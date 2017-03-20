@@ -1,9 +1,9 @@
 //
 //  FormerInputAccessoryView.swift
-//  Former-Demo
+//  SnapGyft
 //
-//  Created by Ryo Aoyama on 8/13/15.
-//  Copyright © 2015 Ryo Aoyama. All rights reserved.
+//  Created by Patra, Sachin Kumar (TekSystems) on 3/17/17.
+//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
 //
 
 import UIKit

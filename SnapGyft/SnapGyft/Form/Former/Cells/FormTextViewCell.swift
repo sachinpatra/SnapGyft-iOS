@@ -1,11 +1,9 @@
-//
-//  FormTextViewCell.swift
-//  Former-Demo
-//
-//  Created by Ryo Aoyama on 7/28/15.
-//  Copyright © 2015 Ryo Aoyama. All rights reserved.
-//
 
+//  SnapGyft
+//
+//  Created by Patra, Sachin Kumar (TekSystems).
+//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
+//
 import UIKit
 
 open class FormTextViewCell: FormCell, TextViewFormableRow {

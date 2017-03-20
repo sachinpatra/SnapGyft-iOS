@@ -1,9 +1,9 @@
 //
 //  ProfileImageCell.swift
-//  Former-Demo
+//  SnapGyft
 //
-//  Created by Ryo Aoyama on 10/31/15.
-//  Copyright © 2015 Ryo Aoyama. All rights reserved.
+//  Created by Patra, Sachin Kumar (TekSystems).
+//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
 //
 
 import UIKit

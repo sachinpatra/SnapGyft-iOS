@@ -1,9 +1,9 @@
 //
 //  EPContactsPicker.swift
-//  EPContacts
+//  SnapGyft
 //
-//  Created by Prabaharan Elangovan on 12/10/15.
-//  Copyright © 2015 Prabaharan Elangovan. All rights reserved.
+//  Created by Patra, Sachin Kumar (TekSystems).
+//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
 //
 
 import UIKit

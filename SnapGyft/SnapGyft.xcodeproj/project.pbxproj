@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180FFA781E7DC00700435772 /* DefaultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA5F1E7DC00700435772 /* DefaultsViewController.swift */; };
 		180FFA7C1E7DC00700435772 /* TextSelectorViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA631E7DC00700435772 /* TextSelectorViewContorller.swift */; };
 		180FFA841E7DC00700435772 /* FormerInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA6D1E7DC00700435772 /* FormerInputAccessoryView.swift */; };
 		180FFABD1E7DC3D600435772 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA891E7DC3D600435772 /* FormCell.swift */; };
@@ -31,7 +30,6 @@
 		180FFACF1E7DC3D600435772 /* SectionFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA9C1E7DC3D600435772 /* SectionFormer.swift */; };
 		180FFAD01E7DC3D600435772 /* ViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA9D1E7DC3D600435772 /* ViewFormer.swift */; };
 		180FFAD11E7DC3D600435772 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA9F1E7DC3D600435772 /* FormViewController.swift */; };
-		180FFAD21E7DC3D600435772 /* UITableViewCell+Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAA21E7DC3D600435772 /* UITableViewCell+Former.swift */; };
 		180FFAD41E7DC3D600435772 /* BaseRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAA51E7DC3D600435772 /* BaseRowFormer.swift */; };
 		180FFAD51E7DC3D600435772 /* CheckRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAA61E7DC3D600435772 /* CheckRowFormer.swift */; };
 		180FFAD61E7DC3D600435772 /* CustomRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAA71E7DC3D600435772 /* CustomRowFormer.swift */; };
@@ -60,6 +58,7 @@
 		185D8C4B1E7C77C400692AD4 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185D8C491E7C77C400692AD4 /* AccountKit.framework */; };
 		185D8C4C1E7C77C400692AD4 /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */; };
 		185D8C521E7C7BE700692AD4 /* SFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D8C511E7C7BE700692AD4 /* SFLoginViewController.swift */; };
+		189E9EA71E806CE6007460E0 /* UITableViewCell+Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */; };
 		18AE406D1E7B15C600B7F495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE406C1E7B15C600B7F495 /* AppDelegate.swift */; };
 		18AE40721E7B15C600B7F495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AE40701E7B15C600B7F495 /* Main.storyboard */; };
 		18AE40751E7B15C600B7F495 /* SnapGyft.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18AE40731E7B15C600B7F495 /* SnapGyft.xcdatamodeld */; };
@@ -96,7 +95,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		180FFA5F1E7DC00700435772 /* DefaultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsViewController.swift; sourceTree = "<group>"; };
 		180FFA631E7DC00700435772 /* TextSelectorViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSelectorViewContorller.swift; sourceTree = "<group>"; };
 		180FFA6D1E7DC00700435772 /* FormerInputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormerInputAccessoryView.swift; sourceTree = "<group>"; };
 		180FFA891E7DC3D600435772 /* FormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 		180FFA9C1E7DC3D600435772 /* SectionFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionFormer.swift; sourceTree = "<group>"; };
 		180FFA9D1E7DC3D600435772 /* ViewFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFormer.swift; sourceTree = "<group>"; };
 		180FFA9F1E7DC3D600435772 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
-		180FFAA21E7DC3D600435772 /* UITableViewCell+Former.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Former.swift"; sourceTree = "<group>"; };
 		180FFAA51E7DC3D600435772 /* BaseRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRowFormer.swift; sourceTree = "<group>"; };
 		180FFAA61E7DC3D600435772 /* CheckRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckRowFormer.swift; sourceTree = "<group>"; };
 		180FFAA71E7DC3D600435772 /* CustomRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRowFormer.swift; sourceTree = "<group>"; };
@@ -150,6 +147,7 @@
 		185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccountKitStrings.bundle; sourceTree = "<group>"; };
 		185D8C4D1E7C780F00692AD4 /* SnapGyft-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapGyft-Bridging-Header.h"; sourceTree = "<group>"; };
 		185D8C511E7C7BE700692AD4 /* SFLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFLoginViewController.swift; sourceTree = "<group>"; };
+		189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Former.swift"; sourceTree = "<group>"; };
 		18AE40691E7B15C600B7F495 /* SnapGyft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapGyft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AE406C1E7B15C600B7F495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18AE40711E7B15C600B7F495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -211,7 +209,6 @@
 		180FFA5C1E7DC00700435772 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				180FFA5F1E7DC00700435772 /* DefaultsViewController.swift */,
 				180FFA631E7DC00700435772 /* TextSelectorViewContorller.swift */,
 			);
 			path = Controllers;
@@ -231,7 +228,6 @@
 				180FFA881E7DC3D600435772 /* Cells */,
 				180FFA981E7DC3D600435772 /* Commons */,
 				180FFA9E1E7DC3D600435772 /* Controllers */,
-				180FFAA11E7DC3D600435772 /* Helpers */,
 				180FFAA41E7DC3D600435772 /* RowFormers */,
 				180FFAB51E7DC3D600435772 /* ViewFormers */,
 				180FFAB91E7DC3D600435772 /* Views */,
@@ -280,14 +276,6 @@
 				180FFA9F1E7DC3D600435772 /* FormViewController.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		180FFAA11E7DC3D600435772 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				180FFAA21E7DC3D600435772 /* UITableViewCell+Former.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		180FFAA41E7DC3D600435772 /* RowFormers */ = {
@@ -352,6 +340,7 @@
 		180FFAF61E7DE5C000435772 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */,
 				180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */,
 				180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */,
 			);
@@ -377,10 +366,10 @@
 		18AE406B1E7B15C600B7F495 /* SnapGyft */ = {
 			isa = PBXGroup;
 			children = (
-				180FFA871E7DC3D600435772 /* Former */,
-				180FFA511E7DC00700435772 /* Form */,
 				185D8C491E7C77C400692AD4 /* AccountKit.framework */,
 				185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */,
+				180FFA511E7DC00700435772 /* Form */,
+				180FFA871E7DC3D600435772 /* Former */,
 				18AE408B1E7B1FE600B7F495 /* TabBarAnimation */,
 				18FCC5D21E7EF20700198CF0 /* ContactsPicker */,
 				18FCC5BF1E7EF07700198CF0 /* Cells */,
@@ -552,7 +541,6 @@
 				180FFAE21E7DC3D600435772 /* TextFieldRowFormer.swift in Sources */,
 				180FFAE61E7DC3D600435772 /* LabelViewFormer.swift in Sources */,
 				185D8C521E7C7BE700692AD4 /* SFLoginViewController.swift in Sources */,
-				180FFA781E7DC00700435772 /* DefaultsViewController.swift in Sources */,
 				18AE40971E7B218600B7F495 /* SFBaseTabBarViewController.swift in Sources */,
 				180FFACB1E7DC3D600435772 /* FormTextViewCell.swift in Sources */,
 				18FCC5CC1E7EF07700198CF0 /* ProfileFieldCell.swift in Sources */,
@@ -596,6 +584,7 @@
 				18FCC5DD1E7EF22600198CF0 /* EPContactsPicker.swift in Sources */,
 				180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */,
 				18AE40861E7B185000B7F495 /* SFEventViewController.swift in Sources */,
+				189E9EA71E806CE6007460E0 /* UITableViewCell+Former.swift in Sources */,
 				180FFACF1E7DC3D600435772 /* SectionFormer.swift in Sources */,
 				180FFABF1E7DC3D600435772 /* FormDatePickerCell.swift in Sources */,
 				180FFAE11E7DC3D600435772 /* SwitchRowFormer.swift in Sources */,
@@ -604,7 +593,6 @@
 				18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */,
 				180FFAC01E7DC3D600435772 /* FormInlineDatePickerCell.swift in Sources */,
 				180FFAE91E7DC3D600435772 /* FormLabelHeaderView.swift in Sources */,
-				180FFAD21E7DC3D600435772 /* UITableViewCell+Former.swift in Sources */,
 				180FFAF21E7DE49200435772 /* Profile.swift in Sources */,
 				180FFADE1E7DC3D600435772 /* SelectorPickerRowFormer.swift in Sources */,
 				18FCC5DB1E7EF22600198CF0 /* EPContactCell.swift in Sources */,

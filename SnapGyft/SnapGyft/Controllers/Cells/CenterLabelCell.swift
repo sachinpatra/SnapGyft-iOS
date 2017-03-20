@@ -1,13 +1,13 @@
 //
 //  CenterLabelCell.swift
 //  Former-Demo
+//  SnapGyft
 //
-//  Created by Ryo Aoyama on 11/8/15.
-//  Copyright © 2015 Ryo Aoyama. All rights reserved.
+//  Created by Patra, Sachin Kumar (TekSystems).
+//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
 //
 
 import UIKit
-//import Former
 
 final class CenterLabelCell: FormCell, LabelFormableRow {
     
@@ -28,7 +28,7 @@ final class CenterLabelCell: FormCell, LabelFormableRow {
         
         let titleLabel = UILabel()
         titleLabel.textColor = .formerSubColor()
-        titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.font = .boldSystemFont(ofSize: 19)
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(titleLabel)

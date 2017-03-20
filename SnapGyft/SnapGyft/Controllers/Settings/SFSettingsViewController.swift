@@ -53,7 +53,7 @@ class SFSettingsViewController: UITableViewController {
         let createMenu: ((String, (() -> Void)?) -> RowFormer) = { text, onSelected in
             return LabelRowFormer<FormLabelCell>() {
                 $0.titleLabel.textColor = .formerColor()
-                $0.titleLabel.font = .boldSystemFont(ofSize: 18)
+                $0.titleLabel.font = .boldSystemFont(ofSize: 17)
                 $0.accessoryType = .disclosureIndicator
                 }.configure {
                     $0.text = text
@@ -68,9 +68,9 @@ class SFSettingsViewController: UITableViewController {
             onSelected: ((RowFormer) -> Void)?) -> RowFormer in
             return LabelRowFormer<FormLabelCell>() {
                 $0.titleLabel.textColor = .formerColor()
-                $0.titleLabel.font = .boldSystemFont(ofSize: 18)
+                $0.titleLabel.font = .boldSystemFont(ofSize: 17)
                 $0.subTextLabel.textColor = .formerSubColor()
-                $0.subTextLabel.font = .boldSystemFont(ofSize: 17)
+                $0.subTextLabel.font = .boldSystemFont(ofSize: 16)
                 $0.accessoryType = .disclosureIndicator
                 }.configure { form in
                     _ = onSelected.map { form.onSelected($0) }
@@ -88,13 +88,19 @@ class SFSettingsViewController: UITableViewController {
         let gyftCardBalanceRow = createSelectorRow("Gyft Card Balance", "$23", pushGyftCardBalance())
         let rewardPointsRow = createSelectorRow("Reward Points", "0 pts", pushRewardPoints())
 
-        let defaultRow = createMenu("All Defaults") { [weak self] in
-            self?.navigationController?.pushViewController(DefaultsViewController(), animated: true)
+        let helpCenterRow = createMenu("Help Center") { [weak self] in
+            //self?.navigationController?.pushViewController(DefaultsViewController(), animated: true)
+        }
+        let feedbackRow = createMenu("FeedBack") { [weak self] in
+            //self?.navigationController?.pushViewController(DefaultsViewController(), animated: true)
+        }
+        let rateUsRow = createMenu("Rate Us") { [weak self] in
+            //self?.navigationController?.pushViewController(DefaultsViewController(), animated: true)
         }
         
         let disableRow = LabelRowFormer<CenterLabelCell>()
             .configure {
-                $0.text = "LogOut"
+                $0.text = "Log Out"
             }.onSelected(disableRowSelected)
         
         // Create Headers and Footers
@@ -118,13 +124,12 @@ class SFSettingsViewController: UITableViewController {
         
         let section1 = SectionFormer(rowFormer: profileRow).set(headerViewFormer: createHeader("  "))
         let section2 = SectionFormer(rowFormer: gyftCardBalanceRow, rewardPointsRow).set(headerViewFormer: createHeader("  "))
-
-        let defaultSection = SectionFormer(rowFormer: defaultRow)
+        let section3 = SectionFormer(rowFormer: helpCenterRow, feedbackRow, rateUsRow)
         let signOutSection = SectionFormer(rowFormer: disableRow)
             .set(footerViewFormer: createFooter("Copyright © 2017 SnapGyft. All rights reserved."))
 
         
-        former.append(sectionFormer: section1, section2, defaultSection, signOutSection)
+        former.append(sectionFormer: section1, section2, section3, signOutSection)
     }
     
     private func pushGyftCardBalance() -> (RowFormer) -> Void {
