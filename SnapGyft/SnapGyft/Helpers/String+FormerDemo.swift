@@ -33,4 +33,9 @@ extension String {
         dateFormatter.dateStyle = .full
         return dateFormatter.string(from: date)
     }
+    
+    func trim() -> String {
+        return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
+    }
+
 }

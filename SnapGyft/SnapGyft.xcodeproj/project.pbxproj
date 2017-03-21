@@ -55,6 +55,12 @@
 		180FFAF21E7DE49200435772 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF11E7DE49200435772 /* Profile.swift */; };
 		180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */; };
 		180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */; };
+		1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */; };
+		1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */; };
+		1829D8D01E81B8D400EEFE71 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CF1E81B8D400EEFE71 /* UIViewController+Extention.swift */; };
+		1829D8D51E81CD2300EEFE71 /* assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1829D8D21E81CD2300EEFE71 /* assets.bundle */; };
+		1829D8D61E81CD2300EEFE71 /* CallingCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1829D8D31E81CD2300EEFE71 /* CallingCodes.plist */; };
+		1829D8D71E81CD2300EEFE71 /* MICountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8D41E81CD2300EEFE71 /* MICountryPicker.swift */; };
 		185D8C4B1E7C77C400692AD4 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185D8C491E7C77C400692AD4 /* AccountKit.framework */; };
 		185D8C4C1E7C77C400692AD4 /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */; };
 		185D8C521E7C7BE700692AD4 /* SFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D8C511E7C7BE700692AD4 /* SFLoginViewController.swift */; };
@@ -72,7 +78,7 @@
 		18AE40931E7B1FE600B7F495 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */; };
 		18AE40971E7B218600B7F495 /* SFBaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */; };
 		18D914551E7F338A0006C7BA /* SGRewardPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D914541E7F338A0006C7BA /* SGRewardPointsViewController.swift */; };
-		18D914571E7F36190006C7BA /* SGAddFiendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D914561E7F36190006C7BA /* SGAddFiendViewController.swift */; };
+		18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */; };
 		18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */; };
 		18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */; };
 		18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */; };
@@ -143,6 +149,12 @@
 		180FFAF11E7DE49200435772 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+FormerDemo.swift"; sourceTree = "<group>"; };
 		180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FormerDemo.swift"; sourceTree = "<group>"; };
+		1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGButtonExtender.swift; sourceTree = "<group>"; };
+		1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
+		1829D8CF1E81B8D400EEFE71 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		1829D8D21E81CD2300EEFE71 /* assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = assets.bundle; sourceTree = "<group>"; };
+		1829D8D31E81CD2300EEFE71 /* CallingCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CallingCodes.plist; sourceTree = "<group>"; };
+		1829D8D41E81CD2300EEFE71 /* MICountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MICountryPicker.swift; sourceTree = "<group>"; };
 		185D8C491E7C77C400692AD4 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
 		185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccountKitStrings.bundle; sourceTree = "<group>"; };
 		185D8C4D1E7C780F00692AD4 /* SnapGyft-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapGyft-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -163,7 +175,7 @@
 		18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFBaseTabBarViewController.swift; sourceTree = "<group>"; };
 		18D914541E7F338A0006C7BA /* SGRewardPointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGRewardPointsViewController.swift; sourceTree = "<group>"; };
-		18D914561E7F36190006C7BA /* SGAddFiendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAddFiendViewController.swift; sourceTree = "<group>"; };
+		18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAddFriendViewController.swift; sourceTree = "<group>"; };
 		18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSettingsViewController.swift; sourceTree = "<group>"; };
 		18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGGyftCardBalanceViewController.swift; sourceTree = "<group>"; };
@@ -343,8 +355,21 @@
 				189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */,
 				180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */,
 				180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */,
+				1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */,
+				1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */,
+				1829D8CF1E81B8D400EEFE71 /* UIViewController+Extention.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1829D8D11E81CD2300EEFE71 /* CountryPicker */ = {
+			isa = PBXGroup;
+			children = (
+				1829D8D21E81CD2300EEFE71 /* assets.bundle */,
+				1829D8D31E81CD2300EEFE71 /* CallingCodes.plist */,
+				1829D8D41E81CD2300EEFE71 /* MICountryPicker.swift */,
+			);
+			path = CountryPicker;
 			sourceTree = "<group>";
 		};
 		18AE40601E7B15C600B7F495 = {
@@ -368,6 +393,7 @@
 			children = (
 				185D8C491E7C77C400692AD4 /* AccountKit.framework */,
 				185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */,
+				1829D8D11E81CD2300EEFE71 /* CountryPicker */,
 				180FFA511E7DC00700435772 /* Form */,
 				180FFA871E7DC3D600435772 /* Former */,
 				18AE408B1E7B1FE600B7F495 /* TabBarAnimation */,
@@ -381,7 +407,7 @@
 				18AE40851E7B185000B7F495 /* SFEventViewController.swift */,
 				185D8C511E7C7BE700692AD4 /* SFLoginViewController.swift */,
 				18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */,
-				18D914561E7F36190006C7BA /* SGAddFiendViewController.swift */,
+				18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */,
 				18AE40701E7B15C600B7F495 /* Main.storyboard */,
 				18AE40761E7B15C600B7F495 /* Images.xcassets */,
 				18AE40781E7B15C600B7F495 /* LaunchScreen.storyboard */,
@@ -511,8 +537,10 @@
 				18FCC5CF1E7EF07700198CF0 /* ProfileImageCell.xib in Resources */,
 				18FCC5CD1E7EF07700198CF0 /* ProfileFieldCell.xib in Resources */,
 				18FCC5CB1E7EF07700198CF0 /* DynamicHeightCell.xib in Resources */,
+				1829D8D61E81CD2300EEFE71 /* CallingCodes.plist in Resources */,
 				18FCC5D11E7EF07700198CF0 /* ProfileLabelCell.xib in Resources */,
 				18AE407A1E7B15C600B7F495 /* LaunchScreen.storyboard in Resources */,
+				1829D8D51E81CD2300EEFE71 /* assets.bundle in Resources */,
 				18AE40771E7B15C600B7F495 /* Images.xcassets in Resources */,
 				18AE40721E7B15C600B7F495 /* Main.storyboard in Resources */,
 				185D8C4C1E7C77C400692AD4 /* AccountKitStrings.bundle in Resources */,
@@ -532,6 +560,7 @@
 				180FFAD81E7DC3D600435772 /* InlineDatePickerRowFormer.swift in Sources */,
 				180FFAE01E7DC3D600435772 /* StepperRowFormer.swift in Sources */,
 				180FFAC51E7DC3D600435772 /* FormSelectorDatePickerCell.swift in Sources */,
+				1829D8D01E81B8D400EEFE71 /* UIViewController+Extention.swift in Sources */,
 				180FFAD41E7DC3D600435772 /* BaseRowFormer.swift in Sources */,
 				180FFAE51E7DC3D600435772 /* CustomViewFormer.swift in Sources */,
 				180FFAC91E7DC3D600435772 /* FormSwitchCell.swift in Sources */,
@@ -552,15 +581,18 @@
 				18FCC5CA1E7EF07700198CF0 /* DynamicHeightCell.swift in Sources */,
 				18FCC5DE1E7EF22600198CF0 /* EPExtensions.swift in Sources */,
 				18AE40931E7B1FE600B7F495 /* UIViewExtension.swift in Sources */,
+				1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */,
 				180FFAD01E7DC3D600435772 /* ViewFormer.swift in Sources */,
 				180FFAC81E7DC3D600435772 /* FormStepperCell.swift in Sources */,
 				18FCC5E01E7EF35700198CF0 /* SGSendViewController.swift in Sources */,
 				180FFAE71E7DC3D600435772 /* FormHeaderFooterView.swift in Sources */,
 				180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */,
+				1829D8D71E81CD2300EEFE71 /* MICountryPicker.swift in Sources */,
 				180FFAE81E7DC3D600435772 /* FormLabelFooterView.swift in Sources */,
 				18AE40901E7B1FE600B7F495 /* AnimateItem.swift in Sources */,
 				180FFA841E7DC00700435772 /* FormerInputAccessoryView.swift in Sources */,
 				18FCC5D01E7EF07700198CF0 /* ProfileLabelCell.swift in Sources */,
+				1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */,
 				18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */,
 				180FFAD11E7DC3D600435772 /* FormViewController.swift in Sources */,
 				180FFABD1E7DC3D600435772 /* FormCell.swift in Sources */,
@@ -598,7 +630,7 @@
 				18FCC5DB1E7EF22600198CF0 /* EPContactCell.swift in Sources */,
 				18AE406D1E7B15C600B7F495 /* AppDelegate.swift in Sources */,
 				180FFAC21E7DC3D600435772 /* FormLabelCell.swift in Sources */,
-				18D914571E7F36190006C7BA /* SGAddFiendViewController.swift in Sources */,
+				18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */,
 				18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */,
 				180FFACA1E7DC3D600435772 /* FormTextFieldCell.swift in Sources */,
 			);

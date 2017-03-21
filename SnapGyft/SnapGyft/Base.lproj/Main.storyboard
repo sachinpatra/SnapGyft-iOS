@@ -69,7 +69,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="0Ac-Oa-MHH" id="63g-Jo-0cM"/>
-                        <segue destination="TBs-3r-5PR" kind="show" identifier="ShowAddFriendSegue" id="8LW-mE-baD"/>
+                        <segue destination="G5N-cV-DBs" kind="show" identifier="ShowAddFriendSegue" id="k84-cU-B4E"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sz3-1G-6VI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -83,24 +83,6 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1377" y="-834"/>
-        </scene>
-        <!--Add Fiend View Controller-->
-        <scene sceneID="wzF-3x-a9p">
-            <objects>
-                <viewController id="TBs-3r-5PR" customClass="SGAddFiendViewController" customModule="SnapGyft" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="JP3-rb-raY"/>
-                        <viewControllerLayoutGuide type="bottom" id="NC3-wi-eoH"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rzl-6Q-iPA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k0m-yN-Nf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2145" y="-834"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="7DO-NQ-VOd">
@@ -329,6 +311,227 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGk-sX-v5W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="439" y="528"/>
+        </scene>
+        <!--Add Friend View Controller-->
+        <scene sceneID="TiA-GW-gyr">
+            <objects>
+                <viewController storyboardIdentifier="AddContactVC" id="G5N-cV-DBs" customClass="SGAddFriendViewController" customModule="SnapGyft" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GQU-EA-pRC"/>
+                        <viewControllerLayoutGuide type="bottom" id="xH0-37-KhK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LTn-ge-pnb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hht-N4-yoY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jrh-ii-9DI">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMv-Lb-zO0">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="598"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IVn-wf-F7a" customClass="SGTextFieldExtender" customModule="SnapGyft" customModuleProvider="target">
+                                                        <rect key="frame" x="5" y="20" width="365" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="7B8-px-orV"/>
+                                                        </constraints>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornurRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="G5N-cV-DBs" id="xN8-Fu-boP"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JU4-3j-cPQ" customClass="SGTextFieldExtender" customModule="SnapGyft" customModuleProvider="target">
+                                                        <rect key="frame" x="85" y="80" width="285" height="40"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornurRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="G5N-cV-DBs" id="ZHz-VP-QT4"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Id (Optional)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6R-hy-xk5" customClass="SGTextFieldExtender" customModule="SnapGyft" customModuleProvider="target">
+                                                        <rect key="frame" x="5" y="140" width="365" height="40"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornurRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="G5N-cV-DBs" id="cgi-4v-FTf"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uAo-A7-3Fr">
+                                                        <rect key="frame" x="5" y="200" width="365" height="40"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odL-ka-mF1" customClass="SGButtonExtender" customModule="SnapGyft" customModuleProvider="target">
+                                                        <rect key="frame" x="49" y="306" width="90" height="39"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="90" id="tGh-nP-jw5"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <state key="normal" title="Save"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornurRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="SaveBtnClicked:" destination="G5N-cV-DBs" eventType="touchUpInside" id="Nqz-Ce-eN6"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="olu-9L-axf" customClass="SGButtonExtender" customModule="SnapGyft" customModuleProvider="target">
+                                                        <rect key="frame" x="237" y="306" width="90" height="39"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="90" id="t9r-3Z-cYU"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <state key="normal" title="Cancel"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornurRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="CancelBtnClicked:" destination="G5N-cV-DBs" eventType="touchUpInside" id="6bG-fT-IYq"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCT-Jd-fSA" customClass="SGButtonExtender" customModule="SnapGyft" customModuleProvider="target">
+                                                        <rect key="frame" x="5" y="80" width="70" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="Hq5-DU-v6r"/>
+                                                        </constraints>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornurRadius">
+                                                                <real key="value" value="5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.5"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="CountryCodeBtnClicked:" destination="G5N-cV-DBs" eventType="touchUpInside" id="89G-NB-1cr"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="JU4-3j-cPQ" firstAttribute="height" secondItem="IVn-wf-F7a" secondAttribute="height" id="6aV-3m-hfa"/>
+                                                    <constraint firstItem="rCT-Jd-fSA" firstAttribute="top" secondItem="JU4-3j-cPQ" secondAttribute="top" id="75L-lV-ued"/>
+                                                    <constraint firstItem="JU4-3j-cPQ" firstAttribute="trailing" secondItem="IVn-wf-F7a" secondAttribute="trailing" id="7T4-O6-Y0d"/>
+                                                    <constraint firstItem="uAo-A7-3Fr" firstAttribute="top" secondItem="Y6R-hy-xk5" secondAttribute="bottom" constant="20" id="9ba-o7-WqN"/>
+                                                    <constraint firstItem="JU4-3j-cPQ" firstAttribute="top" secondItem="IVn-wf-F7a" secondAttribute="bottom" constant="20" id="AaH-Km-PY3"/>
+                                                    <constraint firstItem="rCT-Jd-fSA" firstAttribute="leading" secondItem="IVn-wf-F7a" secondAttribute="leading" id="BbI-wp-p14"/>
+                                                    <constraint firstItem="IVn-wf-F7a" firstAttribute="top" secondItem="JMv-Lb-zO0" secondAttribute="top" constant="20" id="CiY-PN-Szi"/>
+                                                    <constraint firstItem="Y6R-hy-xk5" firstAttribute="height" secondItem="IVn-wf-F7a" secondAttribute="height" id="LGq-fU-eom"/>
+                                                    <constraint firstItem="Y6R-hy-xk5" firstAttribute="top" secondItem="JU4-3j-cPQ" secondAttribute="bottom" constant="20" id="N6i-XE-9ab"/>
+                                                    <constraint firstItem="IVn-wf-F7a" firstAttribute="leading" secondItem="JMv-Lb-zO0" secondAttribute="leading" constant="5" id="NGU-2M-UrN"/>
+                                                    <constraint firstItem="Y6R-hy-xk5" firstAttribute="leading" secondItem="IVn-wf-F7a" secondAttribute="leading" id="Qca-tN-AZd"/>
+                                                    <constraint firstItem="odL-ka-mF1" firstAttribute="leading" secondItem="uAo-A7-3Fr" secondAttribute="leading" constant="43.5" id="YOY-Jx-B58"/>
+                                                    <constraint firstItem="odL-ka-mF1" firstAttribute="top" secondItem="uAo-A7-3Fr" secondAttribute="bottom" constant="66" id="bkc-uz-EYx"/>
+                                                    <constraint firstItem="Y6R-hy-xk5" firstAttribute="trailing" secondItem="IVn-wf-F7a" secondAttribute="trailing" id="bkv-cP-GBP"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IVn-wf-F7a" secondAttribute="trailing" constant="5" id="dPM-vq-PJ5"/>
+                                                    <constraint firstItem="rCT-Jd-fSA" firstAttribute="height" secondItem="IVn-wf-F7a" secondAttribute="height" id="edW-mC-fiE"/>
+                                                    <constraint firstItem="JU4-3j-cPQ" firstAttribute="leading" secondItem="rCT-Jd-fSA" secondAttribute="trailing" constant="10" id="gEQ-wV-Wap"/>
+                                                    <constraint firstItem="uAo-A7-3Fr" firstAttribute="height" secondItem="IVn-wf-F7a" secondAttribute="height" id="gO4-SU-lX4"/>
+                                                    <constraint firstItem="olu-9L-axf" firstAttribute="top" secondItem="odL-ka-mF1" secondAttribute="top" id="l6Z-VV-MO3"/>
+                                                    <constraint firstItem="uAo-A7-3Fr" firstAttribute="trailing" secondItem="IVn-wf-F7a" secondAttribute="trailing" id="rcn-Jd-BeO"/>
+                                                    <constraint firstItem="olu-9L-axf" firstAttribute="trailing" secondItem="uAo-A7-3Fr" secondAttribute="trailing" constant="-43.5" id="rie-vS-3bO"/>
+                                                    <constraint firstItem="uAo-A7-3Fr" firstAttribute="leading" secondItem="IVn-wf-F7a" secondAttribute="leading" id="wUg-1B-xJP"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="JMv-Lb-zO0" secondAttribute="trailing" id="JpV-wE-vxD"/>
+                                            <constraint firstItem="JMv-Lb-zO0" firstAttribute="top" secondItem="jrh-ii-9DI" secondAttribute="top" id="OaD-3U-10p"/>
+                                            <constraint firstItem="JMv-Lb-zO0" firstAttribute="height" secondItem="jrh-ii-9DI" secondAttribute="height" priority="250" id="W2j-BO-g4q"/>
+                                            <constraint firstItem="JMv-Lb-zO0" firstAttribute="leading" secondItem="jrh-ii-9DI" secondAttribute="leading" id="v20-5h-4VS"/>
+                                            <constraint firstItem="JMv-Lb-zO0" firstAttribute="width" secondItem="jrh-ii-9DI" secondAttribute="width" id="vqO-6M-0IR"/>
+                                            <constraint firstAttribute="bottom" secondItem="JMv-Lb-zO0" secondAttribute="bottom" id="wTM-Kh-RDe"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="jrh-ii-9DI" firstAttribute="leading" secondItem="hht-N4-yoY" secondAttribute="leading" id="YNa-gD-yKZ"/>
+                                    <constraint firstItem="jrh-ii-9DI" firstAttribute="top" secondItem="hht-N4-yoY" secondAttribute="top" id="kW3-cr-e9J"/>
+                                    <constraint firstAttribute="bottom" secondItem="jrh-ii-9DI" secondAttribute="bottom" constant="20" symbolic="YES" id="pzK-mc-H04"/>
+                                    <constraint firstAttribute="trailing" secondItem="jrh-ii-9DI" secondAttribute="trailing" id="tRq-3u-508"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="hht-N4-yoY" secondAttribute="trailing" id="CvC-XP-dxY"/>
+                            <constraint firstItem="hht-N4-yoY" firstAttribute="leading" secondItem="LTn-ge-pnb" secondAttribute="leading" id="OZh-8W-Bbz"/>
+                            <constraint firstItem="hht-N4-yoY" firstAttribute="top" secondItem="LTn-ge-pnb" secondAttribute="top" id="gpa-Ds-FXs"/>
+                            <constraint firstItem="xH0-37-KhK" firstAttribute="top" secondItem="hht-N4-yoY" secondAttribute="bottom" id="yzi-X3-sK9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countryBtn" destination="rCT-Jd-fSA" id="SF6-hO-zVY"/>
+                        <outlet property="emailTextField" destination="Y6R-hy-xk5" id="D9r-a2-9YR"/>
+                        <outlet property="nameTextField" destination="IVn-wf-F7a" id="7an-Yo-zB7"/>
+                        <outlet property="phoneTextField" destination="JU4-3j-cPQ" id="BOf-P8-RKq"/>
+                        <outlet property="scrollView" destination="jrh-ii-9DI" id="Dtm-kq-ick"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2VH-xW-iPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2481" y="-834"/>
         </scene>
     </scenes>
     <resources>
