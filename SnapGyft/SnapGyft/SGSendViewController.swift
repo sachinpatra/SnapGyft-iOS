@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SGSendViewController: EPContactsPicker, EPPickerDelegate {
+
+class SGSendViewController: EPContactsPicker, EPPickerDelegate, SGAddFriendViewControllerDelegate {
 
     private var foregroundNotification: NSObjectProtocol!
 
@@ -59,4 +60,15 @@ class SGSendViewController: EPContactsPicker, EPPickerDelegate {
         }
     }
 
+    //MARK: - SGAddFriendViewController delegate
+    func addContactRefresh(){
+        self.reloadContacts()
+    }
+    
+    //MARK: - Segue Delegate
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowAddFriendSegue"{
+            (segue.destination as? SGAddFriendViewController)?.delegate = self
+        }
+    }
 }

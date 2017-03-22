@@ -7,7 +7,11 @@
 //
 
 import UIKit
+import Contacts
 
+public protocol SGAddFriendViewControllerDelegate {
+    func addContactRefresh()
+}
 
 class SGAddFriendViewController: UIViewController {
 
@@ -17,6 +21,8 @@ class SGAddFriendViewController: UIViewController {
     @IBOutlet weak var phoneTextField: SGTextFieldExtender!
     @IBOutlet weak var emailTextField: SGTextFieldExtender!
     @IBOutlet weak var countryBtn: SGButtonExtender!
+    var store = CNContactStore()
+    open var delegate: SGAddFriendViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,24 +55,53 @@ class SGAddFriendViewController: UIViewController {
     }()
     
     @IBAction func CountryCodeBtnClicked(_ sender: Any) {
-        let picker = MICountryPicker { (name, code) -> () in
-            print(code)
-        }
+        let picker = MICountryPicker { (name, code) -> () in}
         // Optional: To pick from custom countries list
         // picker.customCountriesCode = ["EG", "US", "AF", "AQ", "AX"]
         picker.delegate = self
         picker.showCallingCodes = true
-        // or closure
         picker.didSelectCountryClosure = { name, code in}
         
         self.present(UINavigationController(rootViewController: picker), animated: true, completion: nil)
-
     }
     
     @IBAction func SaveBtnClicked(_ sender: Any) {
         if  validationCheck() == true {
-            let dicDetails = generateAllDetailDic()
+            
+            switch CNContactStore.authorizationStatus(for: CNEntityType.contacts) {
+            case CNAuthorizationStatus.denied, CNAuthorizationStatus.restricted:
+                
+                let alert = UIAlertController(title: "Unable to access contacts", message: "SnapGyft does not have access to contacts. Kindly enable it in privacy settings ", preferredStyle: UIAlertControllerStyle.alert)
+                let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: {  action in
+                    _ = self.navigationController?.popViewController(animated: true)
+                })
+                alert.addAction(okAction)
+                self.present(alert, animated: true, completion: nil)
+                
+            case  CNAuthorizationStatus.authorized, CNAuthorizationStatus.notDetermined:
+                let arrFullname: [String] = self.nameTextField.text!.trim().components(separatedBy: " ")
 
+                let newContact = CNMutableContact()
+                newContact.givenName = arrFullname.first!
+                newContact.familyName = arrFullname.last!
+
+                let workEmail = CNLabeledValue(label:CNLabelWork, value:emailTextField.text!.trim() as NSString)
+                newContact.emailAddresses = [workEmail]
+                newContact.phoneNumbers = [CNLabeledValue(
+                    label:CNLabelPhoneNumberiPhone,
+                    value:CNPhoneNumber(stringValue:countryBtn.currentTitle! + phoneTextField.text!))]
+                do {
+                    let saveRequest = CNSaveRequest()
+                    saveRequest.add(newContact, toContainerWithIdentifier: nil)
+                    try self.store.execute(saveRequest)
+                    delegate?.addContactRefresh()
+                    _ = self.navigationController?.popViewController(animated: true)
+                }
+                catch {
+                    self.alertShow(strMessage: "Unable to save the new contact.")
+                }
+               
+            }
         }
     }
 
@@ -74,14 +109,6 @@ class SGAddFriendViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    func generateAllDetailDic() ->NSDictionary  {
-        let arrFullname: [String] = self.nameTextField.text!.trim().components(separatedBy: " ")
-        let fullNo = countryBtn.currentTitle! + emailTextField.text!
-        let emailId = emailTextField.text!.trim()
-        
-        let dic: NSDictionary = ["Fullname": arrFullname , "Mobile": fullNo, "EmailID" : emailId]
-        return dic
-    }
     
     //MARK:- ValidationCheck
     func validationCheck() -> Bool {
@@ -128,7 +155,7 @@ class SGAddFriendViewController: UIViewController {
         return true
     }
 
-    // MARK: - Keyboard Notification Method
+   /* // MARK: - Keyboard Notification Method
     func keyboardWasShown(aNotification: NSNotification) {
         
         if let userInfo = aNotification.userInfo {
@@ -153,7 +180,17 @@ class SGAddFriendViewController: UIViewController {
             self.scrollView.scrollIndicatorInsets = contentInsets
         }, completion: {(finished: Bool) -> Void in
         })
-    }
+    }*/
+    
+    //    func generateAllDetailDic() ->NSDictionary  {
+    //        let arrFullname: [String] = self.nameTextField.text!.trim().components(separatedBy: " ")
+    //        let fullNo = countryBtn.currentTitle! + emailTextField.text!
+    //        let emailId = emailTextField.text!.trim()
+    //
+    //        let dic: NSDictionary = ["Fullname": arrFullname , "Mobile": fullNo, "EmailID" : emailId]
+    //        return dic
+    //    }
+
 }
 
 //MARK:- UITextField Methods
@@ -219,8 +256,6 @@ extension SGAddFriendViewController: MICountryPickerDelegate {
     }
     
     func countryPicker(_ picker: MICountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String){
-       // DispatchQueue.main.asyncAfter(deadline: .now()) {
-
         self.dismiss(animated: true) {
             self.countryBtn.setTitle("\(dialCode)", for: .normal)
         }
