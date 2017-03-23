@@ -18,13 +18,6 @@ class SFSettingsViewController: UITableViewController {
         super.viewDidLoad()
         if accountKit == nil {
             self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
-            accountKit.requestAccount{
-                (account, error) -> Void in
-                Profile.sharedInstance.accountID = account?.accountID
-                if account?.phoneNumber?.phoneNumber != nil {
-                    Profile.sharedInstance.phoneNumber = account!.phoneNumber?.stringRepresentation()
-                }
-            }
         }
 
         configure()

@@ -9,8 +9,8 @@
 import UIKit
 import Contacts
 
-public protocol SGAddFriendViewControllerDelegate {
-    func addContactRefresh()
+protocol SGAddFriendViewControllerDelegate {
+    func addContactRefresh(_ addFriendView: SGAddFriendViewController)
 }
 
 class SGAddFriendViewController: UIViewController {
@@ -94,7 +94,7 @@ class SGAddFriendViewController: UIViewController {
                     let saveRequest = CNSaveRequest()
                     saveRequest.add(newContact, toContainerWithIdentifier: nil)
                     try self.store.execute(saveRequest)
-                    delegate?.addContactRefresh()
+                    delegate?.addContactRefresh(self)
                     _ = self.navigationController?.popViewController(animated: true)
                 }
                 catch {
