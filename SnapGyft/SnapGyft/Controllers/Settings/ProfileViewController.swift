@@ -23,18 +23,7 @@ class ProfileViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
-        if accountKit == nil {
-            self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
-            accountKit.requestAccount{
-                (account, error) -> Void in
-                self.saveProfile(with: "accountID", value: account?.accountID ?? "")
-
-                if account?.phoneNumber?.phoneNumber != nil {
-                    self.saveProfile(with: "phonenumber", value: account!.phoneNumber?.stringRepresentation() ?? "")
-                }
-            }
-        }
-
+        
         
         managedObjectContext = appdelObj.persistentContainer.viewContext
         let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Profile")
@@ -45,11 +34,21 @@ class ProfileViewController: UITableViewController {
             fatalError("Failed to fetch employees: \(error)")
         }
         
+        if myProfile?.phoneNumber == nil
+            /*&& accountKit == nil */{
+            self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
+            accountKit.requestAccount{
+                (account, error) -> Void in
+                self.saveProfile(with: "accountID", value: account?.accountID ?? "")
+                
+                if account?.phoneNumber?.phoneNumber != nil {
+                    self.saveProfile(with: "phonenumber", value: account!.phoneNumber?.stringRepresentation() ?? "")
+                }
+            }
+        }
+
+        
         configure()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     func saveProfile(with propertyName: String, value: Any) {
@@ -91,6 +90,9 @@ class ProfileViewController: UITableViewController {
             break
         case "phonenumber":
             myProfile?.phoneNumber = value as? String
+            break
+        case "imagedata":
+            myProfile?.imageData = value as? NSData
             break
 
         default: break
@@ -138,9 +140,6 @@ class ProfileViewController: UITableViewController {
                 $0.pickerItems = genders.map {
                     InlinePickerItem(title: $0)
                 }
-//                if let gender = Profile.sharedInstance.gender {
-//                    $0.selectedRow = genders.index(of: gender) ?? 0
-//                }
                 if let gender = self.myProfile?.gender {
                     $0.selectedRow = genders.index(of: gender)!
                 }
@@ -179,7 +178,9 @@ class ProfileViewController: UITableViewController {
             $0.titleLabel.font = .boldSystemFont(ofSize: 15)
             $0.switchButton.onTintColor = .formerSubColor()
             }.configure {
-                $0.switched = (myProfile?.moreInformation)!
+                if let moreInformation = myProfile?.moreInformation{
+                    $0.switched = moreInformation
+                }
                 $0.switchWhenSelected = true
             }.onSwitchChanged { [weak self] in
                 self?.saveProfile(with: "moreinfo", value: $0)
@@ -209,7 +210,7 @@ class ProfileViewController: UITableViewController {
             .onCellSelected { [weak self] _ in
                 self?.formerInputAccessoryView.update()
         }
-        if (myProfile?.moreInformation)! {
+        if  (myProfile?.moreInformation)! {
             former.append(sectionFormer: informationSection)
         }
     }
@@ -217,9 +218,11 @@ class ProfileViewController: UITableViewController {
     fileprivate lazy var imageRow: LabelRowFormer<ProfileImageCell> = {
         LabelRowFormer<ProfileImageCell>(instantiateType: .Nib(nibName: "ProfileImageCell")) {
             $0.iconView.image = UIImage(named: "Profile_Demo")
-//            if let image = Profile.sharedInstance.image{
-//                $0.iconView.image = image
-//            }
+            if let image = self.myProfile?.imageData{
+                var imageArray =  UIImage(data: image as Data)
+                print("temp")
+                $0.iconView.image = UIImage(data: image as Data)
+            }
             }.configure {
                 $0.text = "Choose profile image from library"
                 $0.rowHeight = 90
@@ -286,7 +289,9 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
         picker.dismiss(animated: true, completion: nil)
-        //Profile.sharedInstance.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        if let imageData = UIImagePNGRepresentation(info[UIImagePickerControllerOriginalImage] as! UIImage) as NSData?{
+            saveProfile(with: "imagedata", value: imageData)
+        }
         imageRow.cellUpdate {
             $0.iconView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         }

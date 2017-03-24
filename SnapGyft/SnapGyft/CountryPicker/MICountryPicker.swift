@@ -1,9 +1,9 @@
 //
 //  MICountryPicker.swift
-//  MICountryPicker
+//  SnapGyft
 //
-//  Created by Ibrahim, Mustafa on 1/24/16.
-//  Copyright © 2016 Mustafa Ibrahim. All rights reserved.
+//  Created by Patra, Sachin Kumar (TekSystems).
+//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
 //
 
 import UIKit

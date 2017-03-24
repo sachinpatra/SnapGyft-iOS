@@ -161,9 +161,9 @@
         <scene sceneID="tJ0-x8-bOQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Y2-L2-jr7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" image="icon_tab_home_off" id="wb5-fC-OvT"/>
+                    <tabBarItem key="tabBarItem" title="Account" id="wb5-fC-OvT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2zx-tD-q1B">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2zx-tD-q1B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -176,13 +176,13 @@
             </objects>
             <point key="canvasLocation" x="439.19999999999999" y="-1512.5937031484259"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Send-->
         <scene sceneID="w6B-2M-686">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dmv-gl-RW5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="XXV-LQ-hS1"/>
+                    <tabBarItem key="tabBarItem" title="Send" id="XXV-LQ-hS1"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zZh-KH-gxW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zZh-KH-gxW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -195,13 +195,13 @@
             </objects>
             <point key="canvasLocation" x="439.19999999999999" y="-834.33283358320841"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorite-->
         <scene sceneID="w0Y-Fb-9Mm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rvl-L7-0CF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Ie7-dT-2ER"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" id="Ie7-dT-2ER"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ov8-jd-fXG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ov8-jd-fXG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -293,13 +293,13 @@
             </objects>
             <point key="canvasLocation" x="2065" y="1312"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Settings-->
         <scene sceneID="4Yi-9V-oip">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="npi-UH-nqA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="Us2-23-Szc"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="Us2-23-Szc"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XLd-kR-2FP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XLd-kR-2FP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -534,7 +534,4 @@
             <point key="canvasLocation" x="2481" y="-834"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icon_tab_home_off" width="26" height="26"/>
-    </resources>
 </document>
