@@ -13,6 +13,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let indicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -103,6 +104,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    // MARK: - HUD Custom Method
+    func showHUD(viewNew: UIView){
+        DispatchQueue.main.async {
+            self.indicator.center = viewNew.center
+            self.indicator.frame.origin.y = self.indicator.frame.origin.y - 64
+            self.indicator.backgroundColor = UIColor.lightGray
+            viewNew.addSubview(self.indicator)
+            viewNew.bringSubview(toFront: self.indicator)
+            self.indicator.startAnimating(isUserInteractionEnabled: false)
+        }
+    }
+    
+    func HideHud() {
+        DispatchQueue.main.async {
+            self.indicator.stopAnimating(isUserInteractionEnabled: true)
+        }
+    }
+
+    func mobileNumberValidate(number: String) -> Bool {
+        let numberRegEx = "[0-9]{10,15}"
+        let numberTest = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+        if !numberTest.evaluate(with: number){
+            return false
+        }
+        return true
+    }
+    
+    func emailAdrressValidation(strEmail : String)->Bool {
+        // Password should not blank
+        if strEmail.isEmpty{
+            return false
+        }
+        //Email address should accept like:test@gmail.co.uk
+        let emailRegEx = "[.0-9a-zA-Z_-]+@[0-9a-zA-Z.-]+\\.[a-zA-Z]{2,20}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        
+        if !emailTest.evaluate(with: strEmail){
+            return false
+        }
+        return true
+    }
 
 }
 
+extension UIActivityIndicatorView {
+    func startAnimating(isUserInteractionEnabled: Bool){
+        self.startAnimating()
+        self.superview?.isUserInteractionEnabled = isUserInteractionEnabled
+    }
+    func stopAnimating(isUserInteractionEnabled: Bool){
+        self.stopAnimating()
+        self.superview?.isUserInteractionEnabled = isUserInteractionEnabled
+    }
+}

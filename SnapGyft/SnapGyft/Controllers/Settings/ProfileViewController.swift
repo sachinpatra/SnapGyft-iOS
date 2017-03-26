@@ -7,21 +7,104 @@
 //
 
 import UIKit
+import CoreData
 
 class ProfileViewController: UITableViewController {
 
+    var managedObjectContext: NSManagedObjectContext? = nil
+    var myProfile: Profile?
+    var accountKit: AKFAccountKit!
+    
+
     // MARK: Public
     public private(set) lazy var former: Former = Former(tableView: self.tableView)
-    
+    let appdelObj: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = "Profile"
+        
+        
+        managedObjectContext = appdelObj.persistentContainer.viewContext
+        let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Profile")
+        
+        do {
+            myProfile = try (managedObjectContext?.fetch(employeesFetch) as! [Profile]).first
+        } catch {
+            fatalError("Failed to fetch employees: \(error)")
+        }
+        
+        if myProfile?.phoneNumber == nil
+            /*&& accountKit == nil */{
+            self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
+            accountKit.requestAccount{
+                (account, error) -> Void in
+                self.saveProfile(with: "accountID", value: account?.accountID ?? "")
+                
+                if account?.phoneNumber?.phoneNumber != nil {
+                    self.saveProfile(with: "phonenumber", value: account!.phoneNumber?.stringRepresentation() ?? "")
+                }
+            }
+        }
+
+        
         configure()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func saveProfile(with propertyName: String, value: Any) {
+        
+        if (myProfile == nil){
+            myProfile = Profile(context: managedObjectContext!)
+        }
+        
+        switch propertyName {
+        case "name":
+            myProfile?.firstName = value as? String
+            break
+        case "phone":
+            myProfile?.phoneNumber = value as? String
+            break
+        case "gender":
+            myProfile?.gender = value as? String
+            break
+        case "birthday":
+            myProfile?.birthDay = value as? NSDate
+            break
+        case "introduction":
+            myProfile?.introduction = value as? String
+            break
+        case "moreinfo":
+            myProfile?.moreInformation = value as! Bool
+            break
+        case "nickname":
+            myProfile?.nickname = value as? String
+            break
+        case "location":
+            myProfile?.location = value as? String
+            break
+        case "job":
+            myProfile?.job = value as? String
+            break
+        case "accountID":
+            myProfile?.accountID = value as? String
+            break
+        case "phonenumber":
+            myProfile?.phoneNumber = value as? String
+            break
+        case "imagedata":
+            myProfile?.imageData = value as? NSData
+            break
+
+        default: break
+        }
+        
+        // Save the context.
+        do {
+            try managedObjectContext!.save()
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
     }
 
     // MARK: Private
@@ -35,18 +118,19 @@ class ProfileViewController: UITableViewController {
             $0.textField.inputAccessoryView = self?.formerInputAccessoryView
             }.configure {
                 $0.placeholder = "Add your name"
-                $0.text = Profile.sharedInstance.name
+                $0.text = self.myProfile?.firstName
             }.onTextChanged {
-                Profile.sharedInstance.name = $0
+                self.saveProfile(with: "name", value: $0)
         }
         let phoneRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
             $0.titleLabel.text = "Phone"
             $0.textField.inputAccessoryView = self?.formerInputAccessoryView
             $0.textField.delegate = self
             }.configure {
-                $0.text = Profile.sharedInstance.phoneNumber
+                $0.text = self.myProfile?.phoneNumber
             }.onTextChanged {
-                Profile.sharedInstance.name = $0
+                self.saveProfile(with: "phone", value: $0)
+
         }
 
         let genderRow = InlinePickerRowFormer<ProfileLabelCell, String>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
@@ -56,22 +140,27 @@ class ProfileViewController: UITableViewController {
                 $0.pickerItems = genders.map {
                     InlinePickerItem(title: $0)
                 }
-                if let gender = Profile.sharedInstance.gender {
-                    $0.selectedRow = genders.index(of: gender) ?? 0
+                if let gender = self.myProfile?.gender {
+                    $0.selectedRow = genders.index(of: gender)!
                 }
             }.onValueChanged {
-                Profile.sharedInstance.gender = $0.title
+                self.saveProfile(with: "gender", value: $0.title)
+
         }
         let birthdayRow = InlineDatePickerRowFormer<ProfileLabelCell>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
             $0.titleLabel.text = "Birthday"
             }.configure {
-                $0.date = Profile.sharedInstance.birthDay ?? Date()
+//                $0.date = Profile.sharedInstance.birthDay ?? Date()
+                if let date = self.myProfile?.birthDay{
+                    $0.date = date as Date
+                }
             }.inlineCellSetup {
                 $0.datePicker.datePickerMode = .date
             }.displayTextFromDate {
                 return String.mediumDateNoTime(date: $0)
             }.onDateChanged {
-                Profile.sharedInstance.birthDay = $0
+                self.saveProfile(with: "birthday", value: $0)
+
         }
         let introductionRow = TextViewRowFormer<FormTextViewCell>() { [weak self] in
             $0.textView.textColor = .formerSubColor()
@@ -79,9 +168,9 @@ class ProfileViewController: UITableViewController {
             $0.textView.inputAccessoryView = self?.formerInputAccessoryView
             }.configure {
                 $0.placeholder = "Add your self-introduction"
-                $0.text = Profile.sharedInstance.introduction
+                $0.text = myProfile?.introduction
             }.onTextChanged {
-                Profile.sharedInstance.introduction = $0
+                self.saveProfile(with: "introduction", value: $0)
         }
         let moreRow = SwitchRowFormer<FormSwitchCell>() {
             $0.titleLabel.text = "Add more information ?"
@@ -89,10 +178,12 @@ class ProfileViewController: UITableViewController {
             $0.titleLabel.font = .boldSystemFont(ofSize: 15)
             $0.switchButton.onTintColor = .formerSubColor()
             }.configure {
-                $0.switched = Profile.sharedInstance.moreInformation
+                if let moreInformation = myProfile?.moreInformation{
+                    $0.switched = moreInformation
+                }
                 $0.switchWhenSelected = true
             }.onSwitchChanged { [weak self] in
-                Profile.sharedInstance.moreInformation = $0
+                self?.saveProfile(with: "moreinfo", value: $0)
                 self?.switchInfomationSection()
         }
         
@@ -119,7 +210,7 @@ class ProfileViewController: UITableViewController {
             .onCellSelected { [weak self] _ in
                 self?.formerInputAccessoryView.update()
         }
-        if Profile.sharedInstance.moreInformation {
+        if  (myProfile?.moreInformation)! {
             former.append(sectionFormer: informationSection)
         }
     }
@@ -127,8 +218,10 @@ class ProfileViewController: UITableViewController {
     fileprivate lazy var imageRow: LabelRowFormer<ProfileImageCell> = {
         LabelRowFormer<ProfileImageCell>(instantiateType: .Nib(nibName: "ProfileImageCell")) {
             $0.iconView.image = UIImage(named: "Profile_Demo")
-            if let image = Profile.sharedInstance.image{
-                $0.iconView.image = image
+            if let image = self.myProfile?.imageData{
+                var imageArray =  UIImage(data: image as Data)
+                print("temp")
+                $0.iconView.image = UIImage(data: image as Data)
             }
             }.configure {
                 $0.text = "Choose profile image from library"
@@ -145,27 +238,32 @@ class ProfileViewController: UITableViewController {
             $0.textField.inputAccessoryView = self?.formerInputAccessoryView
             }.configure {
                 $0.placeholder = "Add your nickname"
-                $0.text = Profile.sharedInstance.nickname
+                $0.text = self.myProfile?.nickname
+
             }.onTextChanged {
-                Profile.sharedInstance.nickname = $0
+                self.saveProfile(with: "nickname", value: $0)
+
         }
         let locationRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
             $0.titleLabel.text = "Location"
             $0.textField.inputAccessoryView = self?.formerInputAccessoryView
             }.configure {
                 $0.placeholder = "Add your location"
-                $0.text = Profile.sharedInstance.location
+                $0.text = self.myProfile?.location
+
             }.onTextChanged {
-                Profile.sharedInstance.location = $0
+                self.saveProfile(with: "location", value: $0)
+
         }
         let jobRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
             $0.titleLabel.text = "Job"
             $0.textField.inputAccessoryView = self?.formerInputAccessoryView
             }.configure {
                 $0.placeholder = "Add your job"
-                $0.text = Profile.sharedInstance.job
+                $0.text = self.myProfile?.job
+
             }.onTextChanged {
-                Profile.sharedInstance.job = $0
+                self.saveProfile(with: "job", value: $0)
         }
         return SectionFormer(rowFormer: nicknameRow, locationRow, jobRow)
     }()
@@ -179,7 +277,7 @@ class ProfileViewController: UITableViewController {
     }
     
     private func switchInfomationSection() {
-        if Profile.sharedInstance.moreInformation {
+        if (myProfile?.moreInformation)! {
             former.insertUpdate(sectionFormer: informationSection, toSection: former.numberOfSections, rowAnimation: .top)
         } else {
             former.removeUpdate(sectionFormer: informationSection, rowAnimation: .top)
@@ -191,7 +289,9 @@ extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationCo
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]){
         picker.dismiss(animated: true, completion: nil)
-        Profile.sharedInstance.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        if let imageData = UIImagePNGRepresentation(info[UIImagePickerControllerOriginalImage] as! UIImage) as NSData?{
+            saveProfile(with: "imagedata", value: imageData)
+        }
         imageRow.cellUpdate {
             $0.iconView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         }

@@ -8,7 +8,8 @@
 
 import UIKit
 
-class SGSendViewController: EPContactsPicker, EPPickerDelegate {
+
+class SGSendViewController: EPContactsPicker {
 
     private var foregroundNotification: NSObjectProtocol!
 
@@ -36,7 +37,17 @@ class SGSendViewController: EPContactsPicker, EPPickerDelegate {
         self.performSegue(withIdentifier: "ShowAddFriendSegue", sender: self)
     }
     
-    //MARK: EPContactsPicker delegates
+    
+    //MARK: - Segue Delegate
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowAddFriendSegue"{
+            (segue.destination as? SGAddFriendViewController)?.delegate = self
+        }
+    }
+}
+
+//MARK: EPContactsPicker delegates
+extension SGSendViewController: EPPickerDelegate{
     func epContactPicker(_: EPContactsPicker, didContactFetchFailed error : NSError)
     {
         print("Failed with error \(error.description)")
@@ -57,6 +68,14 @@ class SGSendViewController: EPContactsPicker, EPPickerDelegate {
         for contact in contacts {
             print("\(contact.displayName())")
         }
+    }
+}
+
+//MARK: - SGAddFriendViewControllerDelegate
+extension SGSendViewController: SGAddFriendViewControllerDelegate{
+    
+    func addContactRefresh(_: SGAddFriendViewController) {
+        self.reloadContacts()
     }
 
 }
