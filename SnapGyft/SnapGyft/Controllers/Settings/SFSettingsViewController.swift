@@ -10,16 +10,11 @@ import UIKit
 
 class SFSettingsViewController: UITableViewController {
 
-    var accountKit: AKFAccountKit!
-
     public private(set) lazy var former: Former = Former(tableView: self.tableView)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if accountKit == nil {
-            self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
-        }
-
+        
         configure()
     }
 
@@ -27,11 +22,6 @@ class SFSettingsViewController: UITableViewController {
         super.viewWillAppear(animated)
         former.deselect(animated: true)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
-
     
     // MARK: Private
     
@@ -79,7 +69,6 @@ class SFSettingsViewController: UITableViewController {
         
         //Section 2
         let gyftCardBalanceRow = createSelectorRow("Gyft Card Balance", "$23", pushGyftCardBalance())
-        let rewardPointsRow = createSelectorRow("Reward Points", "0 pts", pushRewardPoints())
 
         let helpCenterRow = createMenu("Help Center") { [weak self] in
             //self?.navigationController?.pushViewController(DefaultsViewController(), animated: true)
@@ -91,10 +80,10 @@ class SFSettingsViewController: UITableViewController {
             //self?.navigationController?.pushViewController(DefaultsViewController(), animated: true)
         }
         
-        let disableRow = LabelRowFormer<CenterLabelCell>()
-            .configure {
-                $0.text = "Log Out"
-            }.onSelected(disableRowSelected)
+//        let disableRow = LabelRowFormer<CenterLabelCell>()
+//            .configure {
+//                $0.text = "Log Out"
+//            }.onSelected(disableRowSelected)
         
         // Create Headers and Footers
         let createHeader: ((String) -> ViewFormer) = { text in
@@ -116,13 +105,12 @@ class SFSettingsViewController: UITableViewController {
         // Create SectionFormers
         
         let section1 = SectionFormer(rowFormer: profileRow).set(headerViewFormer: createHeader("  "))
-        let section2 = SectionFormer(rowFormer: gyftCardBalanceRow, rewardPointsRow).set(headerViewFormer: createHeader("  "))
+        let section2 = SectionFormer(rowFormer: gyftCardBalanceRow).set(headerViewFormer: createHeader("  "))
         let section3 = SectionFormer(rowFormer: helpCenterRow, feedbackRow, rateUsRow)
-        let signOutSection = SectionFormer(rowFormer: disableRow)
             .set(footerViewFormer: createFooter("Copyright © 2017 SnapGyft. All rights reserved."))
 
         
-        former.append(sectionFormer: section1, section2, section3, signOutSection)
+        former.append(sectionFormer: section1, section2, section3)
     }
     
     private func pushGyftCardBalance() -> (RowFormer) -> Void {
@@ -134,26 +122,18 @@ class SFSettingsViewController: UITableViewController {
         }
     }
     
-    private func pushRewardPoints() -> (RowFormer) -> Void {
-        return { [weak self] rowFormer in
-            if let rowFormer = rowFormer as? LabelRowFormer<FormLabelCell> {
-                rowFormer.subText = "$0"//For temporary
-                self?.performSegue(withIdentifier: "ShowRewardPointsSegue", sender: self)
-            }
-        }
-    }
     
-    private func disableRowSelected(rowFormer: RowFormer) {
-        let alertController = UIAlertController(title: "SnapGyft", message: "Are you sure! Do you want to logout?", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "No", style: .destructive, handler: nil))
-        alertController.addAction(UIAlertAction(title: "Yes", style: .default) { (action: UIAlertAction) in
-            self.accountKit.logOut()
-            DispatchQueue.main.async(execute: {
-                self.performSegue(withIdentifier: "ShowLoginSegue", sender: self)
-            })
-        })
-        present(alertController, animated: true, completion: nil)
-        former.deselect(animated: true)
-      
-    }
+//    private func disableRowSelected(rowFormer: RowFormer) {
+//        let alertController = UIAlertController(title: "SnapGyft", message: "Are you sure! Do you want to logout?", preferredStyle: .alert)
+//        alertController.addAction(UIAlertAction(title: "No", style: .destructive, handler: nil))
+//        alertController.addAction(UIAlertAction(title: "Yes", style: .default) { (action: UIAlertAction) in
+//            self.accountKit.logOut()
+//            DispatchQueue.main.async(execute: {
+//                self.performSegue(withIdentifier: "ShowLoginSegue", sender: self)
+//            })
+//        })
+//        present(alertController, animated: true, completion: nil)
+//        former.deselect(animated: true)
+//      
+//    }
 }

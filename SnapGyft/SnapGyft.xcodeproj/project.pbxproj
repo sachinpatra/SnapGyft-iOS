@@ -65,6 +65,7 @@
 		18592A2B1E85DB3600003E6A /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18592A261E85DB3600003E6A /* octicons.txt */; };
 		18592A2C1E85DB3600003E6A /* SFCustomIconKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18592A271E85DB3600003E6A /* SFCustomIconKit.swift */; };
 		18592A2D1E85DB3600003E6A /* SFCustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18592A281E85DB3600003E6A /* SFCustomIcons.swift */; };
+		18592A301E87099F00003E6A /* SFMyCharityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18592A2F1E87099F00003E6A /* SFMyCharityController.swift */; };
 		185D8C4B1E7C77C400692AD4 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185D8C491E7C77C400692AD4 /* AccountKit.framework */; };
 		185D8C4C1E7C77C400692AD4 /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */; };
 		185D8C521E7C7BE700692AD4 /* SFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D8C511E7C7BE700692AD4 /* SFLoginViewController.swift */; };
@@ -81,7 +82,6 @@
 		18AE40921E7B1FE600B7F495 /* TabBarAnimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408E1E7B1FE600B7F495 /* TabBarAnimateController.swift */; };
 		18AE40931E7B1FE600B7F495 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */; };
 		18AE40971E7B218600B7F495 /* SFBaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */; };
-		18D914551E7F338A0006C7BA /* SGRewardPointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D914541E7F338A0006C7BA /* SGRewardPointsViewController.swift */; };
 		18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */; };
 		18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */; };
 		18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */; };
@@ -163,6 +163,7 @@
 		18592A261E85DB3600003E6A /* octicons.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = octicons.txt; sourceTree = "<group>"; };
 		18592A271E85DB3600003E6A /* SFCustomIconKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIconKit.swift; sourceTree = "<group>"; };
 		18592A281E85DB3600003E6A /* SFCustomIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIcons.swift; sourceTree = "<group>"; };
+		18592A2F1E87099F00003E6A /* SFMyCharityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFMyCharityController.swift; sourceTree = "<group>"; };
 		185D8C491E7C77C400692AD4 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
 		185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccountKitStrings.bundle; sourceTree = "<group>"; };
 		185D8C4D1E7C780F00692AD4 /* SnapGyft-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapGyft-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -182,7 +183,6 @@
 		18AE408E1E7B1FE600B7F495 /* TabBarAnimateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarAnimateController.swift; sourceTree = "<group>"; };
 		18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFBaseTabBarViewController.swift; sourceTree = "<group>"; };
-		18D914541E7F338A0006C7BA /* SGRewardPointsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGRewardPointsViewController.swift; sourceTree = "<group>"; };
 		18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAddFriendViewController.swift; sourceTree = "<group>"; };
 		18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSettingsViewController.swift; sourceTree = "<group>"; };
@@ -464,7 +464,7 @@
 				18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */,
 				18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */,
 				18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */,
-				18D914541E7F338A0006C7BA /* SGRewardPointsViewController.swift */,
+				18592A2F1E87099F00003E6A /* SFMyCharityController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -614,6 +614,7 @@
 				18AE40931E7B1FE600B7F495 /* UIViewExtension.swift in Sources */,
 				1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */,
 				180FFAD01E7DC3D600435772 /* ViewFormer.swift in Sources */,
+				18592A301E87099F00003E6A /* SFMyCharityController.swift in Sources */,
 				180FFAC81E7DC3D600435772 /* FormStepperCell.swift in Sources */,
 				18592A2D1E85DB3600003E6A /* SFCustomIcons.swift in Sources */,
 				18FCC5E01E7EF35700198CF0 /* SGSendViewController.swift in Sources */,
@@ -645,7 +646,6 @@
 				180FFACD1E7DC3D600435772 /* FormerProtocol.swift in Sources */,
 				18FCC5CE1E7EF07700198CF0 /* ProfileImageCell.swift in Sources */,
 				180FFADD1E7DC3D600435772 /* SelectorDatePickerRowFormer.swift in Sources */,
-				18D914551E7F338A0006C7BA /* SGRewardPointsViewController.swift in Sources */,
 				18FCC5DD1E7EF22600198CF0 /* EPContactsPicker.swift in Sources */,
 				180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */,
 				18AE40861E7B185000B7F495 /* SFEventViewController.swift in Sources */,

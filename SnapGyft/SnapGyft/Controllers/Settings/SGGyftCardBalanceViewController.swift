@@ -15,11 +15,6 @@ class SGGyftCardBalanceViewController: UIViewController {
 
         self.title = "Gyft Card Balance"
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
 
     /*

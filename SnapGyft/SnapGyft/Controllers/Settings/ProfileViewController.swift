@@ -162,16 +162,6 @@ class ProfileViewController: UITableViewController {
                 self.saveProfile(with: "birthday", value: $0)
 
         }
-        let introductionRow = TextViewRowFormer<FormTextViewCell>() { [weak self] in
-            $0.textView.textColor = .formerSubColor()
-            $0.textView.font = .systemFont(ofSize: 15)
-            $0.textView.inputAccessoryView = self?.formerInputAccessoryView
-            }.configure {
-                $0.placeholder = "Add your self-introduction"
-                $0.text = myProfile?.introduction
-            }.onTextChanged {
-                self.saveProfile(with: "introduction", value: $0)
-        }
         let moreRow = SwitchRowFormer<FormSwitchCell>() {
             $0.titleLabel.text = "Add more information ?"
             $0.titleLabel.textColor = .formerColor()
@@ -196,21 +186,21 @@ class ProfileViewController: UITableViewController {
             }
         }
         
+        
         // Create SectionFormers
         let imageSection = SectionFormer(rowFormer: imageRow)
             .set(headerViewFormer: createHeader("Profile Image"))
-        let introductionSection = SectionFormer(rowFormer: introductionRow)
-            .set(headerViewFormer: createHeader("Introduction"))
         let aboutSection = SectionFormer(rowFormer: nameRow, phoneRow, genderRow, birthdayRow)
             .set(headerViewFormer: createHeader("About"))
         let moreSection = SectionFormer(rowFormer: moreRow)
             .set(headerViewFormer: createHeader("More Infomation"))
         
-        former.append(sectionFormer: imageSection, introductionSection, aboutSection, moreSection)
+        former.append(sectionFormer: imageSection, aboutSection, moreSection)
             .onCellSelected { [weak self] _ in
                 self?.formerInputAccessoryView.update()
         }
         if  (myProfile?.moreInformation)! {
+//        if let _ = myProfile?.moreInformation {
             former.append(sectionFormer: informationSection)
         }
     }
@@ -232,6 +222,7 @@ class ProfileViewController: UITableViewController {
         }
     }()
     
+    
     private lazy var informationSection: SectionFormer = {
         let nicknameRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
             $0.titleLabel.text = "Nickname"
@@ -242,8 +233,8 @@ class ProfileViewController: UITableViewController {
 
             }.onTextChanged {
                 self.saveProfile(with: "nickname", value: $0)
-
         }
+        
         let locationRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
             $0.titleLabel.text = "Location"
             $0.textField.inputAccessoryView = self?.formerInputAccessoryView
@@ -253,21 +244,30 @@ class ProfileViewController: UITableViewController {
 
             }.onTextChanged {
                 self.saveProfile(with: "location", value: $0)
-
         }
-        let jobRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
-            $0.titleLabel.text = "Job"
-            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
-            }.configure {
-                $0.placeholder = "Add your job"
-                $0.text = self.myProfile?.job
 
-            }.onTextChanged {
-                self.saveProfile(with: "job", value: $0)
+        let createMenu: ((String, (() -> Void)?) -> RowFormer) = { text, onSelected in
+            return LabelRowFormer<FormLabelCell>() {
+                $0.titleLabel.textColor = .formerColor()
+                $0.titleLabel.font = .boldSystemFont(ofSize: 15)
+                $0.accessoryType = .disclosureIndicator
+                }.configure {
+                    $0.text = text
+                }.onSelected { _ in
+                    onSelected?()
+            }
         }
-        return SectionFormer(rowFormer: nicknameRow, locationRow, jobRow)
+        
+        let myCharityRow = createMenu("My Charity") { [weak self] in
+            self?.performSegue(withIdentifier: "ShowMyCharitySegue", sender: self)
+        }
+        
+        
+        return SectionFormer(rowFormer: nicknameRow, locationRow, myCharityRow)
     }()
 
+   
+    
     private func presentImagePicker() {
         let picker = UIImagePickerController()
         picker.delegate = self
