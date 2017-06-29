@@ -54,6 +54,7 @@
 		180FFAE91E7DC3D600435772 /* FormLabelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFABC1E7DC3D600435772 /* FormLabelHeaderView.swift */; };
 		180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */; };
 		180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */; };
+		181D79941EF5BE47008515D5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D79931EF5BE47008515D5 /* Network.swift */; };
 		1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */; };
 		1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */; };
 		1829D8D01E81B8D400EEFE71 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CF1E81B8D400EEFE71 /* UIViewController+Extention.swift */; };
@@ -102,9 +103,11 @@
 		18FCC5DD1E7EF22600198CF0 /* EPContactsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5D71E7EF22600198CF0 /* EPContactsPicker.swift */; };
 		18FCC5DE1E7EF22600198CF0 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5D81E7EF22600198CF0 /* EPExtensions.swift */; };
 		18FCC5E01E7EF35700198CF0 /* SGSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */; };
+		E5C5BC4814C251F575DE70B9 /* Pods_SnapGyft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC2EAA6B5966C7513AAB391 /* Pods_SnapGyft.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		129FCB9D159D7A5C0FA376EC /* Pods-SnapGyft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapGyft.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapGyft/Pods-SnapGyft.debug.xcconfig"; sourceTree = "<group>"; };
 		180FFA631E7DC00700435772 /* TextSelectorViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSelectorViewContorller.swift; sourceTree = "<group>"; };
 		180FFA6D1E7DC00700435772 /* FormerInputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormerInputAccessoryView.swift; sourceTree = "<group>"; };
 		180FFA891E7DC3D600435772 /* FormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 		180FFABC1E7DC3D600435772 /* FormLabelHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelHeaderView.swift; sourceTree = "<group>"; };
 		180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+FormerDemo.swift"; sourceTree = "<group>"; };
 		180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FormerDemo.swift"; sourceTree = "<group>"; };
+		181D79931EF5BE47008515D5 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGButtonExtender.swift; sourceTree = "<group>"; };
 		1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
 		1829D8CF1E81B8D400EEFE71 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 		18FCC5D71E7EF22600198CF0 /* EPContactsPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPContactsPicker.swift; sourceTree = "<group>"; };
 		18FCC5D81E7EF22600198CF0 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPExtensions.swift; sourceTree = "<group>"; };
 		18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSendViewController.swift; sourceTree = "<group>"; };
+		BCC2EAA6B5966C7513AAB391 /* Pods_SnapGyft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapGyft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D85994039F588C6C59BCF4D8 /* Pods-SnapGyft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapGyft.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapGyft/Pods-SnapGyft.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				185D8C4B1E7C77C400692AD4 /* AccountKit.framework in Frameworks */,
+				E5C5BC4814C251F575DE70B9 /* Pods_SnapGyft.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,11 +406,21 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
+		1883F4391EF59AF4001BACB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2EAA6B5966C7513AAB391 /* Pods_SnapGyft.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		18AE40601E7B15C600B7F495 = {
 			isa = PBXGroup;
 			children = (
 				18AE406B1E7B15C600B7F495 /* SnapGyft */,
 				18AE406A1E7B15C600B7F495 /* Products */,
+				1883F4391EF59AF4001BACB6 /* Frameworks */,
+				8AEECB31FC445F9EEB2E2D2E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -418,6 +435,7 @@
 		18AE406B1E7B15C600B7F495 /* SnapGyft */ = {
 			isa = PBXGroup;
 			children = (
+				181D79931EF5BE47008515D5 /* Network.swift */,
 				185D8C491E7C77C400692AD4 /* AccountKit.framework */,
 				185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */,
 				1829D8D11E81CD2300EEFE71 /* CountryPicker */,
@@ -500,6 +518,15 @@
 			path = TabBarAnimation/ContactsPicker;
 			sourceTree = "<group>";
 		};
+		8AEECB31FC445F9EEB2E2D2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				129FCB9D159D7A5C0FA376EC /* Pods-SnapGyft.debug.xcconfig */,
+				D85994039F588C6C59BCF4D8 /* Pods-SnapGyft.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -507,9 +534,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18AE407E1E7B15C600B7F495 /* Build configuration list for PBXNativeTarget "SnapGyft" */;
 			buildPhases = (
+				9B7CB3657A0A1712077F7CF9 /* [CP] Check Pods Manifest.lock */,
 				18AE40651E7B15C600B7F495 /* Sources */,
 				18AE40661E7B15C600B7F495 /* Frameworks */,
 				18AE40671E7B15C600B7F495 /* Resources */,
+				C5C37D8FB2428F807737690A /* [CP] Embed Pods Frameworks */,
+				3AF081172BE837891EA5B63D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -580,6 +610,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3AF081172BE837891EA5B63D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapGyft/Pods-SnapGyft-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B7CB3657A0A1712077F7CF9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C5C37D8FB2428F807737690A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapGyft/Pods-SnapGyft-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		18AE40651E7B15C600B7F495 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -608,6 +686,7 @@
 				180FFACC1E7DC3D600435772 /* Former.swift in Sources */,
 				180FFAE41E7DC3D600435772 /* BaseViewFormer.swift in Sources */,
 				18AE40921E7B1FE600B7F495 /* TabBarAnimateController.swift in Sources */,
+				181D79941EF5BE47008515D5 /* Network.swift in Sources */,
 				180FFAC61E7DC3D600435772 /* FormSelectorPickerCell.swift in Sources */,
 				18FCC5CA1E7EF07700198CF0 /* DynamicHeightCell.swift in Sources */,
 				18FCC5DE1E7EF22600198CF0 /* EPExtensions.swift in Sources */,
@@ -693,6 +772,7 @@
 		18AE407C1E7B15C600B7F495 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -742,6 +822,7 @@
 		18AE407D1E7B15C600B7F495 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -783,10 +864,14 @@
 		};
 		18AE407F1E7B15C600B7F495 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 129FCB9D159D7A5C0FA376EC /* Pods-SnapGyft.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R6B4T8WMUH;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SnapGyft",
@@ -804,10 +889,14 @@
 		};
 		18AE40801E7B15C600B7F495 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D85994039F588C6C59BCF4D8 /* Pods-SnapGyft.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R6B4T8WMUH;
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SnapGyft",

@@ -53,7 +53,9 @@ class ProfileViewController: UITableViewController {
     
     func saveProfile(with propertyName: String, value: Any) {
         
-        if (myProfile == nil){
+        if let _ = myProfile{
+            
+        }else{
             myProfile = Profile(context: managedObjectContext!)
         }
         
@@ -172,6 +174,7 @@ class ProfileViewController: UITableViewController {
                     $0.switched = moreInformation
                 }
                 $0.switchWhenSelected = true
+
             }.onSwitchChanged { [weak self] in
                 self?.saveProfile(with: "moreinfo", value: $0)
                 self?.switchInfomationSection()
@@ -199,8 +202,9 @@ class ProfileViewController: UITableViewController {
             .onCellSelected { [weak self] _ in
                 self?.formerInputAccessoryView.update()
         }
-        if  (myProfile?.moreInformation)! {
-//        if let _ = myProfile?.moreInformation {
+   //     if  (myProfile?.moreInformation)! {
+       // if let _ = myProfile?.moreInformation {
+        if myProfile?.moreInformation == true{
             former.append(sectionFormer: informationSection)
         }
     }
@@ -276,7 +280,7 @@ class ProfileViewController: UITableViewController {
         present(picker, animated: true, completion: nil)
     }
     
-    private func switchInfomationSection() {
+    private func switchInfomationSection(){
         if (myProfile?.moreInformation)! {
             former.insertUpdate(sectionFormer: informationSection, toSection: former.numberOfSections, rowAnimation: .top)
         } else {

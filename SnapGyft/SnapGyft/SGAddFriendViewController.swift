@@ -55,14 +55,14 @@ class SGAddFriendViewController: UIViewController {
     }()
     
     @IBAction func CountryCodeBtnClicked(_ sender: Any) {
-        let picker = MICountryPicker { (name, code) -> () in}
-        // Optional: To pick from custom countries list
-        // picker.customCountriesCode = ["EG", "US", "AF", "AQ", "AX"]
-        picker.delegate = self
-        picker.showCallingCodes = true
-        picker.didSelectCountryClosure = { name, code in}
-        
-        self.present(UINavigationController(rootViewController: picker), animated: true, completion: nil)
+//        let picker = MICountryPicker { (name, code) -> () in}
+//        // Optional: To pick from custom countries list
+//        // picker.customCountriesCode = ["EG", "US", "AF", "AQ", "AX"]
+//        picker.delegate = self
+//        picker.showCallingCodes = true
+//        picker.didSelectCountryClosure = { name, code in}
+//        
+//        self.present(UINavigationController(rootViewController: picker), animated: true, completion: nil)
     }
     
     @IBAction func SaveBtnClicked(_ sender: Any) {
