@@ -8,23 +8,42 @@
 
 import UIKit
 import AccountKit
+import Alertift
+import Alamofire
+import KRProgressHUD
+import Alamofire_Synchronous
+
+//enum LoginType: Int {
+//    case Phone
+//    case Email
+//}
 
 class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
 
+  //  @IBOutlet weak var loginUserTextFiled: UITextField!
     var accountKit: AKFAccountKit!
+   // var loginType: LoginType!
 
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        //Add leftView in Login TextField
+//        let leftImageView = UIImageView()
+//        leftImageView.frame = CGRect(x: 0, y: 0, width: 35, height: 30)
+//        leftImageView.image = UIImage(named: "Login_User")
+//        loginUserTextFiled.leftViewMode = .always
+//        loginUserTextFiled.leftView = leftImageView
+        
         if accountKit == nil {
             // may also specify AKFResponseTypeAccessToken
             self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
         }
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         if (accountKit.currentAccessToken != nil) {
             // if the user is already logged in, go to the main screen
             DispatchQueue.main.async(execute: {
@@ -33,70 +52,107 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
         }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   //MARK: - Button Actions
     
-    @IBAction func onLoginBtnClicked(_ sender: Any) {
-        //            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(0), execute: {
-        // DispatchQueue.main.async(execute: {
-        //login with Phone
+    @IBAction func onPhoneButtonClicked(_ sender: Any) {
         let inputState: String = UUID().uuidString
-        let viewController:AKFViewController = self.accountKit.viewControllerForPhoneLogin(with: nil, state: inputState)  as! AKFViewController
-        viewController.enableSendToFacebook = true
-        self.prepareLoginViewController(viewController)
+        let viewController = accountKit.viewControllerForPhoneLogin(with: nil, state: inputState) as? AKFViewController
+        viewController?.defaultCountryCode =  "IN" //"US"
+        prepareLoginViewController(viewController!)
         self.present(viewController as! UIViewController, animated: true, completion: nil)
-        // })
+
     }
     
-    //MARK: - AKFAccountKit Delegate
-    func viewController(_ viewController: UIViewController!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
-        print("Login succcess with AccessToken")
+    @IBAction func onLoginButtonClicked(_ sender: Any) {
+        let inputState: String = UUID().uuidString
+        let viewController = accountKit.viewControllerForEmailLogin(withEmail: nil, state: inputState) as? AKFViewController
+        prepareLoginViewController(viewController!)
+        self.present(viewController as! UIViewController, animated: true, completion: nil)
     }
-    func viewController(_ viewController: UIViewController!, didCompleteLoginWithAuthorizationCode code: String!, state: String!) {
-        print("Login succcess with AuthorizationCode")
-    }
-    private func viewController(_ viewController: UIViewController!, didFailWithError error: NSError!) {
-        print("We have an error \(error)")
-    }
-    func viewControllerDidCancel(_ viewController: UIViewController!) {
-        print("The user cancel the login")
-    }
+    
+//    @IBAction func onGetStartedClicked(_ sender: UIButton) {
+//        
+//        if (loginUserTextFiled.text?.isContainsLetters)! {//Email
+//            if (loginUserTextFiled.text?.isValidEmail)! {
+//                
+//                self.loginType = .Email
+//                checkUserExistance()
+//            }else{
+//                Alertift.alert(title: "SnapGyft", message: "Please enter valid Email-ID")
+//                    .action(.default("OK")).show()
+//            }
+//        }else{//Phone
+//            if (loginUserTextFiled.text?.isValidPhoneNumber)! {
+//                //            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(0), execute: {
+//                // DispatchQueue.main.async(execute: {
+//                // })
+//
+//                self.loginType = .Phone
+//                checkUserExistance()
+//            }else{
+//                Alertift.alert(title: "SnapGyft", message: "Please enter valid 10 digits number")
+//                    .action(.default("OK")).show()
+//            }
+//        }
+//    }
+    
+
+    //MARK: - Userdefiend Methods
     
     func prepareLoginViewController(_ loginViewController: AKFViewController) {
         
         loginViewController.delegate = self
-        loginViewController.advancedUIManager = nil
-        
-        //Costumize the theme
-//        let theme:AKFTheme = AKFTheme.default()
-//        theme.headerBackgroundColor = UIColor(red: 0.325, green: 0.557, blue: 1, alpha: 1)
-//        theme.headerTextColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-//        theme.iconColor = UIColor(red: 0.325, green: 0.557, blue: 1, alpha: 1)
-//        theme.inputTextColor = UIColor(white: 0.4, alpha: 1.0)
-//        theme.statusBarStyle = .default
-//        theme.textColor = UIColor(white: 0.3, alpha: 1.0)
-//        theme.titleColor = UIColor(red: 0.247, green: 0.247, blue: 0.247, alpha: 1)
-//        loginViewController.theme = theme
-        
-        let theme:AKFTheme = AKFTheme.default()
-        theme.headerBackgroundColor = UIColor.formerSubColor()
-        //theme.headerTextType = .appName
-        theme.headerTextColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-        theme.iconColor = UIColor(red: 0.325, green: 0.557, blue: 1, alpha: 1)
-        theme.inputTextColor = UIColor(white: 0.4, alpha: 1.0)
-        theme.statusBarStyle = .default
-        theme.textColor = UIColor(white: 0.3, alpha: 1.0)
-        theme.titleColor = UIColor(red: 0.247, green: 0.247, blue: 0.247, alpha: 1)
+        loginViewController.enableSendToFacebook = true
+        //viewController.enableGetACall = true
+        loginViewController.uiManager = AKFSkinManager.init(skinType: .classic, primaryColor: UIColor.formerSubColor(), backgroundImage: UIImage(named: "Login_Background"), backgroundTint: .white, tintIntensity: 0.60)
+    }
     
+    //MARK: - AKFAccountKit Delegate
+    func viewController(_ viewController: UIViewController!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
         
-        theme.inputBackgroundColor = UIColor(red: 0.9, green: 0.55, blue: 0.08, alpha: 0.3)
-        theme.buttonDisabledBackgroundColor = UIColor(red: 0.9, green: 0.55, blue: 0.08, alpha: 0.3)
-        theme.buttonBackgroundColor = UIColor(red: 0.9, green: 0.55, blue: 0.08, alpha: 0.6)
-        theme.buttonHighlightedBackgroundColor = UIColor.formerSubColor()
-        loginViewController.theme = theme
+        KRProgressHUD.show(withMessage: "UpdateAccount API", completion: nil)
         
+        /* Synchronous Request
+         let response = Alamofire.request(Constants.API_UPDATE_ACCOUNT_STATUS, method: .post, parameters: params).responseJSON()
+         if let json = response.result.value {
+         print(json)
+         }*/
+    }
+    
+    func viewController(_ viewController: UIViewController!, didCompleteLoginWithAuthorizationCode code: String!, state: String!) {
+        print("Login succcess with AuthorizationCode")
+    }
+    func viewController(_ viewController: UIViewController!, didFailWithError error: Error!) {
+        print("We have an error \(error)") //phone_number=919748736234
+        
+        //If failed by Facebook server, Then send Phone number to server to be update
+        KRProgressHUD.show()
+        let payload: [String:String] = ["PhoneNumber": "1234567890"] //TODO:- Find Phone Number form Error
+        let params: [String : Any] = ["Header": SGUtility().keyParamsForService, "Payload": payload]
+        Alamofire.request(Constants.API_ISREGISTERED_ACCOUNT,
+                          method: .post,
+                          parameters: params,
+                          encoding: JSONEncoding.default,
+                          headers : nil).responseJSON { response in
+                            
+            /*print(response)
+             let disc = response.result.value as! Dictionary<String, Any>
+             print(disc["IsRegistered"]!)*/
+            
+            KRProgressHUD.dismiss()
+            switch response.result{
+            case .success:
+                break
+                
+            case .failure:
+                Alertift.alert(title: "SnapGyft", message: "Service Down").action(.default("OK")).show()
+                break
+            }
+        }
+
+    }
+    func viewControllerDidCancel(_ viewController: UIViewController!) {
+        print("The user cancel the login")
     }
 
     /*
@@ -110,3 +166,5 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
     */
 
 }
+
+

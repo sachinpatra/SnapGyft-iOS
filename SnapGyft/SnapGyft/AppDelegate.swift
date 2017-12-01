@@ -8,17 +8,21 @@
 
 import UIKit
 import CoreData
+import KRProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let indicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        self.setupAppearance()
+        // ProgressHUD Configuration
+        KRProgressHUD.set(style: .custom(background: UIColor.white, text: UIColor.black, icon: nil))
+        KRProgressHUD.set(activityIndicatorViewStyle: .gradationColor(head: .formerSubColor(), tail: .formerSubColor()))
+
+        
+        setupAppearance()
         
         return true
     }
@@ -104,24 +108,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-    
-    // MARK: - HUD Custom Method
-    func showHUD(viewNew: UIView){
-        DispatchQueue.main.async {
-            self.indicator.center = viewNew.center
-            self.indicator.frame.origin.y = self.indicator.frame.origin.y - 64
-            self.indicator.backgroundColor = UIColor.lightGray
-            viewNew.addSubview(self.indicator)
-            viewNew.bringSubview(toFront: self.indicator)
-            self.indicator.startAnimating(isUserInteractionEnabled: false)
-        }
-    }
-    
-    func HideHud() {
-        DispatchQueue.main.async {
-            self.indicator.stopAnimating(isUserInteractionEnabled: true)
-        }
-    }
 
     func mobileNumberValidate(number: String) -> Bool {
         let numberRegEx = "[0-9]{10,15}"
@@ -147,15 +133,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-}
-
-extension UIActivityIndicatorView {
-    func startAnimating(isUserInteractionEnabled: Bool){
-        self.startAnimating()
-        self.superview?.isUserInteractionEnabled = isUserInteractionEnabled
-    }
-    func stopAnimating(isUserInteractionEnabled: Bool){
-        self.stopAnimating()
-        self.superview?.isUserInteractionEnabled = isUserInteractionEnabled
-    }
 }

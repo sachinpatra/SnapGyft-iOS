@@ -6,5 +6,8 @@ target 'SnapGyft' do
   use_frameworks!
 
   pod 'Alamofire', '~> 4.2.0'
-
+  pod 'KRProgressHUD'
+  pod 'Alertift'
+  pod 'Alamofire-Synchronous', '~> 4.0'
+ 
 end

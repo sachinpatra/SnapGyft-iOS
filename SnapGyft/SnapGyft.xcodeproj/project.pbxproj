@@ -57,10 +57,12 @@
 		181D79941EF5BE47008515D5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D79931EF5BE47008515D5 /* Network.swift */; };
 		1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */; };
 		1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */; };
-		1829D8D01E81B8D400EEFE71 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CF1E81B8D400EEFE71 /* UIViewController+Extention.swift */; };
 		1829D8D51E81CD2300EEFE71 /* assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1829D8D21E81CD2300EEFE71 /* assets.bundle */; };
 		1829D8D61E81CD2300EEFE71 /* CallingCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1829D8D31E81CD2300EEFE71 /* CallingCodes.plist */; };
 		1829D8D71E81CD2300EEFE71 /* MICountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8D41E81CD2300EEFE71 /* MICountryPicker.swift */; };
+		1835F6A61F0CF4E50071184E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6A51F0CF4E50071184E /* Profile.swift */; };
+		184232961FC8707B002F1FC5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232951FC8707B002F1FC5 /* Constants.swift */; };
+		184232991FC87483002F1FC5 /* SGUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232981FC87483002F1FC5 /* SGUtility.swift */; };
 		18592A291E85DB3600003E6A /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 18592A241E85DB3600003E6A /* generator.rb */; };
 		18592A2A1E85DB3600003E6A /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18592A251E85DB3600003E6A /* octicons.ttf */; };
 		18592A2B1E85DB3600003E6A /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18592A261E85DB3600003E6A /* octicons.txt */; };
@@ -83,6 +85,7 @@
 		18AE40921E7B1FE600B7F495 /* TabBarAnimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408E1E7B1FE600B7F495 /* TabBarAnimateController.swift */; };
 		18AE40931E7B1FE600B7F495 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */; };
 		18AE40971E7B218600B7F495 /* SFBaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */; };
+		18B7C95A1FCF325A00771B64 /* AwesomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C9591FCF325A00771B64 /* AwesomeButton.swift */; };
 		18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */; };
 		18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */; };
 		18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */; };
@@ -158,10 +161,12 @@
 		181D79931EF5BE47008515D5 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGButtonExtender.swift; sourceTree = "<group>"; };
 		1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
-		1829D8CF1E81B8D400EEFE71 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		1829D8D21E81CD2300EEFE71 /* assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = assets.bundle; sourceTree = "<group>"; };
 		1829D8D31E81CD2300EEFE71 /* CallingCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CallingCodes.plist; sourceTree = "<group>"; };
 		1829D8D41E81CD2300EEFE71 /* MICountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MICountryPicker.swift; sourceTree = "<group>"; };
+		1835F6A51F0CF4E50071184E /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		184232951FC8707B002F1FC5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		184232981FC87483002F1FC5 /* SGUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGUtility.swift; sourceTree = "<group>"; };
 		18592A241E85DB3600003E6A /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
 		18592A251E85DB3600003E6A /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.ttf; sourceTree = "<group>"; };
 		18592A261E85DB3600003E6A /* octicons.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = octicons.txt; sourceTree = "<group>"; };
@@ -187,6 +192,7 @@
 		18AE408E1E7B1FE600B7F495 /* TabBarAnimateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarAnimateController.swift; sourceTree = "<group>"; };
 		18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFBaseTabBarViewController.swift; sourceTree = "<group>"; };
+		18B7C9591FCF325A00771B64 /* AwesomeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeButton.swift; sourceTree = "<group>"; };
 		18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAddFriendViewController.swift; sourceTree = "<group>"; };
 		18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSettingsViewController.swift; sourceTree = "<group>"; };
@@ -351,6 +357,7 @@
 		180FFAF01E7DE46B00435772 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1835F6A41F0CF4E50071184E /* DataBase */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -371,7 +378,6 @@
 				180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */,
 				1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */,
 				1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */,
-				1829D8CF1E81B8D400EEFE71 /* UIViewController+Extention.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -384,6 +390,14 @@
 				1829D8D41E81CD2300EEFE71 /* MICountryPicker.swift */,
 			);
 			path = CountryPicker;
+			sourceTree = "<group>";
+		};
+		1835F6A41F0CF4E50071184E /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				1835F6A51F0CF4E50071184E /* Profile.swift */,
+			);
+			path = DataBase;
 			sourceTree = "<group>";
 		};
 		18592A221E85DB3600003E6A /* Icons */ = {
@@ -435,7 +449,10 @@
 		18AE406B1E7B15C600B7F495 /* SnapGyft */ = {
 			isa = PBXGroup;
 			children = (
+				18B7C9591FCF325A00771B64 /* AwesomeButton.swift */,
 				181D79931EF5BE47008515D5 /* Network.swift */,
+				184232951FC8707B002F1FC5 /* Constants.swift */,
+				184232981FC87483002F1FC5 /* SGUtility.swift */,
 				185D8C491E7C77C400692AD4 /* AccountKit.framework */,
 				185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */,
 				1829D8D11E81CD2300EEFE71 /* CountryPicker */,
@@ -632,13 +649,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapGyft-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C5C37D8FB2428F807737690A /* [CP] Embed Pods Frameworks */ = {
@@ -647,9 +667,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SnapGyft/Pods-SnapGyft-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
+				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
+				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -669,7 +700,6 @@
 				180FFAD81E7DC3D600435772 /* InlineDatePickerRowFormer.swift in Sources */,
 				180FFAE01E7DC3D600435772 /* StepperRowFormer.swift in Sources */,
 				180FFAC51E7DC3D600435772 /* FormSelectorDatePickerCell.swift in Sources */,
-				1829D8D01E81B8D400EEFE71 /* UIViewController+Extention.swift in Sources */,
 				180FFAD41E7DC3D600435772 /* BaseRowFormer.swift in Sources */,
 				180FFAE51E7DC3D600435772 /* CustomViewFormer.swift in Sources */,
 				180FFAC91E7DC3D600435772 /* FormSwitchCell.swift in Sources */,
@@ -699,6 +729,7 @@
 				18FCC5E01E7EF35700198CF0 /* SGSendViewController.swift in Sources */,
 				180FFAE71E7DC3D600435772 /* FormHeaderFooterView.swift in Sources */,
 				180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */,
+				18B7C95A1FCF325A00771B64 /* AwesomeButton.swift in Sources */,
 				1829D8D71E81CD2300EEFE71 /* MICountryPicker.swift in Sources */,
 				180FFAE81E7DC3D600435772 /* FormLabelFooterView.swift in Sources */,
 				18AE40901E7B1FE600B7F495 /* AnimateItem.swift in Sources */,
@@ -712,6 +743,7 @@
 				180FFADC1E7DC3D600435772 /* SegmentedRowFormer.swift in Sources */,
 				18592A2C1E85DB3600003E6A /* SFCustomIconKit.swift in Sources */,
 				180FFAC31E7DC3D600435772 /* FormPickerCell.swift in Sources */,
+				184232991FC87483002F1FC5 /* SGUtility.swift in Sources */,
 				180FFAE31E7DC3D600435772 /* TextViewRowFormer.swift in Sources */,
 				180FFA7C1E7DC00700435772 /* TextSelectorViewContorller.swift in Sources */,
 				180FFACE1E7DC3D600435772 /* RowFormer.swift in Sources */,
@@ -719,6 +751,7 @@
 				180FFAC41E7DC3D600435772 /* FormSegmentedCell.swift in Sources */,
 				180FFAD71E7DC3D600435772 /* DatePickerRowFormer.swift in Sources */,
 				18FCC5D91E7EF22600198CF0 /* EPConstants.swift in Sources */,
+				1835F6A61F0CF4E50071184E /* Profile.swift in Sources */,
 				180FFAC11E7DC3D600435772 /* FormInlinePickerCell.swift in Sources */,
 				180FFAC71E7DC3D600435772 /* FormSliderCell.swift in Sources */,
 				18FCC5DA1E7EF22600198CF0 /* EPContact.swift in Sources */,
@@ -728,6 +761,7 @@
 				18FCC5DD1E7EF22600198CF0 /* EPContactsPicker.swift in Sources */,
 				180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */,
 				18AE40861E7B185000B7F495 /* SFEventViewController.swift in Sources */,
+				184232961FC8707B002F1FC5 /* Constants.swift in Sources */,
 				189E9EA71E806CE6007460E0 /* UITableViewCell+Former.swift in Sources */,
 				180FFACF1E7DC3D600435772 /* SectionFormer.swift in Sources */,
 				180FFABF1E7DC3D600435772 /* FormDatePickerCell.swift in Sources */,

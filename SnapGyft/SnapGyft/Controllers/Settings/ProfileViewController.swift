@@ -11,10 +11,8 @@ import CoreData
 
 class ProfileViewController: UITableViewController {
 
-    var managedObjectContext: NSManagedObjectContext? = nil
+    var container: NSPersistentContainer? = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     var myProfile: Profile?
-    var accountKit: AKFAccountKit!
-    
 
     // MARK: Public
     public private(set) lazy var former: Former = Former(tableView: self.tableView)
@@ -24,89 +22,103 @@ class ProfileViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Profile"
         
-        
-        managedObjectContext = appdelObj.persistentContainer.viewContext
-        let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Profile")
-        
         do {
-            myProfile = try (managedObjectContext?.fetch(employeesFetch) as! [Profile]).first
+            myProfile = try (container?.viewContext.fetch(Profile.fetchRequest()))?.first
         } catch {
             fatalError("Failed to fetch employees: \(error)")
         }
-        
-        if myProfile?.phoneNumber == nil
-            /*&& accountKit == nil */{
-            self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
-            accountKit.requestAccount{
-                (account, error) -> Void in
-                self.saveProfile(with: "accountID", value: account?.accountID ?? "")
-                
-                if account?.phoneNumber?.phoneNumber != nil {
-                    self.saveProfile(with: "phonenumber", value: account!.phoneNumber?.stringRepresentation() ?? "")
-                }
-            }
-        }
-
         
         configure()
     }
     
     func saveProfile(with propertyName: String, value: Any) {
         
-        if let _ = myProfile{
+//        // Save the context.
+//        switch propertyName {
+//        case "name":
+//            myProfile?.firstName = value as? String
+//            break
+//        case "phone":
+//            myProfile?.phoneNumber = value as? String
+//            break
+//        case "gender":
+//            myProfile?.gender = value as? String
+//            break
+//        case "birthday":
+//            myProfile?.birthDay = value as? NSDate
+//            break
+//        case "introduction":
+//            myProfile?.introduction = value as? String
+//            break
+//        case "moreinfo":
+//            myProfile?.moreInformation = value as! Bool
+//            break
+//        case "nickname":
+//            myProfile?.nickname = value as? String
+//            break
+//        case "location":
+//            myProfile?.location = value as? String
+//            break
+//        case "job":
+//            myProfile?.job = value as? String
+//            break
+//        case "imagedata":
+//            myProfile?.imageData = value as? NSData
+//            break
+//            
+//        default: break
+//        }
+//        
+//        if let context = container?.viewContext{
+//           // context.perform {
+//                try? context.save()
+//           // }
+//
+//        }
+        
+        container?.performBackgroundTask({ [weak self] context in
             
-        }else{
-            myProfile = Profile(context: managedObjectContext!)
-        }
-        
-        switch propertyName {
-        case "name":
-            myProfile?.firstName = value as? String
-            break
-        case "phone":
-            myProfile?.phoneNumber = value as? String
-            break
-        case "gender":
-            myProfile?.gender = value as? String
-            break
-        case "birthday":
-            myProfile?.birthDay = value as? NSDate
-            break
-        case "introduction":
-            myProfile?.introduction = value as? String
-            break
-        case "moreinfo":
-            myProfile?.moreInformation = value as! Bool
-            break
-        case "nickname":
-            myProfile?.nickname = value as? String
-            break
-        case "location":
-            myProfile?.location = value as? String
-            break
-        case "job":
-            myProfile?.job = value as? String
-            break
-        case "accountID":
-            myProfile?.accountID = value as? String
-            break
-        case "phonenumber":
-            myProfile?.phoneNumber = value as? String
-            break
-        case "imagedata":
-            myProfile?.imageData = value as? NSData
-            break
+            let profile = try? context.fetch(Profile.fetchRequest()).first as? Profile
+            
+            switch propertyName {
+            case "name":
+                profile??.firstName = value as? String
+                break
+            case "phone":
+                profile??.phoneNumber = value as? String
+                break
+            case "gender":
+                profile??.gender = value as? String
+                break
+            case "birthday":
+                profile??.birthDay = value as? NSDate
+                break
+            case "introduction":
+                profile??.introduction = value as? String
+                break
+            case "moreinfo":
+                profile??.moreInformation = value as! Bool
+                break
+            case "nickname":
+                profile??.nickname = value as? String
+                break
+            case "location":
+                profile??.location = value as? String
+                break
+            case "job":
+                profile??.job = value as? String
+                break
+            case "imagedata":
+                profile??.imageData = value as? NSData
+                break
+                
+            default: break
+            }
 
-        default: break
-        }
-        
-        // Save the context.
-        do {
-            try managedObjectContext!.save()
-        } catch {
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
+            self?.myProfile = profile!
+            
+            try? context.save()
+        })
     }
 
     // MARK: Private
@@ -177,7 +189,7 @@ class ProfileViewController: UITableViewController {
 
             }.onSwitchChanged { [weak self] in
                 self?.saveProfile(with: "moreinfo", value: $0)
-                self?.switchInfomationSection()
+                self?.switchInfomationSection(switchStatus: $0)
         }
         
         // Create Headers
@@ -214,7 +226,6 @@ class ProfileViewController: UITableViewController {
             $0.iconView.image = UIImage(named: "Profile_Demo")
             if let image = self.myProfile?.imageData{
                 var imageArray =  UIImage(data: image as Data)
-                print("temp")
                 $0.iconView.image = UIImage(data: image as Data)
             }
             }.configure {
@@ -280,8 +291,8 @@ class ProfileViewController: UITableViewController {
         present(picker, animated: true, completion: nil)
     }
     
-    private func switchInfomationSection(){
-        if (myProfile?.moreInformation)! {
+    private func switchInfomationSection(switchStatus: Bool){
+        if (switchStatus) {
             former.insertUpdate(sectionFormer: informationSection, toSection: former.numberOfSections, rowAnimation: .top)
         } else {
             former.removeUpdate(sectionFormer: informationSection, rowAnimation: .top)

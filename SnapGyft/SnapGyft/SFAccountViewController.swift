@@ -8,45 +8,96 @@
 
 import UIKit
 import Alamofire
+import CoreData
+import KRProgressHUD
+import Alertift
 
 class SFAccountViewController: UIViewController {
     
+    var container: NSPersistentContainer? = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    var accountKit: AKFAccountKit!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-      //  let request = Network.request("https://httpbin.org/get").query(["foo": "bar", "sachin": "patra"]).build()
-//        request?.responseJSON(completionHandler: { (_, URLResponse, JSONData, error) -> Void in
-//            print("sachin = \(JSONData!)")
-//            
-//            let dict = JSONData as! [String:Any]
-//            print("sachin \(dict)")
-//
-//        })
+        container?.performBackgroundTask({ [weak self] context in
+            let profileCount = try? context.fetch(Profile.fetchRequest()).count
+            if profileCount == 0{
+                self?.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
+                self?.accountKit.requestAccount{
+                    (account, error) -> Void in
+                    _ = Profile.createProfile(accountID: account!.accountID, phoneNumber: account!.phoneNumber!.stringRepresentation(), in: context)
+                    try? context.save()
+                    
+                    let payload: [String:Any] = ["PhoneNumber": account!.phoneNumber!.stringRepresentation(),
+                                                 "VerificationStatus": "Verified",
+                                                 "Device": SGUtility().deviceParamsForService]
+                    let params: [String : Any] = ["Header": SGUtility().keyParamsForService, "Payload": payload]
+                    Alamofire.request(Constants.API_UPDATE_ACCOUNT_STATUS,
+                                      method: .post,
+                                      parameters: params,
+                                      encoding: JSONEncoding.default,
+                                      headers : nil).responseJSON { [weak self] response in
+                                        
+                        switch response.result{
+                        case .success:
+                            KRProgressHUD.update(message: "AccountDetails API")
+                            let payload: [String:Any] = ["AccountNumber": "236834"]
+                            let params: [String : Any] = ["Header": SGUtility().keyParamsForService, "Payload": payload]
+                            Alamofire.request(Constants.API_ACCOUNT_DETAILS,
+                                              method: .post,
+                                              parameters: params,
+                                              encoding: JSONEncoding.default,
+                                              headers : nil).responseJSON { [weak self] response in
+                                                
+                                switch response.result{
+                                case .success(_):
+                                    KRProgressHUD.dismiss()
+                                    break
+                                case .failure(_):
+                                    self?.onServiceFailure()
+                                    break
+                                }
+                            }
+                            break
         
-        
-        let url = "https://hybridapp1.azurewebsites.net/api/register/RegisterUser"
-        let keyParams: [String:String]   = ["MsgId": "1b4d68ff-c988-4af3-b53a-81356953d2ea",
-                          "MsgDateTime": "1997-07-16 19:20:30.45+0100",
-                          "CustLangPref": "en-In",
-                          "SystemId": "Mobile_Android",]
-        let par: [String:String] = ["MobileNumber": "8984048840"]
-        let params: [String : Any] = ["Header": keyParams, "Payload": par]
-        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default, headers : nil)
-            .responseJSON { response in
-                
-                print(response)
-                let disc = response.result.value as! Dictionary<String, Any>
-                print(disc["UserID"]!)
-                
-        }
+                        case .failure:
+                            self?.onServiceFailure()
+                            break
+                        }
+                    }
+
+                }
+            }
+        })
+       
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
+    //MARK: - Userdefiend Methods
+    func onServiceFailure() {
+        KRProgressHUD.dismiss({
+            let alert = UIAlertController(title: "SnapGyft", message: "Service Down", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: { action in
+                self.accountKit.logOut()
+                DispatchQueue.main.async(execute: {
+                    self.performSegue(withIdentifier: "ShowLoginSegue", sender: self)
+                })
+            }))
+            self.present(alert, animated: true, completion: nil)
+        })
+
+    }
     /*
     // MARK: - Navigation
 

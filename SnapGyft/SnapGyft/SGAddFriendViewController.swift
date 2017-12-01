@@ -8,6 +8,7 @@
 
 import UIKit
 import Contacts
+import Alertift
 
 protocol SGAddFriendViewControllerDelegate {
     func addContactRefresh(_ addFriendView: SGAddFriendViewController)
@@ -98,7 +99,8 @@ class SGAddFriendViewController: UIViewController {
                     _ = self.navigationController?.popViewController(animated: true)
                 }
                 catch {
-                    self.alertShow(strMessage: "Unable to save the new contact.")
+                    Alertift.alert(title: "SnapGyft", message: "Unable to save the new contact.")
+                        .action(.default("OK")).show()
                 }
                
             }
@@ -114,28 +116,32 @@ class SGAddFriendViewController: UIViewController {
     func validationCheck() -> Bool {
         if (nameTextField.text?.trim().isEmpty)! || nameTextField.text?.trim() == nil
         {
-            alertShow(strMessage: "Please enter full name")
+            Alertift.alert(title: "SnapGyft", message: "Please enter full name")
+                .action(.default("OK")).show()
             return false
         }
         else if (nameTextField.text?.trim().characters.count)! > 0 {
             let arrFullname = nameTextField.text?.trim().components(separatedBy: " ")
             
             if (arrFullname?.count)! < 2 {
-                alertShow(strMessage: "Please enter first and last name")
+                Alertift.alert(title: "SnapGyft", message: "Please enter first and last name")
+                    .action(.default("OK")).show()
                 return false
             }
         }
         
         if (phoneTextField.text?.isEmpty)! || phoneTextField.text == nil
         {
-            alertShow(strMessage: "Please enter mobile number")
+            Alertift.alert(title: "SnapGyft", message: "Please enter mobile number")
+                .action(.default("OK")).show()
             return false
         }
         else if (phoneTextField.text?.characters.count)! > 0
         {
             let checkmobile: Bool = appdelObj.mobileNumberValidate(number: phoneTextField.text!)
             if checkmobile == false {
-                alertShow(strMessage: "Please enter valid mobile number")
+                Alertift.alert(title: "SnapGyft", message: "Please enter valid mobile number")
+                    .action(.default("OK")).show()
                 return false
             }
         }
@@ -148,7 +154,8 @@ class SGAddFriendViewController: UIViewController {
                 return true
             }
             else{
-                alertShow(strMessage: "Please enter valid email")
+                Alertift.alert(title: "SnapGyft", message: "Please enter valid email")
+                    .action(.default("OK")).show()
                 return false
             }
         }

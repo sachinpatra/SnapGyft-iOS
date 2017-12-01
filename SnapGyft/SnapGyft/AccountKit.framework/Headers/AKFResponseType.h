@@ -18,14 +18,19 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ AKFResponseType
+
+  The types of response that can be returned from a login.
+ */
 typedef NS_ENUM(NSUInteger, AKFResponseType) {
   /*
-   @abstract Indicates that the requested response type is an access token.
+    Indicates that the requested response type is an access token.
    */
-  AKFResponseTypeAccessToken,
+  AKFResponseTypeAccessToken = 0,
 
   /*
-   @abstract Indicates that the requested response type is an authorization code that can be exchanged for an access
+    Indicates that the requested response type is an authorization code that can be exchanged for an access
    token.
    */
   AKFResponseTypeAuthorizationCode,
