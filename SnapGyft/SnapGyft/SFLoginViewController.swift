@@ -12,28 +12,16 @@ import Alertift
 import Alamofire
 import KRProgressHUD
 import Alamofire_Synchronous
-
-//enum LoginType: Int {
-//    case Phone
-//    case Email
-//}
+import ReachabilitySwift
 
 class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
 
-  //  @IBOutlet weak var loginUserTextFiled: UITextField!
     var accountKit: AKFAccountKit!
-   // var loginType: LoginType!
+    let reachability = Reachability()!
 
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        //Add leftView in Login TextField
-//        let leftImageView = UIImageView()
-//        leftImageView.frame = CGRect(x: 0, y: 0, width: 35, height: 30)
-//        leftImageView.image = UIImage(named: "Login_User")
-//        loginUserTextFiled.leftViewMode = .always
-//        loginUserTextFiled.leftView = leftImageView
         
         if accountKit == nil {
             // may also specify AKFResponseTypeAccessToken
@@ -53,14 +41,13 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
     }
 
    //MARK: - Button Actions
-    
     @IBAction func onPhoneButtonClicked(_ sender: Any) {
+        
         let inputState: String = UUID().uuidString
         let viewController = accountKit.viewControllerForPhoneLogin(with: nil, state: inputState) as? AKFViewController
         viewController?.defaultCountryCode =  "IN" //"US"
         prepareLoginViewController(viewController!)
         self.present(viewController as! UIViewController, animated: true, completion: nil)
-
     }
     
     @IBAction func onLoginButtonClicked(_ sender: Any) {
@@ -69,32 +56,6 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
         prepareLoginViewController(viewController!)
         self.present(viewController as! UIViewController, animated: true, completion: nil)
     }
-    
-//    @IBAction func onGetStartedClicked(_ sender: UIButton) {
-//        
-//        if (loginUserTextFiled.text?.isContainsLetters)! {//Email
-//            if (loginUserTextFiled.text?.isValidEmail)! {
-//                
-//                self.loginType = .Email
-//                checkUserExistance()
-//            }else{
-//                Alertift.alert(title: "SnapGyft", message: "Please enter valid Email-ID")
-//                    .action(.default("OK")).show()
-//            }
-//        }else{//Phone
-//            if (loginUserTextFiled.text?.isValidPhoneNumber)! {
-//                //            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(0), execute: {
-//                // DispatchQueue.main.async(execute: {
-//                // })
-//
-//                self.loginType = .Phone
-//                checkUserExistance()
-//            }else{
-//                Alertift.alert(title: "SnapGyft", message: "Please enter valid 10 digits number")
-//                    .action(.default("OK")).show()
-//            }
-//        }
-//    }
     
 
     //MARK: - Userdefiend Methods
@@ -110,7 +71,7 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
     //MARK: - AKFAccountKit Delegate
     func viewController(_ viewController: UIViewController!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
         
-        KRProgressHUD.show(withMessage: "UpdateAccount API", completion: nil)
+        KRProgressHUD.show()
         
         /* Synchronous Request
          let response = Alamofire.request(Constants.API_UPDATE_ACCOUNT_STATUS, method: .post, parameters: params).responseJSON()
@@ -122,11 +83,16 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
     func viewController(_ viewController: UIViewController!, didCompleteLoginWithAuthorizationCode code: String!, state: String!) {
         print("Login succcess with AuthorizationCode")
     }
+    
     func viewController(_ viewController: UIViewController!, didFailWithError error: Error!) {
         print("We have an error \(error)") //phone_number=919748736234
         
+        guard reachability.isReachable else {
+            Alertift.alert(title: "SnapGyft", message: "Check Network Connection.").action(.default("OK")).show()
+            return
+        }
+        
         //If failed by Facebook server, Then send Phone number to server to be update
-        KRProgressHUD.show()
         let payload: [String:String] = ["PhoneNumber": "1234567890"] //TODO:- Find Phone Number form Error
         let params: [String : Any] = ["Header": SGUtility().keyParamsForService, "Payload": payload]
         Alamofire.request(Constants.API_ISREGISTERED_ACCOUNT,
@@ -139,7 +105,6 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
              let disc = response.result.value as! Dictionary<String, Any>
              print(disc["IsRegistered"]!)*/
             
-            KRProgressHUD.dismiss()
             switch response.result{
             case .success:
                 break
@@ -149,8 +114,9 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
                 break
             }
         }
-
+        
     }
+    
     func viewControllerDidCancel(_ viewController: UIViewController!) {
         print("The user cancel the login")
     }

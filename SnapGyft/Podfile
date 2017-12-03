@@ -9,5 +9,7 @@ target 'SnapGyft' do
   pod 'KRProgressHUD'
   pod 'Alertift'
   pod 'Alamofire-Synchronous', '~> 4.0'
+  pod 'ReachabilitySwift'
+  pod 'OnboardingKit'
  
 end

@@ -57,9 +57,6 @@
 		181D79941EF5BE47008515D5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D79931EF5BE47008515D5 /* Network.swift */; };
 		1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */; };
 		1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */; };
-		1829D8D51E81CD2300EEFE71 /* assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1829D8D21E81CD2300EEFE71 /* assets.bundle */; };
-		1829D8D61E81CD2300EEFE71 /* CallingCodes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1829D8D31E81CD2300EEFE71 /* CallingCodes.plist */; };
-		1829D8D71E81CD2300EEFE71 /* MICountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8D41E81CD2300EEFE71 /* MICountryPicker.swift */; };
 		1835F6A61F0CF4E50071184E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6A51F0CF4E50071184E /* Profile.swift */; };
 		184232961FC8707B002F1FC5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232951FC8707B002F1FC5 /* Constants.swift */; };
 		184232991FC87483002F1FC5 /* SGUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232981FC87483002F1FC5 /* SGUtility.swift */; };
@@ -161,9 +158,6 @@
 		181D79931EF5BE47008515D5 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGButtonExtender.swift; sourceTree = "<group>"; };
 		1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
-		1829D8D21E81CD2300EEFE71 /* assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = assets.bundle; sourceTree = "<group>"; };
-		1829D8D31E81CD2300EEFE71 /* CallingCodes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CallingCodes.plist; sourceTree = "<group>"; };
-		1829D8D41E81CD2300EEFE71 /* MICountryPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MICountryPicker.swift; sourceTree = "<group>"; };
 		1835F6A51F0CF4E50071184E /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		184232951FC8707B002F1FC5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		184232981FC87483002F1FC5 /* SGUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGUtility.swift; sourceTree = "<group>"; };
@@ -382,16 +376,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		1829D8D11E81CD2300EEFE71 /* CountryPicker */ = {
-			isa = PBXGroup;
-			children = (
-				1829D8D21E81CD2300EEFE71 /* assets.bundle */,
-				1829D8D31E81CD2300EEFE71 /* CallingCodes.plist */,
-				1829D8D41E81CD2300EEFE71 /* MICountryPicker.swift */,
-			);
-			path = CountryPicker;
-			sourceTree = "<group>";
-		};
 		1835F6A41F0CF4E50071184E /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,7 +439,6 @@
 				184232981FC87483002F1FC5 /* SGUtility.swift */,
 				185D8C491E7C77C400692AD4 /* AccountKit.framework */,
 				185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */,
-				1829D8D11E81CD2300EEFE71 /* CountryPicker */,
 				18592A221E85DB3600003E6A /* Icons */,
 				180FFA511E7DC00700435772 /* Form */,
 				180FFA871E7DC3D600435772 /* Former */,
@@ -613,12 +596,10 @@
 				18FCC5CF1E7EF07700198CF0 /* ProfileImageCell.xib in Resources */,
 				18FCC5CD1E7EF07700198CF0 /* ProfileFieldCell.xib in Resources */,
 				18FCC5CB1E7EF07700198CF0 /* DynamicHeightCell.xib in Resources */,
-				1829D8D61E81CD2300EEFE71 /* CallingCodes.plist in Resources */,
 				18592A291E85DB3600003E6A /* generator.rb in Resources */,
 				18FCC5D11E7EF07700198CF0 /* ProfileLabelCell.xib in Resources */,
 				18592A2A1E85DB3600003E6A /* octicons.ttf in Resources */,
 				18AE407A1E7B15C600B7F495 /* LaunchScreen.storyboard in Resources */,
-				1829D8D51E81CD2300EEFE71 /* assets.bundle in Resources */,
 				18AE40771E7B15C600B7F495 /* Images.xcassets in Resources */,
 				18AE40721E7B15C600B7F495 /* Main.storyboard in Resources */,
 				185D8C4C1E7C77C400692AD4 /* AccountKitStrings.bundle in Resources */,
@@ -673,6 +654,8 @@
 				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -681,6 +664,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -730,7 +715,6 @@
 				180FFAE71E7DC3D600435772 /* FormHeaderFooterView.swift in Sources */,
 				180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */,
 				18B7C95A1FCF325A00771B64 /* AwesomeButton.swift in Sources */,
-				1829D8D71E81CD2300EEFE71 /* MICountryPicker.swift in Sources */,
 				180FFAE81E7DC3D600435772 /* FormLabelFooterView.swift in Sources */,
 				18AE40901E7B1FE600B7F495 /* AnimateItem.swift in Sources */,
 				180FFA841E7DC00700435772 /* FormerInputAccessoryView.swift in Sources */,

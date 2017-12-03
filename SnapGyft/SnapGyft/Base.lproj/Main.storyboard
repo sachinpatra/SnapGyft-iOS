@@ -43,12 +43,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Account" id="sZo-we-RIj"/>
                     <connections>
-                        <segue destination="AJn-84-BIi" kind="presentation" identifier="ShowLoginSegue" id="pYO-Mn-UJp"/>
+                        <segue destination="ORg-eL-WOR" kind="show" identifier="ShowLoginSegue" id="7Io-Tj-mYj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xQQ-tw-Mr3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1378.4000000000001" y="-1512.5937031484259"/>
+            <point key="canvasLocation" x="1106" y="-1787"/>
         </scene>
         <!--Send-->
         <scene sceneID="q6z-KT-3n7">
@@ -85,12 +85,12 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1377" y="-834"/>
+            <point key="canvasLocation" x="1378" y="-834"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="7DO-NQ-VOd">
             <objects>
-                <viewController id="ORg-eL-WOR" customClass="SFLoginViewController" customModule="SnapGyft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginSotryBoardID" id="ORg-eL-WOR" customClass="SFLoginViewController" customModule="SnapGyft" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZbK-3F-TTe"/>
                         <viewControllerLayoutGuide type="bottom" id="NuG-gI-ghw"/>
@@ -99,23 +99,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with SnapGyft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gks-e7-Qvg">
-                                <rect key="frame" x="27" y="53" width="320" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SnapGyft" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gks-e7-Qvg">
+                                <rect key="frame" x="27" y="97" width="320" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="Hnv-Yj-b2Q"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="39"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mka-G0-MNl" customClass="AwesomeButton" customModule="AwesomeButton">
-                                <rect key="frame" x="20" y="587" width="160" height="50"/>
+                                <rect key="frame" x="20" y="587" width="133.5" height="50"/>
                                 <color key="backgroundColor" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="vl3-q0-SfU"/>
+                                    <constraint firstAttribute="height" constant="50" id="vKE-sR-OrJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Login by Phone">
+                                <state key="normal" title="Phone">
                                     <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected" title="sdfsdf">
@@ -146,13 +146,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T6G-R0-FWP" customClass="AwesomeButton" customModule="AwesomeButton">
-                                <rect key="frame" x="195" y="587" width="160" height="50"/>
+                                <rect key="frame" x="221.5" y="587" width="133.5" height="50"/>
                                 <color key="backgroundColor" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="NSx-XT-0dQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="73D-NV-s7h"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
-                                <state key="normal" title="Login by Email">
+                                <state key="normal" title="Email">
                                     <color key="titleColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <state key="selected" title="sdfsdf">
@@ -182,17 +182,26 @@
                                     <action selector="onLoginButtonClicked:" destination="ORg-eL-WOR" eventType="touchUpInside" id="hl5-bB-FIR"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMc-B0-ONl">
+                                <rect key="frame" x="166" y="602" width="43" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="T6G-R0-FWP" firstAttribute="width" secondItem="mka-G0-MNl" secondAttribute="width" id="Db3-nA-QSz"/>
-                            <constraint firstItem="NuG-gI-ghw" firstAttribute="top" secondItem="T6G-R0-FWP" secondAttribute="bottom" constant="30" id="ETI-Id-VKZ"/>
-                            <constraint firstItem="T6G-R0-FWP" firstAttribute="leading" secondItem="mka-G0-MNl" secondAttribute="trailing" constant="15" id="V62-Ub-S3U"/>
+                            <constraint firstItem="NuG-gI-ghw" firstAttribute="top" secondItem="fMc-B0-ONl" secondAttribute="bottom" constant="44" id="Cpa-m6-vNd"/>
+                            <constraint firstItem="mka-G0-MNl" firstAttribute="leading" secondItem="jSY-vi-h99" secondAttribute="leading" constant="20" id="CsX-s3-jf4"/>
+                            <constraint firstItem="NuG-gI-ghw" firstAttribute="top" secondItem="mka-G0-MNl" secondAttribute="bottom" constant="30" id="G0l-XR-xac"/>
+                            <constraint firstItem="T6G-R0-FWP" firstAttribute="leading" secondItem="mka-G0-MNl" secondAttribute="trailing" constant="68" id="JNC-Cq-kEI"/>
+                            <constraint firstItem="NuG-gI-ghw" firstAttribute="top" secondItem="T6G-R0-FWP" secondAttribute="bottom" constant="30" id="MgE-m5-6Kb"/>
                             <constraint firstAttribute="trailing" secondItem="Gks-e7-Qvg" secondAttribute="trailing" constant="28" id="YgS-IM-Wcv"/>
+                            <constraint firstItem="T6G-R0-FWP" firstAttribute="leading" secondItem="fMc-B0-ONl" secondAttribute="trailing" constant="12.5" id="cLX-sd-X6a"/>
+                            <constraint firstAttribute="trailing" secondItem="T6G-R0-FWP" secondAttribute="trailing" constant="20" id="dCA-qX-LeZ"/>
+                            <constraint firstItem="T6G-R0-FWP" firstAttribute="width" secondItem="mka-G0-MNl" secondAttribute="width" id="fsg-QB-8s8"/>
                             <constraint firstItem="Gks-e7-Qvg" firstAttribute="top" secondItem="ZbK-3F-TTe" secondAttribute="bottom" constant="33" id="i8c-mQ-NZp"/>
-                            <constraint firstItem="NuG-gI-ghw" firstAttribute="top" secondItem="mka-G0-MNl" secondAttribute="bottom" constant="30" id="iy0-oO-98B"/>
-                            <constraint firstAttribute="trailing" secondItem="T6G-R0-FWP" secondAttribute="trailing" constant="20" id="uoU-05-cZM"/>
-                            <constraint firstItem="mka-G0-MNl" firstAttribute="leading" secondItem="jSY-vi-h99" secondAttribute="leading" constant="20" id="vAZ-is-gwY"/>
+                            <constraint firstItem="fMc-B0-ONl" firstAttribute="leading" secondItem="mka-G0-MNl" secondAttribute="trailing" constant="12.5" id="qEX-b5-FRO"/>
                             <constraint firstItem="Gks-e7-Qvg" firstAttribute="leading" secondItem="jSY-vi-h99" secondAttribute="leading" constant="27" id="yqx-vH-0MI"/>
                         </constraints>
                     </view>
@@ -232,7 +241,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Y2-L2-jr7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Account" id="wb5-fC-OvT"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="2zx-tD-q1B">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2zx-tD-q1B">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -251,7 +260,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Dmv-gl-RW5" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Send" id="XXV-LQ-hS1"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="zZh-KH-gxW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zZh-KH-gxW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -270,7 +279,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rvl-L7-0CF" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Event" id="Ie7-dT-2ER"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Ov8-jd-fXG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ov8-jd-fXG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -379,7 +388,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="npi-UH-nqA" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Settings" id="Us2-23-Szc"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="XLd-kR-2FP">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XLd-kR-2FP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -616,9 +625,9 @@
         <!--Navigation Controller-->
         <scene sceneID="Rt3-md-E8p">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="AJn-84-BIi" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationStoryBoardID" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="AJn-84-BIi" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="AkL-aK-5M6">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AkL-aK-5M6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -636,4 +645,7 @@
         <image name="arrowNext" width="16" height="16"/>
         <image name="arrowNextDark" width="16" height="16"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7Io-Tj-mYj"/>
+    </inferredMetricsTieBreakers>
 </document>

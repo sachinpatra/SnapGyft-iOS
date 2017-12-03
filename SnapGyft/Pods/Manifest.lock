@@ -6,12 +6,16 @@ PODS:
   - KRActivityIndicatorView (2.0.2)
   - KRProgressHUD (3.0.0):
     - KRActivityIndicatorView (~> 2.0.2)
+  - OnboardingKit (0.0.5)
+  - ReachabilitySwift (3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.2.0)
   - Alamofire-Synchronous (~> 4.0)
   - Alertift
   - KRProgressHUD
+  - OnboardingKit
+  - ReachabilitySwift
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
@@ -19,7 +23,9 @@ SPEC CHECKSUMS:
   Alertift: 2b28b3ba3af73141390f329153f85aee9a56b2a8
   KRActivityIndicatorView: 2a9d5442ba8da6274db3afdf46aeaef7cf6dd8ad
   KRProgressHUD: 14f9fad06080bdb1e59569104a8eda654c83e813
+  OnboardingKit: 44b085c9e1e191a61fe1caea2bb581645fac1dc1
+  ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
 
-PODFILE CHECKSUM: 53af89d9aa878ca49b261818449a3dc00303354e
+PODFILE CHECKSUM: 5a9869b061213074a1c53a40ac190746a467fe71
 
 COCOAPODS: 1.3.1

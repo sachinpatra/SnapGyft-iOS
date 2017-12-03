@@ -34,12 +34,6 @@ class SGAddFriendViewController: UIViewController {
         phoneTextField.padding(width: 5)
         emailTextField.padding(width: 5)
         
-        //Setting Current Country Default Code
-        let locale = Locale.current
-        let countryCode = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as! String?
-        let countryData = CallingCodes.filter { $0["code"] == countryCode }
-        let dialCode = countryData[0]["dial_code"]!
-        self.countryBtn.setTitle("\(dialCode)", for: .normal)
 
 //        NotificationCenter.default.addObserver(self, selector: #selector(SGAddFiendViewController.keyboardWasShown(aNotification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
 //        NotificationCenter.default.addObserver(self, selector: #selector(SGAddFiendViewController.keyboardWillBeHidden(aNotification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -48,12 +42,6 @@ class SGAddFriendViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    fileprivate lazy var CallingCodes = { () -> [[String: String]] in
-        let resourceBundle = Bundle(for: MICountryPicker.classForCoder())
-        guard let path = resourceBundle.path(forResource: "CallingCodes", ofType: "plist") else { return [] }
-        return NSArray(contentsOfFile: path) as! [[String: String]]
-    }()
     
     @IBAction func CountryCodeBtnClicked(_ sender: Any) {
 //        let picker = MICountryPicker { (name, code) -> () in}
@@ -258,13 +246,4 @@ extension SGAddFriendViewController: UITextFieldDelegate
         return true
     }
 }
-extension SGAddFriendViewController: MICountryPickerDelegate {
-    func countryPicker(_ picker: MICountryPicker, didSelectCountryWithName name: String, code: String) {
-    }
-    
-    func countryPicker(_ picker: MICountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String){
-        self.dismiss(animated: true) {
-            self.countryBtn.setTitle("\(dialCode)", for: .normal)
-        }
-    }
-}
+

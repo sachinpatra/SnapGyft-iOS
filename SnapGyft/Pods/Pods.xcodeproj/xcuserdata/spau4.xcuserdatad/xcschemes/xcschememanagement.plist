@@ -29,7 +29,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OnboardingKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SnapGyft.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReachabilitySwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,7 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>12E9A5ED79B0B1DB57B82EADDB93805C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>41719BA5DD69011FCC2BDBE320DE210D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>436E229D4EF02537F446BAC2CE8643B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F5DA24EBC5EB6F3277801DCFEAD26DE3</key>
+		<key>F8A8CBFF1852C8799E0C347F22EB29EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

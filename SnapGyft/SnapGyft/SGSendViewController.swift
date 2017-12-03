@@ -27,7 +27,7 @@ class SGSendViewController: EPContactsPicker {
     }
 
     deinit {
-        NotificationCenter.default.removeObserver(self.foregroundNotification)
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func didReceiveMemoryWarning() {
