@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18048C481FD427A300207543 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18048C471FD427A300207543 /* DataModel.swift */; };
 		180FFA7C1E7DC00700435772 /* TextSelectorViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA631E7DC00700435772 /* TextSelectorViewContorller.swift */; };
 		180FFA841E7DC00700435772 /* FormerInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA6D1E7DC00700435772 /* FormerInputAccessoryView.swift */; };
 		180FFABD1E7DC3D600435772 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA891E7DC3D600435772 /* FormCell.swift */; };
@@ -108,6 +109,7 @@
 
 /* Begin PBXFileReference section */
 		129FCB9D159D7A5C0FA376EC /* Pods-SnapGyft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapGyft.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapGyft/Pods-SnapGyft.debug.xcconfig"; sourceTree = "<group>"; };
+		18048C471FD427A300207543 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		180FFA631E7DC00700435772 /* TextSelectorViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSelectorViewContorller.swift; sourceTree = "<group>"; };
 		180FFA6D1E7DC00700435772 /* FormerInputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormerInputAccessoryView.swift; sourceTree = "<group>"; };
 		180FFA891E7DC3D600435772 /* FormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
@@ -433,6 +435,7 @@
 		18AE406B1E7B15C600B7F495 /* SnapGyft */ = {
 			isa = PBXGroup;
 			children = (
+				18048C471FD427A300207543 /* DataModel.swift */,
 				18B7C9591FCF325A00771B64 /* AwesomeButton.swift */,
 				181D79931EF5BE47008515D5 /* Network.swift */,
 				184232951FC8707B002F1FC5 /* Constants.swift */,
@@ -756,6 +759,7 @@
 				180FFAC01E7DC3D600435772 /* FormInlineDatePickerCell.swift in Sources */,
 				180FFAE91E7DC3D600435772 /* FormLabelHeaderView.swift in Sources */,
 				180FFADE1E7DC3D600435772 /* SelectorPickerRowFormer.swift in Sources */,
+				18048C481FD427A300207543 /* DataModel.swift in Sources */,
 				18FCC5DB1E7EF22600198CF0 /* EPContactCell.swift in Sources */,
 				18AE406D1E7B15C600B7F495 /* AppDelegate.swift in Sources */,
 				180FFAC21E7DC3D600435772 /* FormLabelCell.swift in Sources */,
@@ -890,6 +894,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R6B4T8WMUH;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SnapGyft",
@@ -915,6 +920,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R6B4T8WMUH;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SnapGyft",

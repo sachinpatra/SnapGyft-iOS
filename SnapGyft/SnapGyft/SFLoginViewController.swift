@@ -13,15 +13,51 @@ import Alamofire
 import KRProgressHUD
 import Alamofire_Synchronous
 import ReachabilitySwift
+import OnboardingKit
 
 class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
 
+    @IBOutlet weak var onboardingView: OnboardingView!
+    @IBOutlet weak var phoneButton: AwesomeButton!
+    @IBOutlet weak var emailButton: AwesomeButton!
     var accountKit: AKFAccountKit!
     let reachability = Reachability()!
+
+    private let model = DataModel()
 
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        onboardingView.dataSource = model
+        onboardingView.delegate = model
+        
+        //Do Button visible control over scroll of tour page
+        model.didShow = { page in
+        }
+        model.willShow = { page in
+            UIView.animate(withDuration: 0.3){
+                switch page {
+                case 0:
+                    self.phoneButton.backgroundColor = UIColor(red: 220, green: 66, blue: 66)
+                    self.emailButton.backgroundColor = UIColor(red: 220, green: 66, blue: 66)
+                case 1:
+                    self.phoneButton.backgroundColor = UIColor(red: 33, green: 184, blue: 252)
+                    self.emailButton.backgroundColor = UIColor(red: 33, green: 184, blue: 252)
+                case 2:
+                    self.phoneButton.backgroundColor = UIColor.formerSubColor()
+                    self.emailButton.backgroundColor = UIColor.formerSubColor()
+                case 3:
+                    self.phoneButton.backgroundColor = UIColor(red: 38, green: 149, blue: 116)
+                    self.emailButton.backgroundColor = UIColor(red: 38, green: 149, blue: 116)
+                case 4:
+                    self.phoneButton.backgroundColor = UIColor(red: 88, green: 72, blue: 154)
+                    self.emailButton.backgroundColor = UIColor(red: 88, green: 72, blue: 154)
+                default:
+                    break
+                }
+            }
+        }
         
         if accountKit == nil {
             // may also specify AKFResponseTypeAccessToken
@@ -29,7 +65,7 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
         }
         
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if (accountKit.currentAccessToken != nil) {
@@ -132,5 +168,4 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
     */
 
 }
-
 
