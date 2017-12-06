@@ -29,6 +29,7 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Time = \(SGUtility.getCurrentTime())")
         onboardingView.dataSource = model
         onboardingView.delegate = model
         
@@ -78,7 +79,6 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
 
    //MARK: - Button Actions
     @IBAction func onPhoneButtonClicked(_ sender: Any) {
-        
         let inputState: String = UUID().uuidString
         let viewController = accountKit.viewControllerForPhoneLogin(with: nil, state: inputState) as? AKFViewController
         viewController?.defaultCountryCode =  "IN" //"US"
@@ -130,7 +130,7 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
         
         //If failed by Facebook server, Then send Phone number to server to be update
         let payload: [String:String] = ["PhoneNumber": "1234567890"] //TODO:- Find Phone Number form Error
-        let params: [String : Any] = ["Header": SGUtility().keyParamsForService, "Payload": payload]
+        let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
         Alamofire.request(Constants.API_ISREGISTERED_ACCOUNT,
                           method: .post,
                           parameters: params,
@@ -157,6 +157,7 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
         print("The user cancel the login")
     }
 
+    
     /*
     // MARK: - Navigation
 
@@ -166,6 +167,8 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    @IBAction func unwindToLoginViewControllre(segue:UIStoryboardSegue) {}
 
 }
 

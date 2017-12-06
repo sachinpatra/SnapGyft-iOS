@@ -74,8 +74,16 @@ open class TabBarAnimateController: UITabBarController {
         animateItems.forEach { (item) in
             item.badgeAnimateType = animate
         }
-    }    
+    }
+    
+    deinit {
+        for animateItem in animateItems {
+            animateItem.removeObserver()
+        }
+    }
 }
+
+
 
 //Private
 extension TabBarAnimateController {

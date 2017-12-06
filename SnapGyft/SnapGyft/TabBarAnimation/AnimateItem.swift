@@ -77,6 +77,12 @@ class MMAnimateItem: NSObject {
         }
     }
     
+    func removeObserver() {
+        if let barItem = self.item {
+            barItem.removeObserver(self, forKeyPath: "badgeValue")
+        }
+    }
+    
     func animateBadge(type:AnimateType) {
         var delay = 0.0
         if badge == nil {

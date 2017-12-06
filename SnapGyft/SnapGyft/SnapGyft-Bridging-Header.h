@@ -6,5 +6,6 @@
 #define AccountKitiOS_Bridging_Header_h
 
 #import <AccountKit/AccountKit.h>
+#include<ifaddrs.h>
 
 #endif
