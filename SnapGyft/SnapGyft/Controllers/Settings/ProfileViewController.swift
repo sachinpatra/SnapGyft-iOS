@@ -11,8 +11,8 @@ import CoreData
 
 class ProfileViewController: UITableViewController {
 
-    var container: NSPersistentContainer? = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     var myProfile: Profile?
+    let instance = AACoreData.sharedInstance()
 
     // MARK: Public
     public private(set) lazy var former: Former = Former(tableView: self.tableView)
@@ -22,103 +22,53 @@ class ProfileViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Profile"
         
-        do {
-            myProfile = try (container?.viewContext.fetch(Profile.fetchRequest()))?.first
-        } catch {
-            fatalError("Failed to fetch employees: \(error)")
+        instance.fetchRecords(entityName: .ProfileEntityName) { (results) in
+            self.myProfile = (results as? [Profile])?.first
         }
         
         configure()
     }
     
     func saveProfile(with propertyName: String, value: Any) {
-        
-//        // Save the context.
-//        switch propertyName {
-//        case "name":
-//            myProfile?.firstName = value as? String
-//            break
-//        case "phone":
-//            myProfile?.phoneNumber = value as? String
-//            break
-//        case "gender":
-//            myProfile?.gender = value as? String
-//            break
-//        case "birthday":
-//            myProfile?.birthDay = value as? NSDate
-//            break
-//        case "introduction":
-//            myProfile?.introduction = value as? String
-//            break
-//        case "moreinfo":
-//            myProfile?.moreInformation = value as! Bool
-//            break
-//        case "nickname":
-//            myProfile?.nickname = value as? String
-//            break
-//        case "location":
-//            myProfile?.location = value as? String
-//            break
-//        case "job":
-//            myProfile?.job = value as? String
-//            break
-//        case "imagedata":
-//            myProfile?.imageData = value as? NSData
-//            break
-//            
-//        default: break
-//        }
-//        
-//        if let context = container?.viewContext{
-//           // context.perform {
-//                try? context.save()
-//           // }
-//
-//        }
-        
-        container?.performBackgroundTask({ [weak self] context in
-            
-            let profile = try? context.fetch(Profile.fetchRequest()).first as? Profile
+        instance.fetchRecords(entityName: .ProfileEntityName) { (results) in
+           let profile = (results as? [Profile])?.first
             
             switch propertyName {
             case "name":
-                profile??.firstName = value as? String
+                profile?.firstName = value as? String
                 break
             case "phone":
-                profile??.phoneNumber = value as? String
+                profile?.phoneNumber = value as? String
                 break
             case "gender":
-                profile??.gender = value as? String
+                profile?.gender = value as? String
                 break
             case "birthday":
-                profile??.birthDay = value as? NSDate
+                profile?.birthDay = value as? NSDate
                 break
             case "introduction":
-                profile??.introduction = value as? String
+                profile?.introduction = value as? String
                 break
             case "moreinfo":
-                profile??.moreInformation = value as! Bool
+                profile?.moreInformation = value as! Bool
                 break
             case "nickname":
-                profile??.nickname = value as? String
+                profile?.nickname = value as? String
                 break
             case "location":
-                profile??.location = value as? String
+                profile?.location = value as? String
                 break
             case "job":
-                profile??.job = value as? String
+                profile?.job = value as? String
                 break
             case "imagedata":
-                profile??.imageData = value as? NSData
+                profile?.imageData = value as? NSData
                 break
                 
             default: break
             }
-
-            self?.myProfile = profile!
-            
-            try? context.save()
-        })
+        }
+        
     }
 
     // MARK: Private

@@ -14,3 +14,8 @@ class Constants {
     static let API_ACCOUNT_DETAILS = "https://snapgift.azurewebsites.net/api/account/GetAccountDetails"
 
 }
+
+extension AACoreData {
+    // MARK:- Add your entities here
+    static let ProfileEntityName = AACoreDataEntity<String>("Profile")
+}

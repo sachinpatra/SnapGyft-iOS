@@ -11,12 +11,12 @@ import CoreData
 
 class Profile: NSManagedObject {
     
-    class func createProfile(accountID: String, phoneNumber: String, in context: NSManagedObjectContext) -> Profile{
+   /* class func createProfile(accountID: String, phoneNumber: String, in context: NSManagedObjectContext) -> Profile{
         
         let profile = Profile(context: context)
         profile.accountID = accountID
         profile.phoneNumber = phoneNumber
         
         return profile
-    }
+    }*/
 }

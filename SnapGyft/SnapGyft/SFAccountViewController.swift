@@ -15,31 +15,33 @@ import ReachabilitySwift
 
 class SFAccountViewController: UIViewController {
     
-    var container: NSPersistentContainer? = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     var accountKit: AKFAccountKit!
     var myProfile: Profile!
     let reachability = Reachability()!
+    let instance = AACoreData.sharedInstance()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        container?.performBackgroundTask({ [weak self] context in
-            let profileCount = try? context.fetch(Profile.fetchRequest()).count
-            if profileCount == 0{
-                self?.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
-                self?.accountKit.requestAccount{
-                    (account, error) -> Void in
-                    self?.myProfile = Profile.createProfile(accountID: account!.accountID, phoneNumber: account!.phoneNumber!.stringRepresentation(), in: context)
-                    try? context.save()
-                    //self?.myProfile = try! context.fetch(Profile.fetchRequest()).first!
 
-                    guard (self?.reachability.isReachable)! else {
-                        self?.backToLoginPageOnNetworkIssue(withMessage: "Check Network Connection.")
+        instance.fetchRecords(entityName: .ProfileEntityName) { (results) in
+
+            guard let _ = results as? [Profile] else {
+                self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
+                self.accountKit.requestAccount{
+                    (account, error) -> Void in
+                    
+                    self.myProfile = self.instance.getNewObject(entityName: .ProfileEntityName) as! Profile
+                    self.myProfile.accountID = account?.accountID
+                    self.myProfile.phoneNumber = account?.phoneNumber?.stringRepresentation()
+                    self.instance.saveContext()
+                    
+                    guard (self.reachability.isReachable) else {
+                        self.backToLoginPageOnNetworkIssue(withMessage: "Check Network Connection.")
                         return
                     }
                     //Call Here All three API's
-                    let payload: [String:String] = ["PhoneNumber": (self?.myProfile.phoneNumber)!]
+                    let payload: [String:String] = ["PhoneNumber": (self.myProfile.phoneNumber)!]
                     let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
                     Alamofire.request(Constants.API_ISREGISTERED_ACCOUNT,
                                       method: .post,
@@ -93,8 +95,10 @@ class SFAccountViewController: UIViewController {
                         }
                     }
                 }
+                
+                return
             }
-        })
+        }
         
     }
 

@@ -23,7 +23,7 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
     var accountKit: AKFAccountKit!
     let reachability = Reachability()!
 
-    private let model = DataModel()
+    private let model = TourScreenDataModel()
 
     //MARK: - View Lifecycle
     override func viewDidLoad() {
