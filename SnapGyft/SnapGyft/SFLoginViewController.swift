@@ -29,7 +29,6 @@ class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("Time = \(SGUtility.getCurrentTime())")
         onboardingView.dataSource = model
         onboardingView.delegate = model
         

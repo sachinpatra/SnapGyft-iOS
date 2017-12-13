@@ -11,5 +11,7 @@ target 'SnapGyft' do
   pod 'Alamofire-Synchronous', '~> 4.0'
   pod 'ReachabilitySwift'
   pod 'OnboardingKit'
+  pod 'expanding-collection', '~> 1.0.3'
+  pod 'SwiftMessages'
  
 end
