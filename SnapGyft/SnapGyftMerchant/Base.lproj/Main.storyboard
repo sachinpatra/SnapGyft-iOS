@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7cX-WX-3VT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="lkR-WV-EWH">
+            <objects>
+                <viewController storyboardIdentifier="LoginSotryBoardID" id="mOc-sl-I4A" customClass="LoginViewController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ymz-cI-hN7"/>
+                        <viewControllerLayoutGuide type="bottom" id="gSt-v2-qfs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y4J-V7-RoW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Niw-iv-PBj" customClass="OnboardingView" customModule="OnboardingKit">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SnapGyft Merchant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYm-m6-NNy">
+                                <rect key="frame" x="27" y="74" width="320" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="QNk-LJ-rAg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPP-2u-Aj9" customClass="AwesomeButton" customModule="AwesomeButton">
+                                <rect key="frame" x="90" y="547" width="194" height="50"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nls-Gg-fPB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Get Started">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="sdfsdf">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" title="Go!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconNormal" value="arrowNextDark"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconHighlighted" value="arrowNext"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.73725490199999999" green="0.75294117650000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="arrowNextDark"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconYOffset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getStartedButtonClicked:" destination="mOc-sl-I4A" eventType="touchUpInside" id="DfY-HI-qCO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dYm-m6-NNy" firstAttribute="leading" secondItem="Y4J-V7-RoW" secondAttribute="leading" constant="27" id="4h5-R3-2JC"/>
+                            <constraint firstItem="Niw-iv-PBj" firstAttribute="top" secondItem="Y4J-V7-RoW" secondAttribute="top" id="9Do-hs-xeR"/>
+                            <constraint firstItem="Niw-iv-PBj" firstAttribute="leading" secondItem="Y4J-V7-RoW" secondAttribute="leading" id="RUH-uq-nFC"/>
+                            <constraint firstItem="dYm-m6-NNy" firstAttribute="top" secondItem="Ymz-cI-hN7" secondAttribute="bottom" constant="10" id="SiA-A7-S6V"/>
+                            <constraint firstAttribute="trailing" secondItem="Niw-iv-PBj" secondAttribute="trailing" id="UT4-fh-I84"/>
+                            <constraint firstAttribute="trailing" secondItem="dYm-m6-NNy" secondAttribute="trailing" constant="28" id="XWf-wH-YAS"/>
+                            <constraint firstItem="VPI-qZ-4uT" firstAttribute="trailing" secondItem="SPP-2u-Aj9" secondAttribute="trailing" constant="91" id="ZKl-U7-GEZ"/>
+                            <constraint firstItem="gSt-v2-qfs" firstAttribute="top" secondItem="SPP-2u-Aj9" secondAttribute="bottom" constant="70" id="aJD-c4-V7O"/>
+                            <constraint firstItem="SPP-2u-Aj9" firstAttribute="leading" secondItem="VPI-qZ-4uT" secondAttribute="leading" constant="90" id="f96-5Z-0Fv"/>
+                            <constraint firstItem="gSt-v2-qfs" firstAttribute="top" secondItem="Niw-iv-PBj" secondAttribute="bottom" id="oAs-PY-4VJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VPI-qZ-4uT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="n8D-3M-zdc"/>
+                    <connections>
+                        <outlet property="getStartedButton" destination="SPP-2u-Aj9" id="40w-lM-d0x"/>
+                        <outlet property="onboardingView" destination="Niw-iv-PBj" id="d8i-fe-fwV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Yz-ar-6fh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-596" y="185.75712143928038"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Odm-zu-Ehj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7cX-WX-3VT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZLD-QB-0fQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mOc-sl-I4A" kind="relationship" relationship="rootViewController" id="Lk3-TP-LBj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37H-Jz-Hbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1468" y="186"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrowNext" width="16" height="16"/>
+        <image name="arrowNextDark" width="16" height="16"/>
+    </resources>
+</document>

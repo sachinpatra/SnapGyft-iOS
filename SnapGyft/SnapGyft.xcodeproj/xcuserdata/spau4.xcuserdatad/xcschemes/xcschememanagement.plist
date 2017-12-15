@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SnapGyftMerchant.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>18613AC21FE2CAFD004AF8F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>18AE40681E7B15C600B7F495</key>
 		<dict>
 			<key>primary</key>

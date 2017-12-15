@@ -1,5 +1,5 @@
 //
-//  TourScreenDataModel.swift
+//  ClientTourScreenModel.swift
 //  SnapGyft
 //
 //  Created by Patra, Sachin Kumar (TekSystems) on 12/7/17.
@@ -9,7 +9,7 @@
 import UIKit
 import OnboardingKit
 
-class TourScreenDataModel: NSObject, OnboardingViewDelegate, OnboardingViewDataSource {
+class ClientTourScreenModel: NSObject, OnboardingViewDelegate, OnboardingViewDataSource {
     
     public var didShow: ((Int) -> Void)?
     public var willShow: ((Int) -> Void)?

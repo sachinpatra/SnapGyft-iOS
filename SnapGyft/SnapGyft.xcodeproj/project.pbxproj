@@ -61,6 +61,21 @@
 		1835F6A61F0CF4E50071184E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6A51F0CF4E50071184E /* Profile.swift */; };
 		184232961FC8707B002F1FC5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232951FC8707B002F1FC5 /* Constants.swift */; };
 		184232991FC87483002F1FC5 /* SGUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232981FC87483002F1FC5 /* SGUtility.swift */; };
+		185078EB1FE2F16100AFB9F8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185078EA1FE2F16100AFB9F8 /* LoginViewController.swift */; };
+		185078EC1FE2F89C00AFB9F8 /* AwesomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C9591FCF325A00771B64 /* AwesomeButton.swift */; };
+		185078EF1FE2F8AD00AFB9F8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6B1FE0679500AC024D /* GradientView.swift */; };
+		185078F01FE2F8B100AFB9F8 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6C1FE0679500AC024D /* StoryboardHelper.swift */; };
+		185078F11FE2F8B400AFB9F8 /* AACoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803A30E1FDB9C20007C4918 /* AACoreData.swift */; };
+		185078F21FE2F8B800AFB9F8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232951FC8707B002F1FC5 /* Constants.swift */; };
+		185078F31FE2F8BF00AFB9F8 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6E1FE0679500AC024D /* CollectionViewHelper.swift */; };
+		185078F41FE2F8C200AFB9F8 /* ConfigurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6D1FE0679500AC024D /* ConfigurationHelper.swift */; };
+		185078F51FE2F8CB00AFB9F8 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D79931EF5BE47008515D5 /* Network.swift */; };
+		185078F81FE2FACF00AFB9F8 /* UIColor+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */; };
+		185078F91FE2FAD600AFB9F8 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */; };
+		185078FA1FE2FADC00AFB9F8 /* String+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */; };
+		185078FC1FE2FDE900AFB9F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AE40761E7B15C600B7F495 /* Images.xcassets */; };
+		185078FF1FE3016800AFB9F8 /* ClientTourScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185078FE1FE3016800AFB9F8 /* ClientTourScreenModel.swift */; };
+		185079031FE301E200AFB9F8 /* MerchantTourScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185079021FE301E200AFB9F8 /* MerchantTourScreenModel.swift */; };
 		18592A291E85DB3600003E6A /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 18592A241E85DB3600003E6A /* generator.rb */; };
 		18592A2A1E85DB3600003E6A /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18592A251E85DB3600003E6A /* octicons.ttf */; };
 		18592A2B1E85DB3600003E6A /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18592A261E85DB3600003E6A /* octicons.txt */; };
@@ -70,6 +85,11 @@
 		185D8C4B1E7C77C400692AD4 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185D8C491E7C77C400692AD4 /* AccountKit.framework */; };
 		185D8C4C1E7C77C400692AD4 /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */; };
 		185D8C521E7C7BE700692AD4 /* SFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D8C511E7C7BE700692AD4 /* SFLoginViewController.swift */; };
+		18613ACD1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18613ACC1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld */; };
+		18613ADB1FE2CBD7004AF8F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18613ADA1FE2CBD7004AF8F1 /* AppDelegate.swift */; };
+		18613AE01FE2CC09004AF8F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18613ADC1FE2CC09004AF8F1 /* Main.storyboard */; };
+		18613AE11FE2CC09004AF8F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18613ADE1FE2CC09004AF8F1 /* LaunchScreen.storyboard */; };
+		18613AE31FE2CC1D004AF8F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18613AE21FE2CC1D004AF8F1 /* Images.xcassets */; };
 		186B5E261FE05FCA00AC024D /* SFAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E251FE05FCA00AC024D /* SFAccountViewController.swift */; };
 		186B5E281FE0601200AC024D /* CardDetailTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E271FE0601200AC024D /* CardDetailTableController.swift */; };
 		186B5E5C1FE0628F00AC024D /* CenterLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E531FE0628F00AC024D /* CenterLabelCell.swift */; };
@@ -87,7 +107,6 @@
 		186B5E701FE0679500AC024D /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6C1FE0679500AC024D /* StoryboardHelper.swift */; };
 		186B5E711FE0679500AC024D /* ConfigurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6D1FE0679500AC024D /* ConfigurationHelper.swift */; };
 		186B5E721FE0679500AC024D /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6E1FE0679500AC024D /* CollectionViewHelper.swift */; };
-		18769BFA1FD8716C003699B0 /* TourScreenDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18769BF91FD8716C003699B0 /* TourScreenDataModel.swift */; };
 		189E9EA71E806CE6007460E0 /* UITableViewCell+Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */; };
 		18AE406D1E7B15C600B7F495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE406C1E7B15C600B7F495 /* AppDelegate.swift */; };
 		18AE40721E7B15C600B7F495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AE40701E7B15C600B7F495 /* Main.storyboard */; };
@@ -112,6 +131,7 @@
 		18FCC5DD1E7EF22600198CF0 /* EPContactsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5D71E7EF22600198CF0 /* EPContactsPicker.swift */; };
 		18FCC5DE1E7EF22600198CF0 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5D81E7EF22600198CF0 /* EPExtensions.swift */; };
 		18FCC5E01E7EF35700198CF0 /* SGSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */; };
+		50D732379430BA3B53F7132A /* Pods_SnapGyftMerchant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F852AB73D487DD112A6B3BF1 /* Pods_SnapGyftMerchant.framework */; };
 		E5C5BC4814C251F575DE70B9 /* Pods_SnapGyft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC2EAA6B5966C7513AAB391 /* Pods_SnapGyft.framework */; };
 /* End PBXBuildFile section */
 
@@ -171,6 +191,9 @@
 		1835F6A51F0CF4E50071184E /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		184232951FC8707B002F1FC5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		184232981FC87483002F1FC5 /* SGUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGUtility.swift; sourceTree = "<group>"; };
+		185078EA1FE2F16100AFB9F8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		185078FE1FE3016800AFB9F8 /* ClientTourScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTourScreenModel.swift; sourceTree = "<group>"; };
+		185079021FE301E200AFB9F8 /* MerchantTourScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantTourScreenModel.swift; sourceTree = "<group>"; };
 		18592A241E85DB3600003E6A /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
 		18592A251E85DB3600003E6A /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.ttf; sourceTree = "<group>"; };
 		18592A261E85DB3600003E6A /* octicons.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = octicons.txt; sourceTree = "<group>"; };
@@ -181,6 +204,13 @@
 		185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccountKitStrings.bundle; sourceTree = "<group>"; };
 		185D8C4D1E7C780F00692AD4 /* SnapGyft-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapGyft-Bridging-Header.h"; sourceTree = "<group>"; };
 		185D8C511E7C7BE700692AD4 /* SFLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFLoginViewController.swift; sourceTree = "<group>"; };
+		18613AC31FE2CAFD004AF8F1 /* SnapGyftMerchant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapGyftMerchant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18613AD31FE2CAFD004AF8F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18613AD71FE2CBAD004AF8F1 /* SnapGyftMerchant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapGyftMerchant-Bridging-Header.h"; sourceTree = "<group>"; };
+		18613ADA1FE2CBD7004AF8F1 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18613ADD1FE2CC09004AF8F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18613ADF1FE2CC09004AF8F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18613AE21FE2CC1D004AF8F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		186B5E251FE05FCA00AC024D /* SFAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFAccountViewController.swift; sourceTree = "<group>"; };
 		186B5E271FE0601200AC024D /* CardDetailTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailTableController.swift; sourceTree = "<group>"; };
 		186B5E531FE0628F00AC024D /* CenterLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterLabelCell.swift; sourceTree = "<group>"; };
@@ -198,7 +228,6 @@
 		186B5E6C1FE0679500AC024D /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		186B5E6D1FE0679500AC024D /* ConfigurationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationHelper.swift; sourceTree = "<group>"; };
 		186B5E6E1FE0679500AC024D /* CollectionViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
-		18769BF91FD8716C003699B0 /* TourScreenDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourScreenDataModel.swift; sourceTree = "<group>"; };
 		189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Former.swift"; sourceTree = "<group>"; };
 		18AE40691E7B15C600B7F495 /* SnapGyft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapGyft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AE406C1E7B15C600B7F495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,11 +254,22 @@
 		18FCC5D71E7EF22600198CF0 /* EPContactsPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPContactsPicker.swift; sourceTree = "<group>"; };
 		18FCC5D81E7EF22600198CF0 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPExtensions.swift; sourceTree = "<group>"; };
 		18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSendViewController.swift; sourceTree = "<group>"; };
+		92B5F5841D9784878426B4CA /* Pods-SnapGyftMerchant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapGyftMerchant.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapGyftMerchant/Pods-SnapGyftMerchant.release.xcconfig"; sourceTree = "<group>"; };
 		BCC2EAA6B5966C7513AAB391 /* Pods_SnapGyft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapGyft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D73B90614B28C75EE2C0916A /* Pods-SnapGyftMerchant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapGyftMerchant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapGyftMerchant/Pods-SnapGyftMerchant.debug.xcconfig"; sourceTree = "<group>"; };
 		D85994039F588C6C59BCF4D8 /* Pods-SnapGyft.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapGyft.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapGyft/Pods-SnapGyft.release.xcconfig"; sourceTree = "<group>"; };
+		F852AB73D487DD112A6B3BF1 /* Pods_SnapGyftMerchant.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapGyftMerchant.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		18613AC01FE2CAFD004AF8F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50D732379430BA3B53F7132A /* Pods_SnapGyftMerchant.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18AE40661E7B15C600B7F495 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,6 +409,7 @@
 		180FFAF01E7DE46B00435772 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				185078FD1FE3016800AFB9F8 /* TourScreen */,
 				1835F6A41F0CF4E50071184E /* DataBase */,
 			);
 			path = Models;
@@ -403,6 +444,30 @@
 			path = DataBase;
 			sourceTree = "<group>";
 		};
+		185078FD1FE3016800AFB9F8 /* TourScreen */ = {
+			isa = PBXGroup;
+			children = (
+				185078FE1FE3016800AFB9F8 /* ClientTourScreenModel.swift */,
+			);
+			path = TourScreen;
+			sourceTree = "<group>";
+		};
+		185079001FE3019E00AFB9F8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				185079011FE3019E00AFB9F8 /* TourScreen */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		185079011FE3019E00AFB9F8 /* TourScreen */ = {
+			isa = PBXGroup;
+			children = (
+				185079021FE301E200AFB9F8 /* MerchantTourScreenModel.swift */,
+			);
+			path = TourScreen;
+			sourceTree = "<group>";
+		};
 		18592A221E85DB3600003E6A /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +486,22 @@
 				18592A261E85DB3600003E6A /* octicons.txt */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		18613AC41FE2CAFD004AF8F1 /* SnapGyftMerchant */ = {
+			isa = PBXGroup;
+			children = (
+				185079001FE3019E00AFB9F8 /* Models */,
+				18613ADA1FE2CBD7004AF8F1 /* AppDelegate.swift */,
+				185078EA1FE2F16100AFB9F8 /* LoginViewController.swift */,
+				18613AE21FE2CC1D004AF8F1 /* Images.xcassets */,
+				18613ADE1FE2CC09004AF8F1 /* LaunchScreen.storyboard */,
+				18613ADC1FE2CC09004AF8F1 /* Main.storyboard */,
+				18613AD31FE2CAFD004AF8F1 /* Info.plist */,
+				18613ACC1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld */,
+				18613AD71FE2CBAD004AF8F1 /* SnapGyftMerchant-Bridging-Header.h */,
+			);
+			path = SnapGyftMerchant;
 			sourceTree = "<group>";
 		};
 		186B5E241FE05FCA00AC024D /* Account */ = {
@@ -470,6 +551,7 @@
 			isa = PBXGroup;
 			children = (
 				BCC2EAA6B5966C7513AAB391 /* Pods_SnapGyft.framework */,
+				F852AB73D487DD112A6B3BF1 /* Pods_SnapGyftMerchant.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -478,6 +560,7 @@
 			isa = PBXGroup;
 			children = (
 				18AE406B1E7B15C600B7F495 /* SnapGyft */,
+				18613AC41FE2CAFD004AF8F1 /* SnapGyftMerchant */,
 				18AE406A1E7B15C600B7F495 /* Products */,
 				1883F4391EF59AF4001BACB6 /* Frameworks */,
 				8AEECB31FC445F9EEB2E2D2E /* Pods */,
@@ -488,6 +571,7 @@
 			isa = PBXGroup;
 			children = (
 				18AE40691E7B15C600B7F495 /* SnapGyft.app */,
+				18613AC31FE2CAFD004AF8F1 /* SnapGyftMerchant.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -500,7 +584,6 @@
 				186B5E6B1FE0679500AC024D /* GradientView.swift */,
 				186B5E6C1FE0679500AC024D /* StoryboardHelper.swift */,
 				1803A30E1FDB9C20007C4918 /* AACoreData.swift */,
-				18769BF91FD8716C003699B0 /* TourScreenDataModel.swift */,
 				18B7C9591FCF325A00771B64 /* AwesomeButton.swift */,
 				181D79931EF5BE47008515D5 /* Network.swift */,
 				184232951FC8707B002F1FC5 /* Constants.swift */,
@@ -573,6 +656,8 @@
 			children = (
 				129FCB9D159D7A5C0FA376EC /* Pods-SnapGyft.debug.xcconfig */,
 				D85994039F588C6C59BCF4D8 /* Pods-SnapGyft.release.xcconfig */,
+				D73B90614B28C75EE2C0916A /* Pods-SnapGyftMerchant.debug.xcconfig */,
+				92B5F5841D9784878426B4CA /* Pods-SnapGyftMerchant.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -580,6 +665,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		18613AC21FE2CAFD004AF8F1 /* SnapGyftMerchant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18613AD61FE2CAFD004AF8F1 /* Build configuration list for PBXNativeTarget "SnapGyftMerchant" */;
+			buildPhases = (
+				CD4D9E4F1031A2E8908109C5 /* [CP] Check Pods Manifest.lock */,
+				18613ABF1FE2CAFD004AF8F1 /* Sources */,
+				18613AC01FE2CAFD004AF8F1 /* Frameworks */,
+				18613AC11FE2CAFD004AF8F1 /* Resources */,
+				F22C7DCD774ABBD4F8D0F364 /* [CP] Embed Pods Frameworks */,
+				5A22E0900E5F293490294B8F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SnapGyftMerchant;
+			productName = SnapGyftMerchant;
+			productReference = 18613AC31FE2CAFD004AF8F1 /* SnapGyftMerchant.app */;
+			productType = "com.apple.product-type.application";
+		};
 		18AE40681E7B15C600B7F495 /* SnapGyft */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18AE407E1E7B15C600B7F495 /* Build configuration list for PBXNativeTarget "SnapGyft" */;
@@ -606,10 +711,16 @@
 		18AE40611E7B15C600B7F495 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Patra, Sachin Kumar (TekSystems)";
 				TargetAttributes = {
+					18613AC21FE2CAFD004AF8F1 = {
+						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = R6B4T8WMUH;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+					};
 					18AE40681E7B15C600B7F495 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = R6B4T8WMUH;
@@ -632,11 +743,23 @@
 			projectRoot = "";
 			targets = (
 				18AE40681E7B15C600B7F495 /* SnapGyft */,
+				18613AC21FE2CAFD004AF8F1 /* SnapGyftMerchant */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		18613AC11FE2CAFD004AF8F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18613AE01FE2CC09004AF8F1 /* Main.storyboard in Resources */,
+				185078FC1FE2FDE900AFB9F8 /* Images.xcassets in Resources */,
+				18613AE31FE2CC1D004AF8F1 /* Images.xcassets in Resources */,
+				18613AE11FE2CC09004AF8F1 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18AE40671E7B15C600B7F495 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -673,6 +796,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapGyft/Pods-SnapGyft-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A22E0900E5F293490294B8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapGyftMerchant/Pods-SnapGyftMerchant-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9B7CB3657A0A1712077F7CF9 /* [CP] Check Pods Manifest.lock */ = {
@@ -727,9 +865,83 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapGyft/Pods-SnapGyft-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		CD4D9E4F1031A2E8908109C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SnapGyftMerchant-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F22C7DCD774ABBD4F8D0F364 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SnapGyftMerchant/Pods-SnapGyftMerchant-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
+				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
+				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/expanding-collection/expanding_collection.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/expanding_collection.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SnapGyftMerchant/Pods-SnapGyftMerchant-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		18613ABF1FE2CAFD004AF8F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				185078F51FE2F8CB00AFB9F8 /* Network.swift in Sources */,
+				185078F41FE2F8C200AFB9F8 /* ConfigurationHelper.swift in Sources */,
+				185078EB1FE2F16100AFB9F8 /* LoginViewController.swift in Sources */,
+				18613ADB1FE2CBD7004AF8F1 /* AppDelegate.swift in Sources */,
+				185078FA1FE2FADC00AFB9F8 /* String+FormerDemo.swift in Sources */,
+				185078F01FE2F8B100AFB9F8 /* StoryboardHelper.swift in Sources */,
+				185078F11FE2F8B400AFB9F8 /* AACoreData.swift in Sources */,
+				185079031FE301E200AFB9F8 /* MerchantTourScreenModel.swift in Sources */,
+				185078F91FE2FAD600AFB9F8 /* UITextField+Extention.swift in Sources */,
+				185078F21FE2F8B800AFB9F8 /* Constants.swift in Sources */,
+				185078F31FE2F8BF00AFB9F8 /* CollectionViewHelper.swift in Sources */,
+				185078F81FE2FACF00AFB9F8 /* UIColor+FormerDemo.swift in Sources */,
+				185078EF1FE2F8AD00AFB9F8 /* GradientView.swift in Sources */,
+				18613ACD1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld in Sources */,
+				185078EC1FE2F89C00AFB9F8 /* AwesomeButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		18AE40651E7B15C600B7F495 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -783,7 +995,6 @@
 				180FFADC1E7DC3D600435772 /* SegmentedRowFormer.swift in Sources */,
 				186B5E6F1FE0679500AC024D /* GradientView.swift in Sources */,
 				18592A2C1E85DB3600003E6A /* SFCustomIconKit.swift in Sources */,
-				18769BFA1FD8716C003699B0 /* TourScreenDataModel.swift in Sources */,
 				186B5E5D1FE0628F00AC024D /* DynamicHeightCell.swift in Sources */,
 				1803A30F1FDB9C20007C4918 /* AACoreData.swift in Sources */,
 				180FFAC31E7DC3D600435772 /* FormPickerCell.swift in Sources */,
@@ -800,6 +1011,7 @@
 				1835F6A61F0CF4E50071184E /* Profile.swift in Sources */,
 				180FFAC11E7DC3D600435772 /* FormInlinePickerCell.swift in Sources */,
 				180FFAC71E7DC3D600435772 /* FormSliderCell.swift in Sources */,
+				185078FF1FE3016800AFB9F8 /* ClientTourScreenModel.swift in Sources */,
 				18FCC5DA1E7EF22600198CF0 /* EPContact.swift in Sources */,
 				180FFACD1E7DC3D600435772 /* FormerProtocol.swift in Sources */,
 				180FFADD1E7DC3D600435772 /* SelectorDatePickerRowFormer.swift in Sources */,
@@ -831,6 +1043,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		18613ADC1FE2CC09004AF8F1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18613ADD1FE2CC09004AF8F1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18613ADE1FE2CC09004AF8F1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18613ADF1FE2CC09004AF8F1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		18AE40701E7B15C600B7F495 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -850,6 +1078,67 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		18613AD41FE2CAFD004AF8F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D73B90614B28C75EE2C0916A /* Pods-SnapGyftMerchant.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R6B4T8WMUH;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SnapGyftMerchant/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sachin.SnapGyftMerchant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnapGyftMerchant/SnapGyftMerchant-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		18613AD51FE2CAFD004AF8F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92B5F5841D9784878426B4CA /* Pods-SnapGyftMerchant.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R6B4T8WMUH;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = SnapGyftMerchant/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sachin.SnapGyftMerchant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SnapGyftMerchant/SnapGyftMerchant-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		18AE407C1E7B15C600B7F495 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -949,7 +1238,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R6B4T8WMUH;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
@@ -975,7 +1263,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = R6B4T8WMUH;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
@@ -997,6 +1284,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		18613AD61FE2CAFD004AF8F1 /* Build configuration list for PBXNativeTarget "SnapGyftMerchant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18613AD41FE2CAFD004AF8F1 /* Debug */,
+				18613AD51FE2CAFD004AF8F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		18AE40641E7B15C600B7F495 /* Build configuration list for PBXProject "SnapGyft" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1018,6 +1314,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
+		18613ACC1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+			);
+			path = SnapGyftMerchant.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		18AE40731E7B15C600B7F495 /* SnapGyft.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

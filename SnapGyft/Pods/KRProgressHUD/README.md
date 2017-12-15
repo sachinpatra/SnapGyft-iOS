@@ -21,9 +21,9 @@
 - Indicator color can be customized
 
 ## Requirements
-- iOS 9.0+
-- Xcode 8.0+
-- Swift 3.0+
+- iOS 8.0+
+- Xcode 9.0+
+- Swift 4.0+
 
 ## DEMO
 To run the example project, clone the repo, and open `KRProgressHUDDemo.xcodeproj` from the DEMO directory.
@@ -62,7 +62,7 @@ Show simple HUD :
 ```Swift
 KRProgressHUD.show()
 
-DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1) {
+DispatchQueue.main.asyncAfter(deadline: .now()+1) {
    KRProgressHUD.dismiss()
 }
 ```
@@ -98,7 +98,7 @@ class func showSuccess()
 class func showInfo()
 class func showWarning()
 class func showError()
-class func showImage() // This can set custom image.
+class func showImage() // This can set custom image. (Max size is 50x50)
 ```
 
 Show the HUD (only message)
@@ -175,15 +175,18 @@ These `set()` setting can be reset by
 I'm seeking bug reports and feature requests.
 
 ## Release Note
++ 3.1.2 :
+  - Fixed bug of custom small image.
+
++ 3.1.1 :
+  - Supported from iOS 8.0.
+
++ 3.1.0 :
+  - Available at CocoaPods and Carthage with Xcode9 and Swift4.
+
 + 3.0.0 :
   - [ADD] Set styles with method chaining.
   - [ADD] Show HUD on VC.
-
-+ 2.2.2 :
-  - [MODIFY] `M_PI` to `Double.pi`
-
-+ 2.2.1 :
-  - [BUGFIX] Bug of message label's position after calling `showText()`
 
 ## License
 KRProgressHUD is available under the MIT license.

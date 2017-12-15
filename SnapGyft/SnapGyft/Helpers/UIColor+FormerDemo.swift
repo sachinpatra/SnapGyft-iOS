@@ -10,6 +10,14 @@ import UIKit
 
 extension UIColor {
     
+    convenience init(red: Int, green: Int, blue: Int) {
+        let newRed = CGFloat(red)/255
+        let newGreen = CGFloat(green)/255
+        let newBlue = CGFloat(blue)/255
+        
+        self.init(red: newRed, green: newGreen, blue: newBlue, alpha: 1.0)
+    }
+    
     class func formerColor() -> UIColor {
         return UIColor(red: 0.14, green: 0.16, blue: 0.22, alpha: 1)
     }

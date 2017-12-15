@@ -111,7 +111,7 @@ class ProfileViewController: UITableViewController {
                 self.saveProfile(with: "gender", value: $0.title)
 
         }
-        let birthdayRow = InlineDatePickerRowFormer<ProfileLabelCell>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
+        /*let birthdayRow = InlineDatePickerRowFormer<ProfileLabelCell>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
             $0.titleLabel.text = "Birthday"
             }.configure {
 //                $0.date = Profile.sharedInstance.birthDay ?? Date()
@@ -124,8 +124,7 @@ class ProfileViewController: UITableViewController {
                 return String.mediumDateNoTime(date: $0)
             }.onDateChanged {
                 self.saveProfile(with: "birthday", value: $0)
-
-        }
+        }*/
         let moreRow = SwitchRowFormer<FormSwitchCell>() {
             $0.titleLabel.text = "Add more information ?"
             $0.titleLabel.textColor = .formerColor()
@@ -155,7 +154,7 @@ class ProfileViewController: UITableViewController {
         // Create SectionFormers
         let imageSection = SectionFormer(rowFormer: imageRow)
             .set(headerViewFormer: createHeader("Profile Image"))
-        let aboutSection = SectionFormer(rowFormer: nameRow, phoneRow, genderRow, birthdayRow)
+        let aboutSection = SectionFormer(rowFormer: nameRow, phoneRow, genderRow/*, birthdayRow*/)
             .set(headerViewFormer: createHeader("About"))
         let moreSection = SectionFormer(rowFormer: moreRow)
             .set(headerViewFormer: createHeader("More Infomation"))
