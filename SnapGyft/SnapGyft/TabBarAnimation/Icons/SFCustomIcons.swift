@@ -6,7 +6,7 @@
 //  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
 //
 
-public enum SFCustomIcons: NSString {
+public enum SFCustomIcons: String {
     
     static let tuples: [(String, SFCustomIcons)] =
         [

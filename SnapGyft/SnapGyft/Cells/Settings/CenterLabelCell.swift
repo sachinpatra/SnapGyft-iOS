@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//import Former
 
 final class CenterLabelCell: FormCell, LabelFormableRow {
     

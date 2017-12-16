@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="1257" y="-849"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Tour View Controller-->
         <scene sceneID="7DO-NQ-VOd">
             <objects>
-                <viewController storyboardIdentifier="LoginSotryBoardID" id="ORg-eL-WOR" customClass="SFLoginViewController" customModule="SnapGyft" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ORg-eL-WOR" customClass="TourViewController" customModule="SnapGyft" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZbK-3F-TTe"/>
                         <viewControllerLayoutGuide type="bottom" id="NuG-gI-ghw"/>
@@ -399,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yp1-qg-8CQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1300" y="1428"/>
+            <point key="canvasLocation" x="2239" y="1364"/>
         </scene>
         <!--Settings-->
         <scene sceneID="4Yi-9V-oip">

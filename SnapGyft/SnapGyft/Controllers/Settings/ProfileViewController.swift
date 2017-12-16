@@ -12,9 +12,8 @@ import CoreData
 class ProfileViewController: UITableViewController {
 
     var myProfile: Profile?
-    let instance = AACoreData.sharedInstance()
+    let coredata = AACoreData.sharedInstance()
 
-    // MARK: Public
     public private(set) lazy var former: Former = Former(tableView: self.tableView)
     let appdelObj: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -22,15 +21,15 @@ class ProfileViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Profile"
         
-        instance.fetchRecords(entityName: .ProfileEntityName) { (results) in
+        coredata.fetchRecords(entityName: .ProfileEntityName) { (results) in
             self.myProfile = (results as? [Profile])?.first
         }
         
-        configure()
+        configureForm()
     }
     
     func saveProfile(with propertyName: String, value: Any) {
-        instance.fetchRecords(entityName: .ProfileEntityName) { (results) in
+        coredata.fetchRecords(entityName: .ProfileEntityName) { (results) in
            let profile = (results as? [Profile])?.first
             
             switch propertyName {
@@ -74,7 +73,7 @@ class ProfileViewController: UITableViewController {
     // MARK: Private
     private lazy var formerInputAccessoryView: FormerInputAccessoryView = FormerInputAccessoryView(former: self.former)    
     
-    private func configure() {
+    private func configureForm() {
         
         // Create RowFomers
         let nameRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
@@ -94,7 +93,6 @@ class ProfileViewController: UITableViewController {
                 $0.text = self.myProfile?.phoneNumber
             }.onTextChanged {
                 self.saveProfile(with: "phone", value: $0)
-
         }
 
         let genderRow = InlinePickerRowFormer<ProfileLabelCell, String>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
@@ -109,7 +107,6 @@ class ProfileViewController: UITableViewController {
                 }
             }.onValueChanged {
                 self.saveProfile(with: "gender", value: $0.title)
-
         }
         /*let birthdayRow = InlineDatePickerRowFormer<ProfileLabelCell>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
             $0.titleLabel.text = "Birthday"

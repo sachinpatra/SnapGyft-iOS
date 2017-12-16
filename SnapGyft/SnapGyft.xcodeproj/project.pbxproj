@@ -8,60 +8,132 @@
 
 /* Begin PBXBuildFile section */
 		1803A30F1FDB9C20007C4918 /* AACoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803A30E1FDB9C20007C4918 /* AACoreData.swift */; };
-		180FFA7C1E7DC00700435772 /* TextSelectorViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA631E7DC00700435772 /* TextSelectorViewContorller.swift */; };
-		180FFA841E7DC00700435772 /* FormerInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA6D1E7DC00700435772 /* FormerInputAccessoryView.swift */; };
-		180FFABD1E7DC3D600435772 /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA891E7DC3D600435772 /* FormCell.swift */; };
-		180FFABE1E7DC3D600435772 /* FormCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA8A1E7DC3D600435772 /* FormCheckCell.swift */; };
-		180FFABF1E7DC3D600435772 /* FormDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA8B1E7DC3D600435772 /* FormDatePickerCell.swift */; };
-		180FFAC01E7DC3D600435772 /* FormInlineDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA8C1E7DC3D600435772 /* FormInlineDatePickerCell.swift */; };
-		180FFAC11E7DC3D600435772 /* FormInlinePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA8D1E7DC3D600435772 /* FormInlinePickerCell.swift */; };
-		180FFAC21E7DC3D600435772 /* FormLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA8E1E7DC3D600435772 /* FormLabelCell.swift */; };
-		180FFAC31E7DC3D600435772 /* FormPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA8F1E7DC3D600435772 /* FormPickerCell.swift */; };
-		180FFAC41E7DC3D600435772 /* FormSegmentedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA901E7DC3D600435772 /* FormSegmentedCell.swift */; };
-		180FFAC51E7DC3D600435772 /* FormSelectorDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA911E7DC3D600435772 /* FormSelectorDatePickerCell.swift */; };
-		180FFAC61E7DC3D600435772 /* FormSelectorPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA921E7DC3D600435772 /* FormSelectorPickerCell.swift */; };
-		180FFAC71E7DC3D600435772 /* FormSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA931E7DC3D600435772 /* FormSliderCell.swift */; };
-		180FFAC81E7DC3D600435772 /* FormStepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA941E7DC3D600435772 /* FormStepperCell.swift */; };
-		180FFAC91E7DC3D600435772 /* FormSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA951E7DC3D600435772 /* FormSwitchCell.swift */; };
-		180FFACA1E7DC3D600435772 /* FormTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA961E7DC3D600435772 /* FormTextFieldCell.swift */; };
-		180FFACB1E7DC3D600435772 /* FormTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA971E7DC3D600435772 /* FormTextViewCell.swift */; };
-		180FFACC1E7DC3D600435772 /* Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA991E7DC3D600435772 /* Former.swift */; };
-		180FFACD1E7DC3D600435772 /* FormerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA9A1E7DC3D600435772 /* FormerProtocol.swift */; };
-		180FFACE1E7DC3D600435772 /* RowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA9B1E7DC3D600435772 /* RowFormer.swift */; };
-		180FFACF1E7DC3D600435772 /* SectionFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA9C1E7DC3D600435772 /* SectionFormer.swift */; };
-		180FFAD01E7DC3D600435772 /* ViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA9D1E7DC3D600435772 /* ViewFormer.swift */; };
-		180FFAD11E7DC3D600435772 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFA9F1E7DC3D600435772 /* FormViewController.swift */; };
-		180FFAD41E7DC3D600435772 /* BaseRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAA51E7DC3D600435772 /* BaseRowFormer.swift */; };
-		180FFAD51E7DC3D600435772 /* CheckRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAA61E7DC3D600435772 /* CheckRowFormer.swift */; };
-		180FFAD61E7DC3D600435772 /* CustomRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAA71E7DC3D600435772 /* CustomRowFormer.swift */; };
-		180FFAD71E7DC3D600435772 /* DatePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAA81E7DC3D600435772 /* DatePickerRowFormer.swift */; };
-		180FFAD81E7DC3D600435772 /* InlineDatePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAA91E7DC3D600435772 /* InlineDatePickerRowFormer.swift */; };
-		180FFAD91E7DC3D600435772 /* InlinePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAAA1E7DC3D600435772 /* InlinePickerRowFormer.swift */; };
-		180FFADA1E7DC3D600435772 /* LabelRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAAB1E7DC3D600435772 /* LabelRowFormer.swift */; };
-		180FFADB1E7DC3D600435772 /* PickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAAC1E7DC3D600435772 /* PickerRowFormer.swift */; };
-		180FFADC1E7DC3D600435772 /* SegmentedRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAAD1E7DC3D600435772 /* SegmentedRowFormer.swift */; };
-		180FFADD1E7DC3D600435772 /* SelectorDatePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAAE1E7DC3D600435772 /* SelectorDatePickerRowFormer.swift */; };
-		180FFADE1E7DC3D600435772 /* SelectorPickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAAF1E7DC3D600435772 /* SelectorPickerRowFormer.swift */; };
-		180FFADF1E7DC3D600435772 /* SliderRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAB01E7DC3D600435772 /* SliderRowFormer.swift */; };
-		180FFAE01E7DC3D600435772 /* StepperRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAB11E7DC3D600435772 /* StepperRowFormer.swift */; };
-		180FFAE11E7DC3D600435772 /* SwitchRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAB21E7DC3D600435772 /* SwitchRowFormer.swift */; };
-		180FFAE21E7DC3D600435772 /* TextFieldRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAB31E7DC3D600435772 /* TextFieldRowFormer.swift */; };
-		180FFAE31E7DC3D600435772 /* TextViewRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAB41E7DC3D600435772 /* TextViewRowFormer.swift */; };
-		180FFAE41E7DC3D600435772 /* BaseViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAB61E7DC3D600435772 /* BaseViewFormer.swift */; };
-		180FFAE51E7DC3D600435772 /* CustomViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAB71E7DC3D600435772 /* CustomViewFormer.swift */; };
-		180FFAE61E7DC3D600435772 /* LabelViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAB81E7DC3D600435772 /* LabelViewFormer.swift */; };
-		180FFAE71E7DC3D600435772 /* FormHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFABA1E7DC3D600435772 /* FormHeaderFooterView.swift */; };
-		180FFAE81E7DC3D600435772 /* FormLabelFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFABB1E7DC3D600435772 /* FormLabelFooterView.swift */; };
-		180FFAE91E7DC3D600435772 /* FormLabelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFABC1E7DC3D600435772 /* FormLabelHeaderView.swift */; };
 		180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */; };
 		180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */; };
 		181D79941EF5BE47008515D5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D79931EF5BE47008515D5 /* Network.swift */; };
 		1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */; };
 		1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */; };
 		1835F6A61F0CF4E50071184E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6A51F0CF4E50071184E /* Profile.swift */; };
+		183B455B1FE454E3009282FB /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B455A1FE454E3009282FB /* RegisterTableViewController.swift */; };
+		183B455F1FE45D61009282FB /* UINavigationBar+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B455E1FE45D61009282FB /* UINavigationBar+Extention.swift */; };
+		183B45601FE45E66009282FB /* UINavigationBar+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B455E1FE45D61009282FB /* UINavigationBar+Extention.swift */; };
+		183B458E1FE4F16D009282FB /* CenterLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E531FE0628F00AC024D /* CenterLabelCell.swift */; };
+		183B45981FE50064009282FB /* RegisterFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B45971FE50064009282FB /* RegisterFieldCell.xib */; };
+		183B459A1FE5009F009282FB /* RegisterFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B45991FE5009F009282FB /* RegisterFieldCell.swift */; };
+		183B459C1FE50D04009282FB /* RegisterLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183B459B1FE50D04009282FB /* RegisterLabelCell.xib */; };
+		183B459E1FE50D2B009282FB /* RegisterLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B459D1FE50D2B009282FB /* RegisterLabelCell.swift */; };
+		183B46771FE57BA2009282FB /* TextSelectorViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46421FE57BA2009282FB /* TextSelectorViewContorller.swift */; };
+		183B46781FE57BA2009282FB /* FormerInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46441FE57BA2009282FB /* FormerInputAccessoryView.swift */; };
+		183B46791FE57BA2009282FB /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46471FE57BA2009282FB /* FormCell.swift */; };
+		183B467A1FE57BA2009282FB /* FormCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46481FE57BA2009282FB /* FormCheckCell.swift */; };
+		183B467B1FE57BA2009282FB /* FormDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46491FE57BA2009282FB /* FormDatePickerCell.swift */; };
+		183B467C1FE57BA2009282FB /* FormInlineDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464A1FE57BA2009282FB /* FormInlineDatePickerCell.swift */; };
+		183B467D1FE57BA2009282FB /* FormInlinePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464B1FE57BA2009282FB /* FormInlinePickerCell.swift */; };
+		183B467E1FE57BA2009282FB /* FormLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464C1FE57BA2009282FB /* FormLabelCell.swift */; };
+		183B467F1FE57BA2009282FB /* FormPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464D1FE57BA2009282FB /* FormPickerCell.swift */; };
+		183B46801FE57BA2009282FB /* FormSegmentedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464E1FE57BA2009282FB /* FormSegmentedCell.swift */; };
+		183B46811FE57BA2009282FB /* FormSelectorDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464F1FE57BA2009282FB /* FormSelectorDatePickerCell.swift */; };
+		183B46821FE57BA2009282FB /* FormSelectorPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46501FE57BA2009282FB /* FormSelectorPickerCell.swift */; };
+		183B46831FE57BA2009282FB /* FormSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46511FE57BA2009282FB /* FormSliderCell.swift */; };
+		183B46841FE57BA2009282FB /* FormStepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46521FE57BA2009282FB /* FormStepperCell.swift */; };
+		183B46851FE57BA2009282FB /* FormSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46531FE57BA2009282FB /* FormSwitchCell.swift */; };
+		183B46861FE57BA2009282FB /* FormTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46541FE57BA2009282FB /* FormTextFieldCell.swift */; };
+		183B46871FE57BA2009282FB /* FormTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46551FE57BA2009282FB /* FormTextViewCell.swift */; };
+		183B46881FE57BA2009282FB /* Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46571FE57BA2009282FB /* Former.swift */; };
+		183B46891FE57BA2009282FB /* FormerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46581FE57BA2009282FB /* FormerProtocol.swift */; };
+		183B468A1FE57BA2009282FB /* RowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46591FE57BA2009282FB /* RowFormer.swift */; };
+		183B468B1FE57BA2009282FB /* SectionFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B465A1FE57BA2009282FB /* SectionFormer.swift */; };
+		183B468C1FE57BA2009282FB /* ViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B465B1FE57BA2009282FB /* ViewFormer.swift */; };
+		183B468D1FE57BA2009282FB /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B465D1FE57BA2009282FB /* FormViewController.swift */; };
+		183B468E1FE57BA2009282FB /* BaseRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B465F1FE57BA2009282FB /* BaseRowFormer.swift */; };
+		183B468F1FE57BA2009282FB /* CheckRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46601FE57BA2009282FB /* CheckRowFormer.swift */; };
+		183B46901FE57BA2009282FB /* CustomRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46611FE57BA2009282FB /* CustomRowFormer.swift */; };
+		183B46911FE57BA2009282FB /* DatePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46621FE57BA2009282FB /* DatePickerRowFormer.swift */; };
+		183B46921FE57BA2009282FB /* InlineDatePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46631FE57BA2009282FB /* InlineDatePickerRowFormer.swift */; };
+		183B46931FE57BA2009282FB /* InlinePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46641FE57BA2009282FB /* InlinePickerRowFormer.swift */; };
+		183B46941FE57BA2009282FB /* LabelRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46651FE57BA2009282FB /* LabelRowFormer.swift */; };
+		183B46951FE57BA2009282FB /* PickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46661FE57BA2009282FB /* PickerRowFormer.swift */; };
+		183B46961FE57BA2009282FB /* SegmentedRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46671FE57BA2009282FB /* SegmentedRowFormer.swift */; };
+		183B46971FE57BA2009282FB /* SelectorDatePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46681FE57BA2009282FB /* SelectorDatePickerRowFormer.swift */; };
+		183B46981FE57BA2009282FB /* SelectorPickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46691FE57BA2009282FB /* SelectorPickerRowFormer.swift */; };
+		183B46991FE57BA2009282FB /* SliderRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B466A1FE57BA2009282FB /* SliderRowFormer.swift */; };
+		183B469A1FE57BA2009282FB /* StepperRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B466B1FE57BA2009282FB /* StepperRowFormer.swift */; };
+		183B469B1FE57BA2009282FB /* SwitchRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B466C1FE57BA2009282FB /* SwitchRowFormer.swift */; };
+		183B469C1FE57BA2009282FB /* TextFieldRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B466D1FE57BA2009282FB /* TextFieldRowFormer.swift */; };
+		183B469D1FE57BA2009282FB /* TextViewRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B466E1FE57BA2009282FB /* TextViewRowFormer.swift */; };
+		183B469E1FE57BA2009282FB /* BaseViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46701FE57BA2009282FB /* BaseViewFormer.swift */; };
+		183B469F1FE57BA2009282FB /* CustomViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46711FE57BA2009282FB /* CustomViewFormer.swift */; };
+		183B46A01FE57BA2009282FB /* LabelViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46721FE57BA2009282FB /* LabelViewFormer.swift */; };
+		183B46A11FE57BA2009282FB /* FormHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46741FE57BA2009282FB /* FormHeaderFooterView.swift */; };
+		183B46A21FE57BA2009282FB /* FormLabelFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46751FE57BA2009282FB /* FormLabelFooterView.swift */; };
+		183B46A31FE57BA2009282FB /* FormLabelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46761FE57BA2009282FB /* FormLabelHeaderView.swift */; };
+		183B46A41FE57CD6009282FB /* TextSelectorViewContorller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46421FE57BA2009282FB /* TextSelectorViewContorller.swift */; };
+		183B46A51FE57CDA009282FB /* FormerInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46441FE57BA2009282FB /* FormerInputAccessoryView.swift */; };
+		183B46A61FE57CE1009282FB /* FormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46471FE57BA2009282FB /* FormCell.swift */; };
+		183B46A71FE57CE5009282FB /* FormCheckCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46481FE57BA2009282FB /* FormCheckCell.swift */; };
+		183B46A81FE57CE8009282FB /* FormDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46491FE57BA2009282FB /* FormDatePickerCell.swift */; };
+		183B46A91FE57CF9009282FB /* FormInlineDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464A1FE57BA2009282FB /* FormInlineDatePickerCell.swift */; };
+		183B46AA1FE57CFC009282FB /* FormInlinePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464B1FE57BA2009282FB /* FormInlinePickerCell.swift */; };
+		183B46AB1FE57CFE009282FB /* FormLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464C1FE57BA2009282FB /* FormLabelCell.swift */; };
+		183B46AC1FE57D01009282FB /* FormPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464D1FE57BA2009282FB /* FormPickerCell.swift */; };
+		183B46AD1FE57D03009282FB /* FormSegmentedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464E1FE57BA2009282FB /* FormSegmentedCell.swift */; };
+		183B46AE1FE57D04009282FB /* FormSelectorDatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B464F1FE57BA2009282FB /* FormSelectorDatePickerCell.swift */; };
+		183B46AF1FE57D07009282FB /* FormSelectorPickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46501FE57BA2009282FB /* FormSelectorPickerCell.swift */; };
+		183B46B01FE57D09009282FB /* FormSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46511FE57BA2009282FB /* FormSliderCell.swift */; };
+		183B46B11FE57D0B009282FB /* FormStepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46521FE57BA2009282FB /* FormStepperCell.swift */; };
+		183B46B21FE57D0D009282FB /* FormSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46531FE57BA2009282FB /* FormSwitchCell.swift */; };
+		183B46B31FE57D10009282FB /* FormTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46541FE57BA2009282FB /* FormTextFieldCell.swift */; };
+		183B46B41FE57D12009282FB /* FormTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46551FE57BA2009282FB /* FormTextViewCell.swift */; };
+		183B46B51FE57D16009282FB /* Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46571FE57BA2009282FB /* Former.swift */; };
+		183B46B61FE57D1A009282FB /* FormerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46581FE57BA2009282FB /* FormerProtocol.swift */; };
+		183B46B71FE57D1D009282FB /* RowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46591FE57BA2009282FB /* RowFormer.swift */; };
+		183B46B81FE57D20009282FB /* SectionFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B465A1FE57BA2009282FB /* SectionFormer.swift */; };
+		183B46B91FE57D22009282FB /* ViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B465B1FE57BA2009282FB /* ViewFormer.swift */; };
+		183B46BA1FE57D26009282FB /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B465D1FE57BA2009282FB /* FormViewController.swift */; };
+		183B46BB1FE57D2B009282FB /* BaseRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B465F1FE57BA2009282FB /* BaseRowFormer.swift */; };
+		183B46BC1FE57D2E009282FB /* CheckRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46601FE57BA2009282FB /* CheckRowFormer.swift */; };
+		183B46BD1FE57D30009282FB /* CustomRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46611FE57BA2009282FB /* CustomRowFormer.swift */; };
+		183B46BE1FE57D39009282FB /* DatePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46621FE57BA2009282FB /* DatePickerRowFormer.swift */; };
+		183B46BF1FE57D3B009282FB /* InlineDatePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46631FE57BA2009282FB /* InlineDatePickerRowFormer.swift */; };
+		183B46C01FE57D3D009282FB /* InlinePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46641FE57BA2009282FB /* InlinePickerRowFormer.swift */; };
+		183B46C11FE57D40009282FB /* LabelRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46651FE57BA2009282FB /* LabelRowFormer.swift */; };
+		183B46C21FE57D46009282FB /* PickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46661FE57BA2009282FB /* PickerRowFormer.swift */; };
+		183B46C31FE57D4D009282FB /* SegmentedRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46671FE57BA2009282FB /* SegmentedRowFormer.swift */; };
+		183B46C41FE57D50009282FB /* SelectorDatePickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46681FE57BA2009282FB /* SelectorDatePickerRowFormer.swift */; };
+		183B46C51FE57D52009282FB /* SelectorPickerRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46691FE57BA2009282FB /* SelectorPickerRowFormer.swift */; };
+		183B46C61FE57D54009282FB /* SliderRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B466A1FE57BA2009282FB /* SliderRowFormer.swift */; };
+		183B46C71FE57D56009282FB /* StepperRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B466B1FE57BA2009282FB /* StepperRowFormer.swift */; };
+		183B46C81FE57D59009282FB /* SwitchRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B466C1FE57BA2009282FB /* SwitchRowFormer.swift */; };
+		183B46C91FE57D5C009282FB /* TextFieldRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B466D1FE57BA2009282FB /* TextFieldRowFormer.swift */; };
+		183B46CA1FE57D5E009282FB /* TextViewRowFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B466E1FE57BA2009282FB /* TextViewRowFormer.swift */; };
+		183B46CB1FE57D63009282FB /* BaseViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46701FE57BA2009282FB /* BaseViewFormer.swift */; };
+		183B46CC1FE57D66009282FB /* CustomViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46711FE57BA2009282FB /* CustomViewFormer.swift */; };
+		183B46CD1FE57D69009282FB /* LabelViewFormer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46721FE57BA2009282FB /* LabelViewFormer.swift */; };
+		183B46CE1FE57D6E009282FB /* FormHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46741FE57BA2009282FB /* FormHeaderFooterView.swift */; };
+		183B46CF1FE57D72009282FB /* FormLabelFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46751FE57BA2009282FB /* FormLabelFooterView.swift */; };
+		183B46D01FE57D75009282FB /* FormLabelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46761FE57BA2009282FB /* FormLabelHeaderView.swift */; };
+		183B46D11FE5A415009282FB /* AnimateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408C1E7B1FE600B7F495 /* AnimateItem.swift */; };
+		183B46D21FE5A419009282FB /* ImageAnimateLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408D1E7B1FE600B7F495 /* ImageAnimateLayer.swift */; };
+		183B46D31FE5A41F009282FB /* TabBarAnimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408E1E7B1FE600B7F495 /* TabBarAnimateController.swift */; };
+		183B46D41FE5A425009282FB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */; };
+		183B46D61FE5A6E1009282FB /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46D51FE5A6E1009282FB /* BaseTabBarController.swift */; };
+		183B46E41FE5AD56009282FB /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 183B46DF1FE5AD56009282FB /* generator.rb */; };
+		183B46E51FE5AD56009282FB /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 183B46E01FE5AD56009282FB /* octicons.ttf */; };
+		183B46E61FE5AD56009282FB /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 183B46E11FE5AD56009282FB /* octicons.txt */; };
+		183B46E71FE5AD56009282FB /* SFCustomIconKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46E21FE5AD56009282FB /* SFCustomIconKit.swift */; };
+		183B46E81FE5AD56009282FB /* SFCustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46E31FE5AD56009282FB /* SFCustomIcons.swift */; };
+		183B46E91FE5AD60009282FB /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 183B46DF1FE5AD56009282FB /* generator.rb */; };
+		183B46EA1FE5AD62009282FB /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 183B46E01FE5AD56009282FB /* octicons.ttf */; };
+		183B46EB1FE5AD64009282FB /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 183B46E11FE5AD56009282FB /* octicons.txt */; };
+		183B46EC1FE5AD68009282FB /* SFCustomIconKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46E21FE5AD56009282FB /* SFCustomIconKit.swift */; };
+		183B46ED1FE5AD6C009282FB /* SFCustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46E31FE5AD56009282FB /* SFCustomIcons.swift */; };
+		183B46F11FE5AE0F009282FB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F01FE5AE0F009282FB /* AccountViewController.swift */; };
+		183B46F31FE5B0E3009282FB /* POSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F21FE5B0E3009282FB /* POSViewController.swift */; };
+		183B46F51FE5B0FD009282FB /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F41FE5B0FD009282FB /* PromoViewController.swift */; };
+		183B46F71FE5B115009282FB /* ProfileTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F61FE5B115009282FB /* ProfileTableController.swift */; };
 		184232961FC8707B002F1FC5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232951FC8707B002F1FC5 /* Constants.swift */; };
 		184232991FC87483002F1FC5 /* SGUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232981FC87483002F1FC5 /* SGUtility.swift */; };
-		185078EB1FE2F16100AFB9F8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185078EA1FE2F16100AFB9F8 /* LoginViewController.swift */; };
+		185078EB1FE2F16100AFB9F8 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185078EA1FE2F16100AFB9F8 /* TourViewController.swift */; };
 		185078EC1FE2F89C00AFB9F8 /* AwesomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C9591FCF325A00771B64 /* AwesomeButton.swift */; };
 		185078EF1FE2F8AD00AFB9F8 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6B1FE0679500AC024D /* GradientView.swift */; };
 		185078F01FE2F8B100AFB9F8 /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6C1FE0679500AC024D /* StoryboardHelper.swift */; };
@@ -76,15 +148,10 @@
 		185078FC1FE2FDE900AFB9F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AE40761E7B15C600B7F495 /* Images.xcassets */; };
 		185078FF1FE3016800AFB9F8 /* ClientTourScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185078FE1FE3016800AFB9F8 /* ClientTourScreenModel.swift */; };
 		185079031FE301E200AFB9F8 /* MerchantTourScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185079021FE301E200AFB9F8 /* MerchantTourScreenModel.swift */; };
-		18592A291E85DB3600003E6A /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 18592A241E85DB3600003E6A /* generator.rb */; };
-		18592A2A1E85DB3600003E6A /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 18592A251E85DB3600003E6A /* octicons.ttf */; };
-		18592A2B1E85DB3600003E6A /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18592A261E85DB3600003E6A /* octicons.txt */; };
-		18592A2C1E85DB3600003E6A /* SFCustomIconKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18592A271E85DB3600003E6A /* SFCustomIconKit.swift */; };
-		18592A2D1E85DB3600003E6A /* SFCustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18592A281E85DB3600003E6A /* SFCustomIcons.swift */; };
 		18592A301E87099F00003E6A /* SFMyCharityController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18592A2F1E87099F00003E6A /* SFMyCharityController.swift */; };
 		185D8C4B1E7C77C400692AD4 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185D8C491E7C77C400692AD4 /* AccountKit.framework */; };
 		185D8C4C1E7C77C400692AD4 /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */; };
-		185D8C521E7C7BE700692AD4 /* SFLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D8C511E7C7BE700692AD4 /* SFLoginViewController.swift */; };
+		185D8C521E7C7BE700692AD4 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D8C511E7C7BE700692AD4 /* TourViewController.swift */; };
 		18613ACD1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18613ACC1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld */; };
 		18613ADB1FE2CBD7004AF8F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18613ADA1FE2CBD7004AF8F1 /* AppDelegate.swift */; };
 		18613AE01FE2CC09004AF8F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18613ADC1FE2CC09004AF8F1 /* Main.storyboard */; };
@@ -138,72 +205,83 @@
 /* Begin PBXFileReference section */
 		129FCB9D159D7A5C0FA376EC /* Pods-SnapGyft.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapGyft.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapGyft/Pods-SnapGyft.debug.xcconfig"; sourceTree = "<group>"; };
 		1803A30E1FDB9C20007C4918 /* AACoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AACoreData.swift; sourceTree = "<group>"; };
-		180FFA631E7DC00700435772 /* TextSelectorViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSelectorViewContorller.swift; sourceTree = "<group>"; };
-		180FFA6D1E7DC00700435772 /* FormerInputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormerInputAccessoryView.swift; sourceTree = "<group>"; };
-		180FFA891E7DC3D600435772 /* FormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
-		180FFA8A1E7DC3D600435772 /* FormCheckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCheckCell.swift; sourceTree = "<group>"; };
-		180FFA8B1E7DC3D600435772 /* FormDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDatePickerCell.swift; sourceTree = "<group>"; };
-		180FFA8C1E7DC3D600435772 /* FormInlineDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormInlineDatePickerCell.swift; sourceTree = "<group>"; };
-		180FFA8D1E7DC3D600435772 /* FormInlinePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormInlinePickerCell.swift; sourceTree = "<group>"; };
-		180FFA8E1E7DC3D600435772 /* FormLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelCell.swift; sourceTree = "<group>"; };
-		180FFA8F1E7DC3D600435772 /* FormPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormPickerCell.swift; sourceTree = "<group>"; };
-		180FFA901E7DC3D600435772 /* FormSegmentedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSegmentedCell.swift; sourceTree = "<group>"; };
-		180FFA911E7DC3D600435772 /* FormSelectorDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSelectorDatePickerCell.swift; sourceTree = "<group>"; };
-		180FFA921E7DC3D600435772 /* FormSelectorPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSelectorPickerCell.swift; sourceTree = "<group>"; };
-		180FFA931E7DC3D600435772 /* FormSliderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSliderCell.swift; sourceTree = "<group>"; };
-		180FFA941E7DC3D600435772 /* FormStepperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormStepperCell.swift; sourceTree = "<group>"; };
-		180FFA951E7DC3D600435772 /* FormSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSwitchCell.swift; sourceTree = "<group>"; };
-		180FFA961E7DC3D600435772 /* FormTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldCell.swift; sourceTree = "<group>"; };
-		180FFA971E7DC3D600435772 /* FormTextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextViewCell.swift; sourceTree = "<group>"; };
-		180FFA991E7DC3D600435772 /* Former.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Former.swift; sourceTree = "<group>"; };
-		180FFA9A1E7DC3D600435772 /* FormerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormerProtocol.swift; sourceTree = "<group>"; };
-		180FFA9B1E7DC3D600435772 /* RowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowFormer.swift; sourceTree = "<group>"; };
-		180FFA9C1E7DC3D600435772 /* SectionFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionFormer.swift; sourceTree = "<group>"; };
-		180FFA9D1E7DC3D600435772 /* ViewFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFormer.swift; sourceTree = "<group>"; };
-		180FFA9F1E7DC3D600435772 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
-		180FFAA51E7DC3D600435772 /* BaseRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRowFormer.swift; sourceTree = "<group>"; };
-		180FFAA61E7DC3D600435772 /* CheckRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckRowFormer.swift; sourceTree = "<group>"; };
-		180FFAA71E7DC3D600435772 /* CustomRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRowFormer.swift; sourceTree = "<group>"; };
-		180FFAA81E7DC3D600435772 /* DatePickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerRowFormer.swift; sourceTree = "<group>"; };
-		180FFAA91E7DC3D600435772 /* InlineDatePickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineDatePickerRowFormer.swift; sourceTree = "<group>"; };
-		180FFAAA1E7DC3D600435772 /* InlinePickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlinePickerRowFormer.swift; sourceTree = "<group>"; };
-		180FFAAB1E7DC3D600435772 /* LabelRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelRowFormer.swift; sourceTree = "<group>"; };
-		180FFAAC1E7DC3D600435772 /* PickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerRowFormer.swift; sourceTree = "<group>"; };
-		180FFAAD1E7DC3D600435772 /* SegmentedRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedRowFormer.swift; sourceTree = "<group>"; };
-		180FFAAE1E7DC3D600435772 /* SelectorDatePickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorDatePickerRowFormer.swift; sourceTree = "<group>"; };
-		180FFAAF1E7DC3D600435772 /* SelectorPickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorPickerRowFormer.swift; sourceTree = "<group>"; };
-		180FFAB01E7DC3D600435772 /* SliderRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderRowFormer.swift; sourceTree = "<group>"; };
-		180FFAB11E7DC3D600435772 /* StepperRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperRowFormer.swift; sourceTree = "<group>"; };
-		180FFAB21E7DC3D600435772 /* SwitchRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchRowFormer.swift; sourceTree = "<group>"; };
-		180FFAB31E7DC3D600435772 /* TextFieldRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldRowFormer.swift; sourceTree = "<group>"; };
-		180FFAB41E7DC3D600435772 /* TextViewRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewRowFormer.swift; sourceTree = "<group>"; };
-		180FFAB61E7DC3D600435772 /* BaseViewFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewFormer.swift; sourceTree = "<group>"; };
-		180FFAB71E7DC3D600435772 /* CustomViewFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewFormer.swift; sourceTree = "<group>"; };
-		180FFAB81E7DC3D600435772 /* LabelViewFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelViewFormer.swift; sourceTree = "<group>"; };
-		180FFABA1E7DC3D600435772 /* FormHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormHeaderFooterView.swift; sourceTree = "<group>"; };
-		180FFABB1E7DC3D600435772 /* FormLabelFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelFooterView.swift; sourceTree = "<group>"; };
-		180FFABC1E7DC3D600435772 /* FormLabelHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelHeaderView.swift; sourceTree = "<group>"; };
 		180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+FormerDemo.swift"; sourceTree = "<group>"; };
 		180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FormerDemo.swift"; sourceTree = "<group>"; };
 		181D79931EF5BE47008515D5 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGButtonExtender.swift; sourceTree = "<group>"; };
 		1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
 		1835F6A51F0CF4E50071184E /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		183B455A1FE454E3009282FB /* RegisterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
+		183B455E1FE45D61009282FB /* UINavigationBar+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extention.swift"; sourceTree = "<group>"; };
+		183B45971FE50064009282FB /* RegisterFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterFieldCell.xib; sourceTree = "<group>"; };
+		183B45991FE5009F009282FB /* RegisterFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFieldCell.swift; sourceTree = "<group>"; };
+		183B459B1FE50D04009282FB /* RegisterLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterLabelCell.xib; sourceTree = "<group>"; };
+		183B459D1FE50D2B009282FB /* RegisterLabelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterLabelCell.swift; sourceTree = "<group>"; };
+		183B46421FE57BA2009282FB /* TextSelectorViewContorller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSelectorViewContorller.swift; sourceTree = "<group>"; };
+		183B46441FE57BA2009282FB /* FormerInputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormerInputAccessoryView.swift; sourceTree = "<group>"; };
+		183B46471FE57BA2009282FB /* FormCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCell.swift; sourceTree = "<group>"; };
+		183B46481FE57BA2009282FB /* FormCheckCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormCheckCell.swift; sourceTree = "<group>"; };
+		183B46491FE57BA2009282FB /* FormDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormDatePickerCell.swift; sourceTree = "<group>"; };
+		183B464A1FE57BA2009282FB /* FormInlineDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormInlineDatePickerCell.swift; sourceTree = "<group>"; };
+		183B464B1FE57BA2009282FB /* FormInlinePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormInlinePickerCell.swift; sourceTree = "<group>"; };
+		183B464C1FE57BA2009282FB /* FormLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelCell.swift; sourceTree = "<group>"; };
+		183B464D1FE57BA2009282FB /* FormPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormPickerCell.swift; sourceTree = "<group>"; };
+		183B464E1FE57BA2009282FB /* FormSegmentedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSegmentedCell.swift; sourceTree = "<group>"; };
+		183B464F1FE57BA2009282FB /* FormSelectorDatePickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSelectorDatePickerCell.swift; sourceTree = "<group>"; };
+		183B46501FE57BA2009282FB /* FormSelectorPickerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSelectorPickerCell.swift; sourceTree = "<group>"; };
+		183B46511FE57BA2009282FB /* FormSliderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSliderCell.swift; sourceTree = "<group>"; };
+		183B46521FE57BA2009282FB /* FormStepperCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormStepperCell.swift; sourceTree = "<group>"; };
+		183B46531FE57BA2009282FB /* FormSwitchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormSwitchCell.swift; sourceTree = "<group>"; };
+		183B46541FE57BA2009282FB /* FormTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextFieldCell.swift; sourceTree = "<group>"; };
+		183B46551FE57BA2009282FB /* FormTextViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTextViewCell.swift; sourceTree = "<group>"; };
+		183B46571FE57BA2009282FB /* Former.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Former.swift; sourceTree = "<group>"; };
+		183B46581FE57BA2009282FB /* FormerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormerProtocol.swift; sourceTree = "<group>"; };
+		183B46591FE57BA2009282FB /* RowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RowFormer.swift; sourceTree = "<group>"; };
+		183B465A1FE57BA2009282FB /* SectionFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionFormer.swift; sourceTree = "<group>"; };
+		183B465B1FE57BA2009282FB /* ViewFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFormer.swift; sourceTree = "<group>"; };
+		183B465D1FE57BA2009282FB /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
+		183B465F1FE57BA2009282FB /* BaseRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRowFormer.swift; sourceTree = "<group>"; };
+		183B46601FE57BA2009282FB /* CheckRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckRowFormer.swift; sourceTree = "<group>"; };
+		183B46611FE57BA2009282FB /* CustomRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRowFormer.swift; sourceTree = "<group>"; };
+		183B46621FE57BA2009282FB /* DatePickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerRowFormer.swift; sourceTree = "<group>"; };
+		183B46631FE57BA2009282FB /* InlineDatePickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlineDatePickerRowFormer.swift; sourceTree = "<group>"; };
+		183B46641FE57BA2009282FB /* InlinePickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InlinePickerRowFormer.swift; sourceTree = "<group>"; };
+		183B46651FE57BA2009282FB /* LabelRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelRowFormer.swift; sourceTree = "<group>"; };
+		183B46661FE57BA2009282FB /* PickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerRowFormer.swift; sourceTree = "<group>"; };
+		183B46671FE57BA2009282FB /* SegmentedRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegmentedRowFormer.swift; sourceTree = "<group>"; };
+		183B46681FE57BA2009282FB /* SelectorDatePickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorDatePickerRowFormer.swift; sourceTree = "<group>"; };
+		183B46691FE57BA2009282FB /* SelectorPickerRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorPickerRowFormer.swift; sourceTree = "<group>"; };
+		183B466A1FE57BA2009282FB /* SliderRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderRowFormer.swift; sourceTree = "<group>"; };
+		183B466B1FE57BA2009282FB /* StepperRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperRowFormer.swift; sourceTree = "<group>"; };
+		183B466C1FE57BA2009282FB /* SwitchRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchRowFormer.swift; sourceTree = "<group>"; };
+		183B466D1FE57BA2009282FB /* TextFieldRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldRowFormer.swift; sourceTree = "<group>"; };
+		183B466E1FE57BA2009282FB /* TextViewRowFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewRowFormer.swift; sourceTree = "<group>"; };
+		183B46701FE57BA2009282FB /* BaseViewFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewFormer.swift; sourceTree = "<group>"; };
+		183B46711FE57BA2009282FB /* CustomViewFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewFormer.swift; sourceTree = "<group>"; };
+		183B46721FE57BA2009282FB /* LabelViewFormer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelViewFormer.swift; sourceTree = "<group>"; };
+		183B46741FE57BA2009282FB /* FormHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormHeaderFooterView.swift; sourceTree = "<group>"; };
+		183B46751FE57BA2009282FB /* FormLabelFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelFooterView.swift; sourceTree = "<group>"; };
+		183B46761FE57BA2009282FB /* FormLabelHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelHeaderView.swift; sourceTree = "<group>"; };
+		183B46D51FE5A6E1009282FB /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		183B46DF1FE5AD56009282FB /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
+		183B46E01FE5AD56009282FB /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.ttf; sourceTree = "<group>"; };
+		183B46E11FE5AD56009282FB /* octicons.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = octicons.txt; sourceTree = "<group>"; };
+		183B46E21FE5AD56009282FB /* SFCustomIconKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIconKit.swift; sourceTree = "<group>"; };
+		183B46E31FE5AD56009282FB /* SFCustomIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIcons.swift; sourceTree = "<group>"; };
+		183B46F01FE5AE0F009282FB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		183B46F21FE5B0E3009282FB /* POSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSViewController.swift; sourceTree = "<group>"; };
+		183B46F41FE5B0FD009282FB /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
+		183B46F61FE5B115009282FB /* ProfileTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableController.swift; sourceTree = "<group>"; };
 		184232951FC8707B002F1FC5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		184232981FC87483002F1FC5 /* SGUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGUtility.swift; sourceTree = "<group>"; };
-		185078EA1FE2F16100AFB9F8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		185078EA1FE2F16100AFB9F8 /* TourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		185078FE1FE3016800AFB9F8 /* ClientTourScreenModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTourScreenModel.swift; sourceTree = "<group>"; };
 		185079021FE301E200AFB9F8 /* MerchantTourScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantTourScreenModel.swift; sourceTree = "<group>"; };
-		18592A241E85DB3600003E6A /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
-		18592A251E85DB3600003E6A /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.ttf; sourceTree = "<group>"; };
-		18592A261E85DB3600003E6A /* octicons.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = octicons.txt; sourceTree = "<group>"; };
-		18592A271E85DB3600003E6A /* SFCustomIconKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIconKit.swift; sourceTree = "<group>"; };
-		18592A281E85DB3600003E6A /* SFCustomIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIcons.swift; sourceTree = "<group>"; };
 		18592A2F1E87099F00003E6A /* SFMyCharityController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFMyCharityController.swift; sourceTree = "<group>"; };
 		185D8C491E7C77C400692AD4 /* AccountKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AccountKit.framework; sourceTree = "<group>"; };
 		185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AccountKitStrings.bundle; sourceTree = "<group>"; };
 		185D8C4D1E7C780F00692AD4 /* SnapGyft-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapGyft-Bridging-Header.h"; sourceTree = "<group>"; };
-		185D8C511E7C7BE700692AD4 /* SFLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFLoginViewController.swift; sourceTree = "<group>"; };
+		185D8C511E7C7BE700692AD4 /* TourViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
 		18613AC31FE2CAFD004AF8F1 /* SnapGyftMerchant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapGyftMerchant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18613AD31FE2CAFD004AF8F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18613AD71FE2CBAD004AF8F1 /* SnapGyftMerchant-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SnapGyftMerchant-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -282,130 +360,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		180FFA511E7DC00700435772 /* Form */ = {
-			isa = PBXGroup;
-			children = (
-				180FFA5C1E7DC00700435772 /* Controllers */,
-				180FFA6C1E7DC00700435772 /* Views */,
-			);
-			path = Form;
-			sourceTree = "<group>";
-		};
-		180FFA5C1E7DC00700435772 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				180FFA631E7DC00700435772 /* TextSelectorViewContorller.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		180FFA6C1E7DC00700435772 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				180FFA6D1E7DC00700435772 /* FormerInputAccessoryView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		180FFA871E7DC3D600435772 /* Former */ = {
-			isa = PBXGroup;
-			children = (
-				180FFA881E7DC3D600435772 /* Cells */,
-				180FFA981E7DC3D600435772 /* Commons */,
-				180FFA9E1E7DC3D600435772 /* Controllers */,
-				180FFAA41E7DC3D600435772 /* RowFormers */,
-				180FFAB51E7DC3D600435772 /* ViewFormers */,
-				180FFAB91E7DC3D600435772 /* Views */,
-			);
-			name = Former;
-			path = Form/Former;
-			sourceTree = "<group>";
-		};
-		180FFA881E7DC3D600435772 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				180FFA891E7DC3D600435772 /* FormCell.swift */,
-				180FFA8A1E7DC3D600435772 /* FormCheckCell.swift */,
-				180FFA8B1E7DC3D600435772 /* FormDatePickerCell.swift */,
-				180FFA8C1E7DC3D600435772 /* FormInlineDatePickerCell.swift */,
-				180FFA8D1E7DC3D600435772 /* FormInlinePickerCell.swift */,
-				180FFA8E1E7DC3D600435772 /* FormLabelCell.swift */,
-				180FFA8F1E7DC3D600435772 /* FormPickerCell.swift */,
-				180FFA901E7DC3D600435772 /* FormSegmentedCell.swift */,
-				180FFA911E7DC3D600435772 /* FormSelectorDatePickerCell.swift */,
-				180FFA921E7DC3D600435772 /* FormSelectorPickerCell.swift */,
-				180FFA931E7DC3D600435772 /* FormSliderCell.swift */,
-				180FFA941E7DC3D600435772 /* FormStepperCell.swift */,
-				180FFA951E7DC3D600435772 /* FormSwitchCell.swift */,
-				180FFA961E7DC3D600435772 /* FormTextFieldCell.swift */,
-				180FFA971E7DC3D600435772 /* FormTextViewCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		180FFA981E7DC3D600435772 /* Commons */ = {
-			isa = PBXGroup;
-			children = (
-				180FFA991E7DC3D600435772 /* Former.swift */,
-				180FFA9A1E7DC3D600435772 /* FormerProtocol.swift */,
-				180FFA9B1E7DC3D600435772 /* RowFormer.swift */,
-				180FFA9C1E7DC3D600435772 /* SectionFormer.swift */,
-				180FFA9D1E7DC3D600435772 /* ViewFormer.swift */,
-			);
-			path = Commons;
-			sourceTree = "<group>";
-		};
-		180FFA9E1E7DC3D600435772 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				180FFA9F1E7DC3D600435772 /* FormViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		180FFAA41E7DC3D600435772 /* RowFormers */ = {
-			isa = PBXGroup;
-			children = (
-				180FFAA51E7DC3D600435772 /* BaseRowFormer.swift */,
-				180FFAA61E7DC3D600435772 /* CheckRowFormer.swift */,
-				180FFAA71E7DC3D600435772 /* CustomRowFormer.swift */,
-				180FFAA81E7DC3D600435772 /* DatePickerRowFormer.swift */,
-				180FFAA91E7DC3D600435772 /* InlineDatePickerRowFormer.swift */,
-				180FFAAA1E7DC3D600435772 /* InlinePickerRowFormer.swift */,
-				180FFAAB1E7DC3D600435772 /* LabelRowFormer.swift */,
-				180FFAAC1E7DC3D600435772 /* PickerRowFormer.swift */,
-				180FFAAD1E7DC3D600435772 /* SegmentedRowFormer.swift */,
-				180FFAAE1E7DC3D600435772 /* SelectorDatePickerRowFormer.swift */,
-				180FFAAF1E7DC3D600435772 /* SelectorPickerRowFormer.swift */,
-				180FFAB01E7DC3D600435772 /* SliderRowFormer.swift */,
-				180FFAB11E7DC3D600435772 /* StepperRowFormer.swift */,
-				180FFAB21E7DC3D600435772 /* SwitchRowFormer.swift */,
-				180FFAB31E7DC3D600435772 /* TextFieldRowFormer.swift */,
-				180FFAB41E7DC3D600435772 /* TextViewRowFormer.swift */,
-			);
-			path = RowFormers;
-			sourceTree = "<group>";
-		};
-		180FFAB51E7DC3D600435772 /* ViewFormers */ = {
-			isa = PBXGroup;
-			children = (
-				180FFAB61E7DC3D600435772 /* BaseViewFormer.swift */,
-				180FFAB71E7DC3D600435772 /* CustomViewFormer.swift */,
-				180FFAB81E7DC3D600435772 /* LabelViewFormer.swift */,
-			);
-			path = ViewFormers;
-			sourceTree = "<group>";
-		};
-		180FFAB91E7DC3D600435772 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				180FFABA1E7DC3D600435772 /* FormHeaderFooterView.swift */,
-				180FFABB1E7DC3D600435772 /* FormLabelFooterView.swift */,
-				180FFABC1E7DC3D600435772 /* FormLabelHeaderView.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		180FFAF01E7DE46B00435772 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +386,7 @@
 				180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */,
 				1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */,
 				1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */,
+				183B455E1FE45D61009282FB /* UINavigationBar+Extention.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -442,6 +397,194 @@
 				1835F6A51F0CF4E50071184E /* Profile.swift */,
 			);
 			path = DataBase;
+			sourceTree = "<group>";
+		};
+		183B45951FE4FF0E009282FB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				183B45961FE4FF0E009282FB /* Register */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		183B45961FE4FF0E009282FB /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				183B459D1FE50D2B009282FB /* RegisterLabelCell.swift */,
+				183B459B1FE50D04009282FB /* RegisterLabelCell.xib */,
+				183B45991FE5009F009282FB /* RegisterFieldCell.swift */,
+				183B45971FE50064009282FB /* RegisterFieldCell.xib */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		183B463F1FE57BA2009282FB /* FormStyle */ = {
+			isa = PBXGroup;
+			children = (
+				183B46401FE57BA2009282FB /* Form */,
+				183B46451FE57BA2009282FB /* Former */,
+			);
+			name = FormStyle;
+			path = SnapGyft/FormStyle;
+			sourceTree = SOURCE_ROOT;
+		};
+		183B46401FE57BA2009282FB /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				183B46411FE57BA2009282FB /* Controllers */,
+				183B46431FE57BA2009282FB /* Views */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		183B46411FE57BA2009282FB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				183B46421FE57BA2009282FB /* TextSelectorViewContorller.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		183B46431FE57BA2009282FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				183B46441FE57BA2009282FB /* FormerInputAccessoryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		183B46451FE57BA2009282FB /* Former */ = {
+			isa = PBXGroup;
+			children = (
+				183B46461FE57BA2009282FB /* Cells */,
+				183B46561FE57BA2009282FB /* Commons */,
+				183B465C1FE57BA2009282FB /* Controllers */,
+				183B465E1FE57BA2009282FB /* RowFormers */,
+				183B466F1FE57BA2009282FB /* ViewFormers */,
+				183B46731FE57BA2009282FB /* Views */,
+			);
+			path = Former;
+			sourceTree = "<group>";
+		};
+		183B46461FE57BA2009282FB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				183B46471FE57BA2009282FB /* FormCell.swift */,
+				183B46481FE57BA2009282FB /* FormCheckCell.swift */,
+				183B46491FE57BA2009282FB /* FormDatePickerCell.swift */,
+				183B464A1FE57BA2009282FB /* FormInlineDatePickerCell.swift */,
+				183B464B1FE57BA2009282FB /* FormInlinePickerCell.swift */,
+				183B464C1FE57BA2009282FB /* FormLabelCell.swift */,
+				183B464D1FE57BA2009282FB /* FormPickerCell.swift */,
+				183B464E1FE57BA2009282FB /* FormSegmentedCell.swift */,
+				183B464F1FE57BA2009282FB /* FormSelectorDatePickerCell.swift */,
+				183B46501FE57BA2009282FB /* FormSelectorPickerCell.swift */,
+				183B46511FE57BA2009282FB /* FormSliderCell.swift */,
+				183B46521FE57BA2009282FB /* FormStepperCell.swift */,
+				183B46531FE57BA2009282FB /* FormSwitchCell.swift */,
+				183B46541FE57BA2009282FB /* FormTextFieldCell.swift */,
+				183B46551FE57BA2009282FB /* FormTextViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		183B46561FE57BA2009282FB /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				183B46571FE57BA2009282FB /* Former.swift */,
+				183B46581FE57BA2009282FB /* FormerProtocol.swift */,
+				183B46591FE57BA2009282FB /* RowFormer.swift */,
+				183B465A1FE57BA2009282FB /* SectionFormer.swift */,
+				183B465B1FE57BA2009282FB /* ViewFormer.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
+		183B465C1FE57BA2009282FB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				183B465D1FE57BA2009282FB /* FormViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		183B465E1FE57BA2009282FB /* RowFormers */ = {
+			isa = PBXGroup;
+			children = (
+				183B465F1FE57BA2009282FB /* BaseRowFormer.swift */,
+				183B46601FE57BA2009282FB /* CheckRowFormer.swift */,
+				183B46611FE57BA2009282FB /* CustomRowFormer.swift */,
+				183B46621FE57BA2009282FB /* DatePickerRowFormer.swift */,
+				183B46631FE57BA2009282FB /* InlineDatePickerRowFormer.swift */,
+				183B46641FE57BA2009282FB /* InlinePickerRowFormer.swift */,
+				183B46651FE57BA2009282FB /* LabelRowFormer.swift */,
+				183B46661FE57BA2009282FB /* PickerRowFormer.swift */,
+				183B46671FE57BA2009282FB /* SegmentedRowFormer.swift */,
+				183B46681FE57BA2009282FB /* SelectorDatePickerRowFormer.swift */,
+				183B46691FE57BA2009282FB /* SelectorPickerRowFormer.swift */,
+				183B466A1FE57BA2009282FB /* SliderRowFormer.swift */,
+				183B466B1FE57BA2009282FB /* StepperRowFormer.swift */,
+				183B466C1FE57BA2009282FB /* SwitchRowFormer.swift */,
+				183B466D1FE57BA2009282FB /* TextFieldRowFormer.swift */,
+				183B466E1FE57BA2009282FB /* TextViewRowFormer.swift */,
+			);
+			path = RowFormers;
+			sourceTree = "<group>";
+		};
+		183B466F1FE57BA2009282FB /* ViewFormers */ = {
+			isa = PBXGroup;
+			children = (
+				183B46701FE57BA2009282FB /* BaseViewFormer.swift */,
+				183B46711FE57BA2009282FB /* CustomViewFormer.swift */,
+				183B46721FE57BA2009282FB /* LabelViewFormer.swift */,
+			);
+			path = ViewFormers;
+			sourceTree = "<group>";
+		};
+		183B46731FE57BA2009282FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				183B46741FE57BA2009282FB /* FormHeaderFooterView.swift */,
+				183B46751FE57BA2009282FB /* FormLabelFooterView.swift */,
+				183B46761FE57BA2009282FB /* FormLabelHeaderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		183B46DD1FE5AD56009282FB /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				183B46DE1FE5AD56009282FB /* Assets */,
+				183B46E21FE5AD56009282FB /* SFCustomIconKit.swift */,
+				183B46E31FE5AD56009282FB /* SFCustomIcons.swift */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
+		183B46DE1FE5AD56009282FB /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				183B46DF1FE5AD56009282FB /* generator.rb */,
+				183B46E01FE5AD56009282FB /* octicons.ttf */,
+				183B46E11FE5AD56009282FB /* octicons.txt */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		183B46EE1FE5ADF4009282FB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				183B46EF1FE5ADF4009282FB /* Account */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		183B46EF1FE5ADF4009282FB /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				183B46F01FE5AE0F009282FB /* AccountViewController.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		185078FD1FE3016800AFB9F8 /* TourScreen */ = {
@@ -468,32 +611,19 @@
 			path = TourScreen;
 			sourceTree = "<group>";
 		};
-		18592A221E85DB3600003E6A /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				18592A231E85DB3600003E6A /* Assets */,
-				18592A271E85DB3600003E6A /* SFCustomIconKit.swift */,
-				18592A281E85DB3600003E6A /* SFCustomIcons.swift */,
-			);
-			path = Icons;
-			sourceTree = "<group>";
-		};
-		18592A231E85DB3600003E6A /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				18592A241E85DB3600003E6A /* generator.rb */,
-				18592A251E85DB3600003E6A /* octicons.ttf */,
-				18592A261E85DB3600003E6A /* octicons.txt */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		18613AC41FE2CAFD004AF8F1 /* SnapGyftMerchant */ = {
 			isa = PBXGroup;
 			children = (
+				183B45951FE4FF0E009282FB /* Cells */,
 				185079001FE3019E00AFB9F8 /* Models */,
+				183B46EE1FE5ADF4009282FB /* ViewControllers */,
 				18613ADA1FE2CBD7004AF8F1 /* AppDelegate.swift */,
-				185078EA1FE2F16100AFB9F8 /* LoginViewController.swift */,
+				185078EA1FE2F16100AFB9F8 /* TourViewController.swift */,
+				183B455A1FE454E3009282FB /* RegisterTableViewController.swift */,
+				183B46D51FE5A6E1009282FB /* BaseTabBarController.swift */,
+				183B46F21FE5B0E3009282FB /* POSViewController.swift */,
+				183B46F41FE5B0FD009282FB /* PromoViewController.swift */,
+				183B46F61FE5B115009282FB /* ProfileTableController.swift */,
 				18613AE21FE2CC1D004AF8F1 /* Images.xcassets */,
 				18613ADE1FE2CC09004AF8F1 /* LaunchScreen.storyboard */,
 				18613ADC1FE2CC09004AF8F1 /* Main.storyboard */,
@@ -590,10 +720,8 @@
 				184232981FC87483002F1FC5 /* SGUtility.swift */,
 				185D8C491E7C77C400692AD4 /* AccountKit.framework */,
 				185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */,
-				18592A221E85DB3600003E6A /* Icons */,
-				180FFA511E7DC00700435772 /* Form */,
+				183B463F1FE57BA2009282FB /* FormStyle */,
 				186B5E501FE0628F00AC024D /* Cells */,
-				180FFA871E7DC3D600435772 /* Former */,
 				18AE408B1E7B1FE600B7F495 /* TabBarAnimation */,
 				18FCC5D21E7EF20700198CF0 /* ContactsPicker */,
 				180FFAF61E7DE5C000435772 /* Helpers */,
@@ -601,7 +729,7 @@
 				180FFAF31E7DE4E500435772 /* Controllers */,
 				18AE406C1E7B15C600B7F495 /* AppDelegate.swift */,
 				18AE40851E7B185000B7F495 /* SFEventViewController.swift */,
-				185D8C511E7C7BE700692AD4 /* SFLoginViewController.swift */,
+				185D8C511E7C7BE700692AD4 /* TourViewController.swift */,
 				18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */,
 				18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */,
 				18AE40701E7B15C600B7F495 /* Main.storyboard */,
@@ -617,6 +745,7 @@
 		18AE408B1E7B1FE600B7F495 /* TabBarAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				183B46DD1FE5AD56009282FB /* Icons */,
 				18AE408C1E7B1FE600B7F495 /* AnimateItem.swift */,
 				18AE408D1E7B1FE600B7F495 /* ImageAnimateLayer.swift */,
 				18AE408E1E7B1FE600B7F495 /* TabBarAnimateController.swift */,
@@ -753,6 +882,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183B459C1FE50D04009282FB /* RegisterLabelCell.xib in Resources */,
+				183B45981FE50064009282FB /* RegisterFieldCell.xib in Resources */,
+				183B46EA1FE5AD62009282FB /* octicons.ttf in Resources */,
+				183B46EB1FE5AD64009282FB /* octicons.txt in Resources */,
+				183B46E91FE5AD60009282FB /* generator.rb in Resources */,
 				18613AE01FE2CC09004AF8F1 /* Main.storyboard in Resources */,
 				185078FC1FE2FDE900AFB9F8 /* Images.xcassets in Resources */,
 				18613AE31FE2CC1D004AF8F1 /* Images.xcassets in Resources */,
@@ -764,18 +898,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18592A2B1E85DB3600003E6A /* octicons.txt in Resources */,
 				18FCC5DC1E7EF22600198CF0 /* EPContactCell.xib in Resources */,
 				186B5E601FE0628F00AC024D /* ProfileFieldCell.xib in Resources */,
-				18592A291E85DB3600003E6A /* generator.rb in Resources */,
 				186B5E641FE0628F00AC024D /* ProfileLabelCell.xib in Resources */,
+				183B46E41FE5AD56009282FB /* generator.rb in Resources */,
 				186B5E5E1FE0628F00AC024D /* DynamicHeightCell.xib in Resources */,
 				186B5E621FE0628F00AC024D /* ProfileImageCell.xib in Resources */,
-				18592A2A1E85DB3600003E6A /* octicons.ttf in Resources */,
 				18AE407A1E7B15C600B7F495 /* LaunchScreen.storyboard in Resources */,
 				18AE40771E7B15C600B7F495 /* Images.xcassets in Resources */,
 				18AE40721E7B15C600B7F495 /* Main.storyboard in Resources */,
 				186B5E6A1FE0633700AC024D /* CardCollectionViewCell.xib in Resources */,
+				183B46E51FE5AD56009282FB /* octicons.ttf in Resources */,
+				183B46E61FE5AD56009282FB /* octicons.txt in Resources */,
 				185D8C4C1E7C77C400692AD4 /* AccountKitStrings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -924,20 +1058,81 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183B46A71FE57CE5009282FB /* FormCheckCell.swift in Sources */,
 				185078F51FE2F8CB00AFB9F8 /* Network.swift in Sources */,
+				183B46AD1FE57D03009282FB /* FormSegmentedCell.swift in Sources */,
+				183B46A61FE57CE1009282FB /* FormCell.swift in Sources */,
+				183B46D11FE5A415009282FB /* AnimateItem.swift in Sources */,
+				183B46B51FE57D16009282FB /* Former.swift in Sources */,
+				183B46B91FE57D22009282FB /* ViewFormer.swift in Sources */,
+				183B46B41FE57D12009282FB /* FormTextViewCell.swift in Sources */,
 				185078F41FE2F8C200AFB9F8 /* ConfigurationHelper.swift in Sources */,
-				185078EB1FE2F16100AFB9F8 /* LoginViewController.swift in Sources */,
+				183B46BF1FE57D3B009282FB /* InlineDatePickerRowFormer.swift in Sources */,
+				183B46BD1FE57D30009282FB /* CustomRowFormer.swift in Sources */,
+				183B46F11FE5AE0F009282FB /* AccountViewController.swift in Sources */,
+				185078EB1FE2F16100AFB9F8 /* TourViewController.swift in Sources */,
+				183B46AA1FE57CFC009282FB /* FormInlinePickerCell.swift in Sources */,
+				183B46C61FE57D54009282FB /* SliderRowFormer.swift in Sources */,
+				183B46CE1FE57D6E009282FB /* FormHeaderFooterView.swift in Sources */,
+				183B459A1FE5009F009282FB /* RegisterFieldCell.swift in Sources */,
 				18613ADB1FE2CBD7004AF8F1 /* AppDelegate.swift in Sources */,
 				185078FA1FE2FADC00AFB9F8 /* String+FormerDemo.swift in Sources */,
+				183B46AF1FE57D07009282FB /* FormSelectorPickerCell.swift in Sources */,
 				185078F01FE2F8B100AFB9F8 /* StoryboardHelper.swift in Sources */,
+				183B46CD1FE57D69009282FB /* LabelViewFormer.swift in Sources */,
+				183B46A51FE57CDA009282FB /* FormerInputAccessoryView.swift in Sources */,
+				183B46C81FE57D59009282FB /* SwitchRowFormer.swift in Sources */,
+				183B46A41FE57CD6009282FB /* TextSelectorViewContorller.swift in Sources */,
+				183B46AE1FE57D04009282FB /* FormSelectorDatePickerCell.swift in Sources */,
+				183B46F51FE5B0FD009282FB /* PromoViewController.swift in Sources */,
+				183B46D21FE5A419009282FB /* ImageAnimateLayer.swift in Sources */,
 				185078F11FE2F8B400AFB9F8 /* AACoreData.swift in Sources */,
+				183B45601FE45E66009282FB /* UINavigationBar+Extention.swift in Sources */,
+				183B46C51FE57D52009282FB /* SelectorPickerRowFormer.swift in Sources */,
+				183B46C11FE57D40009282FB /* LabelRowFormer.swift in Sources */,
+				183B46ED1FE5AD6C009282FB /* SFCustomIcons.swift in Sources */,
+				183B46BE1FE57D39009282FB /* DatePickerRowFormer.swift in Sources */,
 				185079031FE301E200AFB9F8 /* MerchantTourScreenModel.swift in Sources */,
+				183B459E1FE50D2B009282FB /* RegisterLabelCell.swift in Sources */,
+				183B46B31FE57D10009282FB /* FormTextFieldCell.swift in Sources */,
+				183B455B1FE454E3009282FB /* RegisterTableViewController.swift in Sources */,
+				183B46BB1FE57D2B009282FB /* BaseRowFormer.swift in Sources */,
 				185078F91FE2FAD600AFB9F8 /* UITextField+Extention.swift in Sources */,
+				183B46F71FE5B115009282FB /* ProfileTableController.swift in Sources */,
 				185078F21FE2F8B800AFB9F8 /* Constants.swift in Sources */,
 				185078F31FE2F8BF00AFB9F8 /* CollectionViewHelper.swift in Sources */,
+				183B46D01FE57D75009282FB /* FormLabelHeaderView.swift in Sources */,
+				183B46B01FE57D09009282FB /* FormSliderCell.swift in Sources */,
+				183B46F31FE5B0E3009282FB /* POSViewController.swift in Sources */,
+				183B46B21FE57D0D009282FB /* FormSwitchCell.swift in Sources */,
+				183B46D61FE5A6E1009282FB /* BaseTabBarController.swift in Sources */,
+				183B46D41FE5A425009282FB /* UIViewExtension.swift in Sources */,
+				183B46C01FE57D3D009282FB /* InlinePickerRowFormer.swift in Sources */,
 				185078F81FE2FACF00AFB9F8 /* UIColor+FormerDemo.swift in Sources */,
+				183B46C41FE57D50009282FB /* SelectorDatePickerRowFormer.swift in Sources */,
+				183B46CB1FE57D63009282FB /* BaseViewFormer.swift in Sources */,
+				183B46C71FE57D56009282FB /* StepperRowFormer.swift in Sources */,
 				185078EF1FE2F8AD00AFB9F8 /* GradientView.swift in Sources */,
+				183B46EC1FE5AD68009282FB /* SFCustomIconKit.swift in Sources */,
+				183B46B61FE57D1A009282FB /* FormerProtocol.swift in Sources */,
+				183B46C91FE57D5C009282FB /* TextFieldRowFormer.swift in Sources */,
+				183B46AB1FE57CFE009282FB /* FormLabelCell.swift in Sources */,
+				183B46D31FE5A41F009282FB /* TabBarAnimateController.swift in Sources */,
+				183B46AC1FE57D01009282FB /* FormPickerCell.swift in Sources */,
+				183B46A81FE57CE8009282FB /* FormDatePickerCell.swift in Sources */,
+				183B46CF1FE57D72009282FB /* FormLabelFooterView.swift in Sources */,
+				183B46CC1FE57D66009282FB /* CustomViewFormer.swift in Sources */,
+				183B46A91FE57CF9009282FB /* FormInlineDatePickerCell.swift in Sources */,
+				183B46BC1FE57D2E009282FB /* CheckRowFormer.swift in Sources */,
+				183B458E1FE4F16D009282FB /* CenterLabelCell.swift in Sources */,
+				183B46C21FE57D46009282FB /* PickerRowFormer.swift in Sources */,
+				183B46CA1FE57D5E009282FB /* TextViewRowFormer.swift in Sources */,
+				183B46B11FE57D0B009282FB /* FormStepperCell.swift in Sources */,
+				183B46BA1FE57D26009282FB /* FormViewController.swift in Sources */,
+				183B46B71FE57D1D009282FB /* RowFormer.swift in Sources */,
 				18613ACD1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld in Sources */,
+				183B46B81FE57D20009282FB /* SectionFormer.swift in Sources */,
+				183B46C31FE57D4D009282FB /* SegmentedRowFormer.swift in Sources */,
 				185078EC1FE2F89C00AFB9F8 /* AwesomeButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -946,96 +1141,97 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180FFADA1E7DC3D600435772 /* LabelRowFormer.swift in Sources */,
-				180FFABE1E7DC3D600435772 /* FormCheckCell.swift in Sources */,
+				183B46941FE57BA2009282FB /* LabelRowFormer.swift in Sources */,
 				18AE40911E7B1FE600B7F495 /* ImageAnimateLayer.swift in Sources */,
-				180FFAD81E7DC3D600435772 /* InlineDatePickerRowFormer.swift in Sources */,
-				180FFAE01E7DC3D600435772 /* StepperRowFormer.swift in Sources */,
-				180FFAC51E7DC3D600435772 /* FormSelectorDatePickerCell.swift in Sources */,
-				180FFAD41E7DC3D600435772 /* BaseRowFormer.swift in Sources */,
-				180FFAE51E7DC3D600435772 /* CustomViewFormer.swift in Sources */,
 				186B5E5F1FE0628F00AC024D /* ProfileFieldCell.swift in Sources */,
-				180FFAC91E7DC3D600435772 /* FormSwitchCell.swift in Sources */,
-				180FFAD61E7DC3D600435772 /* CustomRowFormer.swift in Sources */,
-				180FFAD91E7DC3D600435772 /* InlinePickerRowFormer.swift in Sources */,
+				183B46921FE57BA2009282FB /* InlineDatePickerRowFormer.swift in Sources */,
+				183B46831FE57BA2009282FB /* FormSliderCell.swift in Sources */,
+				183B46801FE57BA2009282FB /* FormSegmentedCell.swift in Sources */,
 				186B5E5C1FE0628F00AC024D /* CenterLabelCell.swift in Sources */,
-				180FFAE21E7DC3D600435772 /* TextFieldRowFormer.swift in Sources */,
-				180FFAE61E7DC3D600435772 /* LabelViewFormer.swift in Sources */,
-				185D8C521E7C7BE700692AD4 /* SFLoginViewController.swift in Sources */,
+				183B469A1FE57BA2009282FB /* StepperRowFormer.swift in Sources */,
+				183B46871FE57BA2009282FB /* FormTextViewCell.swift in Sources */,
+				183B468E1FE57BA2009282FB /* BaseRowFormer.swift in Sources */,
+				183B469F1FE57BA2009282FB /* CustomViewFormer.swift in Sources */,
+				183B46891FE57BA2009282FB /* FormerProtocol.swift in Sources */,
+				183B46901FE57BA2009282FB /* CustomRowFormer.swift in Sources */,
+				183B46931FE57BA2009282FB /* InlinePickerRowFormer.swift in Sources */,
+				183B469C1FE57BA2009282FB /* TextFieldRowFormer.swift in Sources */,
+				183B46A01FE57BA2009282FB /* LabelViewFormer.swift in Sources */,
+				183B46E71FE5AD56009282FB /* SFCustomIconKit.swift in Sources */,
+				183B46791FE57BA2009282FB /* FormCell.swift in Sources */,
+				185D8C521E7C7BE700692AD4 /* TourViewController.swift in Sources */,
 				18AE40971E7B218600B7F495 /* SFBaseTabBarViewController.swift in Sources */,
-				180FFACB1E7DC3D600435772 /* FormTextViewCell.swift in Sources */,
-				180FFADB1E7DC3D600435772 /* PickerRowFormer.swift in Sources */,
 				186B5E691FE0633700AC024D /* CardCollectionViewCell.swift in Sources */,
-				180FFACC1E7DC3D600435772 /* Former.swift in Sources */,
-				180FFAE41E7DC3D600435772 /* BaseViewFormer.swift in Sources */,
 				18AE40921E7B1FE600B7F495 /* TabBarAnimateController.swift in Sources */,
+				183B46E81FE5AD56009282FB /* SFCustomIcons.swift in Sources */,
 				181D79941EF5BE47008515D5 /* Network.swift in Sources */,
-				180FFAC61E7DC3D600435772 /* FormSelectorPickerCell.swift in Sources */,
 				18FCC5DE1E7EF22600198CF0 /* EPExtensions.swift in Sources */,
+				183B46781FE57BA2009282FB /* FormerInputAccessoryView.swift in Sources */,
 				18AE40931E7B1FE600B7F495 /* UIViewExtension.swift in Sources */,
 				1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */,
-				180FFAD01E7DC3D600435772 /* ViewFormer.swift in Sources */,
+				183B46881FE57BA2009282FB /* Former.swift in Sources */,
+				183B46951FE57BA2009282FB /* PickerRowFormer.swift in Sources */,
 				18592A301E87099F00003E6A /* SFMyCharityController.swift in Sources */,
-				180FFAC81E7DC3D600435772 /* FormStepperCell.swift in Sources */,
-				18592A2D1E85DB3600003E6A /* SFCustomIcons.swift in Sources */,
+				183B469E1FE57BA2009282FB /* BaseViewFormer.swift in Sources */,
+				183B468C1FE57BA2009282FB /* ViewFormer.swift in Sources */,
 				18FCC5E01E7EF35700198CF0 /* SGSendViewController.swift in Sources */,
-				180FFAE71E7DC3D600435772 /* FormHeaderFooterView.swift in Sources */,
 				186B5E701FE0679500AC024D /* StoryboardHelper.swift in Sources */,
+				183B46861FE57BA2009282FB /* FormTextFieldCell.swift in Sources */,
 				180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */,
+				183B46771FE57BA2009282FB /* TextSelectorViewContorller.swift in Sources */,
 				18B7C95A1FCF325A00771B64 /* AwesomeButton.swift in Sources */,
-				180FFAE81E7DC3D600435772 /* FormLabelFooterView.swift in Sources */,
 				186B5E281FE0601200AC024D /* CardDetailTableController.swift in Sources */,
 				18AE40901E7B1FE600B7F495 /* AnimateItem.swift in Sources */,
-				180FFA841E7DC00700435772 /* FormerInputAccessoryView.swift in Sources */,
+				183B46A11FE57BA2009282FB /* FormHeaderFooterView.swift in Sources */,
 				1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */,
 				186B5E261FE05FCA00AC024D /* SFAccountViewController.swift in Sources */,
+				183B46A21FE57BA2009282FB /* FormLabelFooterView.swift in Sources */,
 				18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */,
-				180FFAD11E7DC3D600435772 /* FormViewController.swift in Sources */,
-				180FFABD1E7DC3D600435772 /* FormCell.swift in Sources */,
-				180FFADC1E7DC3D600435772 /* SegmentedRowFormer.swift in Sources */,
+				183B467F1FE57BA2009282FB /* FormPickerCell.swift in Sources */,
 				186B5E6F1FE0679500AC024D /* GradientView.swift in Sources */,
-				18592A2C1E85DB3600003E6A /* SFCustomIconKit.swift in Sources */,
 				186B5E5D1FE0628F00AC024D /* DynamicHeightCell.swift in Sources */,
+				183B467E1FE57BA2009282FB /* FormLabelCell.swift in Sources */,
 				1803A30F1FDB9C20007C4918 /* AACoreData.swift in Sources */,
-				180FFAC31E7DC3D600435772 /* FormPickerCell.swift in Sources */,
 				186B5E631FE0628F00AC024D /* ProfileLabelCell.swift in Sources */,
 				186B5E711FE0679500AC024D /* ConfigurationHelper.swift in Sources */,
 				184232991FC87483002F1FC5 /* SGUtility.swift in Sources */,
-				180FFAE31E7DC3D600435772 /* TextViewRowFormer.swift in Sources */,
-				180FFA7C1E7DC00700435772 /* TextSelectorViewContorller.swift in Sources */,
-				180FFACE1E7DC3D600435772 /* RowFormer.swift in Sources */,
+				183B467D1FE57BA2009282FB /* FormInlinePickerCell.swift in Sources */,
 				18AE40751E7B15C600B7F495 /* SnapGyft.xcdatamodeld in Sources */,
-				180FFAC41E7DC3D600435772 /* FormSegmentedCell.swift in Sources */,
-				180FFAD71E7DC3D600435772 /* DatePickerRowFormer.swift in Sources */,
+				183B46961FE57BA2009282FB /* SegmentedRowFormer.swift in Sources */,
+				183B467A1FE57BA2009282FB /* FormCheckCell.swift in Sources */,
 				18FCC5D91E7EF22600198CF0 /* EPConstants.swift in Sources */,
+				183B467B1FE57BA2009282FB /* FormDatePickerCell.swift in Sources */,
+				183B469D1FE57BA2009282FB /* TextViewRowFormer.swift in Sources */,
 				1835F6A61F0CF4E50071184E /* Profile.swift in Sources */,
-				180FFAC11E7DC3D600435772 /* FormInlinePickerCell.swift in Sources */,
-				180FFAC71E7DC3D600435772 /* FormSliderCell.swift in Sources */,
 				185078FF1FE3016800AFB9F8 /* ClientTourScreenModel.swift in Sources */,
+				183B46851FE57BA2009282FB /* FormSwitchCell.swift in Sources */,
+				183B468A1FE57BA2009282FB /* RowFormer.swift in Sources */,
+				183B46811FE57BA2009282FB /* FormSelectorDatePickerCell.swift in Sources */,
 				18FCC5DA1E7EF22600198CF0 /* EPContact.swift in Sources */,
-				180FFACD1E7DC3D600435772 /* FormerProtocol.swift in Sources */,
-				180FFADD1E7DC3D600435772 /* SelectorDatePickerRowFormer.swift in Sources */,
 				18FCC5DD1E7EF22600198CF0 /* EPContactsPicker.swift in Sources */,
+				183B46911FE57BA2009282FB /* DatePickerRowFormer.swift in Sources */,
+				183B467C1FE57BA2009282FB /* FormInlineDatePickerCell.swift in Sources */,
 				180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */,
+				183B468B1FE57BA2009282FB /* SectionFormer.swift in Sources */,
 				18AE40861E7B185000B7F495 /* SFEventViewController.swift in Sources */,
 				186B5E611FE0628F00AC024D /* ProfileImageCell.swift in Sources */,
+				183B468D1FE57BA2009282FB /* FormViewController.swift in Sources */,
+				183B46821FE57BA2009282FB /* FormSelectorPickerCell.swift in Sources */,
+				183B46971FE57BA2009282FB /* SelectorDatePickerRowFormer.swift in Sources */,
 				184232961FC8707B002F1FC5 /* Constants.swift in Sources */,
+				183B455F1FE45D61009282FB /* UINavigationBar+Extention.swift in Sources */,
 				189E9EA71E806CE6007460E0 /* UITableViewCell+Former.swift in Sources */,
-				180FFACF1E7DC3D600435772 /* SectionFormer.swift in Sources */,
-				180FFABF1E7DC3D600435772 /* FormDatePickerCell.swift in Sources */,
-				180FFAE11E7DC3D600435772 /* SwitchRowFormer.swift in Sources */,
-				180FFADF1E7DC3D600435772 /* SliderRowFormer.swift in Sources */,
-				180FFAD51E7DC3D600435772 /* CheckRowFormer.swift in Sources */,
+				183B469B1FE57BA2009282FB /* SwitchRowFormer.swift in Sources */,
+				183B46991FE57BA2009282FB /* SliderRowFormer.swift in Sources */,
+				183B468F1FE57BA2009282FB /* CheckRowFormer.swift in Sources */,
+				183B46841FE57BA2009282FB /* FormStepperCell.swift in Sources */,
+				183B46A31FE57BA2009282FB /* FormLabelHeaderView.swift in Sources */,
 				18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */,
-				180FFAC01E7DC3D600435772 /* FormInlineDatePickerCell.swift in Sources */,
-				180FFAE91E7DC3D600435772 /* FormLabelHeaderView.swift in Sources */,
-				180FFADE1E7DC3D600435772 /* SelectorPickerRowFormer.swift in Sources */,
 				18FCC5DB1E7EF22600198CF0 /* EPContactCell.swift in Sources */,
+				183B46981FE57BA2009282FB /* SelectorPickerRowFormer.swift in Sources */,
 				18AE406D1E7B15C600B7F495 /* AppDelegate.swift in Sources */,
-				180FFAC21E7DC3D600435772 /* FormLabelCell.swift in Sources */,
 				18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */,
 				18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */,
-				180FFACA1E7DC3D600435772 /* FormTextFieldCell.swift in Sources */,
 				186B5E721FE0679500AC024D /* CollectionViewHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

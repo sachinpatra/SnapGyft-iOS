@@ -1,5 +1,5 @@
 //
-//  SFLoginViewController.swift
+//  TourViewController.swift
 //  SnapGyft
 //
 //  Created by Patra, Sachin Kumar (TekSystems) on 3/18/17.
@@ -15,7 +15,7 @@ import Alamofire_Synchronous
 import ReachabilitySwift
 import OnboardingKit
 
-class SFLoginViewController: UIViewController, AKFViewControllerDelegate {
+class TourViewController: UIViewController, AKFViewControllerDelegate {
 
     @IBOutlet weak var onboardingView: OnboardingView!
     @IBOutlet weak var phoneButton: AwesomeButton!

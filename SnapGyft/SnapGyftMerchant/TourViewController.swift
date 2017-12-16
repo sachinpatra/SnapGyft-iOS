@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  TourViewController.swift
 //  SnapGyftMerchant
 //
 //  Created by Patra, Sachin Kumar (TekSystems) on 12/14/17.
@@ -9,7 +9,7 @@
 import UIKit
 import OnboardingKit
 
-class LoginViewController: UIViewController {
+class TourViewController: UIViewController {
     
     @IBOutlet weak var onboardingView: OnboardingView!
     private let model = MerchantTourScreenModel()
@@ -43,6 +43,11 @@ class LoginViewController: UIViewController {
             }
         }
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,6 +56,7 @@ class LoginViewController: UIViewController {
     
 
     @IBAction func getStartedButtonClicked(_ sender: AwesomeButton) {
+            self.performSegue(withIdentifier: "showRegisterSegue", sender: self)
     }
     /*
     // MARK: - Navigation

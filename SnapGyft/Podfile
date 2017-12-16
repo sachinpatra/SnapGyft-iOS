@@ -12,6 +12,7 @@
   pod 'OnboardingKit'
   pod 'expanding-collection', '~> 1.0.3'
   pod 'SwiftMessages'
+  #pod 'Former'
 
 
 target 'SnapGyft' do

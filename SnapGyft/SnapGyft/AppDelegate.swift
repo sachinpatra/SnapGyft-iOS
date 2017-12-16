@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         AACoreData.sharedInstance().dataModel = "SnapGyft"
         
-        setupAppearance()
+        UINavigationBar.setupAppearance()
         
         return true
     }
@@ -50,19 +50,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         AACoreData.sharedInstance().saveContext()
-    }
-
-    func setupAppearance() {
-        UINavigationBar.appearance().barTintColor = UIColor.formerSubColor()
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        UISearchBar.appearance().tintColor = UIColor.formerSubColor()
-        UITabBar.appearance().tintColor = UIColor.formerSubColor()
-        
-        //UISearchBar.appearance().barTintColor = UIColor.formerSubColor()
-        //UISearchBar.appearance(whenContainedInInstancesOf: [UITableViewController.self]).barTintColor = .blue
-        //UISearchBar.appearance(whenContainedInInstancesOf: [UITableViewController.self]).tintColor = .white
-
     }
     
     // MARK: - Core Data stack
