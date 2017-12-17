@@ -18,6 +18,8 @@ class Constants {
 extension AACoreData {
     // MARK:- Add your entities here
     static let ProfileEntityName = AACoreDataEntity<String>("Profile")
+    static let MerchantProfileEntityName = AACoreDataEntity<String>("MerchantProfile")
+
 }
 
 #if os(iOS) || os(tvOS) || os(watchOS)

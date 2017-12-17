@@ -131,6 +131,9 @@
 		183B46F31FE5B0E3009282FB /* POSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F21FE5B0E3009282FB /* POSViewController.swift */; };
 		183B46F51FE5B0FD009282FB /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F41FE5B0FD009282FB /* PromoViewController.swift */; };
 		183B46F71FE5B115009282FB /* ProfileTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F61FE5B115009282FB /* ProfileTableController.swift */; };
+		183B46FD1FE657C4009282FB /* SnapGyftMerchant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 183B46FB1FE657C4009282FB /* SnapGyftMerchant.xcdatamodeld */; };
+		183B46FF1FE6B148009282FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183B46FE1FE6B147009282FB /* GoogleService-Info.plist */; };
+		183B47001FE6F589009282FB /* SGUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232981FC87483002F1FC5 /* SGUtility.swift */; };
 		184232961FC8707B002F1FC5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232951FC8707B002F1FC5 /* Constants.swift */; };
 		184232991FC87483002F1FC5 /* SGUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232981FC87483002F1FC5 /* SGUtility.swift */; };
 		185078EB1FE2F16100AFB9F8 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185078EA1FE2F16100AFB9F8 /* TourViewController.swift */; };
@@ -152,7 +155,6 @@
 		185D8C4B1E7C77C400692AD4 /* AccountKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 185D8C491E7C77C400692AD4 /* AccountKit.framework */; };
 		185D8C4C1E7C77C400692AD4 /* AccountKitStrings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */; };
 		185D8C521E7C7BE700692AD4 /* TourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185D8C511E7C7BE700692AD4 /* TourViewController.swift */; };
-		18613ACD1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18613ACC1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld */; };
 		18613ADB1FE2CBD7004AF8F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18613ADA1FE2CBD7004AF8F1 /* AppDelegate.swift */; };
 		18613AE01FE2CC09004AF8F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18613ADC1FE2CC09004AF8F1 /* Main.storyboard */; };
 		18613AE11FE2CC09004AF8F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18613ADE1FE2CC09004AF8F1 /* LaunchScreen.storyboard */; };
@@ -272,6 +274,8 @@
 		183B46F21FE5B0E3009282FB /* POSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSViewController.swift; sourceTree = "<group>"; };
 		183B46F41FE5B0FD009282FB /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
 		183B46F61FE5B115009282FB /* ProfileTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableController.swift; sourceTree = "<group>"; };
+		183B46FC1FE657C4009282FB /* SnapGyftMerchant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SnapGyftMerchant.xcdatamodel; sourceTree = "<group>"; };
+		183B46FE1FE6B147009282FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		184232951FC8707B002F1FC5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		184232981FC87483002F1FC5 /* SGUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGUtility.swift; sourceTree = "<group>"; };
 		185078EA1FE2F16100AFB9F8 /* TourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourViewController.swift; sourceTree = "<group>"; };
@@ -628,8 +632,9 @@
 				18613ADE1FE2CC09004AF8F1 /* LaunchScreen.storyboard */,
 				18613ADC1FE2CC09004AF8F1 /* Main.storyboard */,
 				18613AD31FE2CAFD004AF8F1 /* Info.plist */,
-				18613ACC1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld */,
+				183B46FB1FE657C4009282FB /* SnapGyftMerchant.xcdatamodeld */,
 				18613AD71FE2CBAD004AF8F1 /* SnapGyftMerchant-Bridging-Header.h */,
+				183B46FE1FE6B147009282FB /* GoogleService-Info.plist */,
 			);
 			path = SnapGyftMerchant;
 			sourceTree = "<group>";
@@ -889,6 +894,7 @@
 				183B46E91FE5AD60009282FB /* generator.rb in Resources */,
 				18613AE01FE2CC09004AF8F1 /* Main.storyboard in Resources */,
 				185078FC1FE2FDE900AFB9F8 /* Images.xcassets in Resources */,
+				183B46FF1FE6B148009282FB /* GoogleService-Info.plist in Resources */,
 				18613AE31FE2CC1D004AF8F1 /* Images.xcassets in Resources */,
 				18613AE11FE2CC09004AF8F1 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -975,24 +981,30 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
 				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/expanding-collection/expanding_collection.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/expanding_collection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1027,24 +1039,30 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
 				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/expanding-collection/expanding_collection.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/expanding_collection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1059,6 +1077,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				183B46A71FE57CE5009282FB /* FormCheckCell.swift in Sources */,
+				183B47001FE6F589009282FB /* SGUtility.swift in Sources */,
 				185078F51FE2F8CB00AFB9F8 /* Network.swift in Sources */,
 				183B46AD1FE57D03009282FB /* FormSegmentedCell.swift in Sources */,
 				183B46A61FE57CE1009282FB /* FormCell.swift in Sources */,
@@ -1085,6 +1104,7 @@
 				183B46A41FE57CD6009282FB /* TextSelectorViewContorller.swift in Sources */,
 				183B46AE1FE57D04009282FB /* FormSelectorDatePickerCell.swift in Sources */,
 				183B46F51FE5B0FD009282FB /* PromoViewController.swift in Sources */,
+				183B46FD1FE657C4009282FB /* SnapGyftMerchant.xcdatamodeld in Sources */,
 				183B46D21FE5A419009282FB /* ImageAnimateLayer.swift in Sources */,
 				185078F11FE2F8B400AFB9F8 /* AACoreData.swift in Sources */,
 				183B45601FE45E66009282FB /* UINavigationBar+Extention.swift in Sources */,
@@ -1130,7 +1150,6 @@
 				183B46B11FE57D0B009282FB /* FormStepperCell.swift in Sources */,
 				183B46BA1FE57D26009282FB /* FormViewController.swift in Sources */,
 				183B46B71FE57D1D009282FB /* RowFormer.swift in Sources */,
-				18613ACD1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld in Sources */,
 				183B46B81FE57D20009282FB /* SectionFormer.swift in Sources */,
 				183B46C31FE57D4D009282FB /* SegmentedRowFormer.swift in Sources */,
 				185078EC1FE2F89C00AFB9F8 /* AwesomeButton.swift in Sources */,
@@ -1510,10 +1529,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		18613ACC1FE2CAFD004AF8F1 /* SnapGyftMerchant.xcdatamodeld */ = {
+		183B46FB1FE657C4009282FB /* SnapGyftMerchant.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				183B46FC1FE657C4009282FB /* SnapGyftMerchant.xcdatamodel */,
 			);
+			currentVersion = 183B46FC1FE657C4009282FB /* SnapGyftMerchant.xcdatamodel */;
 			path = SnapGyftMerchant.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

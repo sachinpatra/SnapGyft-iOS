@@ -12,6 +12,7 @@ class POSViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "POS"
 
         // Do any additional setup after loading the view.
     }

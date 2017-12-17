@@ -12,6 +12,7 @@ class PromoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Promo"
 
         // Do any additional setup after loading the view.
     }

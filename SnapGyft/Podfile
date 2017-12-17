@@ -13,6 +13,7 @@
   pod 'expanding-collection', '~> 1.0.3'
   pod 'SwiftMessages'
   #pod 'Former'
+  pod 'Firebase/Auth'
 
 
 target 'SnapGyft' do

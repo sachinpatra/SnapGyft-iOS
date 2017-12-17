@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.setupAppearance()
         
+        
         return true
     }
 

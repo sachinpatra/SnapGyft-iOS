@@ -7,7 +7,8 @@
 //
 
 import Foundation
-
+import Alertift
+import KRProgressHUD
 
 class SGUtility: NSObject {
         
@@ -56,6 +57,15 @@ class SGUtility: NSObject {
         formatter.timeZone = TimeZone.current
         formatter.dateFormat = "dd/MM/yyyy HH:mm:ssZZZ"
         return formatter.string(from: now)
+    }
+    
+    class func showAlert(withMessage message:String) {
+        KRProgressHUD.dismiss({
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                Alertift.alert(title: "SnapGyft", message: message).action(.default("OK")){ _ in
+                    }.show()
+            }
+        })
     }
     
 }
