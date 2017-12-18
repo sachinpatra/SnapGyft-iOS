@@ -20,7 +20,7 @@ class SFAccountViewController: ExpandingViewController {
     var accountKit: AKFAccountKit!
     var myProfile: Profile!
     let reachability = Reachability()!
-    let instance = AACoreData.sharedInstance()
+    let coreData = AACoreData.sharedInstance()
     
     typealias ItemInfo = (imageName: String, title: String)
     fileprivate let items: [ItemInfo] = [("item0", "UBER"),("item1", "OLA"),("item2", "PayTM"),("item3", "AMAZON")]
@@ -36,20 +36,23 @@ class SFAccountViewController: ExpandingViewController {
         
         showAddView()
 
-        instance.fetchRecords(entityName: .ProfileEntityName) { (results) in
+        coreData.fetchRecords(entityName: .ProfileEntityName) { (results) in
             guard let _ = results as? [Profile] else {
                 self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
                 self.accountKit.requestAccount{
                     (account, error) -> Void in
+                    if let error = error {
+                        self.backToLoginPageOnNetworkIssue(withMessage: error.localizedDescription)
+                        return
+                    }
                     
-                    self.myProfile = self.instance.getNewObject(entityName: .ProfileEntityName) as! Profile
+                    self.myProfile = self.coreData.getNewObject(entityName: .ProfileEntityName) as! Profile
                     self.myProfile.accountID = account?.accountID
                     self.myProfile.phoneNumber = account?.phoneNumber?.stringRepresentation()
-                    self.instance.saveContext()
+                    self.coreData.saveContext()
                     
                     guard (self.reachability.isReachable) else {
-                        self.backToLoginPageOnNetworkIssue(withMessage: "Check Network Connection.")
-                        return
+                        self.backToLoginPageOnNetworkIssue(withMessage: "Check Network Connection."); return
                     }
                     //Call Here All three API's
                     let payload: [String:String] = ["PhoneNumber": (self.myProfile.phoneNumber)!]
@@ -58,52 +61,43 @@ class SFAccountViewController: ExpandingViewController {
                                       method: .post,
                                       parameters: params,
                                       encoding: JSONEncoding.default,
-                                      headers : nil).responseJSON {[weak self] response in
-                                        
-                        switch response.result{
-                        case .success:
-                            let payload: [String:Any] = ["PhoneNumber": account!.phoneNumber!.stringRepresentation(),
-                                                         "VerificationStatus": "Verified",
-                                                         "Device": SGUtility.deviceParamsForService]
-                            let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
-                            Alamofire.request(Constants.API_UPDATE_ACCOUNT_STATUS,
-                                              method: .post,
-                                              parameters: params,
-                                              encoding: JSONEncoding.default,
-                                              headers : nil).responseJSON { [weak self] response in
-                                                
-                                switch response.result{
-                                case .success:
-                                    let payload: [String:Any] = ["AccountNumber": "236834"]
-                                    let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
-                                    Alamofire.request(Constants.API_ACCOUNT_DETAILS,
-                                                      method: .post,
-                                                      parameters: params,
-                                                      encoding: JSONEncoding.default,
-                                                      headers : nil).responseJSON { [weak self] response in
-                                                        
-                                        switch response.result{
-                                        case .success(_):
-                                            KRProgressHUD.dismiss()
-                                            break
-                                        case .failure(_):
-                                            self?.backToLoginPageOnNetworkIssue(withMessage: "Service Down")
-                                            break
-                                        }
-                                    }
-                                    break
-                                    
-                                case .failure:
-                                    self?.backToLoginPageOnNetworkIssue(withMessage: "Service Down")
-                                    break
-                                }
-                            }
-                            break
-                            
-                        case .failure:
-                            self?.backToLoginPageOnNetworkIssue(withMessage: "Service Down")
-                            break
+                                      headers : nil).validate().responseJSON {[weak self] response in
+                        guard response.result.isSuccess else {
+                            self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
+                            return
                         }
+                        
+                        let payload: [String:Any] = ["PhoneNumber": account!.phoneNumber!.stringRepresentation(),
+                                                     "VerificationStatus": "Verified",
+                                                     "Device": SGUtility.deviceParamsForService]
+                        let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
+                        Alamofire.request(Constants.API_UPDATE_ACCOUNT_STATUS,
+                                          method: .post,
+                                          parameters: params,
+                                          encoding: JSONEncoding.default,
+                       headers : nil).validate().responseJSON { [weak self] response in
+                        
+                            guard response.result.isSuccess else {
+                                self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
+                                return
+                            }
+                            let payload: [String:Any] = ["AccountNumber": "236834"]
+                            let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
+                            Alamofire.request(Constants.API_ACCOUNT_DETAILS,
+                                          method: .post,
+                                          parameters: params,
+                                          encoding: JSONEncoding.default,
+                                          headers : nil).validate().responseJSON { [weak self] response in
+                                            
+                                guard response.result.isSuccess else {
+                                    self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
+                                    return
+                                }
+                                KRProgressHUD.dismiss()
+                                           
+                        }
+                    }
+                        
                     }
                 }
                 
@@ -140,7 +134,6 @@ class SFAccountViewController: ExpandingViewController {
         config.presentationStyle = .bottom
         config.duration = .forever
         SwiftMessages.show(config: config, view: buttomView)
-        SwiftMessages.sharedInstance
     }
     
     func registerCell() {
@@ -253,8 +246,11 @@ class SFAccountViewController: ExpandingViewController {
         KRProgressHUD.dismiss({
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
                 Alertift.alert(title: "SnapGyft", message: message).action(.default("OK")){ _ in
-                    self.accountKit.logOut()
-                    //TODO:- Delete Profile data from DB before back to login page
+                    if let account = self.accountKit {
+                        account.logOut()
+                    }
+                    //self.accountKit.logOut()
+                    self.coreData.deleteAllRecords(entity: .ProfileEntityName)
                     self.performSegue(withIdentifier: "backToLoginPageSegue", sender: self)
                 }.show()
             }

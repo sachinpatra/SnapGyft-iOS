@@ -11,6 +11,7 @@ import Alertift
 import Firebase
 import KRProgressHUD
 import ReachabilitySwift
+import Alamofire
 
 enum PhysicalLcations {
     case None, Customers, Single, BelowTen, BelowFifty, AboveFifty
@@ -91,7 +92,7 @@ class RegisterTableViewController: UITableViewController {
     var stateRow: InlinePickerRowFormer<RegisterLabelCell, String>!
     
     var merchantProfile: MerchantProfile!
-    let instance = AACoreData.sharedInstance()
+    let coreData = AACoreData.sharedInstance()
     let reachability = Reachability()!
 
     //MARK: View Lifecycle
@@ -313,20 +314,23 @@ class RegisterTableViewController: UITableViewController {
             Alertift.alert(title: "SnapGyft", message: "Please select state.").action(.default("OK")).show(); return }
         
         //Save in Database
-        merchantProfile = instance.getNewObject(entityName: .MerchantProfileEntityName) as! MerchantProfile
+        merchantProfile = coreData.getNewObject(entityName: .MerchantProfileEntityName) as! MerchantProfile
         merchantProfile.businessName = businessName
         merchantProfile.phoneNumber = phoneNumber
         merchantProfile.emailID = emailID
         merchantProfile.zipcode = zipcode
         merchantProfile.firstName = firstname
         merchantProfile.lastName = lastname
+        merchantProfile.numberOfLocations = PhysicalLcations.values()[physicalLocationRow.selectedRow - 1].title()
+        merchantProfile.category = Categories.values()[businessCategoryRow.selectedRow - 1].title()
         merchantProfile.address = address
         merchantProfile.city = city
-        merchantProfile.country = countryRow.pickerItems[countryRow.selectedRow].title
-        merchantProfile.state = States.values()[stateRow.selectedRow].title()
-        instance.saveContext()
+        merchantProfile.country = Countries.values()[countryRow.selectedRow - 1].title()
+        merchantProfile.state = States.values()[stateRow.selectedRow - 1].title()
+        coreData.saveContext()
         
         firebaseAuthentication()
+        
     }
     
     func firebaseAuthentication(){
@@ -340,7 +344,7 @@ class RegisterTableViewController: UITableViewController {
             PhoneAuthProvider.provider().verifyPhoneNumber("+91"+self.businessPhoneRow.text!, uiDelegate: nil) { (verificationID, error) in
                 KRProgressHUD.dismiss({
                     if let error = error {
-                        Alertift.alert(title: "SnapGyft", message: error.localizedDescription).action(.default("OK")).show() ;return
+                        SGUtility.showAlert(withMessage: error.localizedDescription); return
                     }
                     //Enter verificaton code alert
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -360,38 +364,56 @@ class RegisterTableViewController: UITableViewController {
                                     //Do SignIn with verification code
                                     Auth.auth().signIn(with: credential) { (user, error) in
                                         if let error = error {
-                                            KRProgressHUD.dismiss({
-                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                                    Alertift.alert(title: "SnapGyft", message: error.localizedDescription).action(.default("OK")).show(); return
-                                                }
-                                            })
+                                            SGUtility.showAlert(withMessage: error.localizedDescription); return
                                         }
                                         //Update Email-ID
                                         Auth.auth().currentUser?.updateEmail(to: self.emailRow.text!) { (error) in
-                                            KRProgressHUD.dismiss({
-                                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                                    if let error = error {
-                                                        Alertift.alert(title: "SnapGyft", message: error.localizedDescription).action(.default("OK")).show(); return
-                                                    }
-                                                }
-                                                
-                                                //Navigate to next page
-                                                self.performSegue(withIdentifier: "ShowHomeSegue", sender: self)
-                                            })
+                                            if let error = error {
+                                                SGUtility.showAlert(withMessage: error.localizedDescription); return
+                                            }
+                                            
+                                            //Register Merchant for local server
+                                            self.registerMerchant()
                                         }
                                     }
                                 } else {
-                                    KRProgressHUD.dismiss({
-                                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                                            Alertift.alert(title: "SnapGyft", message: "verification code can't be empty").action(.default("OK")).show(); return
-                                        }
-                                    })
+                                    SGUtility.showAlert(withMessage: "verification code can't be empty"); return
                                 }
                             }
                             .show()
                     }
                 })
             }
+        }
+    }
+    
+    func registerMerchant() {
+        let payload: [String:String] = ["BusinessName": merchantProfile.businessName!,
+                                     "BusinessPhone": merchantProfile.phoneNumber!,
+                                     "BusinessEmail": merchantProfile.emailID!,
+                                     "FirstName": merchantProfile.firstName!,
+                                     "LastName": merchantProfile.lastName!,
+                                     "Category": merchantProfile.category!,
+                                     "SubCategory": merchantProfile.numberOfLocations!]
+        let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
+        Alamofire.request(Constants.API_MERCHANT_REGISTER,
+                          method: .post,
+                          parameters: params,
+                          encoding: JSONEncoding.default,
+                          headers : nil).validate().responseJSON { [weak self] response in
+
+                            guard response.result.isSuccess else {
+                                SGUtility.showAlert(withMessage: (response.result.error?.localizedDescription)!)
+                                return
+                            }
+                            guard let _ = response.result.value as? [String: Any] else {
+                                return
+                            }
+                            
+                            KRProgressHUD.dismiss({
+                                self?.performSegue(withIdentifier: "ShowHomeSegue", sender: self)
+                            })
+                            
         }
     }
     

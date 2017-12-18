@@ -29,9 +29,16 @@ class TourViewController: UIViewController, AKFViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if accountKit == nil {
+            self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
+        }
+        if let _ = accountKit.currentAccessToken {
+            // if the user is already logged in, go to the main screen
+            performSegue(withIdentifier: "ShowHomeSegue", sender: self); return
+        }
+        
         onboardingView.dataSource = model
         onboardingView.delegate = model
-        
         //Do Button visible control over scroll of tour page
         model.didShow = { page in
         }
@@ -58,21 +65,12 @@ class TourViewController: UIViewController, AKFViewControllerDelegate {
                 }
             }
         }
-        
-        if accountKit == nil {
-            // may also specify AKFResponseTypeAccessToken
-            self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
-        }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if (accountKit.currentAccessToken != nil) {
-            // if the user is already logged in, go to the main screen
-            DispatchQueue.main.async(execute: {
-                self.performSegue(withIdentifier: "ShowHomeSegue", sender: self)
-            })
+        if let _ = accountKit.currentAccessToken {
+            performSegue(withIdentifier: "ShowHomeSegue", sender: self); return
         }
     }
 
@@ -134,19 +132,13 @@ class TourViewController: UIViewController, AKFViewControllerDelegate {
                           method: .post,
                           parameters: params,
                           encoding: JSONEncoding.default,
-                          headers : nil).responseJSON { response in
+                          headers : nil).validate().responseJSON { response in
                             
             /*print(response)
              let disc = response.result.value as! Dictionary<String, Any>
              print(disc["IsRegistered"]!)*/
-            
-            switch response.result{
-            case .success:
-                break
-                
-            case .failure:
-                Alertift.alert(title: "SnapGyft", message: "Service Down").action(.default("OK")).show()
-                break
+            guard response.result.isSuccess else {
+                SGUtility.showAlert(withMessage: (response.result.error?.localizedDescription)!); return
             }
         }
         

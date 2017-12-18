@@ -8,6 +8,7 @@
 
 import UIKit
 import OnboardingKit
+import Firebase
 
 class TourViewController: UIViewController {
     
@@ -17,11 +18,14 @@ class TourViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let _ = Auth.auth().currentUser {
+            performSegue(withIdentifier: "ShowHomeSegue", sender: self); return
+        }
 
+        //Tour Screen
         onboardingView.dataSource = model
         onboardingView.delegate = model
-        
-        //Do Button visible control over scroll of tour page
         model.didShow = { page in
         }
         model.willShow = { page in

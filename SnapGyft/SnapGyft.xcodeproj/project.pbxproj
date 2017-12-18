@@ -176,6 +176,8 @@
 		186B5E701FE0679500AC024D /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6C1FE0679500AC024D /* StoryboardHelper.swift */; };
 		186B5E711FE0679500AC024D /* ConfigurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6D1FE0679500AC024D /* ConfigurationHelper.swift */; };
 		186B5E721FE0679500AC024D /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6E1FE0679500AC024D /* CollectionViewHelper.swift */; };
+		189B0DDA1FE7C6F100E64EAC /* UIApplication+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */; };
+		189B0DDB1FE7C6F100E64EAC /* UIApplication+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */; };
 		189E9EA71E806CE6007460E0 /* UITableViewCell+Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */; };
 		18AE406D1E7B15C600B7F495 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE406C1E7B15C600B7F495 /* AppDelegate.swift */; };
 		18AE40721E7B15C600B7F495 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AE40701E7B15C600B7F495 /* Main.storyboard */; };
@@ -310,6 +312,7 @@
 		186B5E6C1FE0679500AC024D /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		186B5E6D1FE0679500AC024D /* ConfigurationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationHelper.swift; sourceTree = "<group>"; };
 		186B5E6E1FE0679500AC024D /* CollectionViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
+		189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extention.swift"; sourceTree = "<group>"; };
 		189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Former.swift"; sourceTree = "<group>"; };
 		18AE40691E7B15C600B7F495 /* SnapGyft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapGyft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18AE406C1E7B15C600B7F495 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -391,6 +394,7 @@
 				1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */,
 				1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */,
 				183B455E1FE45D61009282FB /* UINavigationBar+Extention.swift */,
+				189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1095,6 +1099,7 @@
 				183B46CE1FE57D6E009282FB /* FormHeaderFooterView.swift in Sources */,
 				183B459A1FE5009F009282FB /* RegisterFieldCell.swift in Sources */,
 				18613ADB1FE2CBD7004AF8F1 /* AppDelegate.swift in Sources */,
+				189B0DDB1FE7C6F100E64EAC /* UIApplication+Extention.swift in Sources */,
 				185078FA1FE2FADC00AFB9F8 /* String+FormerDemo.swift in Sources */,
 				183B46AF1FE57D07009282FB /* FormSelectorPickerCell.swift in Sources */,
 				185078F01FE2F8B100AFB9F8 /* StoryboardHelper.swift in Sources */,
@@ -1236,6 +1241,7 @@
 				186B5E611FE0628F00AC024D /* ProfileImageCell.swift in Sources */,
 				183B468D1FE57BA2009282FB /* FormViewController.swift in Sources */,
 				183B46821FE57BA2009282FB /* FormSelectorPickerCell.swift in Sources */,
+				189B0DDA1FE7C6F100E64EAC /* UIApplication+Extention.swift in Sources */,
 				183B46971FE57BA2009282FB /* SelectorDatePickerRowFormer.swift in Sources */,
 				184232961FC8707B002F1FC5 /* Constants.swift in Sources */,
 				183B455F1FE45D61009282FB /* UINavigationBar+Extention.swift in Sources */,

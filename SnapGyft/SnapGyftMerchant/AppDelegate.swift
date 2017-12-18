@@ -25,7 +25,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AACoreData.sharedInstance().dataModel = "SnapGyftMerchant"
         UINavigationBar.setupAppearance()
         
+        //Firebase Setup
         FirebaseApp.configure()
+        if UIApplication.isFirstLaunch() {// Doing logout for first time launch, otherwise user is not removed even in app uninstall
+            let firebaseAuth = Auth.auth()
+            do{
+                try firebaseAuth.signOut()
+            }catch let signOutError as NSError {
+                print("Error signing out: %@", signOutError)
+            }
+        }
+        
         
         return true
     }
