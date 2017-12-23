@@ -1,7 +1,9 @@
-//  SnapGyft
 //
-//  Created by Patra, Sachin Kumar (TekSystems).
-//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
+//  ImageAnimateLayer.swift
+//  Pods
+//
+//  Created by Millman YANG on 2016/12/20.
+//
 //
 
 import UIKit

@@ -112,21 +112,7 @@
 		183B46CE1FE57D6E009282FB /* FormHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46741FE57BA2009282FB /* FormHeaderFooterView.swift */; };
 		183B46CF1FE57D72009282FB /* FormLabelFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46751FE57BA2009282FB /* FormLabelFooterView.swift */; };
 		183B46D01FE57D75009282FB /* FormLabelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46761FE57BA2009282FB /* FormLabelHeaderView.swift */; };
-		183B46D11FE5A415009282FB /* AnimateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408C1E7B1FE600B7F495 /* AnimateItem.swift */; };
-		183B46D21FE5A419009282FB /* ImageAnimateLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408D1E7B1FE600B7F495 /* ImageAnimateLayer.swift */; };
-		183B46D31FE5A41F009282FB /* TabBarAnimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408E1E7B1FE600B7F495 /* TabBarAnimateController.swift */; };
-		183B46D41FE5A425009282FB /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */; };
 		183B46D61FE5A6E1009282FB /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46D51FE5A6E1009282FB /* BaseTabBarController.swift */; };
-		183B46E41FE5AD56009282FB /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 183B46DF1FE5AD56009282FB /* generator.rb */; };
-		183B46E51FE5AD56009282FB /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 183B46E01FE5AD56009282FB /* octicons.ttf */; };
-		183B46E61FE5AD56009282FB /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 183B46E11FE5AD56009282FB /* octicons.txt */; };
-		183B46E71FE5AD56009282FB /* SFCustomIconKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46E21FE5AD56009282FB /* SFCustomIconKit.swift */; };
-		183B46E81FE5AD56009282FB /* SFCustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46E31FE5AD56009282FB /* SFCustomIcons.swift */; };
-		183B46E91FE5AD60009282FB /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 183B46DF1FE5AD56009282FB /* generator.rb */; };
-		183B46EA1FE5AD62009282FB /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 183B46E01FE5AD56009282FB /* octicons.ttf */; };
-		183B46EB1FE5AD64009282FB /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 183B46E11FE5AD56009282FB /* octicons.txt */; };
-		183B46EC1FE5AD68009282FB /* SFCustomIconKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46E21FE5AD56009282FB /* SFCustomIconKit.swift */; };
-		183B46ED1FE5AD6C009282FB /* SFCustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46E31FE5AD56009282FB /* SFCustomIcons.swift */; };
 		183B46F11FE5AE0F009282FB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F01FE5AE0F009282FB /* AccountViewController.swift */; };
 		183B46F31FE5B0E3009282FB /* POSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F21FE5B0E3009282FB /* POSViewController.swift */; };
 		183B46F51FE5B0FD009282FB /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F41FE5B0FD009282FB /* PromoViewController.swift */; };
@@ -175,6 +161,23 @@
 		186B5E701FE0679500AC024D /* StoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6C1FE0679500AC024D /* StoryboardHelper.swift */; };
 		186B5E711FE0679500AC024D /* ConfigurationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6D1FE0679500AC024D /* ConfigurationHelper.swift */; };
 		186B5E721FE0679500AC024D /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E6E1FE0679500AC024D /* CollectionViewHelper.swift */; };
+		1890F9FB1FEEB721007D5536 /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1890F9F01FEEB721007D5536 /* generator.rb */; };
+		1890F9FC1FEEB721007D5536 /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1890F9F11FEEB721007D5536 /* octicons.ttf */; };
+		1890F9FD1FEEB721007D5536 /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1890F9F21FEEB721007D5536 /* octicons.txt */; };
+		1890FA041FEEB721007D5536 /* SFBaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890F9FA1FEEB721007D5536 /* SFBaseTabBarViewController.swift */; };
+		1890FA0C1FEEB793007D5536 /* EPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890FA061FEEB793007D5536 /* EPConstants.swift */; };
+		1890FA0D1FEEB793007D5536 /* EPContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890FA071FEEB793007D5536 /* EPContact.swift */; };
+		1890FA0E1FEEB793007D5536 /* EPContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890FA081FEEB793007D5536 /* EPContactCell.swift */; };
+		1890FA0F1FEEB793007D5536 /* EPContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1890FA091FEEB793007D5536 /* EPContactCell.xib */; };
+		1890FA101FEEB793007D5536 /* EPContactsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890FA0A1FEEB793007D5536 /* EPContactsPicker.swift */; };
+		1890FA111FEEB793007D5536 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890FA0B1FEEB793007D5536 /* EPExtensions.swift */; };
+		1890FA141FEEB9A6007D5536 /* SFCustomIconKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890FA121FEEB9A6007D5536 /* SFCustomIconKit.swift */; };
+		1890FA151FEEB9A6007D5536 /* SFCustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890FA131FEEB9A6007D5536 /* SFCustomIcons.swift */; };
+		1890FA171FEEB9E0007D5536 /* SFCustomIconKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890FA121FEEB9A6007D5536 /* SFCustomIconKit.swift */; };
+		1890FA181FEEB9E3007D5536 /* SFCustomIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1890FA131FEEB9A6007D5536 /* SFCustomIcons.swift */; };
+		1890FA191FEEB9E7007D5536 /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1890F9F01FEEB721007D5536 /* generator.rb */; };
+		1890FA1A1FEEB9EA007D5536 /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1890F9F11FEEB721007D5536 /* octicons.ttf */; };
+		1890FA1B1FEEB9EE007D5536 /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1890F9F21FEEB721007D5536 /* octicons.txt */; };
 		189B0DDA1FE7C6F100E64EAC /* UIApplication+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */; };
 		189B0DDB1FE7C6F100E64EAC /* UIApplication+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */; };
 		189E9EA71E806CE6007460E0 /* UITableViewCell+Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */; };
@@ -184,11 +187,6 @@
 		18AE40771E7B15C600B7F495 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AE40761E7B15C600B7F495 /* Images.xcassets */; };
 		18AE407A1E7B15C600B7F495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AE40781E7B15C600B7F495 /* LaunchScreen.storyboard */; };
 		18AE40861E7B185000B7F495 /* SFEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE40851E7B185000B7F495 /* SFEventViewController.swift */; };
-		18AE40901E7B1FE600B7F495 /* AnimateItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408C1E7B1FE600B7F495 /* AnimateItem.swift */; };
-		18AE40911E7B1FE600B7F495 /* ImageAnimateLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408D1E7B1FE600B7F495 /* ImageAnimateLayer.swift */; };
-		18AE40921E7B1FE600B7F495 /* TabBarAnimateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408E1E7B1FE600B7F495 /* TabBarAnimateController.swift */; };
-		18AE40931E7B1FE600B7F495 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */; };
-		18AE40971E7B218600B7F495 /* SFBaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */; };
 		18B7C95A1FCF325A00771B64 /* AwesomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C9591FCF325A00771B64 /* AwesomeButton.swift */; };
 		18BB4F8A1FED77440044392F /* DCQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB4F881FED77440044392F /* DCQRCode.swift */; };
 		18BB4F8B1FED77440044392F /* FunctionalCoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB4F891FED77440044392F /* FunctionalCoreImage.swift */; };
@@ -199,12 +197,6 @@
 		18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */; };
 		18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */; };
 		18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */; };
-		18FCC5D91E7EF22600198CF0 /* EPConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5D31E7EF22600198CF0 /* EPConstants.swift */; };
-		18FCC5DA1E7EF22600198CF0 /* EPContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5D41E7EF22600198CF0 /* EPContact.swift */; };
-		18FCC5DB1E7EF22600198CF0 /* EPContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5D51E7EF22600198CF0 /* EPContactCell.swift */; };
-		18FCC5DC1E7EF22600198CF0 /* EPContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FCC5D61E7EF22600198CF0 /* EPContactCell.xib */; };
-		18FCC5DD1E7EF22600198CF0 /* EPContactsPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5D71E7EF22600198CF0 /* EPContactsPicker.swift */; };
-		18FCC5DE1E7EF22600198CF0 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5D81E7EF22600198CF0 /* EPExtensions.swift */; };
 		18FCC5E01E7EF35700198CF0 /* SGSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */; };
 		50D732379430BA3B53F7132A /* Pods_SnapGyftMerchant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F852AB73D487DD112A6B3BF1 /* Pods_SnapGyftMerchant.framework */; };
 		E5C5BC4814C251F575DE70B9 /* Pods_SnapGyft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC2EAA6B5966C7513AAB391 /* Pods_SnapGyft.framework */; };
@@ -271,11 +263,6 @@
 		183B46751FE57BA2009282FB /* FormLabelFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelFooterView.swift; sourceTree = "<group>"; };
 		183B46761FE57BA2009282FB /* FormLabelHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelHeaderView.swift; sourceTree = "<group>"; };
 		183B46D51FE5A6E1009282FB /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		183B46DF1FE5AD56009282FB /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
-		183B46E01FE5AD56009282FB /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.ttf; sourceTree = "<group>"; };
-		183B46E11FE5AD56009282FB /* octicons.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = octicons.txt; sourceTree = "<group>"; };
-		183B46E21FE5AD56009282FB /* SFCustomIconKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIconKit.swift; sourceTree = "<group>"; };
-		183B46E31FE5AD56009282FB /* SFCustomIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIcons.swift; sourceTree = "<group>"; };
 		183B46F01FE5AE0F009282FB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		183B46F21FE5B0E3009282FB /* POSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSViewController.swift; sourceTree = "<group>"; };
 		183B46F41FE5B0FD009282FB /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
@@ -315,6 +302,18 @@
 		186B5E6C1FE0679500AC024D /* StoryboardHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHelper.swift; sourceTree = "<group>"; };
 		186B5E6D1FE0679500AC024D /* ConfigurationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationHelper.swift; sourceTree = "<group>"; };
 		186B5E6E1FE0679500AC024D /* CollectionViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
+		1890F9F01FEEB721007D5536 /* generator.rb */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; path = generator.rb; sourceTree = "<group>"; };
+		1890F9F11FEEB721007D5536 /* octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = octicons.ttf; sourceTree = "<group>"; };
+		1890F9F21FEEB721007D5536 /* octicons.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = octicons.txt; sourceTree = "<group>"; };
+		1890F9FA1FEEB721007D5536 /* SFBaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFBaseTabBarViewController.swift; sourceTree = "<group>"; };
+		1890FA061FEEB793007D5536 /* EPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPConstants.swift; sourceTree = "<group>"; };
+		1890FA071FEEB793007D5536 /* EPContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPContact.swift; sourceTree = "<group>"; };
+		1890FA081FEEB793007D5536 /* EPContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPContactCell.swift; sourceTree = "<group>"; };
+		1890FA091FEEB793007D5536 /* EPContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPContactCell.xib; sourceTree = "<group>"; };
+		1890FA0A1FEEB793007D5536 /* EPContactsPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPContactsPicker.swift; sourceTree = "<group>"; };
+		1890FA0B1FEEB793007D5536 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPExtensions.swift; sourceTree = "<group>"; };
+		1890FA121FEEB9A6007D5536 /* SFCustomIconKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIconKit.swift; sourceTree = "<group>"; };
+		1890FA131FEEB9A6007D5536 /* SFCustomIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIcons.swift; sourceTree = "<group>"; };
 		189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extention.swift"; sourceTree = "<group>"; };
 		189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Former.swift"; sourceTree = "<group>"; };
 		18AE40691E7B15C600B7F495 /* SnapGyft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapGyft.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -325,11 +324,6 @@
 		18AE40791E7B15C600B7F495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18AE407B1E7B15C600B7F495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18AE40851E7B185000B7F495 /* SFEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFEventViewController.swift; sourceTree = "<group>"; };
-		18AE408C1E7B1FE600B7F495 /* AnimateItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateItem.swift; sourceTree = "<group>"; };
-		18AE408D1E7B1FE600B7F495 /* ImageAnimateLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageAnimateLayer.swift; sourceTree = "<group>"; };
-		18AE408E1E7B1FE600B7F495 /* TabBarAnimateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarAnimateController.swift; sourceTree = "<group>"; };
-		18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFBaseTabBarViewController.swift; sourceTree = "<group>"; };
 		18B7C9591FCF325A00771B64 /* AwesomeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeButton.swift; sourceTree = "<group>"; };
 		18BB4F881FED77440044392F /* DCQRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCQRCode.swift; sourceTree = "<group>"; };
 		18BB4F891FED77440044392F /* FunctionalCoreImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalCoreImage.swift; sourceTree = "<group>"; };
@@ -340,12 +334,6 @@
 		18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSettingsViewController.swift; sourceTree = "<group>"; };
 		18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGGyftCardBalanceViewController.swift; sourceTree = "<group>"; };
-		18FCC5D31E7EF22600198CF0 /* EPConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPConstants.swift; sourceTree = "<group>"; };
-		18FCC5D41E7EF22600198CF0 /* EPContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPContact.swift; sourceTree = "<group>"; };
-		18FCC5D51E7EF22600198CF0 /* EPContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPContactCell.swift; sourceTree = "<group>"; };
-		18FCC5D61E7EF22600198CF0 /* EPContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPContactCell.xib; sourceTree = "<group>"; };
-		18FCC5D71E7EF22600198CF0 /* EPContactsPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPContactsPicker.swift; sourceTree = "<group>"; };
-		18FCC5D81E7EF22600198CF0 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPExtensions.swift; sourceTree = "<group>"; };
 		18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSendViewController.swift; sourceTree = "<group>"; };
 		92B5F5841D9784878426B4CA /* Pods-SnapGyftMerchant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapGyftMerchant.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapGyftMerchant/Pods-SnapGyftMerchant.release.xcconfig"; sourceTree = "<group>"; };
 		BCC2EAA6B5966C7513AAB391 /* Pods_SnapGyft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapGyft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -567,26 +555,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		183B46DD1FE5AD56009282FB /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				183B46DE1FE5AD56009282FB /* Assets */,
-				183B46E21FE5AD56009282FB /* SFCustomIconKit.swift */,
-				183B46E31FE5AD56009282FB /* SFCustomIcons.swift */,
-			);
-			path = Icons;
-			sourceTree = "<group>";
-		};
-		183B46DE1FE5AD56009282FB /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				183B46DF1FE5AD56009282FB /* generator.rb */,
-				183B46E01FE5AD56009282FB /* octicons.ttf */,
-				183B46E11FE5AD56009282FB /* octicons.txt */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		183B46EE1FE5ADF4009282FB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -705,6 +673,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1890F9EE1FEEB721007D5536 /* TabBarAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				1890F9EF1FEEB721007D5536 /* Assets */,
+				1890F9FA1FEEB721007D5536 /* SFBaseTabBarViewController.swift */,
+			);
+			path = TabBarAnimation;
+			sourceTree = "<group>";
+		};
+		1890F9EF1FEEB721007D5536 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1890FA121FEEB9A6007D5536 /* SFCustomIconKit.swift */,
+				1890FA131FEEB9A6007D5536 /* SFCustomIcons.swift */,
+				1890F9F01FEEB721007D5536 /* generator.rb */,
+				1890F9F11FEEB721007D5536 /* octicons.ttf */,
+				1890F9F21FEEB721007D5536 /* octicons.txt */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		1890FA051FEEB793007D5536 /* ContactsPicker */ = {
+			isa = PBXGroup;
+			children = (
+				1890FA061FEEB793007D5536 /* EPConstants.swift */,
+				1890FA071FEEB793007D5536 /* EPContact.swift */,
+				1890FA081FEEB793007D5536 /* EPContactCell.swift */,
+				1890FA091FEEB793007D5536 /* EPContactCell.xib */,
+				1890FA0A1FEEB793007D5536 /* EPContactsPicker.swift */,
+				1890FA0B1FEEB793007D5536 /* EPExtensions.swift */,
+			);
+			path = ContactsPicker;
+			sourceTree = "<group>";
+		};
 		18AE40601E7B15C600B7F495 = {
 			isa = PBXGroup;
 			children = (
@@ -739,11 +741,11 @@
 				184232981FC87483002F1FC5 /* SGUtility.swift */,
 				185D8C491E7C77C400692AD4 /* AccountKit.framework */,
 				185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */,
+				1890FA051FEEB793007D5536 /* ContactsPicker */,
+				1890F9EE1FEEB721007D5536 /* TabBarAnimation */,
 				18BB4F871FED77440044392F /* QRCodeGenerator */,
 				183B463F1FE57BA2009282FB /* FormStyle */,
 				186B5E501FE0628F00AC024D /* Cells */,
-				18AE408B1E7B1FE600B7F495 /* TabBarAnimation */,
-				18FCC5D21E7EF20700198CF0 /* ContactsPicker */,
 				180FFAF61E7DE5C000435772 /* Helpers */,
 				180FFAF01E7DE46B00435772 /* Models */,
 				180FFAF31E7DE4E500435772 /* Controllers */,
@@ -760,19 +762,6 @@
 				185D8C4D1E7C780F00692AD4 /* SnapGyft-Bridging-Header.h */,
 			);
 			path = SnapGyft;
-			sourceTree = "<group>";
-		};
-		18AE408B1E7B1FE600B7F495 /* TabBarAnimation */ = {
-			isa = PBXGroup;
-			children = (
-				183B46DD1FE5AD56009282FB /* Icons */,
-				18AE408C1E7B1FE600B7F495 /* AnimateItem.swift */,
-				18AE408D1E7B1FE600B7F495 /* ImageAnimateLayer.swift */,
-				18AE408E1E7B1FE600B7F495 /* TabBarAnimateController.swift */,
-				18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */,
-				18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */,
-			);
-			path = TabBarAnimation;
 			sourceTree = "<group>";
 		};
 		18BB4F871FED77440044392F /* QRCodeGenerator */ = {
@@ -793,20 +782,6 @@
 				18592A2F1E87099F00003E6A /* SFMyCharityController.swift */,
 			);
 			path = Settings;
-			sourceTree = "<group>";
-		};
-		18FCC5D21E7EF20700198CF0 /* ContactsPicker */ = {
-			isa = PBXGroup;
-			children = (
-				18FCC5D31E7EF22600198CF0 /* EPConstants.swift */,
-				18FCC5D41E7EF22600198CF0 /* EPContact.swift */,
-				18FCC5D51E7EF22600198CF0 /* EPContactCell.swift */,
-				18FCC5D61E7EF22600198CF0 /* EPContactCell.xib */,
-				18FCC5D71E7EF22600198CF0 /* EPContactsPicker.swift */,
-				18FCC5D81E7EF22600198CF0 /* EPExtensions.swift */,
-			);
-			name = ContactsPicker;
-			path = TabBarAnimation/ContactsPicker;
 			sourceTree = "<group>";
 		};
 		8AEECB31FC445F9EEB2E2D2E /* Pods */ = {
@@ -913,13 +888,13 @@
 			files = (
 				183B459C1FE50D04009282FB /* RegisterLabelCell.xib in Resources */,
 				183B45981FE50064009282FB /* RegisterFieldCell.xib in Resources */,
-				183B46EA1FE5AD62009282FB /* octicons.ttf in Resources */,
-				183B46EB1FE5AD64009282FB /* octicons.txt in Resources */,
-				183B46E91FE5AD60009282FB /* generator.rb in Resources */,
 				18613AE01FE2CC09004AF8F1 /* Main.storyboard in Resources */,
 				185078FC1FE2FDE900AFB9F8 /* Images.xcassets in Resources */,
+				1890FA1B1FEEB9EE007D5536 /* octicons.txt in Resources */,
 				183B46FF1FE6B148009282FB /* GoogleService-Info.plist in Resources */,
+				1890FA191FEEB9E7007D5536 /* generator.rb in Resources */,
 				18613AE31FE2CC1D004AF8F1 /* Images.xcassets in Resources */,
+				1890FA1A1FEEB9EA007D5536 /* octicons.ttf in Resources */,
 				18613AE11FE2CC09004AF8F1 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -928,19 +903,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1890F9FD1FEEB721007D5536 /* octicons.txt in Resources */,
 				18C7C02F1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib in Resources */,
-				18FCC5DC1E7EF22600198CF0 /* EPContactCell.xib in Resources */,
 				186B5E601FE0628F00AC024D /* ProfileFieldCell.xib in Resources */,
+				1890FA0F1FEEB793007D5536 /* EPContactCell.xib in Resources */,
 				186B5E641FE0628F00AC024D /* ProfileLabelCell.xib in Resources */,
-				183B46E41FE5AD56009282FB /* generator.rb in Resources */,
 				186B5E5E1FE0628F00AC024D /* DynamicHeightCell.xib in Resources */,
+				1890F9FB1FEEB721007D5536 /* generator.rb in Resources */,
 				186B5E621FE0628F00AC024D /* ProfileImageCell.xib in Resources */,
+				1890F9FC1FEEB721007D5536 /* octicons.ttf in Resources */,
 				18AE407A1E7B15C600B7F495 /* LaunchScreen.storyboard in Resources */,
 				18AE40771E7B15C600B7F495 /* Images.xcassets in Resources */,
 				18AE40721E7B15C600B7F495 /* Main.storyboard in Resources */,
 				186B5E6A1FE0633700AC024D /* CardCollectionViewCell.xib in Resources */,
-				183B46E51FE5AD56009282FB /* octicons.ttf in Resources */,
-				183B46E61FE5AD56009282FB /* octicons.txt in Resources */,
 				185D8C4C1E7C77C400692AD4 /* AccountKitStrings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1010,6 +985,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MMTabBarAnimation/MMTabBarAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
@@ -1025,6 +1001,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMTabBarAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
@@ -1068,6 +1045,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MMTabBarAnimation/MMTabBarAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
@@ -1083,6 +1061,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMTabBarAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
@@ -1106,7 +1085,6 @@
 				185078F51FE2F8CB00AFB9F8 /* Network.swift in Sources */,
 				183B46AD1FE57D03009282FB /* FormSegmentedCell.swift in Sources */,
 				183B46A61FE57CE1009282FB /* FormCell.swift in Sources */,
-				183B46D11FE5A415009282FB /* AnimateItem.swift in Sources */,
 				183B46B51FE57D16009282FB /* Former.swift in Sources */,
 				183B46B91FE57D22009282FB /* ViewFormer.swift in Sources */,
 				183B46B41FE57D12009282FB /* FormTextViewCell.swift in Sources */,
@@ -1131,12 +1109,11 @@
 				183B46AE1FE57D04009282FB /* FormSelectorDatePickerCell.swift in Sources */,
 				183B46F51FE5B0FD009282FB /* PromoViewController.swift in Sources */,
 				183B46FD1FE657C4009282FB /* SnapGyftMerchant.xcdatamodeld in Sources */,
-				183B46D21FE5A419009282FB /* ImageAnimateLayer.swift in Sources */,
+				1890FA181FEEB9E3007D5536 /* SFCustomIcons.swift in Sources */,
 				185078F11FE2F8B400AFB9F8 /* AACoreData.swift in Sources */,
 				183B45601FE45E66009282FB /* UINavigationBar+Extention.swift in Sources */,
 				183B46C51FE57D52009282FB /* SelectorPickerRowFormer.swift in Sources */,
 				183B46C11FE57D40009282FB /* LabelRowFormer.swift in Sources */,
-				183B46ED1FE5AD6C009282FB /* SFCustomIcons.swift in Sources */,
 				183B46BE1FE57D39009282FB /* DatePickerRowFormer.swift in Sources */,
 				185079031FE301E200AFB9F8 /* MerchantTourScreenModel.swift in Sources */,
 				183B459E1FE50D2B009282FB /* RegisterLabelCell.swift in Sources */,
@@ -1152,18 +1129,15 @@
 				183B46F31FE5B0E3009282FB /* POSViewController.swift in Sources */,
 				183B46B21FE57D0D009282FB /* FormSwitchCell.swift in Sources */,
 				183B46D61FE5A6E1009282FB /* BaseTabBarController.swift in Sources */,
-				183B46D41FE5A425009282FB /* UIViewExtension.swift in Sources */,
 				183B46C01FE57D3D009282FB /* InlinePickerRowFormer.swift in Sources */,
 				185078F81FE2FACF00AFB9F8 /* UIColor+FormerDemo.swift in Sources */,
 				183B46C41FE57D50009282FB /* SelectorDatePickerRowFormer.swift in Sources */,
 				183B46CB1FE57D63009282FB /* BaseViewFormer.swift in Sources */,
 				183B46C71FE57D56009282FB /* StepperRowFormer.swift in Sources */,
 				185078EF1FE2F8AD00AFB9F8 /* GradientView.swift in Sources */,
-				183B46EC1FE5AD68009282FB /* SFCustomIconKit.swift in Sources */,
 				183B46B61FE57D1A009282FB /* FormerProtocol.swift in Sources */,
 				183B46C91FE57D5C009282FB /* TextFieldRowFormer.swift in Sources */,
 				183B46AB1FE57CFE009282FB /* FormLabelCell.swift in Sources */,
-				183B46D31FE5A41F009282FB /* TabBarAnimateController.swift in Sources */,
 				183B46AC1FE57D01009282FB /* FormPickerCell.swift in Sources */,
 				183B46A81FE57CE8009282FB /* FormDatePickerCell.swift in Sources */,
 				183B46CF1FE57D72009282FB /* FormLabelFooterView.swift in Sources */,
@@ -1179,6 +1153,7 @@
 				183B46B81FE57D20009282FB /* SectionFormer.swift in Sources */,
 				183B46C31FE57D4D009282FB /* SegmentedRowFormer.swift in Sources */,
 				185078EC1FE2F89C00AFB9F8 /* AwesomeButton.swift in Sources */,
+				1890FA171FEEB9E0007D5536 /* SFCustomIconKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1187,11 +1162,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				183B46941FE57BA2009282FB /* LabelRowFormer.swift in Sources */,
-				18AE40911E7B1FE600B7F495 /* ImageAnimateLayer.swift in Sources */,
 				186B5E5F1FE0628F00AC024D /* ProfileFieldCell.swift in Sources */,
 				183B46921FE57BA2009282FB /* InlineDatePickerRowFormer.swift in Sources */,
 				183B46831FE57BA2009282FB /* FormSliderCell.swift in Sources */,
+				1890FA0C1FEEB793007D5536 /* EPConstants.swift in Sources */,
 				183B46801FE57BA2009282FB /* FormSegmentedCell.swift in Sources */,
+				1890FA0D1FEEB793007D5536 /* EPContact.swift in Sources */,
 				186B5E5C1FE0628F00AC024D /* CenterLabelCell.swift in Sources */,
 				18C7C02E1FEDA2CE00C0472D /* CardDetailQRCodeCell.swift in Sources */,
 				183B469A1FE57BA2009282FB /* StepperRowFormer.swift in Sources */,
@@ -1201,20 +1177,17 @@
 				183B469F1FE57BA2009282FB /* CustomViewFormer.swift in Sources */,
 				183B46891FE57BA2009282FB /* FormerProtocol.swift in Sources */,
 				183B46901FE57BA2009282FB /* CustomRowFormer.swift in Sources */,
+				1890FA141FEEB9A6007D5536 /* SFCustomIconKit.swift in Sources */,
 				183B46931FE57BA2009282FB /* InlinePickerRowFormer.swift in Sources */,
 				183B469C1FE57BA2009282FB /* TextFieldRowFormer.swift in Sources */,
 				183B46A01FE57BA2009282FB /* LabelViewFormer.swift in Sources */,
-				183B46E71FE5AD56009282FB /* SFCustomIconKit.swift in Sources */,
+				1890FA101FEEB793007D5536 /* EPContactsPicker.swift in Sources */,
 				183B46791FE57BA2009282FB /* FormCell.swift in Sources */,
+				1890FA151FEEB9A6007D5536 /* SFCustomIcons.swift in Sources */,
 				185D8C521E7C7BE700692AD4 /* TourViewController.swift in Sources */,
-				18AE40971E7B218600B7F495 /* SFBaseTabBarViewController.swift in Sources */,
 				186B5E691FE0633700AC024D /* CardCollectionViewCell.swift in Sources */,
-				18AE40921E7B1FE600B7F495 /* TabBarAnimateController.swift in Sources */,
-				183B46E81FE5AD56009282FB /* SFCustomIcons.swift in Sources */,
 				181D79941EF5BE47008515D5 /* Network.swift in Sources */,
-				18FCC5DE1E7EF22600198CF0 /* EPExtensions.swift in Sources */,
 				183B46781FE57BA2009282FB /* FormerInputAccessoryView.swift in Sources */,
-				18AE40931E7B1FE600B7F495 /* UIViewExtension.swift in Sources */,
 				1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */,
 				183B46881FE57BA2009282FB /* Former.swift in Sources */,
 				183B46951FE57BA2009282FB /* PickerRowFormer.swift in Sources */,
@@ -1227,7 +1200,6 @@
 				180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */,
 				183B46771FE57BA2009282FB /* TextSelectorViewContorller.swift in Sources */,
 				18B7C95A1FCF325A00771B64 /* AwesomeButton.swift in Sources */,
-				18AE40901E7B1FE600B7F495 /* AnimateItem.swift in Sources */,
 				183B46A11FE57BA2009282FB /* FormHeaderFooterView.swift in Sources */,
 				1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */,
 				186B5E261FE05FCA00AC024D /* SFAccountViewController.swift in Sources */,
@@ -1238,6 +1210,8 @@
 				18BB4F8A1FED77440044392F /* DCQRCode.swift in Sources */,
 				186B5E5D1FE0628F00AC024D /* DynamicHeightCell.swift in Sources */,
 				183B467E1FE57BA2009282FB /* FormLabelCell.swift in Sources */,
+				1890FA041FEEB721007D5536 /* SFBaseTabBarViewController.swift in Sources */,
+				1890FA0E1FEEB793007D5536 /* EPContactCell.swift in Sources */,
 				1803A30F1FDB9C20007C4918 /* AACoreData.swift in Sources */,
 				186B5E631FE0628F00AC024D /* ProfileLabelCell.swift in Sources */,
 				186B5E711FE0679500AC024D /* ConfigurationHelper.swift in Sources */,
@@ -1246,7 +1220,6 @@
 				18AE40751E7B15C600B7F495 /* SnapGyft.xcdatamodeld in Sources */,
 				183B46961FE57BA2009282FB /* SegmentedRowFormer.swift in Sources */,
 				183B467A1FE57BA2009282FB /* FormCheckCell.swift in Sources */,
-				18FCC5D91E7EF22600198CF0 /* EPConstants.swift in Sources */,
 				183B467B1FE57BA2009282FB /* FormDatePickerCell.swift in Sources */,
 				183B469D1FE57BA2009282FB /* TextViewRowFormer.swift in Sources */,
 				1835F6A61F0CF4E50071184E /* Profile.swift in Sources */,
@@ -1254,14 +1227,13 @@
 				183B46851FE57BA2009282FB /* FormSwitchCell.swift in Sources */,
 				183B468A1FE57BA2009282FB /* RowFormer.swift in Sources */,
 				183B46811FE57BA2009282FB /* FormSelectorDatePickerCell.swift in Sources */,
-				18FCC5DA1E7EF22600198CF0 /* EPContact.swift in Sources */,
-				18FCC5DD1E7EF22600198CF0 /* EPContactsPicker.swift in Sources */,
 				183B46911FE57BA2009282FB /* DatePickerRowFormer.swift in Sources */,
 				183B467C1FE57BA2009282FB /* FormInlineDatePickerCell.swift in Sources */,
 				180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */,
 				183B468B1FE57BA2009282FB /* SectionFormer.swift in Sources */,
 				18AE40861E7B185000B7F495 /* SFEventViewController.swift in Sources */,
 				186B5E611FE0628F00AC024D /* ProfileImageCell.swift in Sources */,
+				1890FA111FEEB793007D5536 /* EPExtensions.swift in Sources */,
 				183B468D1FE57BA2009282FB /* FormViewController.swift in Sources */,
 				183B46821FE57BA2009282FB /* FormSelectorPickerCell.swift in Sources */,
 				189B0DDA1FE7C6F100E64EAC /* UIApplication+Extention.swift in Sources */,
@@ -1276,7 +1248,6 @@
 				18C7C02B1FED941D00C0472D /* CardDetailTableController.swift in Sources */,
 				183B46A31FE57BA2009282FB /* FormLabelHeaderView.swift in Sources */,
 				18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */,
-				18FCC5DB1E7EF22600198CF0 /* EPContactCell.swift in Sources */,
 				183B46981FE57BA2009282FB /* SelectorPickerRowFormer.swift in Sources */,
 				18AE406D1E7B15C600B7F495 /* AppDelegate.swift in Sources */,
 				18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */,

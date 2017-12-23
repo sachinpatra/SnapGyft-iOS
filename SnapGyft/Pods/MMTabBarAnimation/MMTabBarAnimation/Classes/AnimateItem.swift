@@ -1,7 +1,9 @@
-//  SnapGyft
 //
-//  Created by Patra, Sachin Kumar (TekSystems).
-//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
+//  AnimateItem.swift
+//  TabBarDemo
+//
+//  Created by Millman YANG on 2016/12/17.
+//  Copyright © 2016年 Millman YANG. All rights reserved.
 //
 
 import UIKit
@@ -74,12 +76,6 @@ class MMAnimateItem: NSObject {
     fileprivate func observerBadge() {
         if let barItem = self.item , barItem.observationInfo == nil{
             barItem.addObserver(self, forKeyPath: "badgeValue", options: .new, context: nil)
-        }
-    }
-    
-    func removeObserver() {
-        if let barItem = self.item {
-            barItem.removeObserver(self, forKeyPath: "badgeValue")
         }
     }
     

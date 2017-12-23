@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E0CA193021A88F407FCC1A5687626544"
+               BlueprintIdentifier = "775CE637D732D4F27987EFF7D79BDD5F"
                BuildableName = "Pods_SnapGyftMerchant.framework"
                BlueprintName = "Pods-SnapGyftMerchant"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -47,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E0CA193021A88F407FCC1A5687626544"
+            BlueprintIdentifier = "775CE637D732D4F27987EFF7D79BDD5F"
             BuildableName = "Pods_SnapGyftMerchant.framework"
             BlueprintName = "Pods-SnapGyftMerchant"
             ReferencedContainer = "container:Pods.xcodeproj">

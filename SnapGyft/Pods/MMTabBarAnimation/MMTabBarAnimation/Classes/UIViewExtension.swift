@@ -1,7 +1,9 @@
-//  SnapGyft
 //
-//  Created by Patra, Sachin Kumar (TekSystems).
-//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
+//  UIViewExtension.swift
+//  TabBarDemo
+//
+//  Created by Millman YANG on 2016/12/17.
+//  Copyright © 2016年 Millman YANG. All rights reserved.
 //
 
 import UIKit

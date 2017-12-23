@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3CCDA7FCFBBF818DDDE42F6E67168637'
-               BlueprintName = 'SwiftMessages'
+               BlueprintIdentifier = '7C93A3A2A9D7B818EEBA0DC43658CA96'
+               BlueprintName = 'MMTabBarAnimation'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftMessages.framework'>
+               BuildableName = 'MMTabBarAnimation.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

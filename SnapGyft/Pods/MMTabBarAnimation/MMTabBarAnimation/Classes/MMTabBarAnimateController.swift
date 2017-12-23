@@ -1,12 +1,14 @@
-//  SnapGyft
 //
-//  Created by Patra, Sachin Kumar (TekSystems).
-//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
+//  MMTabBarAnimateController.swift
+//  Pods
+//
+//  Created by Millman YANG on 2016/12/17.
+//
 //
 
 import UIKit
 
-open class TabBarAnimateController: UITabBarController {
+open class MMTabBarAnimateController: UITabBarController {
     var animateItems = [MMAnimateItem]()
     
     required public init?(coder aDecoder: NSCoder) {
@@ -74,19 +76,11 @@ open class TabBarAnimateController: UITabBarController {
         animateItems.forEach { (item) in
             item.badgeAnimateType = animate
         }
-    }
-    
-    deinit {
-        for animateItem in animateItems {
-            animateItem.removeObserver()
-        }
-    }
+    }    
 }
 
-
-
 //Private
-extension TabBarAnimateController {
+extension MMTabBarAnimateController {
     
     fileprivate func initAnimateItem() {
         tabBar.items?.forEach{ _ in animateItems.append(MMAnimateItem())}

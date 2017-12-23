@@ -59,18 +59,64 @@ enum Countries {
 }
 
 enum States {
-    case None, Alabama, Alaska, Arizona, California
+    case None, Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, NewHampshire, NewJersey, NewMexico, NewYork, NorthCarolina, NorthDakota, Ohio, Oklahoma, Oregon, Pennsylvania, RhodeIsland, SouthCarolina, SouthDakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, WestVirginia, Wisconsin, Wyoming
     func title() -> String {
         switch self {
         case .None: return "Select State"
         case .Alabama: return "Alabama"
         case .Alaska: return "Alaska"
         case .Arizona: return "Arizona"
+        case .Arkansas: return "Arkansas"
         case .California: return "California"
+        case .Colorado: return "Colorado"
+        case .Connecticut: return "Connecticut"
+        case .Delaware: return "Delaware"
+        case .Florida: return "Florida"
+        case .Georgia: return "Georgia"
+        case .Hawaii: return "Hawaii"
+        case .Idaho: return "Idaho"
+        case .Illinois: return "Illinois"
+        case .Indiana: return "Indiana"
+        case .Iowa: return "Iowa"
+        case .Kansas: return "Kansas"
+        case .Kentucky: return "Kentucky"
+        case .Louisiana: return "Louisiana"
+        case .Maine: return "Maine"
+        case .Maryland: return "Maryland"
+        case .Massachusetts: return "Massachusetts"
+        case .Michigan: return "Michigan"
+        case .Minnesota: return "Minnesota"
+        case .Mississippi: return "Mississippi"
+        case .Missouri: return "Missouri"
+        case .Montana: return "Montana"
+        case .Nebraska: return "Nebraska"
+        case .Nevada: return "Nevada"
+        case .NewHampshire: return "New Hampshire"
+        case .NewJersey: return "New Jersey"
+        case .NewMexico: return "New Mexico"
+        case .NewYork: return "New York"
+        case .NorthCarolina: return "North Carolina"
+        case .NorthDakota: return "North Dakota"
+        case .Ohio: return "Ohio"
+        case .Oklahoma: return "Oklahoma"
+        case .Oregon: return "Oregon"
+        case .Pennsylvania: return "Pennsylvania"
+        case .RhodeIsland: return "Rhode Island"
+        case .SouthCarolina: return "South Carolina"
+        case .SouthDakota: return "South Dakota"
+        case .Tennessee: return "Tennessee"
+        case .Texas: return "Texas"
+        case .Utah: return "Utah"
+        case .Vermont: return "Vermont"
+        case .Virginia: return "Virginia"
+        case .Washington: return "Washington"
+        case .WestVirginia: return "West Virginia"
+        case .Wisconsin: return "Wisconsin"
+        case .Wyoming: return "Wyoming"
         }
     }
     static func values() -> [States] {
-        return [Alabama, Alaska, Arizona, California]
+        return [Alabama, Alaska, Arizona, Arkansas, California, Colorado, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Iowa, Kansas, Kentucky, Louisiana, Maine, Maryland, Massachusetts, Michigan, Minnesota, Mississippi, Missouri, Montana, Nebraska, Nevada, NewHampshire, NewJersey, NewMexico, NewYork, NorthCarolina, NorthDakota, Ohio, Oklahoma, Oregon, Pennsylvania, RhodeIsland, SouthCarolina, SouthDakota, Tennessee, Texas, Utah, Vermont, Virginia, Washington, WestVirginia, Wisconsin, Wyoming]
     }
 }
 

@@ -29,6 +29,8 @@ class CardDetailTableController: ExpandingTableViewController {
                 
                 }.configure {
                     $0.rowHeight = 270
+            }.onSelected { _ in
+                self.former.deselect(animated: true)
             }
         }()
         return SectionFormer(rowFormer: qrCodeRow)
@@ -63,10 +65,10 @@ class CardDetailTableController: ExpandingTableViewController {
             }
         }
         
-        let registerSection = SectionFormer(rowFormer: redeemRow)
+        let redeemSection = SectionFormer(rowFormer: redeemRow)
             .set(headerViewFormer: createSpaceHeader())
         
-        former.append(sectionFormer: registerSection)
+        former.append(sectionFormer: redeemSection)
             .onCellSelected { [weak self] _ in
                 self?.formerInputAccessoryView.update()
         }
@@ -83,7 +85,7 @@ class CardDetailTableController: ExpandingTableViewController {
                 tempView.animationZoom(scaleX: 0.2, y: 0.2)
                 tempView.animationRoted(angle: CGFloat(Double.pi))
                 
-                tempView.frame.origin.x = (self.tabBarController?.tabBar.frame.origin.x)! + 320
+                tempView.frame.origin.x = (self.tabBarController?.tabBar.frame.origin.x)! + 340
                 tempView.frame.origin.y = (self.tabBarController?.tabBar.frame.origin.y)!
                 
             }, completion: { _ in
@@ -103,7 +105,13 @@ class CardDetailTableController: ExpandingTableViewController {
             .action(.cancel("Cancel"))
             .action(.default("OK")) { _ in
                 KRProgressHUD.show(withMessage: nil) {
+                    //Insert QRCode Row
                     self.former.insertUpdate(sectionFormer: self.qrcodeSection, toSection: self.former.numberOfSections, rowAnimation: .top)
+                    
+                    //Disable QRCode Row
+                    guard let redeemRow = rowFormer as? LabelRowFormer<CenterLabelCell> else { return }
+                    redeemRow.enabled = false
+                    
                     //Start Animate to show badge
                     let qrCodeCell =  self.qrcodeSection.firstRowFormer?.cellInstance as! CardDetailQRCodeCell
                     let imageViewPosition : CGPoint = qrCodeCell.qrcodeImageView.convert(qrCodeCell.qrcodeImageView.bounds.origin, to: self.view)

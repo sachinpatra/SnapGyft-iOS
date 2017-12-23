@@ -8,10 +8,11 @@
 
 
 import UIKit
+import MMTabBarAnimation
 
 let kIconSize:CGFloat = 32
 
-class SFBaseTabBarViewController: TabBarAnimateController {
+class SFBaseTabBarViewController: MMTabBarAnimateController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
