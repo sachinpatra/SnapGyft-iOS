@@ -72,28 +72,6 @@ class CardDetailTableController: ExpandingTableViewController {
         }
     }
     
-    
-    // MARK: Actions
-    private func onRedeemBtnSelected(rowFormer: RowFormer) {
-        rowFormer.former?.deselect(animated: true)
-        
-        Alertift.alert(title: "SnapGyft", message: "Are you sure!! You want redeem")
-            .action(.cancel("Cancel"))
-            .action(.default("OK")) { _ in
-                KRProgressHUD.show(withMessage: nil) {
-                    self.former.insertUpdate(sectionFormer: self.qrcodeSection, toSection: self.former.numberOfSections, rowAnimation: .top)
-                    //Start Animate to show badge
-                    let qrCodeCell =  self.qrcodeSection.firstRowFormer?.cellInstance as! CardDetailQRCodeCell
-                    let imageViewPosition : CGPoint = qrCodeCell.qrcodeImageView.convert(qrCodeCell.qrcodeImageView.bounds.origin, to: self.view)
-                    let imgViewTemp = UIImageView(frame: CGRect(x: imageViewPosition.x, y: imageViewPosition.y, width: qrCodeCell.qrcodeImageView.frame.size.width, height: qrCodeCell.qrcodeImageView.frame.size.height))
-                    imgViewTemp.image = qrCodeCell.qrcodeImageView.image
-                    self.animation(tempView: imgViewTemp)
-
-                }
-            }.show()
-    }
-    
-    
     func animation(tempView : UIView)  {
         self.view.addSubview(tempView)
         UIView.animate(withDuration: 1.0,
@@ -115,6 +93,28 @@ class CardDetailTableController: ExpandingTableViewController {
                 }
             })
         })
+    }
+    
+    // MARK: Actions
+    private func onRedeemBtnSelected(rowFormer: RowFormer) {
+        rowFormer.former?.deselect(animated: true)
+        
+        Alertift.alert(title: "SnapGyft", message: "Are you sure!! You want redeem")
+            .action(.cancel("Cancel"))
+            .action(.default("OK")) { _ in
+                KRProgressHUD.show(withMessage: nil) {
+                    self.former.insertUpdate(sectionFormer: self.qrcodeSection, toSection: self.former.numberOfSections, rowAnimation: .top)
+                    //Start Animate to show badge
+                    let qrCodeCell =  self.qrcodeSection.firstRowFormer?.cellInstance as! CardDetailQRCodeCell
+                    let imageViewPosition : CGPoint = qrCodeCell.qrcodeImageView.convert(qrCodeCell.qrcodeImageView.bounds.origin, to: self.view)
+                    let imgViewTemp = UIImageView(frame: CGRect(x: imageViewPosition.x, y: imageViewPosition.y, width: qrCodeCell.qrcodeImageView.frame.size.width, height: qrCodeCell.qrcodeImageView.frame.size.height))
+                    imgViewTemp.image = qrCodeCell.qrcodeImageView.image
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                        self.animation(tempView: imgViewTemp)
+                    }
+
+                }
+            }.show()
     }
     
     @IBAction func backButtonHandler(_ sender: AnyObject) {
