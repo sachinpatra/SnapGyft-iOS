@@ -31,7 +31,7 @@ class SFBaseTabBarViewController: TabBarAnimateController {
         super.setAnimate(index: 2, animate: .icon(type: .scale(rate: 1.2)))
         super.setAnimate(index: 3, animate: .label(type: .shake))
         
-
+        super.setAllBadgeAnimate(animate: .scale(rate: 1.2))
         
 //        super.setBadgeAnimate(index: 0, animate: .jump)
 //        super.setBadgeAnimate(index: 1, animate: .rotation(type: .left))

@@ -160,8 +160,7 @@ class ProfileViewController: UITableViewController {
             .onCellSelected { [weak self] _ in
                 self?.formerInputAccessoryView.update()
         }
-   //     if  (myProfile?.moreInformation)! {
-       // if let _ = myProfile?.moreInformation {
+        
         if myProfile?.moreInformation == true{
             former.append(sectionFormer: informationSection)
         }

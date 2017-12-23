@@ -244,16 +244,16 @@ class SFAccountViewController: ExpandingViewController {
     
     func backToLoginPageOnNetworkIssue(withMessage message:String) {
         KRProgressHUD.dismiss({
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                Alertift.alert(title: "SnapGyft", message: message).action(.default("OK")){ _ in
-                    if let account = self.accountKit {
-                        account.logOut()
-                    }
-                    //self.accountKit.logOut()
-                    self.coreData.deleteAllRecords(entity: .ProfileEntityName)
-                    self.performSegue(withIdentifier: "backToLoginPageSegue", sender: self)
-                }.show()
-            }
+//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+//                Alertift.alert(title: "SnapGyft", message: message).action(.default("OK")){ _ in
+//                    if let account = self.accountKit {
+//                        account.logOut()
+//                    }
+//                    //self.accountKit.logOut()
+//                    self.coreData.deleteAllRecords(entity: .ProfileEntityName)
+//                    self.performSegue(withIdentifier: "backToLoginPageSegue", sender: self)
+//                }.show()
+//            }
         })
     }
     

@@ -160,7 +160,6 @@
 		18613AE11FE2CC09004AF8F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18613ADE1FE2CC09004AF8F1 /* LaunchScreen.storyboard */; };
 		18613AE31FE2CC1D004AF8F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18613AE21FE2CC1D004AF8F1 /* Images.xcassets */; };
 		186B5E261FE05FCA00AC024D /* SFAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E251FE05FCA00AC024D /* SFAccountViewController.swift */; };
-		186B5E281FE0601200AC024D /* CardDetailTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E271FE0601200AC024D /* CardDetailTableController.swift */; };
 		186B5E5C1FE0628F00AC024D /* CenterLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E531FE0628F00AC024D /* CenterLabelCell.swift */; };
 		186B5E5D1FE0628F00AC024D /* DynamicHeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186B5E541FE0628F00AC024D /* DynamicHeightCell.swift */; };
 		186B5E5E1FE0628F00AC024D /* DynamicHeightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 186B5E551FE0628F00AC024D /* DynamicHeightCell.xib */; };
@@ -191,6 +190,11 @@
 		18AE40931E7B1FE600B7F495 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */; };
 		18AE40971E7B218600B7F495 /* SFBaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */; };
 		18B7C95A1FCF325A00771B64 /* AwesomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C9591FCF325A00771B64 /* AwesomeButton.swift */; };
+		18BB4F8A1FED77440044392F /* DCQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB4F881FED77440044392F /* DCQRCode.swift */; };
+		18BB4F8B1FED77440044392F /* FunctionalCoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB4F891FED77440044392F /* FunctionalCoreImage.swift */; };
+		18C7C02B1FED941D00C0472D /* CardDetailTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7C02A1FED941D00C0472D /* CardDetailTableController.swift */; };
+		18C7C02E1FEDA2CE00C0472D /* CardDetailQRCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7C02C1FEDA2CE00C0472D /* CardDetailQRCodeCell.swift */; };
+		18C7C02F1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7C02D1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib */; };
 		18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */; };
 		18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */; };
 		18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */; };
@@ -296,7 +300,6 @@
 		18613ADF1FE2CC09004AF8F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18613AE21FE2CC1D004AF8F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		186B5E251FE05FCA00AC024D /* SFAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFAccountViewController.swift; sourceTree = "<group>"; };
-		186B5E271FE0601200AC024D /* CardDetailTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailTableController.swift; sourceTree = "<group>"; };
 		186B5E531FE0628F00AC024D /* CenterLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterLabelCell.swift; sourceTree = "<group>"; };
 		186B5E541FE0628F00AC024D /* DynamicHeightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHeightCell.swift; sourceTree = "<group>"; };
 		186B5E551FE0628F00AC024D /* DynamicHeightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicHeightCell.xib; sourceTree = "<group>"; };
@@ -328,6 +331,11 @@
 		18AE408F1E7B1FE600B7F495 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFBaseTabBarViewController.swift; sourceTree = "<group>"; };
 		18B7C9591FCF325A00771B64 /* AwesomeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeButton.swift; sourceTree = "<group>"; };
+		18BB4F881FED77440044392F /* DCQRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCQRCode.swift; sourceTree = "<group>"; };
+		18BB4F891FED77440044392F /* FunctionalCoreImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalCoreImage.swift; sourceTree = "<group>"; };
+		18C7C02A1FED941D00C0472D /* CardDetailTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailTableController.swift; sourceTree = "<group>"; };
+		18C7C02C1FEDA2CE00C0472D /* CardDetailQRCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailQRCodeCell.swift; sourceTree = "<group>"; };
+		18C7C02D1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailQRCodeCell.xib; sourceTree = "<group>"; };
 		18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAddFriendViewController.swift; sourceTree = "<group>"; };
 		18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSettingsViewController.swift; sourceTree = "<group>"; };
@@ -647,7 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				186B5E251FE05FCA00AC024D /* SFAccountViewController.swift */,
-				186B5E271FE0601200AC024D /* CardDetailTableController.swift */,
+				18C7C02A1FED941D00C0472D /* CardDetailTableController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -664,6 +672,8 @@
 		186B5E511FE0628F00AC024D /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				18C7C02C1FEDA2CE00C0472D /* CardDetailQRCodeCell.swift */,
+				18C7C02D1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib */,
 				186B5E671FE0633700AC024D /* CardCollectionViewCell.swift */,
 				186B5E681FE0633700AC024D /* CardCollectionViewCell.xib */,
 			);
@@ -729,6 +739,7 @@
 				184232981FC87483002F1FC5 /* SGUtility.swift */,
 				185D8C491E7C77C400692AD4 /* AccountKit.framework */,
 				185D8C4A1E7C77C400692AD4 /* AccountKitStrings.bundle */,
+				18BB4F871FED77440044392F /* QRCodeGenerator */,
 				183B463F1FE57BA2009282FB /* FormStyle */,
 				186B5E501FE0628F00AC024D /* Cells */,
 				18AE408B1E7B1FE600B7F495 /* TabBarAnimation */,
@@ -762,6 +773,15 @@
 				18AE40961E7B218600B7F495 /* SFBaseTabBarViewController.swift */,
 			);
 			path = TabBarAnimation;
+			sourceTree = "<group>";
+		};
+		18BB4F871FED77440044392F /* QRCodeGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				18BB4F881FED77440044392F /* DCQRCode.swift */,
+				18BB4F891FED77440044392F /* FunctionalCoreImage.swift */,
+			);
+			path = QRCodeGenerator;
 			sourceTree = "<group>";
 		};
 		18FCC5B81E7E6E3000198CF0 /* Settings */ = {
@@ -908,6 +928,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C7C02F1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib in Resources */,
 				18FCC5DC1E7EF22600198CF0 /* EPContactCell.xib in Resources */,
 				186B5E601FE0628F00AC024D /* ProfileFieldCell.xib in Resources */,
 				186B5E641FE0628F00AC024D /* ProfileLabelCell.xib in Resources */,
@@ -1172,7 +1193,9 @@
 				183B46831FE57BA2009282FB /* FormSliderCell.swift in Sources */,
 				183B46801FE57BA2009282FB /* FormSegmentedCell.swift in Sources */,
 				186B5E5C1FE0628F00AC024D /* CenterLabelCell.swift in Sources */,
+				18C7C02E1FEDA2CE00C0472D /* CardDetailQRCodeCell.swift in Sources */,
 				183B469A1FE57BA2009282FB /* StepperRowFormer.swift in Sources */,
+				18BB4F8B1FED77440044392F /* FunctionalCoreImage.swift in Sources */,
 				183B46871FE57BA2009282FB /* FormTextViewCell.swift in Sources */,
 				183B468E1FE57BA2009282FB /* BaseRowFormer.swift in Sources */,
 				183B469F1FE57BA2009282FB /* CustomViewFormer.swift in Sources */,
@@ -1204,7 +1227,6 @@
 				180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */,
 				183B46771FE57BA2009282FB /* TextSelectorViewContorller.swift in Sources */,
 				18B7C95A1FCF325A00771B64 /* AwesomeButton.swift in Sources */,
-				186B5E281FE0601200AC024D /* CardDetailTableController.swift in Sources */,
 				18AE40901E7B1FE600B7F495 /* AnimateItem.swift in Sources */,
 				183B46A11FE57BA2009282FB /* FormHeaderFooterView.swift in Sources */,
 				1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */,
@@ -1213,6 +1235,7 @@
 				18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */,
 				183B467F1FE57BA2009282FB /* FormPickerCell.swift in Sources */,
 				186B5E6F1FE0679500AC024D /* GradientView.swift in Sources */,
+				18BB4F8A1FED77440044392F /* DCQRCode.swift in Sources */,
 				186B5E5D1FE0628F00AC024D /* DynamicHeightCell.swift in Sources */,
 				183B467E1FE57BA2009282FB /* FormLabelCell.swift in Sources */,
 				1803A30F1FDB9C20007C4918 /* AACoreData.swift in Sources */,
@@ -1250,6 +1273,7 @@
 				183B46991FE57BA2009282FB /* SliderRowFormer.swift in Sources */,
 				183B468F1FE57BA2009282FB /* CheckRowFormer.swift in Sources */,
 				183B46841FE57BA2009282FB /* FormStepperCell.swift in Sources */,
+				18C7C02B1FED941D00C0472D /* CardDetailTableController.swift in Sources */,
 				183B46A31FE57BA2009282FB /* FormLabelHeaderView.swift in Sources */,
 				18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */,
 				18FCC5DB1E7EF22600198CF0 /* EPContactCell.swift in Sources */,

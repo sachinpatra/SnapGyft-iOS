@@ -14,11 +14,10 @@ import ReachabilitySwift
 import Alamofire
 
 enum PhysicalLcations {
-    case None, Customers, Single, BelowTen, BelowFifty, AboveFifty
+    case None, Single, BelowTen, BelowFifty, AboveFifty
     func title() -> String {
         switch self {
         case .None: return "Number of physical locations"
-        case .Customers: return "I travel to my customers"
         case .Single: return "1"
         case .BelowTen: return "2-9"
         case .BelowFifty: return "10-49"
@@ -26,23 +25,23 @@ enum PhysicalLcations {
         }
     }
     static func values() -> [PhysicalLcations] {
-        return [Customers, Single, BelowTen, BelowFifty, AboveFifty]
+        return [Single, BelowTen, BelowFifty, AboveFifty]
     }
 }
 
 enum Categories {
-    case None, Restaurant, Hotel, Massage, Photography
+    case None, Restaurant, Massage, Photography, Other
     func title() -> String {
         switch self {
         case .None: return "Select business category"
         case .Restaurant: return "Restaurant"
-        case .Hotel: return "Hotel"
-        case .Massage: return "Massage"
+        case .Massage: return "Massage / Spa"
         case .Photography: return "Photography"
+        case .Other: return "Other"
         }
     }
     static func values() -> [Categories] {
-        return [Restaurant, Hotel, Massage, Photography]
+        return [Restaurant, Massage, Photography, Other]
     }
 }
 
@@ -94,6 +93,7 @@ class RegisterTableViewController: UITableViewController {
     var merchantProfile: MerchantProfile!
     let coreData = AACoreData.sharedInstance()
     let reachability = Reachability()!
+    
 
     //MARK: View Lifecycle
     override func viewDidLoad() {
@@ -192,9 +192,22 @@ class RegisterTableViewController: UITableViewController {
                 $0.pickerItems += Categories.values().map {
                     InlinePickerItem(title: $0.title(), value: $0.title())
                 }
-            }.onValueChanged {_ in
-        }
-        
+            }.onValueChanged({ (pickerItem) in
+                if pickerItem.title == "Other" {
+                    Alertift.alert(title: "New Category", message: "Input your category name")
+                        .textField { textField in
+                            textField.placeholder = "Category Name"
+                        }
+                        .action(.default("OK")) {_, _, textFields in
+                            if let otherCategoryName = textFields?.first?.text {
+                                self.businessCategoryRow.cell.displayLabel.text = otherCategoryName
+                            }else{
+                                
+                            }
+                    }.show()
+                }
+            })
+
         
         //Little More in business
         addressRow = TextFieldRowFormer<RegisterFieldCell>(instantiateType: .Nib(nibName: "RegisterFieldCell")) { [weak self] in
@@ -271,7 +284,8 @@ class RegisterTableViewController: UITableViewController {
             .set(headerViewFormer: createHeader("Tell us a little bit more about your business"))
         let registerSection = SectionFormer(rowFormer: submitRow)
             .set(headerViewFormer: createSpaceHeader())
-
+        
+        
         former.append(sectionFormer: aboutSection, categorySection, littleMoreBusinessSection, registerSection)
             .onCellSelected { [weak self] _ in
                 self?.formerInputAccessoryView.update()
@@ -373,7 +387,11 @@ class RegisterTableViewController: UITableViewController {
                                             }
                                             
                                             //Register Merchant for local server
-                                            self.registerMerchant()
+                                           // self.registerMerchant()
+                                            KRProgressHUD.dismiss({
+                                                self.performSegue(withIdentifier: "ShowHomeSegue", sender: self)
+                                            })
+
                                         }
                                     }
                                 } else {
@@ -404,6 +422,7 @@ class RegisterTableViewController: UITableViewController {
 
                             guard response.result.isSuccess else {
                                 SGUtility.showAlert(withMessage: (response.result.error?.localizedDescription)!)
+                                //TODO: SignOut FIrebase
                                 return
                             }
                             guard let _ = response.result.value as? [String: Any] else {
@@ -417,7 +436,13 @@ class RegisterTableViewController: UITableViewController {
         }
     }
     
+    
+    
+   
+    
 }
+
+
 
 //MARK: Extentions
 extension RegisterTableViewController: UITextFieldDelegate{
