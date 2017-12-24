@@ -35,17 +35,18 @@ class SFAccountViewController: ExpandingViewController {
         addGesture(to: collectionView!)
         
         showAddView()
+        
 
         coreData.fetchRecords(entityName: .ProfileEntityName) { (results) in
-            guard let _ = results as? [Profile] else {
-                self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
+            self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
+            guard let profileList = results as? [Profile] else {
                 self.accountKit.requestAccount{
                     (account, error) -> Void in
                     if let error = error {
                         self.backToLoginPageOnNetworkIssue(withMessage: error.localizedDescription)
                         return
                     }
-                    
+
                     //Save profile data with Authentication details
                     self.myProfile = self.coreData.getNewObject(entityName: .ProfileEntityName) as! Profile
                     self.myProfile.accountID = account?.accountID
@@ -57,6 +58,7 @@ class SFAccountViewController: ExpandingViewController {
                     }
                     self.coreData.saveContext()
                     
+
                     guard (self.reachability.isReachable) else {
                         self.backToLoginPageOnNetworkIssue(withMessage: "Check Network Connection."); return
                     }
@@ -72,7 +74,7 @@ class SFAccountViewController: ExpandingViewController {
                             self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
                             return
                         }
-                        
+
                         let payload: [String:Any] = ["PhoneNumber": account!.phoneNumber!.stringRepresentation(),
                                                      "VerificationStatus": "Verified",
                                                      "Device": SGUtility.deviceParamsForService]
@@ -82,7 +84,7 @@ class SFAccountViewController: ExpandingViewController {
                                           parameters: params,
                                           encoding: JSONEncoding.default,
                        headers : nil).validate().responseJSON { [weak self] response in
-                        
+
                             guard response.result.isSuccess else {
                                 self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
                                 return
@@ -94,28 +96,30 @@ class SFAccountViewController: ExpandingViewController {
                                           parameters: params,
                                           encoding: JSONEncoding.default,
                                           headers : nil).validate().responseJSON { [weak self] response in
-                                            
+
                                 guard response.result.isSuccess else {
                                     self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
                                     return
                                 }
-                                KRProgressHUD.dismiss()
-                                           
+                                KRProgressHUD.dismiss({
+                                    self?.startAlternateAuthentication()
+                                })
                         }
                     }
-                        
+
                     }
                 }
-                
+
                 return
             }
+            
+            self.myProfile = profileList.first
         }
         
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -167,6 +171,7 @@ class SFAccountViewController: ExpandingViewController {
         view.addGestureRecognizer(downGesture)
     }
     
+    //MARK: - expanding_collection Delegates
     func swipeHandler(_ sender: UISwipeGestureRecognizer) {
         let indexPath = IndexPath(row: currentIndex, section: 0)
         guard let cell  = collectionView?.cellForItem(at: indexPath) as? CardCollectionViewCell else { return }
@@ -223,7 +228,6 @@ class SFAccountViewController: ExpandingViewController {
         cell.customTitle.text = info.title
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: IndexPath) {
         guard let cell = collectionView.cellForItem(at: indexPath) as? CardCollectionViewCell
             , currentIndex == indexPath.row else { return }
@@ -247,34 +251,81 @@ class SFAccountViewController: ExpandingViewController {
     }
     
     //MARK: - Userdefiend Methods
-    
     func backToLoginPageOnNetworkIssue(withMessage message:String) {
         KRProgressHUD.dismiss({
-//            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-//                Alertift.alert(title: "SnapGyft", message: message).action(.default("OK")){ _ in
-//                    if let account = self.accountKit {
-//                        account.logOut()
-//                    }
-//                    //self.accountKit.logOut()
-//                    self.coreData.deleteAllRecords(entity: .ProfileEntityName)
-//                    self.performSegue(withIdentifier: "backToLoginPageSegue", sender: self)
-//                }.show()
-//            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                Alertift.alert(title: "SnapGyft", message: message).action(.default("OK")){ _ in
+                    if let account = self.accountKit {
+                        account.logOut()
+                    }
+                    //self.accountKit.logOut()
+                    self.coreData.deleteAllRecords(entity: .ProfileEntityName)
+                    self.performSegue(withIdentifier: "backToLoginPageSegue", sender: self)
+                }.show()
+            }
         })
     }
+    
+    func startAlternateAuthentication() {
+        guard let _ = self.myProfile.emailAddress else {
+            Alertift.alert(title: "SnapGyft", message: "Please Authenticate EmailID. This is must before transaction. Do you want to proceed now?")
+                .action(.cancel("Skip"))
+                .action(.default("Proceed")) { _ in
+                    let inputState: String = UUID().uuidString
+                    let viewController = self.accountKit.viewControllerForEmailLogin(withEmail: nil, state: inputState) as? AKFViewController
+                    self.prepareLoginViewController(viewController!)
+                    self.present(viewController as! UIViewController, animated: true, completion: nil)
+                }.show()
+            
+            return
+        }
+        
+        if let _ = self.myProfile.phoneNumber?.isEmpty {
+            Alertift.alert(title: "SnapGyft", message: "Please Authenticate Phone number. This is must before transaction. Do you want to proceed now?")
+                .action(.cancel("Skip"))
+                .action(.default("Proceed")) { _ in
+                    let inputState: String = UUID().uuidString
+                    let viewController = self.accountKit.viewControllerForPhoneLogin(with: nil, state: inputState) as? AKFViewController
+                    self.prepareLoginViewController(viewController!)
+                    self.present(viewController as! UIViewController, animated: true, completion: nil)
+                }.show()
+            
+            return
+        }
+    }
+    
+    //MARK: - AKFAccountKit Delegate
+    func viewController(_ viewController: UIViewController!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
+        self.accountKit.requestAccount{
+            (account, error) -> Void in
+            if let emailID = account?.emailAddress {
+                self.myProfile.emailAddress = emailID
+                Alertift.alert(title: "SnapGyft", message: "Email address sucessfully authenticated").action(.cancel("OK")).show()
+            }
+            if let phoneNumber = account?.phoneNumber {
+                self.myProfile.phoneNumber = phoneNumber.stringRepresentation()
+                Alertift.alert(title: "SnapGyft", message: "Phone number sucessfully authenticated").action(.cancel("OK")).show()
+            }
+            self.coreData.saveContext()
+        }
+    }
+    
+    func viewController(_ viewController: UIViewController!, didCompleteLoginWithAuthorizationCode code: String!, state: String!) {
+        print("Login succcess with AuthorizationCode")
+    }
+    
+    func viewController(_ viewController: UIViewController!, didFailWithError error: Error!) {
+        print("We have an error \(error)")
+    }
+    
+    func viewControllerDidCancel(_ viewController: UIViewController!) {
+        print("The user cancel the login")
+    }
+    
     
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

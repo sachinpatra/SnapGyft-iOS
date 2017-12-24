@@ -15,7 +15,7 @@ import Alamofire_Synchronous
 import ReachabilitySwift
 import OnboardingKit
 
-class TourViewController: UIViewController, AKFViewControllerDelegate {
+class TourViewController: UIViewController {
 
     @IBOutlet weak var onboardingView: OnboardingView!
     @IBOutlet weak var phoneButton: AwesomeButton!
@@ -90,16 +90,6 @@ class TourViewController: UIViewController, AKFViewControllerDelegate {
         self.present(viewController as! UIViewController, animated: true, completion: nil)
     }
     
-
-    //MARK: - Userdefiend Methods
-    
-    func prepareLoginViewController(_ loginViewController: AKFViewController) {
-        
-        loginViewController.delegate = self
-        loginViewController.enableSendToFacebook = true
-        //viewController.enableGetACall = true
-        loginViewController.uiManager = AKFSkinManager.init(skinType: .classic, primaryColor: UIColor.formerSubColor(), backgroundImage: UIImage(named: "Login_Background"), backgroundTint: .white, tintIntensity: 0.60)
-    }
     
     //MARK: - AKFAccountKit Delegate
     func viewController(_ viewController: UIViewController!, didCompleteLoginWith accessToken: AKFAccessToken!, state: String!) {
@@ -118,7 +108,7 @@ class TourViewController: UIViewController, AKFViewControllerDelegate {
     }
     
     func viewController(_ viewController: UIViewController!, didFailWithError error: Error!) {
-        print("We have an error \(error)") //phone_number=919748736234
+        print("We have an error \(error)")
         
         guard reachability.isReachable else {
             Alertift.alert(title: "SnapGyft", message: "Check Network Connection.").action(.default("OK")).show()
@@ -162,4 +152,5 @@ class TourViewController: UIViewController, AKFViewControllerDelegate {
     @IBAction func unwindToLoginViewControllre(segue:UIStoryboardSegue) {}
 
 }
+
 

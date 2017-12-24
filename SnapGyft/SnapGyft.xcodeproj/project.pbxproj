@@ -195,6 +195,7 @@
 		18C7C02E1FEDA2CE00C0472D /* CardDetailQRCodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C7C02C1FEDA2CE00C0472D /* CardDetailQRCodeCell.swift */; };
 		18C7C02F1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7C02D1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib */; };
 		18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */; };
+		18F5C0761FEFCE80008E9FCD /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5C0751FEFCE80008E9FCD /* UIViewController+Extention.swift */; };
 		18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */; };
 		18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */; };
 		18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */; };
@@ -333,6 +334,7 @@
 		18C7C02C1FEDA2CE00C0472D /* CardDetailQRCodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardDetailQRCodeCell.swift; sourceTree = "<group>"; };
 		18C7C02D1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailQRCodeCell.xib; sourceTree = "<group>"; };
 		18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAddFriendViewController.swift; sourceTree = "<group>"; };
+		18F5C0751FEFCE80008E9FCD /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSettingsViewController.swift; sourceTree = "<group>"; };
 		18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGGyftCardBalanceViewController.swift; sourceTree = "<group>"; };
@@ -393,6 +395,7 @@
 				1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */,
 				183B455E1FE45D61009282FB /* UINavigationBar+Extention.swift */,
 				189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */,
+				18F5C0751FEFCE80008E9FCD /* UIViewController+Extention.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1204,6 +1207,7 @@
 				183B46771FE57BA2009282FB /* TextSelectorViewContorller.swift in Sources */,
 				18B7C95A1FCF325A00771B64 /* AwesomeButton.swift in Sources */,
 				183B46A11FE57BA2009282FB /* FormHeaderFooterView.swift in Sources */,
+				18F5C0761FEFCE80008E9FCD /* UIViewController+Extention.swift in Sources */,
 				1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */,
 				186B5E261FE05FCA00AC024D /* SFAccountViewController.swift in Sources */,
 				183B46A21FE57BA2009282FB /* FormLabelFooterView.swift in Sources */,
