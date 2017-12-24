@@ -15,6 +15,7 @@
   #pod 'Former'
   pod 'Firebase/Auth'
   pod 'MMTabBarAnimation'
+  #pod 'Wallet'
 
 
 target 'SnapGyft' do

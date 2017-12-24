@@ -41,7 +41,6 @@ class CardDetailTableController: ExpandingTableViewController {
         super.viewDidLoad()
         self.title = "Amazon"
         self.navigationItem.setHidesBackButton(true, animated: false)
-
        
         configureForm()
     }

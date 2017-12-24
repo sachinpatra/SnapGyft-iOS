@@ -46,9 +46,15 @@ class SFAccountViewController: ExpandingViewController {
                         return
                     }
                     
+                    //Save profile data with Authentication details
                     self.myProfile = self.coreData.getNewObject(entityName: .ProfileEntityName) as! Profile
                     self.myProfile.accountID = account?.accountID
-                    self.myProfile.phoneNumber = account?.phoneNumber?.stringRepresentation()
+                    if let phoneNumber = account?.phoneNumber {
+                        self.myProfile.phoneNumber = phoneNumber.stringRepresentation()
+                    }
+                    if let emailID = account?.emailAddress {
+                        self.myProfile.emailAddress = emailID
+                    }
                     self.coreData.saveContext()
                     
                     guard (self.reachability.isReachable) else {

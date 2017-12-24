@@ -11,6 +11,7 @@
 		180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */; };
 		180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */; };
 		181D79941EF5BE47008515D5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D79931EF5BE47008515D5 /* Network.swift */; };
+		1820C47D1FEEDF04003AE023 /* RedemptionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820C47C1FEEDF04003AE023 /* RedemptionListViewController.swift */; };
 		1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */; };
 		1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */; };
 		1835F6A61F0CF4E50071184E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6A51F0CF4E50071184E /* Profile.swift */; };
@@ -208,6 +209,7 @@
 		180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+FormerDemo.swift"; sourceTree = "<group>"; };
 		180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FormerDemo.swift"; sourceTree = "<group>"; };
 		181D79931EF5BE47008515D5 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		1820C47C1FEEDF04003AE023 /* RedemptionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedemptionListViewController.swift; sourceTree = "<group>"; };
 		1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGButtonExtender.swift; sourceTree = "<group>"; };
 		1829D8CD1E81B7B200EEFE71 /* UITextField+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extention.swift"; sourceTree = "<group>"; };
 		1835F6A51F0CF4E50071184E /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
@@ -780,6 +782,7 @@
 				18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */,
 				18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */,
 				18592A2F1E87099F00003E6A /* SFMyCharityController.swift */,
+				1820C47C1FEEDF04003AE023 /* RedemptionListViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -1252,6 +1255,7 @@
 				18AE406D1E7B15C600B7F495 /* AppDelegate.swift in Sources */,
 				18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */,
 				18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */,
+				1820C47D1FEEDF04003AE023 /* RedemptionListViewController.swift in Sources */,
 				186B5E721FE0679500AC024D /* CollectionViewHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
