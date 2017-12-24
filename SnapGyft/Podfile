@@ -16,6 +16,7 @@
   pod 'Firebase/Auth'
   pod 'MMTabBarAnimation'
   #pod 'Wallet'
+  pod 'QRCodeReader.swift'
 
 
 target 'SnapGyft' do

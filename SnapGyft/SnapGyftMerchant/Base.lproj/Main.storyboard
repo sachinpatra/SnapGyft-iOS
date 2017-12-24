@@ -149,7 +149,88 @@
                     <view key="view" contentMode="scaleToFill" id="dtp-f4-4hZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zp4-Np-UXZ" customClass="AwesomeButton" customModule="AwesomeButton">
+                                <rect key="frame" x="90" y="175" width="194" height="50"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="SRm-3d-XnZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="PAY">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconNormal" value="arrowNextDark"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconHighlighted" value="arrowNext"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.73725490199999999" green="0.75294117650000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="arrowNextDark"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconYOffset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="nXv-GF-0rs" kind="show" id="4Qp-0Z-w5V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0P-K9-g2N" customClass="AwesomeButton" customModule="AwesomeButton">
+                                <rect key="frame" x="90" y="370" width="194" height="50"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="J0U-YY-S8C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="REFUND">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" title="sdfsdf">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconNormal" value="arrowNextDark"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconHighlighted" value="arrowNext"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.73725490199999999" green="0.75294117650000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="arrowNextDark"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconYOffset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m0P-K9-g2N" firstAttribute="top" secondItem="Zp4-Np-UXZ" secondAttribute="bottom" constant="145" id="2pE-0O-c59"/>
+                            <constraint firstItem="Zp4-Np-UXZ" firstAttribute="leading" secondItem="8gt-K2-DPg" secondAttribute="leading" constant="90" id="IL6-ig-LGb"/>
+                            <constraint firstItem="Zp4-Np-UXZ" firstAttribute="top" secondItem="8gt-K2-DPg" secondAttribute="top" constant="67" id="bJF-Tn-O7Y"/>
+                            <constraint firstItem="8gt-K2-DPg" firstAttribute="trailing" secondItem="m0P-K9-g2N" secondAttribute="trailing" constant="91" id="elZ-9S-BPh"/>
+                            <constraint firstItem="8gt-K2-DPg" firstAttribute="trailing" secondItem="Zp4-Np-UXZ" secondAttribute="trailing" constant="91" id="gLL-Bv-bTu"/>
+                            <constraint firstItem="m0P-K9-g2N" firstAttribute="leading" secondItem="8gt-K2-DPg" secondAttribute="leading" constant="90" id="ibk-34-x6d"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8gt-K2-DPg"/>
                     </view>
                     <navigationItem key="navigationItem" id="PhQ-Io-HIT"/>
@@ -157,6 +238,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UdH-ei-ueA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2838" y="-142"/>
+        </scene>
+        <!--Pay View Controller-->
+        <scene sceneID="y9W-wu-Vgy">
+            <objects>
+                <viewController id="nXv-GF-0rs" customClass="PayViewController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jEY-xi-RYr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTl-L9-qZ4">
+                                <rect key="frame" x="47" y="148" width="281" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BNH-v8-oV2"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5G-Wc-Roj" customClass="AwesomeButton" customModule="AwesomeButton">
+                                <rect key="frame" x="90" y="265" width="194" height="50"/>
+                                <color key="backgroundColor" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ejj-KT-Bfm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="SCAN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconNormal" value="arrowNextDark"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconHighlighted" value="arrowNext"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.73725490199999999" green="0.75294117650000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="arrowNextDark"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="iconYOffset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onScanBtnClicked:" destination="nXv-GF-0rs" eventType="touchUpInside" id="PJg-ZO-hz5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lTl-L9-qZ4" firstAttribute="leading" secondItem="gbL-rB-3BQ" secondAttribute="leading" constant="47" id="1nH-C4-t3P"/>
+                            <constraint firstItem="gbL-rB-3BQ" firstAttribute="trailing" secondItem="lTl-L9-qZ4" secondAttribute="trailing" constant="47" id="Bec-r3-DSz"/>
+                            <constraint firstItem="gbL-rB-3BQ" firstAttribute="trailing" secondItem="N5G-Wc-Roj" secondAttribute="trailing" constant="91" id="Jk6-KQ-ZAL"/>
+                            <constraint firstItem="N5G-Wc-Roj" firstAttribute="top" secondItem="lTl-L9-qZ4" secondAttribute="bottom" constant="67" id="Q1w-v7-1Z5"/>
+                            <constraint firstItem="lTl-L9-qZ4" firstAttribute="top" secondItem="gbL-rB-3BQ" secondAttribute="top" constant="40" id="jlP-7O-T3g"/>
+                            <constraint firstItem="N5G-Wc-Roj" firstAttribute="leading" secondItem="gbL-rB-3BQ" secondAttribute="leading" constant="90" id="l4a-hR-4QP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gbL-rB-3BQ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yb2-Xt-Mu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3637.5999999999999" y="-142.57871064467767"/>
         </scene>
         <!--Base Tab Bar Controller-->
         <scene sceneID="0DW-0O-Vul">
@@ -324,6 +476,6 @@
         <image name="arrowNextDark" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="70x-qs-RIl"/>
+        <segue reference="zOO-Mw-buu"/>
     </inferredMetricsTieBreakers>
 </document>

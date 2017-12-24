@@ -43,6 +43,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - OnboardingKit (0.0.5)
+  - QRCodeReader.swift (8.0.4)
   - ReachabilitySwift (3)
   - SwiftMessages (4.1.0)
 
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - KRProgressHUD
   - MMTabBarAnimation
   - OnboardingKit
+  - QRCodeReader.swift
   - ReachabilitySwift
   - SwiftMessages
 
@@ -75,9 +77,10 @@ SPEC CHECKSUMS:
   MMTabBarAnimation: 1d810a99d32b109afdf77cd0a20a19981c1e8598
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   OnboardingKit: 44b085c9e1e191a61fe1caea2bb581645fac1dc1
+  QRCodeReader.swift: 9730cfa7ed5f0dd839765df8cf18d41db20e4081
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
 
-PODFILE CHECKSUM: aadd28bab9f9ee83fc04dd182be60674603359d9
+PODFILE CHECKSUM: 69aebff2450cda1f4259ee144edc8f42bd1ca427
 
 COCOAPODS: 1.3.1

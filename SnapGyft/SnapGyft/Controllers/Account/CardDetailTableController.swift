@@ -19,9 +19,9 @@ class CardDetailTableController: ExpandingTableViewController {
         var qrCodeRow: LabelRowFormer<CardDetailQRCodeCell> = {
             LabelRowFormer<CardDetailQRCodeCell>(instantiateType: .Nib(nibName: "CardDetailQRCodeCell")) {
                 let inputString = "This is SnapGyft Member App"
-                let base64EncodedString = inputString.base64Encoded()
-                print("sachin Encoded = \(base64EncodedString!)")
-                let qrcode = DCQRCode(info: base64EncodedString!, size: CGSize(width: 300, height: 300))
+                //let base64EncodedString = inputString.base64Encoded()
+                //print("sachin Encoded = \(base64EncodedString!)")
+                let qrcode = DCQRCode(info: inputString, size: CGSize(width: 300, height: 300))
                 qrcode.positionOuterColor = UIColor.formerSubColor()
                 let image = qrcode.image()
                 $0.qrcodeImageView.image = image

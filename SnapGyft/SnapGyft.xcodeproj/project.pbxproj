@@ -196,6 +196,7 @@
 		18C7C02F1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7C02D1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib */; };
 		18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */; };
 		18F5C0761FEFCE80008E9FCD /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5C0751FEFCE80008E9FCD /* UIViewController+Extention.swift */; };
+		18F5C0781FF017BF008E9FCD /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5C0771FF017BF008E9FCD /* PayViewController.swift */; };
 		18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */; };
 		18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */; };
 		18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */; };
@@ -335,6 +336,7 @@
 		18C7C02D1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailQRCodeCell.xib; sourceTree = "<group>"; };
 		18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAddFriendViewController.swift; sourceTree = "<group>"; };
 		18F5C0751FEFCE80008E9FCD /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		18F5C0771FF017BF008E9FCD /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSettingsViewController.swift; sourceTree = "<group>"; };
 		18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGGyftCardBalanceViewController.swift; sourceTree = "<group>"; };
@@ -611,6 +613,7 @@
 				183B455A1FE454E3009282FB /* RegisterTableViewController.swift */,
 				183B46D51FE5A6E1009282FB /* BaseTabBarController.swift */,
 				183B46F21FE5B0E3009282FB /* POSViewController.swift */,
+				18F5C0771FF017BF008E9FCD /* PayViewController.swift */,
 				183B46F41FE5B0FD009282FB /* PromoViewController.swift */,
 				183B46F61FE5B115009282FB /* ProfileTableController.swift */,
 				18613AE21FE2CC1D004AF8F1 /* Images.xcassets */,
@@ -993,6 +996,7 @@
 				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MMTabBarAnimation/MMTabBarAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/expanding-collection/expanding_collection.framework",
@@ -1009,6 +1013,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMTabBarAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/expanding_collection.framework",
@@ -1053,6 +1058,7 @@
 				"${BUILT_PRODUCTS_DIR}/KRProgressHUD/KRProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MMTabBarAnimation/MMTabBarAnimation.framework",
 				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/expanding-collection/expanding_collection.framework",
@@ -1069,6 +1075,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMTabBarAnimation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/expanding_collection.framework",
@@ -1087,6 +1094,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				183B46A71FE57CE5009282FB /* FormCheckCell.swift in Sources */,
+				18F5C0781FF017BF008E9FCD /* PayViewController.swift in Sources */,
 				183B47001FE6F589009282FB /* SGUtility.swift in Sources */,
 				185078F51FE2F8CB00AFB9F8 /* Network.swift in Sources */,
 				183B46AD1FE57D03009282FB /* FormSegmentedCell.swift in Sources */,

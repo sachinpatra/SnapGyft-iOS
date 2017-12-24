@@ -39,6 +39,9 @@ class ProfileViewController: UITableViewController {
             case "phone":
                 profile?.phoneNumber = value as? String
                 break
+            case "email":
+                profile?.emailAddress = value as? String
+                break
             case "gender":
                 profile?.gender = value as? String
                 break
@@ -93,6 +96,15 @@ class ProfileViewController: UITableViewController {
                 $0.text = self.myProfile?.phoneNumber
             }.onTextChanged {
                 self.saveProfile(with: "phone", value: $0)
+        }
+        let emailRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
+            $0.titleLabel.text = "Email"
+            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
+            $0.textField.delegate = self
+            }.configure {
+                $0.text = self.myProfile?.emailAddress
+            }.onTextChanged {
+                self.saveProfile(with: "email", value: $0)
         }
 
         let genderRow = InlinePickerRowFormer<ProfileLabelCell, String>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
@@ -151,7 +163,7 @@ class ProfileViewController: UITableViewController {
         // Create SectionFormers
         let imageSection = SectionFormer(rowFormer: imageRow)
             .set(headerViewFormer: createHeader("Profile Image"))
-        let aboutSection = SectionFormer(rowFormer: nameRow, phoneRow, genderRow/*, birthdayRow*/)
+        let aboutSection = SectionFormer(rowFormer: nameRow, phoneRow, emailRow, genderRow/*, birthdayRow*/)
             .set(headerViewFormer: createHeader("About"))
         let moreSection = SectionFormer(rowFormer: moreRow)
             .set(headerViewFormer: createHeader("More Infomation"))

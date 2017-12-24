@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B444BDDA2EAAFF7AB25D0F8FD9294D06"
-               BuildableName = "Pods_SnapGyft.framework"
-               BlueprintName = "Pods-SnapGyft"
+               BlueprintIdentifier = "197BFB0622B9BE1D07A77CEF13A4535E"
+               BuildableName = "QRCodeReader.framework"
+               BlueprintName = "QRCodeReader.swift"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "B444BDDA2EAAFF7AB25D0F8FD9294D06"
-            BuildableName = "Pods_SnapGyft.framework"
-            BlueprintName = "Pods-SnapGyft"
+            BlueprintIdentifier = "197BFB0622B9BE1D07A77CEF13A4535E"
+            BuildableName = "QRCodeReader.framework"
+            BlueprintName = "QRCodeReader.swift"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

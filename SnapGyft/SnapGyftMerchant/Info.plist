@@ -45,16 +45,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>CFBundleURLTypes</key>
-    <array>
-        <dict>
-            <key>CFBundleURLSchemes</key>
-            <array>
-                <string>REVERSED_CLIENT_ID</string>
-                <string>com.googleusercontent.apps.873641648754-c6iikre8650u6fapjgajdh3ivbpg5dah</string>
-                <string>https://mytestfirebase-bdc24.firebaseapp.com/__/auth/handler</string>
-            </array>
-        </dict>
-    </array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>REVERSED_CLIENT_ID</string>
+				<string>com.googleusercontent.apps.873641648754-c6iikre8650u6fapjgajdh3ivbpg5dah</string>
+				<string>https://mytestfirebase-bdc24.firebaseapp.com/__/auth/handler</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>The camera is needed to scan QR codes</string>
 </dict>
 </plist>
