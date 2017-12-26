@@ -25,6 +25,7 @@ class SFAccountViewController: ExpandingViewController {
     typealias ItemInfo = (imageName: String, title: String)
     fileprivate let items: [ItemInfo] = [("item0", "UBER"),("item1", "OLA"),("item2", "PayTM"),("item3", "AMAZON")]
     
+    //MARK: - View life cycle
     override func viewDidLoad() {
         
 //    itemSize = CGSize(width: 256, height: 335)
@@ -33,8 +34,6 @@ class SFAccountViewController: ExpandingViewController {
         
         registerCell()
         addGesture(to: collectionView!)
-        
-        showAddView()
         
 
         coreData.fetchRecords(entityName: .ProfileEntityName) { (results) in
@@ -58,56 +57,61 @@ class SFAccountViewController: ExpandingViewController {
                     }
                     self.coreData.saveContext()
                     
-
-                    guard (self.reachability.isReachable) else {
-                        self.backToLoginPageOnNetworkIssue(withMessage: "Check Network Connection."); return
-                    }
-                    //Call Here All three API's
-                    let payload: [String:String] = ["PhoneNumber": (self.myProfile.phoneNumber)!]
-                    let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
-                    Alamofire.request(Constants.API_ISREGISTERED_ACCOUNT,
-                                      method: .post,
-                                      parameters: params,
-                                      encoding: JSONEncoding.default,
-                                      headers : nil).validate().responseJSON {[weak self] response in
-                        guard response.result.isSuccess else {
-                            self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
-                            return
-                        }
-
-                        let payload: [String:Any] = ["PhoneNumber": account!.phoneNumber!.stringRepresentation(),
-                                                     "VerificationStatus": "Verified",
-                                                     "Device": SGUtility.deviceParamsForService]
-                        let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
-                        Alamofire.request(Constants.API_UPDATE_ACCOUNT_STATUS,
-                                          method: .post,
-                                          parameters: params,
-                                          encoding: JSONEncoding.default,
-                       headers : nil).validate().responseJSON { [weak self] response in
-
-                            guard response.result.isSuccess else {
-                                self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
-                                return
-                            }
-                            let payload: [String:Any] = ["AccountNumber": "236834"]
-                            let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
-                            Alamofire.request(Constants.API_ACCOUNT_DETAILS,
-                                          method: .post,
-                                          parameters: params,
-                                          encoding: JSONEncoding.default,
-                                          headers : nil).validate().responseJSON { [weak self] response in
-
-                                guard response.result.isSuccess else {
-                                    self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
-                                    return
-                                }
-                                KRProgressHUD.dismiss({
-                                    self?.startAlternateAuthentication()
-                                })
-                        }
-                    }
-
-                    }
+                    //TODO:-  Remove this after sucess of service work
+                    KRProgressHUD.dismiss({
+                        self.startAlternateAuthentication()
+                    })
+                    
+//
+//                    guard (self.reachability.isReachable) else {
+//                        self.backToLoginPageOnNetworkIssue(withMessage: "Check Network Connection."); return
+//                    }
+//                    //Call Here All three API's
+//                    let payload: [String:String] = ["PhoneNumber": (self.myProfile.phoneNumber)!]
+//                    let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
+//                    Alamofire.request(Constants.API_ISREGISTERED_ACCOUNT,
+//                                      method: .post,
+//                                      parameters: params,
+//                                      encoding: JSONEncoding.default,
+//                                      headers : nil).validate().responseJSON {[weak self] response in
+//                        guard response.result.isSuccess else {
+//                            self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
+//                            return
+//                        }
+//
+//                        let payload: [String:Any] = ["PhoneNumber": account!.phoneNumber!.stringRepresentation(),
+//                                                     "VerificationStatus": "Verified",
+//                                                     "Device": SGUtility.deviceParamsForService]
+//                        let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
+//                        Alamofire.request(Constants.API_UPDATE_ACCOUNT_STATUS,
+//                                          method: .post,
+//                                          parameters: params,
+//                                          encoding: JSONEncoding.default,
+//                       headers : nil).validate().responseJSON { [weak self] response in
+//
+//                            guard response.result.isSuccess else {
+//                                self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
+//                                return
+//                            }
+//                            let payload: [String:Any] = ["AccountNumber": "236834"]
+//                            let params: [String : Any] = ["Header": SGUtility.keyParamsForService, "Payload": payload]
+//                            Alamofire.request(Constants.API_ACCOUNT_DETAILS,
+//                                          method: .post,
+//                                          parameters: params,
+//                                          encoding: JSONEncoding.default,
+//                                          headers : nil).validate().responseJSON { [weak self] response in
+//
+//                                guard response.result.isSuccess else {
+//                                    self?.backToLoginPageOnNetworkIssue(withMessage: (response.result.error?.localizedDescription)!)
+//                                    return
+//                                }
+//                                KRProgressHUD.dismiss({
+//                                    self?.startAlternateAuthentication()
+//                                })
+//                        }
+//                    }
+//
+//                    }
                 }
 
                 return
@@ -117,14 +121,23 @@ class SFAccountViewController: ExpandingViewController {
         }
         
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.collectionView?.frame = CGRect(x: 0, y: (self.collectionView?.frame.origin.y)! - 60, width: (self.collectionView?.frame.size.width)!, height: (self.collectionView?.frame.size.height)!)
+    }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        showAddView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        SwiftMessages.hide()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func showAddView() {
@@ -182,9 +195,7 @@ class SFAccountViewController: ExpandingViewController {
         
         let open = sender.direction == .up ? true : false
         if open == false{
-            showAddView()
         }else{
-            SwiftMessages.hide()
             let endcolor = cell.backgroundImageView.image?.getPixelColor(pos: CGPoint(x: 5, y: 5))
             cell.backsideView.startColor = endcolor!
         }
@@ -197,9 +208,7 @@ class SFAccountViewController: ExpandingViewController {
         guard let cell  = collectionView?.cellForItem(at: indexPath) as? CardCollectionViewCell else { return }
         
         if cell.isOpened == true {
-            SwiftMessages.hide()
         }else{
-            showAddView()
         }
         
     }

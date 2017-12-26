@@ -400,7 +400,7 @@ class RegisterTableViewController: UITableViewController {
         }
         
         //Phone Authentication
-        KRProgressHUD.show(withMessage: "") {
+        KRProgressHUD.show(withMessage: nil) {
             PhoneAuthProvider.provider().verifyPhoneNumber("+91"+self.businessPhoneRow.text!, uiDelegate: nil) { (verificationID, error) in
                 KRProgressHUD.dismiss({
                     if let error = error {
