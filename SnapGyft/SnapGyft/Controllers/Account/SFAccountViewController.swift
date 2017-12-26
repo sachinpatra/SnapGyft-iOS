@@ -27,14 +27,12 @@ class SFAccountViewController: ExpandingViewController {
     
     //MARK: - View life cycle
     override func viewDidLoad() {
-        
 //    itemSize = CGSize(width: 256, height: 335)
-        
         super.viewDidLoad()
         
         registerCell()
         addGesture(to: collectionView!)
-        
+
 
         coreData.fetchRecords(entityName: .ProfileEntityName) { (results) in
             self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
@@ -121,6 +119,7 @@ class SFAccountViewController: ExpandingViewController {
         }
         
     }
+    
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
@@ -243,7 +242,6 @@ class SFAccountViewController: ExpandingViewController {
         
         if cell.isOpened == false {
             cell.cellIsOpen(true)
-            SwiftMessages.hide()
             let endcolor = cell.backgroundImageView.image?.getPixelColor(pos: CGPoint(x: 5, y: 5))
             cell.backsideView.startColor = endcolor!
         } else {
