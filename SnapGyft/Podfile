@@ -17,6 +17,7 @@
   pod 'MMTabBarAnimation'
   #pod 'Wallet'
   pod 'QRCodeReader.swift'
+  pod 'CSWAnimatedTextView'
 
 
 target 'SnapGyft' do

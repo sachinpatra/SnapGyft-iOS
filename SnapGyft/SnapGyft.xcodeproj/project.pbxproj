@@ -114,10 +114,6 @@
 		183B46CF1FE57D72009282FB /* FormLabelFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46751FE57BA2009282FB /* FormLabelFooterView.swift */; };
 		183B46D01FE57D75009282FB /* FormLabelHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46761FE57BA2009282FB /* FormLabelHeaderView.swift */; };
 		183B46D61FE5A6E1009282FB /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46D51FE5A6E1009282FB /* BaseTabBarController.swift */; };
-		183B46F11FE5AE0F009282FB /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F01FE5AE0F009282FB /* AccountViewController.swift */; };
-		183B46F31FE5B0E3009282FB /* POSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F21FE5B0E3009282FB /* POSViewController.swift */; };
-		183B46F51FE5B0FD009282FB /* PromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F41FE5B0FD009282FB /* PromoViewController.swift */; };
-		183B46F71FE5B115009282FB /* ProfileTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183B46F61FE5B115009282FB /* ProfileTableController.swift */; };
 		183B46FD1FE657C4009282FB /* SnapGyftMerchant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 183B46FB1FE657C4009282FB /* SnapGyftMerchant.xcdatamodeld */; };
 		183B46FF1FE6B148009282FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 183B46FE1FE6B147009282FB /* GoogleService-Info.plist */; };
 		183B47001FE6F589009282FB /* SGUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184232981FC87483002F1FC5 /* SGUtility.swift */; };
@@ -179,6 +175,19 @@
 		1890FA191FEEB9E7007D5536 /* generator.rb in Resources */ = {isa = PBXBuildFile; fileRef = 1890F9F01FEEB721007D5536 /* generator.rb */; };
 		1890FA1A1FEEB9EA007D5536 /* octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1890F9F11FEEB721007D5536 /* octicons.ttf */; };
 		1890FA1B1FEEB9EE007D5536 /* octicons.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1890F9F21FEEB721007D5536 /* octicons.txt */; };
+		1896D7781FF6469F00EFDD53 /* AccountTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7771FF6469F00EFDD53 /* AccountTableController.swift */; };
+		1896D77C1FF65D8500EFDD53 /* PaymentTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D77B1FF65D8500EFDD53 /* PaymentTableController.swift */; };
+		1896D77E1FF65DED00EFDD53 /* NextPaymentTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D77D1FF65DED00EFDD53 /* NextPaymentTableController.swift */; };
+		1896D7801FF65E4A00EFDD53 /* GiftStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D77F1FF65E4A00EFDD53 /* GiftStatsViewController.swift */; };
+		1896D7871FF667A500EFDD53 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7821FF667A500EFDD53 /* PayViewController.swift */; };
+		1896D7881FF667A500EFDD53 /* POSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7831FF667A500EFDD53 /* POSViewController.swift */; };
+		1896D78B1FF667DA00EFDD53 /* ProfileTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D78A1FF667DA00EFDD53 /* ProfileTableController.swift */; };
+		1896D78D1FF667F800EFDD53 /* PromoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D78C1FF667F800EFDD53 /* PromoTableController.swift */; };
+		1896D78F1FF6719A00EFDD53 /* WeekEndPromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D78E1FF6719A00EFDD53 /* WeekEndPromoViewController.swift */; };
+		1896D7911FF671A700EFDD53 /* NewDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7901FF671A700EFDD53 /* NewDishViewController.swift */; };
+		1896D7931FF671BE00EFDD53 /* FishBiriyaniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7921FF671BE00EFDD53 /* FishBiriyaniViewController.swift */; };
+		1896D7971FF6740A00EFDD53 /* NewPromoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7961FF6740900EFDD53 /* NewPromoTableController.swift */; };
+		1896D7991FF6760100EFDD53 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7981FF6760100EFDD53 /* HistoryViewController.swift */; };
 		189B0DDA1FE7C6F100E64EAC /* UIApplication+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */; };
 		189B0DDB1FE7C6F100E64EAC /* UIApplication+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */; };
 		189E9EA71E806CE6007460E0 /* UITableViewCell+Former.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */; };
@@ -196,7 +205,6 @@
 		18C7C02F1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C7C02D1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib */; };
 		18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */; };
 		18F5C0761FEFCE80008E9FCD /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5C0751FEFCE80008E9FCD /* UIViewController+Extention.swift */; };
-		18F5C0781FF017BF008E9FCD /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F5C0771FF017BF008E9FCD /* PayViewController.swift */; };
 		18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */; };
 		18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */; };
 		18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */; };
@@ -267,10 +275,6 @@
 		183B46751FE57BA2009282FB /* FormLabelFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelFooterView.swift; sourceTree = "<group>"; };
 		183B46761FE57BA2009282FB /* FormLabelHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormLabelHeaderView.swift; sourceTree = "<group>"; };
 		183B46D51FE5A6E1009282FB /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
-		183B46F01FE5AE0F009282FB /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
-		183B46F21FE5B0E3009282FB /* POSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POSViewController.swift; sourceTree = "<group>"; };
-		183B46F41FE5B0FD009282FB /* PromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoViewController.swift; sourceTree = "<group>"; };
-		183B46F61FE5B115009282FB /* ProfileTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableController.swift; sourceTree = "<group>"; };
 		183B46FC1FE657C4009282FB /* SnapGyftMerchant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SnapGyftMerchant.xcdatamodel; sourceTree = "<group>"; };
 		183B46FE1FE6B147009282FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		184232951FC8707B002F1FC5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -318,6 +322,19 @@
 		1890FA0B1FEEB793007D5536 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EPExtensions.swift; sourceTree = "<group>"; };
 		1890FA121FEEB9A6007D5536 /* SFCustomIconKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIconKit.swift; sourceTree = "<group>"; };
 		1890FA131FEEB9A6007D5536 /* SFCustomIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFCustomIcons.swift; sourceTree = "<group>"; };
+		1896D7771FF6469F00EFDD53 /* AccountTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableController.swift; sourceTree = "<group>"; };
+		1896D77B1FF65D8500EFDD53 /* PaymentTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableController.swift; sourceTree = "<group>"; };
+		1896D77D1FF65DED00EFDD53 /* NextPaymentTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextPaymentTableController.swift; sourceTree = "<group>"; };
+		1896D77F1FF65E4A00EFDD53 /* GiftStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftStatsViewController.swift; sourceTree = "<group>"; };
+		1896D7821FF667A500EFDD53 /* PayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
+		1896D7831FF667A500EFDD53 /* POSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POSViewController.swift; sourceTree = "<group>"; };
+		1896D78A1FF667DA00EFDD53 /* ProfileTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableController.swift; sourceTree = "<group>"; };
+		1896D78C1FF667F800EFDD53 /* PromoTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTableController.swift; sourceTree = "<group>"; };
+		1896D78E1FF6719A00EFDD53 /* WeekEndPromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekEndPromoViewController.swift; sourceTree = "<group>"; };
+		1896D7901FF671A700EFDD53 /* NewDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDishViewController.swift; sourceTree = "<group>"; };
+		1896D7921FF671BE00EFDD53 /* FishBiriyaniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishBiriyaniViewController.swift; sourceTree = "<group>"; };
+		1896D7961FF6740900EFDD53 /* NewPromoTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPromoTableController.swift; sourceTree = "<group>"; };
+		1896D7981FF6760100EFDD53 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		189B0DD91FE7C6F100E64EAC /* UIApplication+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extention.swift"; sourceTree = "<group>"; };
 		189E9EA61E806CE6007460E0 /* UITableViewCell+Former.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Former.swift"; sourceTree = "<group>"; };
 		18AE40691E7B15C600B7F495 /* SnapGyft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnapGyft.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -336,7 +353,6 @@
 		18C7C02D1FEDA2CE00C0472D /* CardDetailQRCodeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardDetailQRCodeCell.xib; sourceTree = "<group>"; };
 		18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGAddFriendViewController.swift; sourceTree = "<group>"; };
 		18F5C0751FEFCE80008E9FCD /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
-		18F5C0771FF017BF008E9FCD /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayViewController.swift; sourceTree = "<group>"; };
 		18FCC5B91E7E6E3000198CF0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSettingsViewController.swift; sourceTree = "<group>"; };
 		18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGGyftCardBalanceViewController.swift; sourceTree = "<group>"; };
@@ -565,6 +581,9 @@
 		183B46EE1FE5ADF4009282FB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1896D7811FF667A500EFDD53 /* POS */,
+				1896D7841FF667A500EFDD53 /* Profile */,
+				1896D7851FF667A500EFDD53 /* Promo */,
 				183B46EF1FE5ADF4009282FB /* Account */,
 			);
 			path = ViewControllers;
@@ -573,7 +592,11 @@
 		183B46EF1FE5ADF4009282FB /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				183B46F01FE5AE0F009282FB /* AccountViewController.swift */,
+				1896D7771FF6469F00EFDD53 /* AccountTableController.swift */,
+				1896D77B1FF65D8500EFDD53 /* PaymentTableController.swift */,
+				1896D77D1FF65DED00EFDD53 /* NextPaymentTableController.swift */,
+				1896D77F1FF65E4A00EFDD53 /* GiftStatsViewController.swift */,
+				1896D7981FF6760100EFDD53 /* HistoryViewController.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -612,10 +635,6 @@
 				185078EA1FE2F16100AFB9F8 /* TourViewController.swift */,
 				183B455A1FE454E3009282FB /* RegisterTableViewController.swift */,
 				183B46D51FE5A6E1009282FB /* BaseTabBarController.swift */,
-				183B46F21FE5B0E3009282FB /* POSViewController.swift */,
-				18F5C0771FF017BF008E9FCD /* PayViewController.swift */,
-				183B46F41FE5B0FD009282FB /* PromoViewController.swift */,
-				183B46F61FE5B115009282FB /* ProfileTableController.swift */,
 				18613AE21FE2CC1D004AF8F1 /* Images.xcassets */,
 				18613ADE1FE2CC09004AF8F1 /* LaunchScreen.storyboard */,
 				18613ADC1FE2CC09004AF8F1 /* Main.storyboard */,
@@ -713,6 +732,35 @@
 				1890FA0B1FEEB793007D5536 /* EPExtensions.swift */,
 			);
 			path = ContactsPicker;
+			sourceTree = "<group>";
+		};
+		1896D7811FF667A500EFDD53 /* POS */ = {
+			isa = PBXGroup;
+			children = (
+				1896D7821FF667A500EFDD53 /* PayViewController.swift */,
+				1896D7831FF667A500EFDD53 /* POSViewController.swift */,
+			);
+			path = POS;
+			sourceTree = "<group>";
+		};
+		1896D7841FF667A500EFDD53 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				1896D78A1FF667DA00EFDD53 /* ProfileTableController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		1896D7851FF667A500EFDD53 /* Promo */ = {
+			isa = PBXGroup;
+			children = (
+				1896D78C1FF667F800EFDD53 /* PromoTableController.swift */,
+				1896D7961FF6740900EFDD53 /* NewPromoTableController.swift */,
+				1896D78E1FF6719A00EFDD53 /* WeekEndPromoViewController.swift */,
+				1896D7901FF671A700EFDD53 /* NewDishViewController.swift */,
+				1896D7921FF671BE00EFDD53 /* FishBiriyaniViewController.swift */,
+			);
+			path = Promo;
 			sourceTree = "<group>";
 		};
 		18AE40601E7B15C600B7F495 = {
@@ -990,6 +1038,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
 				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
+				"${BUILT_PRODUCTS_DIR}/CSWAnimatedTextView/CSWAnimatedTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
@@ -1007,6 +1056,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSWAnimatedTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
@@ -1052,6 +1102,7 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-Synchronous/Alamofire_Synchronous.framework",
 				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
+				"${BUILT_PRODUCTS_DIR}/CSWAnimatedTextView/CSWAnimatedTextView.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/KRActivityIndicatorView/KRActivityIndicatorView.framework",
@@ -1069,6 +1120,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_Synchronous.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSWAnimatedTextView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KRActivityIndicatorView.framework",
@@ -1094,22 +1146,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				183B46A71FE57CE5009282FB /* FormCheckCell.swift in Sources */,
-				18F5C0781FF017BF008E9FCD /* PayViewController.swift in Sources */,
+				1896D7871FF667A500EFDD53 /* PayViewController.swift in Sources */,
 				183B47001FE6F589009282FB /* SGUtility.swift in Sources */,
+				1896D7881FF667A500EFDD53 /* POSViewController.swift in Sources */,
 				185078F51FE2F8CB00AFB9F8 /* Network.swift in Sources */,
 				183B46AD1FE57D03009282FB /* FormSegmentedCell.swift in Sources */,
+				1896D77C1FF65D8500EFDD53 /* PaymentTableController.swift in Sources */,
 				183B46A61FE57CE1009282FB /* FormCell.swift in Sources */,
 				183B46B51FE57D16009282FB /* Former.swift in Sources */,
 				183B46B91FE57D22009282FB /* ViewFormer.swift in Sources */,
+				1896D78D1FF667F800EFDD53 /* PromoTableController.swift in Sources */,
+				1896D77E1FF65DED00EFDD53 /* NextPaymentTableController.swift in Sources */,
 				183B46B41FE57D12009282FB /* FormTextViewCell.swift in Sources */,
 				185078F41FE2F8C200AFB9F8 /* ConfigurationHelper.swift in Sources */,
 				183B46BF1FE57D3B009282FB /* InlineDatePickerRowFormer.swift in Sources */,
 				183B46BD1FE57D30009282FB /* CustomRowFormer.swift in Sources */,
-				183B46F11FE5AE0F009282FB /* AccountViewController.swift in Sources */,
 				185078EB1FE2F16100AFB9F8 /* TourViewController.swift in Sources */,
 				183B46AA1FE57CFC009282FB /* FormInlinePickerCell.swift in Sources */,
 				183B46C61FE57D54009282FB /* SliderRowFormer.swift in Sources */,
+				1896D78F1FF6719A00EFDD53 /* WeekEndPromoViewController.swift in Sources */,
 				183B46CE1FE57D6E009282FB /* FormHeaderFooterView.swift in Sources */,
+				1896D7801FF65E4A00EFDD53 /* GiftStatsViewController.swift in Sources */,
 				183B459A1FE5009F009282FB /* RegisterFieldCell.swift in Sources */,
 				18613ADB1FE2CBD7004AF8F1 /* AppDelegate.swift in Sources */,
 				189B0DDB1FE7C6F100E64EAC /* UIApplication+Extention.swift in Sources */,
@@ -1121,7 +1178,6 @@
 				183B46C81FE57D59009282FB /* SwitchRowFormer.swift in Sources */,
 				183B46A41FE57CD6009282FB /* TextSelectorViewContorller.swift in Sources */,
 				183B46AE1FE57D04009282FB /* FormSelectorDatePickerCell.swift in Sources */,
-				183B46F51FE5B0FD009282FB /* PromoViewController.swift in Sources */,
 				183B46FD1FE657C4009282FB /* SnapGyftMerchant.xcdatamodeld in Sources */,
 				1890FA181FEEB9E3007D5536 /* SFCustomIcons.swift in Sources */,
 				185078F11FE2F8B400AFB9F8 /* AACoreData.swift in Sources */,
@@ -1130,17 +1186,18 @@
 				183B46C11FE57D40009282FB /* LabelRowFormer.swift in Sources */,
 				183B46BE1FE57D39009282FB /* DatePickerRowFormer.swift in Sources */,
 				185079031FE301E200AFB9F8 /* MerchantTourScreenModel.swift in Sources */,
+				1896D78B1FF667DA00EFDD53 /* ProfileTableController.swift in Sources */,
+				1896D7991FF6760100EFDD53 /* HistoryViewController.swift in Sources */,
 				183B459E1FE50D2B009282FB /* RegisterLabelCell.swift in Sources */,
 				183B46B31FE57D10009282FB /* FormTextFieldCell.swift in Sources */,
 				183B455B1FE454E3009282FB /* RegisterTableViewController.swift in Sources */,
 				183B46BB1FE57D2B009282FB /* BaseRowFormer.swift in Sources */,
 				185078F91FE2FAD600AFB9F8 /* UITextField+Extention.swift in Sources */,
-				183B46F71FE5B115009282FB /* ProfileTableController.swift in Sources */,
+				1896D7931FF671BE00EFDD53 /* FishBiriyaniViewController.swift in Sources */,
 				185078F21FE2F8B800AFB9F8 /* Constants.swift in Sources */,
 				185078F31FE2F8BF00AFB9F8 /* CollectionViewHelper.swift in Sources */,
 				183B46D01FE57D75009282FB /* FormLabelHeaderView.swift in Sources */,
 				183B46B01FE57D09009282FB /* FormSliderCell.swift in Sources */,
-				183B46F31FE5B0E3009282FB /* POSViewController.swift in Sources */,
 				183B46B21FE57D0D009282FB /* FormSwitchCell.swift in Sources */,
 				183B46D61FE5A6E1009282FB /* BaseTabBarController.swift in Sources */,
 				183B46C01FE57D3D009282FB /* InlinePickerRowFormer.swift in Sources */,
@@ -1154,6 +1211,7 @@
 				183B46AB1FE57CFE009282FB /* FormLabelCell.swift in Sources */,
 				183B46AC1FE57D01009282FB /* FormPickerCell.swift in Sources */,
 				183B46A81FE57CE8009282FB /* FormDatePickerCell.swift in Sources */,
+				1896D7971FF6740A00EFDD53 /* NewPromoTableController.swift in Sources */,
 				183B46CF1FE57D72009282FB /* FormLabelFooterView.swift in Sources */,
 				183B46CC1FE57D66009282FB /* CustomViewFormer.swift in Sources */,
 				183B46A91FE57CF9009282FB /* FormInlineDatePickerCell.swift in Sources */,
@@ -1161,9 +1219,11 @@
 				183B458E1FE4F16D009282FB /* CenterLabelCell.swift in Sources */,
 				183B46C21FE57D46009282FB /* PickerRowFormer.swift in Sources */,
 				183B46CA1FE57D5E009282FB /* TextViewRowFormer.swift in Sources */,
+				1896D7911FF671A700EFDD53 /* NewDishViewController.swift in Sources */,
 				183B46B11FE57D0B009282FB /* FormStepperCell.swift in Sources */,
 				183B46BA1FE57D26009282FB /* FormViewController.swift in Sources */,
 				183B46B71FE57D1D009282FB /* RowFormer.swift in Sources */,
+				1896D7781FF6469F00EFDD53 /* AccountTableController.swift in Sources */,
 				183B46B81FE57D20009282FB /* SectionFormer.swift in Sources */,
 				183B46C31FE57D4D009282FB /* SegmentedRowFormer.swift in Sources */,
 				185078EC1FE2F89C00AFB9F8 /* AwesomeButton.swift in Sources */,

@@ -12,6 +12,7 @@ import Firebase
 import KRProgressHUD
 import ReachabilitySwift
 import Alamofire
+import QRCodeReader
 
 enum PhysicalLcations {
     case None, Single, BelowTen, BelowFifty, AboveFifty
@@ -120,9 +121,10 @@ enum States {
     }
 }
 
-class RegisterTableViewController: UITableViewController {
+class RegisterTableViewController: UITableViewController, QRCodeReaderViewControllerDelegate {
 
     public private(set) lazy var former: Former = Former(tableView: self.tableView)
+    
     var businessNameRow: TextFieldRowFormer<RegisterFieldCell>!
     var businessPhoneRow: TextFieldRowFormer<RegisterFieldCell>!
     var emailRow: TextFieldRowFormer<RegisterFieldCell>!
@@ -140,6 +142,16 @@ class RegisterTableViewController: UITableViewController {
     let coreData = AACoreData.sharedInstance()
     let reachability = Reachability()!
     
+    
+    lazy var readerVC: QRCodeReaderViewController = {
+        let builder = QRCodeReaderViewControllerBuilder {
+            $0.reader          = QRCodeReader.init(captureDevicePosition: .back)
+            $0.showTorchButton = true
+            $0.reader.stopScanningWhenCodeIsFound = false
+        }
+        return QRCodeReaderViewController(builder: builder)
+    }()
+    
 
     //MARK: View Lifecycle
     override func viewDidLoad() {
@@ -147,6 +159,13 @@ class RegisterTableViewController: UITableViewController {
         self.title = "Register"
 
         configureForm()
+        
+        //Set Table Header
+        let cellTableViewHeader = tableView.dequeueReusableCell(withIdentifier: "RegisterTableHeaderIdentifier")
+        //cellTableViewHeader?.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 60)
+        tableView.tableHeaderView = cellTableViewHeader
+
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -166,9 +185,7 @@ class RegisterTableViewController: UITableViewController {
             $0.textField.keyboardType = .alphabet
             }.configure {
                 $0.placeholder = "Business Name"
-                //$0.text = self.myProfile?.firstName
             }.onTextChanged {_ in
-                //self.saveProfile(with: "name", value: $0)
         }
         businessPhoneRow = TextFieldRowFormer<RegisterFieldCell>(instantiateType: .Nib(nibName: "RegisterFieldCell")) { [weak self] in
             $0.titleLabel.text = "Phone"
@@ -338,6 +355,7 @@ class RegisterTableViewController: UITableViewController {
         }
     }
     
+    //MARK: - Button Actions
     private func onSubmitBtnSelected(rowFormer: RowFormer) {
         rowFormer.former?.deselect(animated: true)
         
@@ -484,7 +502,31 @@ class RegisterTableViewController: UITableViewController {
     
     
     
-   
+    @IBAction func onRedeemBtnClicked(_ sender: AwesomeButton) {
+        readerVC.modalPresentationStyle = .formSheet
+        readerVC.delegate               = self
+        readerVC.completionBlock = { (result: QRCodeReaderResult?) in
+            if let result = result {
+                print("Completion with result: \(result.value) of type \(result.metadataType)")
+            }
+        }
+        present(readerVC, animated: true, completion: nil)
+    }
+    
+    //MARK: - QRCodeReader Delegate
+    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        reader.stopScanning()
+        dismiss(animated: true) { _ in
+            //let decodedString = result.value.base64Decoded()
+            Alertift.alert(title: "SnapGyft", message: "Scaned Value = \(result.value)").action(.cancel("OK")).show()
+        }
+    }
+    
+    func readerDidCancel(_ reader: QRCodeReaderViewController) {
+        reader.stopScanning()
+        dismiss(animated: true, completion: nil)
+    }
+    
     
 }
 

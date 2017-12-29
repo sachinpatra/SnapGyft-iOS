@@ -27,7 +27,8 @@ class SFAccountViewController: ExpandingViewController {
     
     //MARK: - View life cycle
     override func viewDidLoad() {
-//    itemSize = CGSize(width: 256, height: 335)
+  //  itemSize = CGSize(width: 356, height: 250)
+        
         super.viewDidLoad()
         
         registerCell()

@@ -113,6 +113,102 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RegisterTableHeaderIdentifier" rowHeight="60" id="oED-sy-bQZ">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oED-sy-bQZ" id="Fli-3Z-8cm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wey-Hh-feg" customClass="AwesomeButton" customModule="AwesomeButton">
+                                            <rect key="frame" x="28" y="19" width="120" height="40"/>
+                                            <color key="backgroundColor" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="aZX-aa-GjM"/>
+                                                <constraint firstAttribute="width" constant="120" id="lap-T5-fXt"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <state key="normal" title="Login">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" title="sdfsdf">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="iconNormal" value="arrowNextDark"/>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="iconHighlighted" value="arrowNext"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.73725490199999999" green="0.75294117650000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="arrowNextDark"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="iconYOffset">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="getStartedButtonClicked:" destination="mOc-sl-I4A" eventType="touchUpInside" id="pdV-Z5-sa9"/>
+                                                <segue destination="btY-kk-sYK" kind="show" id="dEZ-Ue-EGg"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luE-5O-9un" customClass="AwesomeButton" customModule="AwesomeButton">
+                                            <rect key="frame" x="225" y="19" width="120" height="40"/>
+                                            <color key="backgroundColor" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="0jp-Hg-oLC"/>
+                                                <constraint firstAttribute="height" constant="40" id="2jH-aM-GRs"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                            <state key="normal" title="Redeem">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <state key="selected" title="sdfsdf">
+                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <state key="highlighted">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="15"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="3"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="iconNormal" value="arrowNextDark"/>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="iconHighlighted" value="arrowNext"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.73725490199999999" green="0.75294117650000003" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="image" keyPath="iconSelected" value="arrowNextDark"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="iconYOffset">
+                                                    <real key="value" value="0.0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="getStartedButtonClicked:" destination="mOc-sl-I4A" eventType="touchUpInside" id="uRm-Qq-NCe"/>
+                                                <action selector="onRedeemBtnClicked:" destination="wvv-2R-RaT" eventType="touchUpInside" id="SBy-lQ-NQs"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="luE-5O-9un" secondAttribute="trailing" constant="30" id="PP0-Ny-w4Q"/>
+                                        <constraint firstItem="Wey-Hh-feg" firstAttribute="leading" secondItem="Fli-3Z-8cm" secondAttribute="leading" constant="28" id="TiW-0v-pnx"/>
+                                        <constraint firstAttribute="bottom" secondItem="luE-5O-9un" secondAttribute="bottom" constant="0.5" id="kFu-MR-BUa"/>
+                                        <constraint firstAttribute="bottom" secondItem="Wey-Hh-feg" secondAttribute="bottom" constant="0.5" id="lTV-n6-ehZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="wvv-2R-RaT" id="vcm-E4-2SZ"/>
                             <outlet property="delegate" destination="wvv-2R-RaT" id="YMb-MQ-Xvd"/>
@@ -124,23 +220,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0I-cH-hTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="662"/>
-        </scene>
-        <!--Promo View Controller-->
-        <scene sceneID="KYW-Yf-NXo">
-            <objects>
-                <viewController id="gpE-3h-piJ" customClass="PromoViewController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qrK-6k-AnS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="liK-Uc-sl9"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="n0I-Q8-jK5"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lM8-B6-PoE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2838" y="522"/>
+            <point key="canvasLocation" x="174" y="573"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="uNW-qj-M2g">
@@ -310,6 +390,39 @@
             </objects>
             <point key="canvasLocation" x="3637.5999999999999" y="-142.57871064467767"/>
         </scene>
+        <!--Gift Stats View Controller-->
+        <scene sceneID="zb7-No-kNp">
+            <objects>
+                <viewController id="8Ui-Ba-3cq" customClass="GiftStatsViewController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0OQ-nx-tkK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="UPd-ks-K3f"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Btv-G6-EUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4044" y="-823"/>
+        </scene>
+        <!--Next Payment Table Controller-->
+        <scene sceneID="hFF-sC-qvw">
+            <objects>
+                <tableViewController id="65A-Ok-Z9D" customClass="NextPaymentTableController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yqp-qW-NwM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="65A-Ok-Z9D" id="QEV-cS-BYk"/>
+                            <outlet property="delegate" destination="65A-Ok-Z9D" id="iI0-8B-T3P"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWG-q4-tRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5150" y="-1196"/>
+        </scene>
         <!--Base Tab Bar Controller-->
         <scene sceneID="0DW-0O-Vul">
             <objects>
@@ -320,9 +433,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="pOK-sI-xQm" kind="relationship" relationship="viewControllers" id="oWW-3N-8Mh"/>
+                        <segue destination="C2H-or-hAj" kind="relationship" relationship="viewControllers" id="0Y0-KC-caL"/>
                         <segue destination="RKB-U6-mAK" kind="relationship" relationship="viewControllers" id="WGD-wz-Ol4"/>
-                        <segue destination="TQZ-eQ-wY3" kind="relationship" relationship="viewControllers" id="ZlE-I7-vX8"/>
+                        <segue destination="3nw-0A-2CV" kind="relationship" relationship="viewControllers" id="dt5-9e-ap8"/>
                         <segue destination="Nra-ZQ-Xsn" kind="relationship" relationship="viewControllers" id="qXY-MT-Axk"/>
                     </connections>
                 </tabBarController>
@@ -349,22 +462,6 @@
             </objects>
             <point key="canvasLocation" x="-1468" y="186"/>
         </scene>
-        <!--Account View Controller-->
-        <scene sceneID="dCn-VL-x1G">
-            <objects>
-                <viewController id="ma8-oG-999" customClass="AccountViewController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="OS6-Ku-zA2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="FYt-cU-5KT"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="bfd-bT-XUy"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KWf-GB-5qN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2838" y="-821"/>
-        </scene>
         <!--POS-->
         <scene sceneID="AcO-AY-MZL">
             <objects>
@@ -384,43 +481,112 @@
             </objects>
             <point key="canvasLocation" x="2017.5999999999999" y="-141.22938530734635"/>
         </scene>
-        <!--Promo-->
-        <scene sceneID="ipn-BT-Y1y">
+        <!--Account Table Controller-->
+        <scene sceneID="ub8-IJ-D30">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TQZ-eQ-wY3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Promo" id="yRB-N5-b0w"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IAg-hw-8yE">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <tableViewController id="AWe-Ws-5bP" customClass="AccountTableController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="pxe-CC-IR8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="AWe-Ws-5bP" id="NvR-RC-UZm"/>
+                            <outlet property="delegate" destination="AWe-Ws-5bP" id="QII-Jl-cRn"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hqF-23-FdZ"/>
                     <connections>
-                        <segue destination="gpE-3h-piJ" kind="relationship" relationship="rootViewController" id="oDo-CJ-vcN"/>
+                        <segue destination="4P6-4a-dDz" kind="show" identifier="showPaymentSegue" id="qED-cn-GAZ"/>
+                        <segue destination="8Ui-Ba-3cq" kind="show" identifier="showGiftStatsSegue" id="yuT-4Q-1fx"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XAV-F0-Oee" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1t-Hg-lCk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2017.5999999999999" y="522.63868065967017"/>
+            <point key="canvasLocation" x="2834" y="-822"/>
         </scene>
-        <!--Account-->
-        <scene sceneID="Zxp-gA-Px9">
+        <!--Payment Table Controller-->
+        <scene sceneID="4lo-Ov-RO8">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pOK-sI-xQm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" id="ncD-9x-fk6"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oiX-mO-8K7">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <tableViewController id="4P6-4a-dDz" customClass="PaymentTableController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="W4o-Io-JN0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LifetimePaymentCellIdentifier" rowHeight="60" id="pjS-ZT-1ig">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pjS-ZT-1ig" id="VnL-QW-2rN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9fW-mU-Q9H" customClass="CSWAnimatedTextView">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="375" id="8tu-cE-dwT"/>
+                                                <constraint firstAttribute="height" constant="60" id="oZw-a7-Dd5"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Lifetime Payment $200"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="HelveticaNeue-Thin"/>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="colorOuter">
+                                                    <color key="value" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="colorInner">
+                                                    <color key="value" red="1" green="0.98227362104698013" blue="0.11878688872929788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
+                                                    <point key="value" x="0.0" y="0.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="point" keyPath="endPoint">
+                                                    <point key="value" x="1" y="0.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                                    <real key="value" value="30"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9fW-mU-Q9H" firstAttribute="centerX" secondItem="VnL-QW-2rN" secondAttribute="centerX" id="Exe-Q6-6Mg"/>
+                                        <constraint firstItem="9fW-mU-Q9H" firstAttribute="centerY" secondItem="VnL-QW-2rN" secondAttribute="centerY" id="dI2-6B-g9c"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4P6-4a-dDz" id="YcK-LF-nwi"/>
+                            <outlet property="delegate" destination="4P6-4a-dDz" id="BoL-8g-MJE"/>
+                        </connections>
+                    </tableView>
                     <connections>
-                        <segue destination="ma8-oG-999" kind="relationship" relationship="rootViewController" id="Lza-hA-LeN"/>
+                        <segue destination="wxB-Cx-jK7" kind="show" identifier="showHistorySegue" id="MbO-IH-0pc"/>
+                        <segue destination="65A-Ok-Z9D" kind="show" identifier="showNextPaymentSegue" id="DTB-RX-Luh"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ygn-xC-AHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LWP-Oy-ors" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2011.2" y="-820.38980509745136"/>
+            <point key="canvasLocation" x="4044" y="-1593.5532233883059"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="Nmt-n4-nAD">
+            <objects>
+                <viewController id="wxB-Cx-jK7" customClass="HistoryViewController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xZ5-TJ-g5T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="lhT-4C-yhZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xq4-zl-X36" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5167" y="-1985"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ILr-vI-uj4">
@@ -441,24 +607,107 @@
             </objects>
             <point key="canvasLocation" x="2010" y="1236"/>
         </scene>
+        <!--Promo Table Controller-->
+        <scene sceneID="JY6-5L-XVA">
+            <objects>
+                <tableViewController id="sfh-Xv-S8o" customClass="PromoTableController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="kBy-Wj-4DC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="sfh-Xv-S8o" id="XOJ-mA-TTr"/>
+                            <outlet property="delegate" destination="sfh-Xv-S8o" id="RSy-r6-C99"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="7YU-VG-PYt">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="E2Y-p1-HWs">
+                            <connections>
+                                <segue destination="MFZ-W7-ze3" kind="show" id="DcX-fR-eGm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="izR-kw-Shj" kind="show" identifier="showWeekEndPromoSegue" id="rkL-dN-YGt"/>
+                        <segue destination="FXo-bV-iZy" kind="show" identifier="showNewDishSegue" id="ETA-Rs-AnB"/>
+                        <segue destination="BnX-BF-Vho" kind="show" identifier="showFishBiriyaniSegue" id="TYh-qw-rPz"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nhc-55-GHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2950" y="573"/>
+        </scene>
+        <!--New Promo Table Controller-->
+        <scene sceneID="52H-Ax-aO7">
+            <objects>
+                <tableViewController id="MFZ-W7-ze3" customClass="NewPromoTableController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="TtE-qj-cJd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="MFZ-W7-ze3" id="jxE-Vx-OmC"/>
+                            <outlet property="delegate" destination="MFZ-W7-ze3" id="p1s-Rg-9fN"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lOV-9U-02T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3760" y="573"/>
+        </scene>
+        <!--Week End Promo View Controller-->
+        <scene sceneID="hM3-UP-Htj">
+            <objects>
+                <viewController id="izR-kw-Shj" customClass="WeekEndPromoViewController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xnJ-kf-7yd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="MZ1-4A-bbK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Plf-qc-qcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4524" y="573"/>
+        </scene>
+        <!--New Dish View Controller-->
+        <scene sceneID="h4j-UM-Jgf">
+            <objects>
+                <viewController id="FXo-bV-iZy" customClass="NewDishViewController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R2n-NE-wac">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="znp-tE-OzR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAA-Oh-uYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5292" y="573"/>
+        </scene>
+        <!--Fish Biriyani View Controller-->
+        <scene sceneID="xsf-fR-iIV">
+            <objects>
+                <viewController id="BnX-BF-Vho" customClass="FishBiriyaniViewController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zFw-ms-Ikp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="6Eq-Hn-LF4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yl8-Jf-13j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6127" y="573"/>
+        </scene>
         <!--Profile Table Controller-->
         <scene sceneID="lTE-mQ-0op">
             <objects>
                 <tableViewController id="etm-YF-gnU" customClass="ProfileTableController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hQW-rx-Ora">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="hQW-rx-Ora">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="8fc-sh-ZHu">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8fc-sh-ZHu" id="Wrc-Sx-dMa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="etm-YF-gnU" id="MlH-Ck-iZE"/>
                             <outlet property="delegate" destination="etm-YF-gnU" id="sdr-DB-jwc"/>
@@ -470,12 +719,50 @@
             </objects>
             <point key="canvasLocation" x="2835" y="1233"/>
         </scene>
+        <!--Account-->
+        <scene sceneID="LSA-aH-VUG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="C2H-or-hAj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" id="H3s-Bl-Axr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PiI-pY-jYC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="AWe-Ws-5bP" kind="relationship" relationship="rootViewController" id="lH8-qc-rXv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Frp-va-aKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017" y="-822"/>
+        </scene>
+        <!--Promo-->
+        <scene sceneID="SfX-tH-EwX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3nw-0A-2CV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Promo" id="FxM-HU-fGC"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zvU-CO-4Zp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sfh-Xv-S8o" kind="relationship" relationship="rootViewController" id="dXx-1D-fFP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nx7-JQ-Skt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2017" y="542"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrowNext" width="16" height="16"/>
         <image name="arrowNextDark" width="16" height="16"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zOO-Mw-buu"/>
+        <segue reference="dEZ-Ue-EGg"/>
     </inferredMetricsTieBreakers>
 </document>

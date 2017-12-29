@@ -1,25 +1,23 @@
 //
-//  PromoViewController.swift
+//  HistoryViewController.swift
 //  SnapGyftMerchant
 //
-//  Created by Patra, Sachin Kumar (TekSystems) on 12/17/17.
+//  Created by Patra, Sachin Kumar (TekSystems) on 12/29/17.
 //  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
 //
 
 import UIKit
 
-class PromoViewController: UIViewController {
+class HistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Promo"
+        self.title = "History"
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
