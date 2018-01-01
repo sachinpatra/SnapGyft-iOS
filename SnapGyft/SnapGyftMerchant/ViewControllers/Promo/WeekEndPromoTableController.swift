@@ -1,20 +1,20 @@
 //
-//  NextPaymentTableController.swift
+//  WeekEndPromoTableController.swift
 //  SnapGyftMerchant
 //
-//  Created by Patra, Sachin Kumar (TekSystems) on 12/29/17.
-//  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
+//  Created by Patra, Sachin Kumar (TekSystems) on 1/1/18.
+//  Copyright © 2018 Patra, Sachin Kumar (TekSystems). All rights reserved.
 //
 
 import UIKit
 
-class NextPaymentTableController: UITableViewController {
+class WeekEndPromoTableController: UITableViewController {
 
     public private(set) lazy var former: Former = Former(tableView: self.tableView)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Next Payment"
+        self.title = "Weekend 10% Promo"
         
         configureForm()
     }
@@ -42,8 +42,12 @@ class NextPaymentTableController: UITableViewController {
         }
         
         //Section 1
-        let ammountRow = createFixedLabel("Amount", "$200")
-        let dateRow = createFixedLabel("Date", "07/24/2018")
+        let startDateRow = createFixedLabel("Start Date", "03/09/2018")
+        let endDateRow = createFixedLabel("End Date", "03/11/2018")
+        let AdSeenByRow = createFixedLabel("Ad seen by", "1000")
+        let AdCreatedRow = createFixedLabel("Ad Clicked", "20")
+        let giftProcessedRow = createFixedLabel("Transactions", "$100, 2 transactions")
+
         
         // Create Headers and Footers
         let createHeader: ((String) -> ViewFormer) = { text in
@@ -55,10 +59,9 @@ class NextPaymentTableController: UITableViewController {
         }
         
         // Create SectionFormers
-        let section1 = SectionFormer(rowFormer: ammountRow, dateRow).set(headerViewFormer: createHeader("Next payment details"))
+        let section1 = SectionFormer(rowFormer: startDateRow, endDateRow, AdSeenByRow, AdCreatedRow, giftProcessedRow).set(headerViewFormer: createHeader("Weekend promo details"))
         
         former.append(sectionFormer: section1)
-        
     }
-
+    
 }

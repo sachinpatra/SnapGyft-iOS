@@ -10,82 +10,77 @@ import UIKit
 
 class ProfileTableController: UITableViewController {
 
+    public private(set) lazy var former: Former = Former(tableView: self.tableView)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
         
+        configureForm()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    // MARK: Private
+    private lazy var formerInputAccessoryView: FormerInputAccessoryView = FormerInputAccessoryView(former: self.former)
+    private func configureForm() {
+        
+        let createMenu: ((String, (() -> Void)?) -> RowFormer) = { text, onSelected in
+            return LabelRowFormer<FormLabelCell>() {
+                $0.titleLabel.textColor = .formerColor()
+                $0.titleLabel.font = .boldSystemFont(ofSize: 17)
+                $0.accessoryType = .disclosureIndicator
+                }.configure {
+                    $0.text = text
+                }.onSelected { _ in
+                    onSelected?()
+            }
+        }
+        
+        let createFixedLabel = { (
+            text: String,
+            subText: String) -> RowFormer in
+            return LabelRowFormer<RegisterLabelCell>(instantiateType: .Nib(nibName: "RegisterLabelCell")) {
+                $0.titleLabel.textColor = .formerColor()
+                $0.titleLabel.font = .boldSystemFont(ofSize: 15)
+                }.configure {
+                    $0.text = text
+                    $0.subText = subText
+                }.onSelected { _ in
+                    self.former.deselect(animated: true)
+            }
+        }
+        
+        // Create Headers
+        let createHeader: ((String) -> ViewFormer) = { text in
+            return LabelViewFormer<FormLabelHeaderView>()
+                .configure {
+                    $0.viewHeight = 40
+                    $0.text = text
+            }
+        }
+        
+        //Section 1
+        let nameRow = createFixedLabel("Name", "Italian Restaurant")
+        let emailRow = createFixedLabel("Email", "sachin@italianrestaurant.com")
+        let phoneRow = createFixedLabel("Phone", "1234567890")
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        //Section 2
+        let setPinRow = createMenu("Set Pin") { [weak self] in
+            self?.performSegue(withIdentifier: "showSetPinSegue", sender: self)
+        }
+        
+        
+        // Create SectionFormers
+        let section1 = SectionFormer(rowFormer: nameRow, emailRow, phoneRow).set(headerViewFormer: createHeader("    "))
+        let section2 = SectionFormer(rowFormer: setPinRow).set(headerViewFormer: createHeader("    "))
+        
+        former.append(sectionFormer: section1, section2)
+        
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

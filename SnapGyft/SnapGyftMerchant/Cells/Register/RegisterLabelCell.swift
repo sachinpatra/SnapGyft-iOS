@@ -8,7 +8,8 @@
 
 import UIKit
 
-class RegisterLabelCell: UITableViewCell, InlineDatePickerFormableRow, InlinePickerFormableRow, SelectorPickerFormableRow {
+final class RegisterLabelCell: UITableViewCell, InlineDatePickerFormableRow, InlinePickerFormableRow, SelectorPickerFormableRow, LabelFormableRow {
+    
     var selectorPickerView: UIPickerView?
     
     var selectorAccessoryView: UIView?
@@ -32,4 +33,13 @@ class RegisterLabelCell: UITableViewCell, InlineDatePickerFormableRow, InlinePic
     }
     
     func updateWithRowFormer(_ rowFormer: RowFormer) {}
+    
+    //MARK: - LabelFormableRow Delegate
+    func formTextLabel() -> UILabel? {
+        return titleLabel
+    }
+    
+    func formSubTextLabel() -> UILabel? {
+        return displayLabel
+    }
 }

@@ -12,6 +12,7 @@ import Alertift
 
 class PayViewController: UIViewController, QRCodeReaderViewControllerDelegate {
     
+    @IBOutlet weak var amountTextField: UITextField!
     
     lazy var readerVC: QRCodeReaderViewController = {
         let builder = QRCodeReaderViewControllerBuilder {
@@ -25,6 +26,12 @@ class PayViewController: UIViewController, QRCodeReaderViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "PAY"
+        
+        amountTextField.leftViewMode = .always
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        let image = UIImage(named: "Dollar")
+        imageView.image = image
+        amountTextField.leftView = imageView
     }
 
     override func didReceiveMemoryWarning() {

@@ -28,18 +28,6 @@ class PromoTableController: UITableViewController {
     private lazy var formerInputAccessoryView: FormerInputAccessoryView = FormerInputAccessoryView(former: self.former)
     private func configureForm() {
         
-        let createMenu: ((String, (() -> Void)?) -> RowFormer) = { text, onSelected in
-            return LabelRowFormer<FormLabelCell>() {
-                $0.titleLabel.textColor = .formerColor()
-                $0.titleLabel.font = .boldSystemFont(ofSize: 17)
-                $0.accessoryType = .disclosureIndicator
-                }.configure {
-                    $0.text = text
-                }.onSelected { _ in
-                    onSelected?()
-            }
-        }
-        
         let createSelectorRow = { (
             text: String,
             subText: String,

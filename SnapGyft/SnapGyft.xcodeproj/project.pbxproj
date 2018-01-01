@@ -10,6 +10,10 @@
 		1803A30F1FDB9C20007C4918 /* AACoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1803A30E1FDB9C20007C4918 /* AACoreData.swift */; };
 		180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */; };
 		180FFAFA1E7DE5C000435772 /* UIColor+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */; };
+		181380861FF7871E00B6867F /* SetPinTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181380851FF7871E00B6867F /* SetPinTableController.swift */; };
+		181380931FFA00BC00B6867F /* NewPromoImageTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181380911FFA00BC00B6867F /* NewPromoImageTableCell.xib */; };
+		181380941FFA00BC00B6867F /* NewPromoImageTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181380921FFA00BC00B6867F /* NewPromoImageTableCell.swift */; };
+		181380961FFA7CF500B6867F /* WeekEndPromoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181380951FFA7CF500B6867F /* WeekEndPromoTableController.swift */; };
 		181D79941EF5BE47008515D5 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181D79931EF5BE47008515D5 /* Network.swift */; };
 		1820C47D1FEEDF04003AE023 /* RedemptionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1820C47C1FEEDF04003AE023 /* RedemptionListViewController.swift */; };
 		1829D8CC1E81B1E300EEFE71 /* SGButtonExtender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */; };
@@ -183,7 +187,6 @@
 		1896D7881FF667A500EFDD53 /* POSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7831FF667A500EFDD53 /* POSViewController.swift */; };
 		1896D78B1FF667DA00EFDD53 /* ProfileTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D78A1FF667DA00EFDD53 /* ProfileTableController.swift */; };
 		1896D78D1FF667F800EFDD53 /* PromoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D78C1FF667F800EFDD53 /* PromoTableController.swift */; };
-		1896D78F1FF6719A00EFDD53 /* WeekEndPromoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D78E1FF6719A00EFDD53 /* WeekEndPromoViewController.swift */; };
 		1896D7911FF671A700EFDD53 /* NewDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7901FF671A700EFDD53 /* NewDishViewController.swift */; };
 		1896D7931FF671BE00EFDD53 /* FishBiriyaniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7921FF671BE00EFDD53 /* FishBiriyaniViewController.swift */; };
 		1896D7971FF6740A00EFDD53 /* NewPromoTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1896D7961FF6740900EFDD53 /* NewPromoTableController.swift */; };
@@ -218,6 +221,10 @@
 		1803A30E1FDB9C20007C4918 /* AACoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AACoreData.swift; sourceTree = "<group>"; };
 		180FFAF71E7DE5C000435772 /* String+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+FormerDemo.swift"; sourceTree = "<group>"; };
 		180FFAF81E7DE5C000435772 /* UIColor+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FormerDemo.swift"; sourceTree = "<group>"; };
+		181380851FF7871E00B6867F /* SetPinTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPinTableController.swift; sourceTree = "<group>"; };
+		181380911FFA00BC00B6867F /* NewPromoImageTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewPromoImageTableCell.xib; sourceTree = "<group>"; };
+		181380921FFA00BC00B6867F /* NewPromoImageTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewPromoImageTableCell.swift; sourceTree = "<group>"; };
+		181380951FFA7CF500B6867F /* WeekEndPromoTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekEndPromoTableController.swift; sourceTree = "<group>"; };
 		181D79931EF5BE47008515D5 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		1820C47C1FEEDF04003AE023 /* RedemptionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedemptionListViewController.swift; sourceTree = "<group>"; };
 		1829D8CB1E81B1E300EEFE71 /* SGButtonExtender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGButtonExtender.swift; sourceTree = "<group>"; };
@@ -330,7 +337,6 @@
 		1896D7831FF667A500EFDD53 /* POSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POSViewController.swift; sourceTree = "<group>"; };
 		1896D78A1FF667DA00EFDD53 /* ProfileTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableController.swift; sourceTree = "<group>"; };
 		1896D78C1FF667F800EFDD53 /* PromoTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromoTableController.swift; sourceTree = "<group>"; };
-		1896D78E1FF6719A00EFDD53 /* WeekEndPromoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekEndPromoViewController.swift; sourceTree = "<group>"; };
 		1896D7901FF671A700EFDD53 /* NewDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDishViewController.swift; sourceTree = "<group>"; };
 		1896D7921FF671BE00EFDD53 /* FishBiriyaniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishBiriyaniViewController.swift; sourceTree = "<group>"; };
 		1896D7961FF6740900EFDD53 /* NewPromoTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPromoTableController.swift; sourceTree = "<group>"; };
@@ -418,6 +424,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		181380881FF9F8B700B6867F /* Promo */ = {
+			isa = PBXGroup;
+			children = (
+				181380921FFA00BC00B6867F /* NewPromoImageTableCell.swift */,
+				181380911FFA00BC00B6867F /* NewPromoImageTableCell.xib */,
+			);
+			path = Promo;
+			sourceTree = "<group>";
+		};
 		1835F6A41F0CF4E50071184E /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
@@ -430,6 +445,7 @@
 			isa = PBXGroup;
 			children = (
 				183B45961FE4FF0E009282FB /* Register */,
+				181380881FF9F8B700B6867F /* Promo */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -747,6 +763,7 @@
 			isa = PBXGroup;
 			children = (
 				1896D78A1FF667DA00EFDD53 /* ProfileTableController.swift */,
+				181380851FF7871E00B6867F /* SetPinTableController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -756,7 +773,7 @@
 			children = (
 				1896D78C1FF667F800EFDD53 /* PromoTableController.swift */,
 				1896D7961FF6740900EFDD53 /* NewPromoTableController.swift */,
-				1896D78E1FF6719A00EFDD53 /* WeekEndPromoViewController.swift */,
+				181380951FFA7CF500B6867F /* WeekEndPromoTableController.swift */,
 				1896D7901FF671A700EFDD53 /* NewDishViewController.swift */,
 				1896D7921FF671BE00EFDD53 /* FishBiriyaniViewController.swift */,
 			);
@@ -951,6 +968,7 @@
 				183B46FF1FE6B148009282FB /* GoogleService-Info.plist in Resources */,
 				1890FA191FEEB9E7007D5536 /* generator.rb in Resources */,
 				18613AE31FE2CC1D004AF8F1 /* Images.xcassets in Resources */,
+				181380931FFA00BC00B6867F /* NewPromoImageTableCell.xib in Resources */,
 				1890FA1A1FEEB9EA007D5536 /* octicons.ttf in Resources */,
 				18613AE11FE2CC09004AF8F1 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -1147,6 +1165,7 @@
 			files = (
 				183B46A71FE57CE5009282FB /* FormCheckCell.swift in Sources */,
 				1896D7871FF667A500EFDD53 /* PayViewController.swift in Sources */,
+				181380961FFA7CF500B6867F /* WeekEndPromoTableController.swift in Sources */,
 				183B47001FE6F589009282FB /* SGUtility.swift in Sources */,
 				1896D7881FF667A500EFDD53 /* POSViewController.swift in Sources */,
 				185078F51FE2F8CB00AFB9F8 /* Network.swift in Sources */,
@@ -1164,7 +1183,6 @@
 				185078EB1FE2F16100AFB9F8 /* TourViewController.swift in Sources */,
 				183B46AA1FE57CFC009282FB /* FormInlinePickerCell.swift in Sources */,
 				183B46C61FE57D54009282FB /* SliderRowFormer.swift in Sources */,
-				1896D78F1FF6719A00EFDD53 /* WeekEndPromoViewController.swift in Sources */,
 				183B46CE1FE57D6E009282FB /* FormHeaderFooterView.swift in Sources */,
 				1896D7801FF65E4A00EFDD53 /* GiftStatsViewController.swift in Sources */,
 				183B459A1FE5009F009282FB /* RegisterFieldCell.swift in Sources */,
@@ -1206,6 +1224,7 @@
 				183B46CB1FE57D63009282FB /* BaseViewFormer.swift in Sources */,
 				183B46C71FE57D56009282FB /* StepperRowFormer.swift in Sources */,
 				185078EF1FE2F8AD00AFB9F8 /* GradientView.swift in Sources */,
+				181380861FF7871E00B6867F /* SetPinTableController.swift in Sources */,
 				183B46B61FE57D1A009282FB /* FormerProtocol.swift in Sources */,
 				183B46C91FE57D5C009282FB /* TextFieldRowFormer.swift in Sources */,
 				183B46AB1FE57CFE009282FB /* FormLabelCell.swift in Sources */,
@@ -1220,6 +1239,7 @@
 				183B46C21FE57D46009282FB /* PickerRowFormer.swift in Sources */,
 				183B46CA1FE57D5E009282FB /* TextViewRowFormer.swift in Sources */,
 				1896D7911FF671A700EFDD53 /* NewDishViewController.swift in Sources */,
+				181380941FFA00BC00B6867F /* NewPromoImageTableCell.swift in Sources */,
 				183B46B11FE57D0B009282FB /* FormStepperCell.swift in Sources */,
 				183B46BA1FE57D26009282FB /* FormViewController.swift in Sources */,
 				183B46B71FE57D1D009282FB /* RowFormer.swift in Sources */,

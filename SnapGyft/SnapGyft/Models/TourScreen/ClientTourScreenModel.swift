@@ -60,7 +60,7 @@ class ClientTourScreenModel: NSObject, OnboardingViewDelegate, OnboardingViewDat
             return OnboardingConfiguration(
                 image: UIImage(named: "PageNutritionImage")!,
                 itemImage: UIImage(named: "ItemNutritionIcon")!,
-                pageTitle: "Snap Event",
+                pageTitle: "BUY",
                 pageDescription: "Nutrition tracking can be difficult! \n\nContinue to use your favorite calorie tracking apps if you want, but check out your results here and make sure your macros are in check!",
                 //backgroundImage: UIImage(named: "BackgroundOrange"),
                 backgroundImage: UIImage(named: "BackgroundGreen"),

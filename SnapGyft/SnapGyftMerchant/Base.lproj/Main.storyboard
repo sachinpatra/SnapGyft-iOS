@@ -327,14 +327,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lTl-L9-qZ4">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Amount" textAlignment="natural" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="lTl-L9-qZ4">
                                 <rect key="frame" x="47" y="148" width="281" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BNH-v8-oV2"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5G-Wc-Roj" customClass="AwesomeButton" customModule="AwesomeButton">
                                 <rect key="frame" x="90" y="265" width="194" height="50"/>
@@ -385,6 +385,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gbL-rB-3BQ"/>
                     </view>
+                    <connections>
+                        <outlet property="amountTextField" destination="lTl-L9-qZ4" id="sZU-2n-2DO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yb2-Xt-Mu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -405,19 +408,22 @@
             </objects>
             <point key="canvasLocation" x="4044" y="-823"/>
         </scene>
-        <!--Next Payment Table Controller-->
+        <!--Title-->
         <scene sceneID="hFF-sC-qvw">
             <objects>
                 <tableViewController id="65A-Ok-Z9D" customClass="NextPaymentTableController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yqp-qW-NwM">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="yqp-qW-NwM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="65A-Ok-Z9D" id="QEV-cS-BYk"/>
                             <outlet property="delegate" destination="65A-Ok-Z9D" id="iI0-8B-T3P"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="kxk-nV-aPK">
+                        <barButtonItem key="rightBarButtonItem" title="SUPPORT" id="ibw-At-SL2"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FWG-q4-tRs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -528,13 +534,13 @@
                                                 <constraint firstAttribute="height" constant="60" id="oZw-a7-Dd5"/>
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Lifetime Payment $200"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="HelveticaNeue-Thin"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Lifetime Payment $2000"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="HelveticaNeue-Bold"/>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="colorOuter">
                                                     <color key="value" red="0.85882352939999995" green="0.52549019610000003" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="colorInner">
-                                                    <color key="value" red="1" green="0.98227362104698013" blue="0.11878688872929788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="value" red="1" green="0.98227362100000004" blue="0.1187868887" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                                 <userDefinedRuntimeAttribute type="point" keyPath="startPoint">
                                                     <point key="value" x="0.0" y="0.5"/>
@@ -628,16 +634,16 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="izR-kw-Shj" kind="show" identifier="showWeekEndPromoSegue" id="rkL-dN-YGt"/>
                         <segue destination="FXo-bV-iZy" kind="show" identifier="showNewDishSegue" id="ETA-Rs-AnB"/>
                         <segue destination="BnX-BF-Vho" kind="show" identifier="showFishBiriyaniSegue" id="TYh-qw-rPz"/>
+                        <segue destination="Dey-rW-Btk" kind="show" identifier="showWeekEndPromoSegue" id="Lsb-58-WkR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nhc-55-GHk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2950" y="573"/>
+            <point key="canvasLocation" x="2838" y="554"/>
         </scene>
-        <!--New Promo Table Controller-->
+        <!--Title-->
         <scene sceneID="52H-Ax-aO7">
             <objects>
                 <tableViewController id="MFZ-W7-ze3" customClass="NewPromoTableController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
@@ -650,25 +656,31 @@
                             <outlet property="delegate" destination="MFZ-W7-ze3" id="p1s-Rg-9fN"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="M37-Wj-v8S">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cZG-Pr-XP7"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lOV-9U-02T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3760" y="573"/>
         </scene>
-        <!--Week End Promo View Controller-->
-        <scene sceneID="hM3-UP-Htj">
+        <!--Week End Promo Table Controller-->
+        <scene sceneID="zTB-Pv-Aj2">
             <objects>
-                <viewController id="izR-kw-Shj" customClass="WeekEndPromoViewController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xnJ-kf-7yd">
+                <tableViewController id="Dey-rW-Btk" customClass="WeekEndPromoTableController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="rJW-sz-r3G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="MZ1-4A-bbK"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Plf-qc-qcX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Dey-rW-Btk" id="PM3-0R-bHG"/>
+                            <outlet property="delegate" destination="Dey-rW-Btk" id="fto-KH-2Gk"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6q9-Bc-a3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4524" y="573"/>
+            <point key="canvasLocation" x="4529" y="542"/>
         </scene>
         <!--New Dish View Controller-->
         <scene sceneID="h4j-UM-Jgf">
@@ -714,10 +726,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="l1r-wZ-QMs"/>
+                    <connections>
+                        <segue destination="JCJ-eY-a35" kind="show" identifier="showSetPinSegue" id="za9-wn-bQX"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5qr-zM-s90" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2835" y="1233"/>
+        </scene>
+        <!--Set Pin Table Controller-->
+        <scene sceneID="lL6-Vi-qcn">
+            <objects>
+                <tableViewController id="JCJ-eY-a35" customClass="SetPinTableController" customModule="SnapGyftMerchant" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="T7F-gF-Xay">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="JCJ-eY-a35" id="NUE-vn-P8f"/>
+                            <outlet property="delegate" destination="JCJ-eY-a35" id="any-RY-DYo"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wfq-Bx-eYQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3759" y="1236"/>
         </scene>
         <!--Account-->
         <scene sceneID="LSA-aH-VUG">

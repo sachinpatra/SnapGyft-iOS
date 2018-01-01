@@ -14,7 +14,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Snap Event-->
+        <!--BUY-->
         <scene sceneID="KpX-8N-yGK">
             <objects>
                 <viewController id="kYT-dg-8GH" customClass="SFEventViewController" customModule="SnapGyft" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,13 +27,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Snap Event" id="30X-nK-IfY"/>
+                    <navigationItem key="navigationItem" title="BUY" id="30X-nK-IfY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tpl-VZ-ZFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2316" y="-179.46026986506749"/>
         </scene>
-        <!--Account-->
+        <!--Wallet-->
         <scene sceneID="VIP-hF-LjU">
             <objects>
                 <viewController id="8Eo-UF-Jve" customClass="SFAccountViewController" customModule="SnapGyft" customModuleProvider="target" sceneMemberID="viewController">
@@ -46,7 +46,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Account" id="sZo-we-RIj">
+                    <navigationItem key="navigationItem" title="Wallet" id="sZo-we-RIj">
                         <barButtonItem key="rightBarButtonItem" title="$23" id="fqr-Vn-vAn">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
@@ -282,11 +282,11 @@
             </objects>
             <point key="canvasLocation" x="-63.200000000000003" y="185.75712143928038"/>
         </scene>
-        <!--Account-->
+        <!--Wallet-->
         <scene sceneID="tJ0-x8-bOQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Y2-L2-jr7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Account" id="wb5-fC-OvT"/>
+                    <tabBarItem key="tabBarItem" title="Wallet" id="wb5-fC-OvT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2zx-tD-q1B">
                         <autoresizingMask key="autoresizingMask"/>
@@ -318,11 +318,11 @@
             </objects>
             <point key="canvasLocation" x="439.19999999999999" y="-834.33283358320841"/>
         </scene>
-        <!--Event-->
+        <!--BUY-->
         <scene sceneID="w0Y-Fb-9Mm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rvl-L7-0CF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Event" id="Ie7-dT-2ER"/>
+                    <tabBarItem key="tabBarItem" title="BUY" id="Ie7-dT-2ER"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ov8-jd-fXG">
                         <autoresizingMask key="autoresizingMask"/>
