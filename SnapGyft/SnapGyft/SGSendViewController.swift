@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import KRProgressHUD
 
 class SGSendViewController: EPContactsPicker {
 
@@ -16,17 +16,18 @@ class SGSendViewController: EPContactsPicker {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.multiSelectEnabled = true
-        self.contactDelegate = self
-        self.subtitleCellValue = SubtitleCellValue.email
+        multiSelectEnabled = true
+        contactDelegate = self
+        subtitleCellValue = SubtitleCellValue.email
         
-        self.foregroundNotification = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationWillEnterForeground, object: nil, queue: OperationQueue.main) {_ in
+        foregroundNotification = NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationWillEnterForeground, object: nil, queue: OperationQueue.main) {_ in
             self.reloadContacts()
         }
+        
     }
 
     deinit {
-        NotificationCenter.default.removeObserver(self.foregroundNotification)
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +35,7 @@ class SGSendViewController: EPContactsPicker {
     }
     
     @IBAction func onAddBtnClicked(_ sender: UIBarButtonItem) {
-        self.performSegue(withIdentifier: "ShowAddFriendSegue", sender: self)
+        performSegue(withIdentifier: "ShowAddFriendSegue", sender: self)
     }
     
     

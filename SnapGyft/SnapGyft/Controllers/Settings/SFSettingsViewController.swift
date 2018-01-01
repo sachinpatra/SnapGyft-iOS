@@ -69,7 +69,12 @@ class SFSettingsViewController: UITableViewController {
         
         //Section 2
         let gyftCardBalanceRow = createSelectorRow("Gyft Card Balance", "$23", pushGyftCardBalance())
+        let redemptionRow = createMenu("Redemptions") { [weak self] in
+            self?.performSegue(withIdentifier: "ShowRedemptionListSegue", sender: self)
+        }
 
+
+        //Section 3
         let helpCenterRow = createMenu("Help Center") { [weak self] in
             //self?.navigationController?.pushViewController(DefaultsViewController(), animated: true)
         }
@@ -80,10 +85,6 @@ class SFSettingsViewController: UITableViewController {
             //self?.navigationController?.pushViewController(DefaultsViewController(), animated: true)
         }
         
-//        let disableRow = LabelRowFormer<CenterLabelCell>()
-//            .configure {
-//                $0.text = "Log Out"
-//            }.onSelected(disableRowSelected)
         
         // Create Headers and Footers
         let createHeader: ((String) -> ViewFormer) = { text in
@@ -103,9 +104,8 @@ class SFSettingsViewController: UITableViewController {
         }
         
         // Create SectionFormers
-        
         let section1 = SectionFormer(rowFormer: profileRow).set(headerViewFormer: createHeader("  "))
-        let section2 = SectionFormer(rowFormer: gyftCardBalanceRow).set(headerViewFormer: createHeader("  "))
+        let section2 = SectionFormer(rowFormer: gyftCardBalanceRow, redemptionRow).set(headerViewFormer: createHeader("  "))
         let section3 = SectionFormer(rowFormer: helpCenterRow, feedbackRow, rateUsRow)
             .set(footerViewFormer: createFooter("Copyright © 2017 SnapGyft. All rights reserved."))
 
@@ -122,18 +122,4 @@ class SFSettingsViewController: UITableViewController {
         }
     }
     
-    
-//    private func disableRowSelected(rowFormer: RowFormer) {
-//        let alertController = UIAlertController(title: "SnapGyft", message: "Are you sure! Do you want to logout?", preferredStyle: .alert)
-//        alertController.addAction(UIAlertAction(title: "No", style: .destructive, handler: nil))
-//        alertController.addAction(UIAlertAction(title: "Yes", style: .default) { (action: UIAlertAction) in
-//            self.accountKit.logOut()
-//            DispatchQueue.main.async(execute: {
-//                self.performSegue(withIdentifier: "ShowLoginSegue", sender: self)
-//            })
-//        })
-//        present(alertController, animated: true, completion: nil)
-//        former.deselect(animated: true)
-//      
-//    }
 }

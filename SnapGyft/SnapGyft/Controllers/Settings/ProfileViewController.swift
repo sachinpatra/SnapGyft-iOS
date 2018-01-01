@@ -11,12 +11,9 @@ import CoreData
 
 class ProfileViewController: UITableViewController {
 
-    var managedObjectContext: NSManagedObjectContext? = nil
     var myProfile: Profile?
-    var accountKit: AKFAccountKit!
-    
+    let coredata = AACoreData.sharedInstance()
 
-    // MARK: Public
     public private(set) lazy var former: Former = Former(tableView: self.tableView)
     let appdelObj: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
@@ -24,93 +21,62 @@ class ProfileViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Profile"
         
-        
-        managedObjectContext = appdelObj.persistentContainer.viewContext
-        let employeesFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Profile")
-        
-        do {
-            myProfile = try (managedObjectContext?.fetch(employeesFetch) as! [Profile]).first
-        } catch {
-            fatalError("Failed to fetch employees: \(error)")
+        coredata.fetchRecords(entityName: .ProfileEntityName) { (results) in
+            self.myProfile = (results as? [Profile])?.first
         }
         
-        if myProfile?.phoneNumber == nil
-            /*&& accountKit == nil */{
-            self.accountKit = AKFAccountKit(responseType: AKFResponseType.accessToken)
-            accountKit.requestAccount{
-                (account, error) -> Void in
-                self.saveProfile(with: "accountID", value: account?.accountID ?? "")
-                
-                if account?.phoneNumber?.phoneNumber != nil {
-                    self.saveProfile(with: "phonenumber", value: account!.phoneNumber?.stringRepresentation() ?? "")
-                }
-            }
-        }
-
-        
-        configure()
+        configureForm()
     }
     
     func saveProfile(with propertyName: String, value: Any) {
-        
-        if (myProfile == nil){
-            myProfile = Profile(context: managedObjectContext!)
+        coredata.fetchRecords(entityName: .ProfileEntityName) { (results) in
+           let profile = (results as? [Profile])?.first
+            
+            switch propertyName {
+            case "name":
+                profile?.firstName = value as? String
+                break
+            case "phone":
+                profile?.phoneNumber = value as? String
+                break
+            case "email":
+                profile?.emailAddress = value as? String
+                break
+            case "gender":
+                profile?.gender = value as? String
+                break
+            case "birthday":
+                profile?.birthDay = value as? NSDate
+                break
+            case "introduction":
+                profile?.introduction = value as? String
+                break
+            case "moreinfo":
+                profile?.moreInformation = value as! Bool
+                break
+            case "nickname":
+                profile?.nickname = value as? String
+                break
+            case "location":
+                profile?.location = value as? String
+                break
+            case "job":
+                profile?.job = value as? String
+                break
+            case "imagedata":
+                profile?.imageData = value as? NSData
+                break
+                
+            default: break
+            }
         }
         
-        switch propertyName {
-        case "name":
-            myProfile?.firstName = value as? String
-            break
-        case "phone":
-            myProfile?.phoneNumber = value as? String
-            break
-        case "gender":
-            myProfile?.gender = value as? String
-            break
-        case "birthday":
-            myProfile?.birthDay = value as? NSDate
-            break
-        case "introduction":
-            myProfile?.introduction = value as? String
-            break
-        case "moreinfo":
-            myProfile?.moreInformation = value as! Bool
-            break
-        case "nickname":
-            myProfile?.nickname = value as? String
-            break
-        case "location":
-            myProfile?.location = value as? String
-            break
-        case "job":
-            myProfile?.job = value as? String
-            break
-        case "accountID":
-            myProfile?.accountID = value as? String
-            break
-        case "phonenumber":
-            myProfile?.phoneNumber = value as? String
-            break
-        case "imagedata":
-            myProfile?.imageData = value as? NSData
-            break
-
-        default: break
-        }
-        
-        // Save the context.
-        do {
-            try managedObjectContext!.save()
-        } catch {
-            let nserror = error as NSError
-            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-        }
     }
 
     // MARK: Private
     private lazy var formerInputAccessoryView: FormerInputAccessoryView = FormerInputAccessoryView(former: self.former)    
     
-    private func configure() {
+    private func configureForm() {
         
         // Create RowFomers
         let nameRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
@@ -130,7 +96,15 @@ class ProfileViewController: UITableViewController {
                 $0.text = self.myProfile?.phoneNumber
             }.onTextChanged {
                 self.saveProfile(with: "phone", value: $0)
-
+        }
+        let emailRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
+            $0.titleLabel.text = "Email"
+            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
+            $0.textField.delegate = self
+            }.configure {
+                $0.text = self.myProfile?.emailAddress
+            }.onTextChanged {
+                self.saveProfile(with: "email", value: $0)
         }
 
         let genderRow = InlinePickerRowFormer<ProfileLabelCell, String>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
@@ -145,9 +119,8 @@ class ProfileViewController: UITableViewController {
                 }
             }.onValueChanged {
                 self.saveProfile(with: "gender", value: $0.title)
-
         }
-        let birthdayRow = InlineDatePickerRowFormer<ProfileLabelCell>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
+        /*let birthdayRow = InlineDatePickerRowFormer<ProfileLabelCell>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
             $0.titleLabel.text = "Birthday"
             }.configure {
 //                $0.date = Profile.sharedInstance.birthDay ?? Date()
@@ -160,8 +133,7 @@ class ProfileViewController: UITableViewController {
                 return String.mediumDateNoTime(date: $0)
             }.onDateChanged {
                 self.saveProfile(with: "birthday", value: $0)
-
-        }
+        }*/
         let moreRow = SwitchRowFormer<FormSwitchCell>() {
             $0.titleLabel.text = "Add more information ?"
             $0.titleLabel.textColor = .formerColor()
@@ -172,9 +144,10 @@ class ProfileViewController: UITableViewController {
                     $0.switched = moreInformation
                 }
                 $0.switchWhenSelected = true
+
             }.onSwitchChanged { [weak self] in
                 self?.saveProfile(with: "moreinfo", value: $0)
-                self?.switchInfomationSection()
+                self?.switchInfomationSection(switchStatus: $0)
         }
         
         // Create Headers
@@ -190,7 +163,7 @@ class ProfileViewController: UITableViewController {
         // Create SectionFormers
         let imageSection = SectionFormer(rowFormer: imageRow)
             .set(headerViewFormer: createHeader("Profile Image"))
-        let aboutSection = SectionFormer(rowFormer: nameRow, phoneRow, genderRow, birthdayRow)
+        let aboutSection = SectionFormer(rowFormer: nameRow, phoneRow, emailRow, genderRow/*, birthdayRow*/)
             .set(headerViewFormer: createHeader("About"))
         let moreSection = SectionFormer(rowFormer: moreRow)
             .set(headerViewFormer: createHeader("More Infomation"))
@@ -199,8 +172,8 @@ class ProfileViewController: UITableViewController {
             .onCellSelected { [weak self] _ in
                 self?.formerInputAccessoryView.update()
         }
-        if  (myProfile?.moreInformation)! {
-//        if let _ = myProfile?.moreInformation {
+        
+        if myProfile?.moreInformation == true{
             former.append(sectionFormer: informationSection)
         }
     }
@@ -210,7 +183,6 @@ class ProfileViewController: UITableViewController {
             $0.iconView.image = UIImage(named: "Profile_Demo")
             if let image = self.myProfile?.imageData{
                 var imageArray =  UIImage(data: image as Data)
-                print("temp")
                 $0.iconView.image = UIImage(data: image as Data)
             }
             }.configure {
@@ -276,8 +248,8 @@ class ProfileViewController: UITableViewController {
         present(picker, animated: true, completion: nil)
     }
     
-    private func switchInfomationSection() {
-        if (myProfile?.moreInformation)! {
+    private func switchInfomationSection(switchStatus: Bool){
+        if (switchStatus) {
             former.insertUpdate(sectionFormer: informationSection, toSection: former.numberOfSections, rowAnimation: .top)
         } else {
             former.removeUpdate(sectionFormer: informationSection, rowAnimation: .top)

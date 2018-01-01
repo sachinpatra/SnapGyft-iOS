@@ -2,18 +2,19 @@
 //  UIViewController+Extention.swift
 //  SnapGyft
 //
-//  Created by Patra, Sachin Kumar (TekSystems) on 3/22/17.
+//  Created by Patra, Sachin Kumar (TekSystems) on 12/24/17.
 //  Copyright © 2017 Patra, Sachin Kumar (TekSystems). All rights reserved.
 //
 
 import UIKit
+import AccountKit
 
-extension UIViewController {
-
-    //MARK:- Alert Function
-    func alertShow(strMessage: String) {
-        let alert = UIAlertController(title: "SnapGyft", message: strMessage, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:nil))
-        self.present(alert, animated: true, completion: nil)
+extension UIViewController: AKFViewControllerDelegate {
+    func prepareLoginViewController(_ loginViewController: AKFViewController) {
+        
+        loginViewController.delegate = self
+        loginViewController.enableSendToFacebook = true
+        //viewController.enableGetACall = true
+        loginViewController.uiManager = AKFSkinManager.init(skinType: .classic, primaryColor: UIColor.formerSubColor(), backgroundImage: UIImage(named: "Login_Background"), backgroundTint: .white, tintIntensity: 0.60)
     }
 }

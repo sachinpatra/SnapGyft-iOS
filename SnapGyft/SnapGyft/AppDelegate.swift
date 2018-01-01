@@ -7,18 +7,23 @@
 //
 
 import UIKit
-import CoreData
+import KRProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    let indicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        self.setupAppearance()
+        // ProgressHUD Configuration
+        KRProgressHUD.set(style: .custom(background: UIColor.white, text: UIColor.black, icon: nil))
+        KRProgressHUD.set(activityIndicatorViewStyle: .gradationColor(head: .formerSubColor(), tail: .formerSubColor()))
+        
+        AACoreData.sharedInstance().dataModel = "SnapGyft"
+        
+        UINavigationBar.setupAppearance()
+        
         
         return true
     }
@@ -45,24 +50,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
-    }
-
-    func setupAppearance() {
-        UINavigationBar.appearance().barTintColor = UIColor.formerSubColor()
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
-        UISearchBar.appearance().tintColor = UIColor.formerSubColor()
-        UITabBar.appearance().tintColor = UIColor.formerSubColor()
-        
-        //UISearchBar.appearance().barTintColor = UIColor.formerSubColor()
-        //UISearchBar.appearance(whenContainedInInstancesOf: [UITableViewController.self]).barTintColor = .blue
-        //UISearchBar.appearance(whenContainedInInstancesOf: [UITableViewController.self]).tintColor = .white
-
+        AACoreData.sharedInstance().saveContext()
     }
     
     // MARK: - Core Data stack
-    lazy var persistentContainer: NSPersistentContainer = {
+  /*  lazy var persistentContainer: NSPersistentContainer = {
         /*
          The persistent container for the application. This implementation
          creates and returns a container, having loaded the store for the
@@ -103,25 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
-    }
-    
-    // MARK: - HUD Custom Method
-    func showHUD(viewNew: UIView){
-        DispatchQueue.main.async {
-            self.indicator.center = viewNew.center
-            self.indicator.frame.origin.y = self.indicator.frame.origin.y - 64
-            self.indicator.backgroundColor = UIColor.lightGray
-            viewNew.addSubview(self.indicator)
-            viewNew.bringSubview(toFront: self.indicator)
-            self.indicator.startAnimating(isUserInteractionEnabled: false)
-        }
-    }
-    
-    func HideHud() {
-        DispatchQueue.main.async {
-            self.indicator.stopAnimating(isUserInteractionEnabled: true)
-        }
-    }
+    }*/
 
     func mobileNumberValidate(number: String) -> Bool {
         let numberRegEx = "[0-9]{10,15}"
@@ -147,15 +121,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-}
-
-extension UIActivityIndicatorView {
-    func startAnimating(isUserInteractionEnabled: Bool){
-        self.startAnimating()
-        self.superview?.isUserInteractionEnabled = isUserInteractionEnabled
-    }
-    func stopAnimating(isUserInteractionEnabled: Bool){
-        self.stopAnimating()
-        self.superview?.isUserInteractionEnabled = isUserInteractionEnabled
-    }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import Contacts
+import Alertift
 
 protocol SGAddFriendViewControllerDelegate {
     func addContactRefresh(_ addFriendView: SGAddFriendViewController)
@@ -33,12 +34,6 @@ class SGAddFriendViewController: UIViewController {
         phoneTextField.padding(width: 5)
         emailTextField.padding(width: 5)
         
-        //Setting Current Country Default Code
-        let locale = Locale.current
-        let countryCode = (locale as NSLocale).object(forKey: NSLocale.Key.countryCode) as! String?
-        let countryData = CallingCodes.filter { $0["code"] == countryCode }
-        let dialCode = countryData[0]["dial_code"]!
-        self.countryBtn.setTitle("\(dialCode)", for: .normal)
 
 //        NotificationCenter.default.addObserver(self, selector: #selector(SGAddFiendViewController.keyboardWasShown(aNotification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
 //        NotificationCenter.default.addObserver(self, selector: #selector(SGAddFiendViewController.keyboardWillBeHidden(aNotification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -48,21 +43,15 @@ class SGAddFriendViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    fileprivate lazy var CallingCodes = { () -> [[String: String]] in
-        let resourceBundle = Bundle(for: MICountryPicker.classForCoder())
-        guard let path = resourceBundle.path(forResource: "CallingCodes", ofType: "plist") else { return [] }
-        return NSArray(contentsOfFile: path) as! [[String: String]]
-    }()
-    
     @IBAction func CountryCodeBtnClicked(_ sender: Any) {
-        let picker = MICountryPicker { (name, code) -> () in}
-        // Optional: To pick from custom countries list
-        // picker.customCountriesCode = ["EG", "US", "AF", "AQ", "AX"]
-        picker.delegate = self
-        picker.showCallingCodes = true
-        picker.didSelectCountryClosure = { name, code in}
-        
-        self.present(UINavigationController(rootViewController: picker), animated: true, completion: nil)
+//        let picker = MICountryPicker { (name, code) -> () in}
+//        // Optional: To pick from custom countries list
+//        // picker.customCountriesCode = ["EG", "US", "AF", "AQ", "AX"]
+//        picker.delegate = self
+//        picker.showCallingCodes = true
+//        picker.didSelectCountryClosure = { name, code in}
+//        
+//        self.present(UINavigationController(rootViewController: picker), animated: true, completion: nil)
     }
     
     @IBAction func SaveBtnClicked(_ sender: Any) {
@@ -98,7 +87,8 @@ class SGAddFriendViewController: UIViewController {
                     _ = self.navigationController?.popViewController(animated: true)
                 }
                 catch {
-                    self.alertShow(strMessage: "Unable to save the new contact.")
+                    Alertift.alert(title: "SnapGyft", message: "Unable to save the new contact.")
+                        .action(.default("OK")).show()
                 }
                
             }
@@ -114,28 +104,32 @@ class SGAddFriendViewController: UIViewController {
     func validationCheck() -> Bool {
         if (nameTextField.text?.trim().isEmpty)! || nameTextField.text?.trim() == nil
         {
-            alertShow(strMessage: "Please enter full name")
+            Alertift.alert(title: "SnapGyft", message: "Please enter full name")
+                .action(.default("OK")).show()
             return false
         }
         else if (nameTextField.text?.trim().characters.count)! > 0 {
             let arrFullname = nameTextField.text?.trim().components(separatedBy: " ")
             
             if (arrFullname?.count)! < 2 {
-                alertShow(strMessage: "Please enter first and last name")
+                Alertift.alert(title: "SnapGyft", message: "Please enter first and last name")
+                    .action(.default("OK")).show()
                 return false
             }
         }
         
         if (phoneTextField.text?.isEmpty)! || phoneTextField.text == nil
         {
-            alertShow(strMessage: "Please enter mobile number")
+            Alertift.alert(title: "SnapGyft", message: "Please enter mobile number")
+                .action(.default("OK")).show()
             return false
         }
         else if (phoneTextField.text?.characters.count)! > 0
         {
             let checkmobile: Bool = appdelObj.mobileNumberValidate(number: phoneTextField.text!)
             if checkmobile == false {
-                alertShow(strMessage: "Please enter valid mobile number")
+                Alertift.alert(title: "SnapGyft", message: "Please enter valid mobile number")
+                    .action(.default("OK")).show()
                 return false
             }
         }
@@ -148,7 +142,8 @@ class SGAddFriendViewController: UIViewController {
                 return true
             }
             else{
-                alertShow(strMessage: "Please enter valid email")
+                Alertift.alert(title: "SnapGyft", message: "Please enter valid email")
+                    .action(.default("OK")).show()
                 return false
             }
         }
@@ -251,13 +246,4 @@ extension SGAddFriendViewController: UITextFieldDelegate
         return true
     }
 }
-extension SGAddFriendViewController: MICountryPickerDelegate {
-    func countryPicker(_ picker: MICountryPicker, didSelectCountryWithName name: String, code: String) {
-    }
-    
-    func countryPicker(_ picker: MICountryPicker, didSelectCountryWithName name: String, code: String, dialCode: String){
-        self.dismiss(animated: true) {
-            self.countryBtn.setTitle("\(dialCode)", for: .normal)
-        }
-    }
-}
+

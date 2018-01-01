@@ -1,0 +1,6 @@
+framework module CSWAnimatedTextView {
+  umbrella header "CSWAnimatedTextView-umbrella.h"
+
+  export *
+  module * { export * }
+}
