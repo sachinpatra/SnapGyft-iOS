@@ -184,9 +184,6 @@ class NewPromoTableController: UITableViewController {
             .actions(["Camera", "Photo Galery"])
             .action(.destructive("Cancel"))
             .finally { action, index in
-                if action.style == .cancel {
-                    return
-                }
                 
                 let picker = UIImagePickerController()
                 picker.delegate = self
@@ -196,6 +193,7 @@ class NewPromoTableController: UITableViewController {
                     picker.sourceType = UIImagePickerControllerSourceType.camera
                 case "Photo Galery":
                     picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+                case "Cancel":return
                 default:break
                 }
                 self.present(picker, animated: true, completion: nil)

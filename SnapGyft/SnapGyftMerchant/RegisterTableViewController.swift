@@ -162,9 +162,7 @@ class RegisterTableViewController: UITableViewController, QRCodeReaderViewContro
         
         //Set Table Header
         let cellTableViewHeader = tableView.dequeueReusableCell(withIdentifier: "RegisterTableHeaderIdentifier")
-        //cellTableViewHeader?.frame = CGRect(x: 0, y: 0, width: tableView.bounds.width, height: 60)
         tableView.tableHeaderView = cellTableViewHeader
-
         
     }
     
@@ -417,7 +415,18 @@ class RegisterTableViewController: UITableViewController, QRCodeReaderViewContro
             SGUtility.showAlert(withMessage: "Check Network Connection."); return
         }
         
-        //Phone Authentication
+        //TODO: Below code is for temporary
+        KRProgressHUD.show(withMessage: nil){
+            sleep(5)
+            KRProgressHUD.dismiss({
+                self.performSegue(withIdentifier: "ShowHomeSegue", sender: self)
+
+                SGUtility.showAlert(withMessage: "Your business is ready to issue gift cards with default settings. To customize go to your profile."); return
+            })
+        }
+        
+        //TODO:-  Unblock this after demo to real client
+/*        //Phone Authentication
         KRProgressHUD.show(withMessage: nil) {
             PhoneAuthProvider.provider().verifyPhoneNumber("+91"+self.businessPhoneRow.text!, uiDelegate: nil) { (verificationID, error) in
                 KRProgressHUD.dismiss({
@@ -466,7 +475,7 @@ class RegisterTableViewController: UITableViewController, QRCodeReaderViewContro
                     }
                 })
             }
-        }
+        }*/
     }
     
     func registerMerchant() {
@@ -518,7 +527,17 @@ class RegisterTableViewController: UITableViewController, QRCodeReaderViewContro
         reader.stopScanning()
         dismiss(animated: true) { _ in
             //let decodedString = result.value.base64Decoded()
-            Alertift.alert(title: "SnapGyft", message: "Scaned Value = \(result.value)").action(.cancel("OK")).show()
+            //Alertift.alert(title: "SnapGyft", message: "Scaned Value = \(result.value)").action(.cancel("OK")).show()
+            
+            Alertift.alert(title: "SnapGyft", message: "Input your pin")
+                .textField { textField in
+                    textField.keyboardType = .numberPad
+                    textField.placeholder = "Pin"
+                }
+                .action(.default("OK")) { _, _, textFields in
+                    if let _ = textFields?.first?.text {
+                    }
+            }.show()
         }
     }
     

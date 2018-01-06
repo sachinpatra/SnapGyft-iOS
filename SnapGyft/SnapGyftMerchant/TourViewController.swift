@@ -32,9 +32,9 @@ class TourViewController: UIViewController {
             UIView.animate(withDuration: 0.3){
                 switch page {
                 case 0:
-                    self.getStartedButton.backgroundColor = UIColor(red: 220, green: 66, blue: 66)
-                case 1:
                     self.getStartedButton.backgroundColor = UIColor(red: 33, green: 184, blue: 252)
+                case 1:
+                    self.getStartedButton.backgroundColor = UIColor(red: 220, green: 66, blue: 66)
                 case 2:
                     self.getStartedButton.backgroundColor = UIColor.formerSubColor()
                 case 3:

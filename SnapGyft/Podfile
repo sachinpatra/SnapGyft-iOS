@@ -18,6 +18,7 @@
   #pod 'Wallet'
   pod 'QRCodeReader.swift'
   pod 'CSWAnimatedTextView'
+  pod "Shiny"
 
 
 target 'SnapGyft' do

@@ -199,7 +199,6 @@
 		18AE40751E7B15C600B7F495 /* SnapGyft.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18AE40731E7B15C600B7F495 /* SnapGyft.xcdatamodeld */; };
 		18AE40771E7B15C600B7F495 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18AE40761E7B15C600B7F495 /* Images.xcassets */; };
 		18AE407A1E7B15C600B7F495 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18AE40781E7B15C600B7F495 /* LaunchScreen.storyboard */; };
-		18AE40861E7B185000B7F495 /* SFEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AE40851E7B185000B7F495 /* SFEventViewController.swift */; };
 		18B7C95A1FCF325A00771B64 /* AwesomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7C9591FCF325A00771B64 /* AwesomeButton.swift */; };
 		18BB4F8A1FED77440044392F /* DCQRCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB4F881FED77440044392F /* DCQRCode.swift */; };
 		18BB4F8B1FED77440044392F /* FunctionalCoreImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BB4F891FED77440044392F /* FunctionalCoreImage.swift */; };
@@ -213,6 +212,12 @@
 		18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */; };
 		18FCC5E01E7EF35700198CF0 /* SGSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */; };
 		50D732379430BA3B53F7132A /* Pods_SnapGyftMerchant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F852AB73D487DD112A6B3BF1 /* Pods_SnapGyftMerchant.framework */; };
+		8C81F89B1FFFFF2E0037DA96 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81F89A1FFFFF2E0037DA96 /* BuyViewController.swift */; };
+		8C81F89D20009BAD0037DA96 /* SelectAmountTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81F89C20009BAD0037DA96 /* SelectAmountTableController.swift */; };
+		8C81F8A02000A3F90037DA96 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81F89F2000A3F90037DA96 /* ContainerView.swift */; };
+		8C81F8A22000A5530037DA96 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81F8A12000A5530037DA96 /* Extensions.swift */; };
+		8C81F8A42000A7840037DA96 /* SelectAmountCardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81F8A32000A7840037DA96 /* SelectAmountCardTableCell.swift */; };
+		8C81F8A620010A620037DA96 /* OrderSummaryTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81F8A520010A620037DA96 /* OrderSummaryTableController.swift */; };
 		E5C5BC4814C251F575DE70B9 /* Pods_SnapGyft.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC2EAA6B5966C7513AAB391 /* Pods_SnapGyft.framework */; };
 /* End PBXBuildFile section */
 
@@ -350,7 +355,6 @@
 		18AE40761E7B15C600B7F495 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18AE40791E7B15C600B7F495 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18AE407B1E7B15C600B7F495 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		18AE40851E7B185000B7F495 /* SFEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFEventViewController.swift; sourceTree = "<group>"; };
 		18B7C9591FCF325A00771B64 /* AwesomeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AwesomeButton.swift; sourceTree = "<group>"; };
 		18BB4F881FED77440044392F /* DCQRCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DCQRCode.swift; sourceTree = "<group>"; };
 		18BB4F891FED77440044392F /* FunctionalCoreImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunctionalCoreImage.swift; sourceTree = "<group>"; };
@@ -363,6 +367,12 @@
 		18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSettingsViewController.swift; sourceTree = "<group>"; };
 		18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGGyftCardBalanceViewController.swift; sourceTree = "<group>"; };
 		18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSendViewController.swift; sourceTree = "<group>"; };
+		8C81F89A1FFFFF2E0037DA96 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
+		8C81F89C20009BAD0037DA96 /* SelectAmountTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAmountTableController.swift; sourceTree = "<group>"; };
+		8C81F89F2000A3F90037DA96 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		8C81F8A12000A5530037DA96 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8C81F8A32000A7840037DA96 /* SelectAmountCardTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAmountCardTableCell.swift; sourceTree = "<group>"; };
+		8C81F8A520010A620037DA96 /* OrderSummaryTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderSummaryTableController.swift; sourceTree = "<group>"; };
 		92B5F5841D9784878426B4CA /* Pods-SnapGyftMerchant.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapGyftMerchant.release.xcconfig"; path = "Pods/Target Support Files/Pods-SnapGyftMerchant/Pods-SnapGyftMerchant.release.xcconfig"; sourceTree = "<group>"; };
 		BCC2EAA6B5966C7513AAB391 /* Pods_SnapGyft.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapGyft.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D73B90614B28C75EE2C0916A /* Pods-SnapGyftMerchant.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapGyftMerchant.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SnapGyftMerchant/Pods-SnapGyftMerchant.debug.xcconfig"; sourceTree = "<group>"; };
@@ -405,6 +415,7 @@
 			children = (
 				186B5E241FE05FCA00AC024D /* Account */,
 				18FCC5B81E7E6E3000198CF0 /* Settings */,
+				8C81F8991FFFFF0A0037DA96 /* BUY */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -823,7 +834,6 @@
 				180FFAF01E7DE46B00435772 /* Models */,
 				180FFAF31E7DE4E500435772 /* Controllers */,
 				18AE406C1E7B15C600B7F495 /* AppDelegate.swift */,
-				18AE40851E7B185000B7F495 /* SFEventViewController.swift */,
 				185D8C511E7C7BE700692AD4 /* TourViewController.swift */,
 				18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */,
 				18D914561E7F36190006C7BA /* SGAddFriendViewController.swift */,
@@ -867,6 +877,19 @@
 				92B5F5841D9784878426B4CA /* Pods-SnapGyftMerchant.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8C81F8991FFFFF0A0037DA96 /* BUY */ = {
+			isa = PBXGroup;
+			children = (
+				8C81F89A1FFFFF2E0037DA96 /* BuyViewController.swift */,
+				8C81F89C20009BAD0037DA96 /* SelectAmountTableController.swift */,
+				8C81F8A520010A620037DA96 /* OrderSummaryTableController.swift */,
+				8C81F8A32000A7840037DA96 /* SelectAmountCardTableCell.swift */,
+				8C81F89F2000A3F90037DA96 /* ContainerView.swift */,
+				8C81F8A12000A5530037DA96 /* Extensions.swift */,
+			);
+			path = BUY;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1065,6 +1088,7 @@
 				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Shiny/Shiny.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/expanding-collection/expanding_collection.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -1083,6 +1107,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shiny.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/expanding_collection.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -1129,6 +1154,7 @@
 				"${BUILT_PRODUCTS_DIR}/OnboardingKit/OnboardingKit.framework",
 				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Shiny/Shiny.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/expanding-collection/expanding_collection.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -1147,6 +1173,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnboardingKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Shiny.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/expanding_collection.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -1266,6 +1293,7 @@
 				18C7C02E1FEDA2CE00C0472D /* CardDetailQRCodeCell.swift in Sources */,
 				183B469A1FE57BA2009282FB /* StepperRowFormer.swift in Sources */,
 				18BB4F8B1FED77440044392F /* FunctionalCoreImage.swift in Sources */,
+				8C81F89B1FFFFF2E0037DA96 /* BuyViewController.swift in Sources */,
 				183B46871FE57BA2009282FB /* FormTextViewCell.swift in Sources */,
 				183B468E1FE57BA2009282FB /* BaseRowFormer.swift in Sources */,
 				183B469F1FE57BA2009282FB /* CustomViewFormer.swift in Sources */,
@@ -1298,6 +1326,7 @@
 				18F5C0761FEFCE80008E9FCD /* UIViewController+Extention.swift in Sources */,
 				1829D8CE1E81B7B200EEFE71 /* UITextField+Extention.swift in Sources */,
 				186B5E261FE05FCA00AC024D /* SFAccountViewController.swift in Sources */,
+				8C81F8A02000A3F90037DA96 /* ContainerView.swift in Sources */,
 				183B46A21FE57BA2009282FB /* FormLabelFooterView.swift in Sources */,
 				18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */,
 				183B467F1FE57BA2009282FB /* FormPickerCell.swift in Sources */,
@@ -1325,8 +1354,9 @@
 				183B46911FE57BA2009282FB /* DatePickerRowFormer.swift in Sources */,
 				183B467C1FE57BA2009282FB /* FormInlineDatePickerCell.swift in Sources */,
 				180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */,
+				8C81F8A42000A7840037DA96 /* SelectAmountCardTableCell.swift in Sources */,
+				8C81F8A22000A5530037DA96 /* Extensions.swift in Sources */,
 				183B468B1FE57BA2009282FB /* SectionFormer.swift in Sources */,
-				18AE40861E7B185000B7F495 /* SFEventViewController.swift in Sources */,
 				186B5E611FE0628F00AC024D /* ProfileImageCell.swift in Sources */,
 				1890FA111FEEB793007D5536 /* EPExtensions.swift in Sources */,
 				183B468D1FE57BA2009282FB /* FormViewController.swift in Sources */,
@@ -1342,12 +1372,14 @@
 				183B46841FE57BA2009282FB /* FormStepperCell.swift in Sources */,
 				18C7C02B1FED941D00C0472D /* CardDetailTableController.swift in Sources */,
 				183B46A31FE57BA2009282FB /* FormLabelHeaderView.swift in Sources */,
+				8C81F8A620010A620037DA96 /* OrderSummaryTableController.swift in Sources */,
 				18FCC5BC1E7E6E3000198CF0 /* ProfileViewController.swift in Sources */,
 				183B46981FE57BA2009282FB /* SelectorPickerRowFormer.swift in Sources */,
 				18AE406D1E7B15C600B7F495 /* AppDelegate.swift in Sources */,
 				18D914571E7F36190006C7BA /* SGAddFriendViewController.swift in Sources */,
 				18FCC5BD1E7E6E3000198CF0 /* SFSettingsViewController.swift in Sources */,
 				1820C47D1FEEDF04003AE023 /* RedemptionListViewController.swift in Sources */,
+				8C81F89D20009BAD0037DA96 /* SelectAmountTableController.swift in Sources */,
 				186B5E721FE0679500AC024D /* CollectionViewHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

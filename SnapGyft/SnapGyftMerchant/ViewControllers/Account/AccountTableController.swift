@@ -57,7 +57,7 @@ class AccountTableController: UITableViewController {
         }
         
         //Section 1
-        let paymentRow = createSelectorRow("Payment", "$200", pushPaymentController())
+        let paymentRow = createSelectorRow("Payment", "$2000", pushPaymentController())
         let giftStatsRow = createMenu("Gift Stats") { [weak self] in
             self?.performSegue(withIdentifier: "showGiftStatsSegue", sender: self)
         }

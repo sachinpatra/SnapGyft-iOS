@@ -57,6 +57,8 @@
 		</dict>
 	</array>
 	<key>NSCameraUsageDescription</key>
-	<string>The camera is needed to scan QR codes</string>
+	<string>Allow SnapGyft to access device camera.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Select picture from Photo Galery.</string>
 </dict>
 </plist>

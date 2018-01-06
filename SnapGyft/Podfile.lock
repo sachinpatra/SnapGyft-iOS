@@ -46,6 +46,7 @@ PODS:
   - OnboardingKit (0.0.5)
   - QRCodeReader.swift (8.0.4)
   - ReachabilitySwift (3)
+  - Shiny (1.0.1)
   - SwiftMessages (4.1.0)
 
 DEPENDENCIES:
@@ -60,6 +61,7 @@ DEPENDENCIES:
   - OnboardingKit
   - QRCodeReader.swift
   - ReachabilitySwift
+  - Shiny
   - SwiftMessages
 
 SPEC CHECKSUMS:
@@ -82,8 +84,9 @@ SPEC CHECKSUMS:
   OnboardingKit: 44b085c9e1e191a61fe1caea2bb581645fac1dc1
   QRCodeReader.swift: 9730cfa7ed5f0dd839765df8cf18d41db20e4081
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
+  Shiny: be3ac16c6225f858bbbaf187e7afc1fed530b74c
   SwiftMessages: 1bacc783c8f10bdfdc57c14860cae8a1f1fa6591
 
-PODFILE CHECKSUM: da6978c4272a2e96427ded77412c1c75cc7ebe68
+PODFILE CHECKSUM: 9274fb8a407a42d32867181a5b25e5815ba9206e
 
 COCOAPODS: 1.3.1

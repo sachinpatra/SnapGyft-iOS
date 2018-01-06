@@ -23,24 +23,24 @@ class MerchantTourScreenModel: NSObject, OnboardingViewDelegate, OnboardingViewD
             
         case 0:
             return OnboardingConfiguration(
-                image: UIImage(named: "PageHeartImage")!,
-                itemImage: UIImage(named: "ItemHeartIcon")!,
-                pageTitle: "BuyIT",
-                pageDescription: "A new kind share to trust! \n\n100% free, because great health should be accessible to all!",
+                image: UIImage(named: "PageMetricsImage")!,
+                itemImage: UIImage(named: "ItemMetricsIcon")!,
+                pageTitle: "Gift Cards",
+                pageDescription: "Efficient gift card options without much expenses! \n\nBe part of the gift card business growing exponentially. Get new customers thru gifts",
                 //backgroundImage: UIImage(named: "BackgroundOrange"),
-                backgroundImage: UIImage(named: "BackgroundRed"),
+                backgroundImage: UIImage(named: "BackgroundBlue"),
                 topBackgroundImage: nil,
                 bottomBackgroundImage: UIImage(named: "WavesImage")
             )
             
         case 1:
             return OnboardingConfiguration(
-                image: UIImage(named: "PageMetricsImage")!,
-                itemImage: UIImage(named: "ItemMetricsIcon")!,
-                pageTitle: "Gift Cards",
-                pageDescription: "Gift Cards will never be the same! \n\nTrack Gift Card, purchase Gift Card, share Gift Card of your progress!",
+                image: UIImage(named: "PageHeartImage")!,
+                itemImage: UIImage(named: "ItemHeartIcon")!,
+                pageTitle: "Member Base",
+                pageDescription: "Have access to huge local members wanting to gift as SnapGyft grows! \n\nLocal members searching for businesses for themselves or friends",
                 //backgroundImage: UIImage(named: "BackgroundOrange"),
-                backgroundImage: UIImage(named: "BackgroundBlue"),
+                backgroundImage: UIImage(named: "BackgroundRed"),
                 topBackgroundImage: nil,
                 bottomBackgroundImage: UIImage(named: "WavesImage")
             )
@@ -49,8 +49,8 @@ class MerchantTourScreenModel: NSObject, OnboardingViewDelegate, OnboardingViewD
             return OnboardingConfiguration(
                 image: UIImage(named: "PageActivityImage")!,
                 itemImage: UIImage(named: "ItemActivityIcon")!,
-                pageTitle: "Client",
-                pageDescription: "View activity collected by your Gift Cards and your other mobile apps! \n\nData has never been more beautiful or easier to understand!",
+                pageTitle: "Targeted Promotion",
+                pageDescription: "Run targeted promotions using SnapGyfts algorithms!\nSnapGyft will have more information about members and their choices based on history and/or preferences and can show your business ad to the right members",
                 backgroundImage: UIImage(named: "BackgroundOrange"),
                 topBackgroundImage: nil,
                 bottomBackgroundImage: UIImage(named: "WavesImage")
@@ -60,8 +60,8 @@ class MerchantTourScreenModel: NSObject, OnboardingViewDelegate, OnboardingViewD
             return OnboardingConfiguration(
                 image: UIImage(named: "PageNutritionImage")!,
                 itemImage: UIImage(named: "ItemNutritionIcon")!,
-                pageTitle: "Promo",
-                pageDescription: "Nutrition tracking can be difficult! \n\nContinue to use your favorite calorie tracking apps if you want, but check out your results here and make sure your macros are in check!",
+                pageTitle: "Promotions",
+                pageDescription: "Run controlled promotions based on time and amount from your app! \n\nNo need to share all your profits just to have a good promotion and attract customers",
                 //backgroundImage: UIImage(named: "BackgroundOrange"),
                 backgroundImage: UIImage(named: "BackgroundGreen"),
                 topBackgroundImage: nil,
@@ -72,14 +72,13 @@ class MerchantTourScreenModel: NSObject, OnboardingViewDelegate, OnboardingViewD
             return OnboardingConfiguration(
                 image: UIImage(named: "PageTimelapseImage")!,
                 itemImage: UIImage(named: "ItemTimelapseIcon")!,
-                pageTitle: "POS",
-                pageDescription: "Your Profile photos are being put to good use! \n\nThe photoLAPSE feature allows you to view your results over custom time periods!",
+                pageTitle: "Efficiency",
+                pageDescription: "Get clear understanding of your payments or transactions! \n\nGet all the details about your payments, transactions, promotion effectiveness in one place in the app",
                 //backgroundImage: UIImage(named: "BackgroundOrange"),
                 backgroundImage: UIImage(named: "BackgroundPurple"),
                 topBackgroundImage: nil,
                 bottomBackgroundImage: UIImage(named: "WavesImage")
             )
-            
         default:
             fatalError("Out of range!")
         }

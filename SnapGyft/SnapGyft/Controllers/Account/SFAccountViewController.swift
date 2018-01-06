@@ -23,12 +23,12 @@ class SFAccountViewController: ExpandingViewController {
     let coreData = AACoreData.sharedInstance()
     
     typealias ItemInfo = (imageName: String, title: String)
-    fileprivate let items: [ItemInfo] = [("item0", "UBER"),("item1", "OLA"),("item2", "PayTM"),("item3", "AMAZON")]
+    var items: [ItemInfo] = [("item0", "UBER"),("item1", "OLA"),("item2", "PayTM"),("item3", "AMAZON")]
     
     //MARK: - View life cycle
     override func viewDidLoad() {
   //  itemSize = CGSize(width: 356, height: 250)
-        
+    
         super.viewDidLoad()
         
         registerCell()
@@ -228,7 +228,8 @@ class SFAccountViewController: ExpandingViewController {
             cell.cardValue.text = "$40"
         
         default:
-            break
+            cell.cardValue.text = "$425"
+
         }
         
         let index = indexPath.row % items.count
