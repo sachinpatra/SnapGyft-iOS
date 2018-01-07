@@ -212,6 +212,7 @@
 		18FCC5BE1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */; };
 		18FCC5E01E7EF35700198CF0 /* SGSendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */; };
 		50D732379430BA3B53F7132A /* Pods_SnapGyftMerchant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F852AB73D487DD112A6B3BF1 /* Pods_SnapGyftMerchant.framework */; };
+		8C5CADB12002980300223FEF /* SelectAmountBuyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5CADB02002980300223FEF /* SelectAmountBuyTableCell.swift */; };
 		8C81F89B1FFFFF2E0037DA96 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81F89A1FFFFF2E0037DA96 /* BuyViewController.swift */; };
 		8C81F89D20009BAD0037DA96 /* SelectAmountTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81F89C20009BAD0037DA96 /* SelectAmountTableController.swift */; };
 		8C81F8A02000A3F90037DA96 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C81F89F2000A3F90037DA96 /* ContainerView.swift */; };
@@ -367,6 +368,7 @@
 		18FCC5BA1E7E6E3000198CF0 /* SFSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SFSettingsViewController.swift; sourceTree = "<group>"; };
 		18FCC5BB1E7E6E3000198CF0 /* SGGyftCardBalanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGGyftCardBalanceViewController.swift; sourceTree = "<group>"; };
 		18FCC5DF1E7EF35700198CF0 /* SGSendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SGSendViewController.swift; sourceTree = "<group>"; };
+		8C5CADB02002980300223FEF /* SelectAmountBuyTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAmountBuyTableCell.swift; sourceTree = "<group>"; };
 		8C81F89A1FFFFF2E0037DA96 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		8C81F89C20009BAD0037DA96 /* SelectAmountTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAmountTableController.swift; sourceTree = "<group>"; };
 		8C81F89F2000A3F90037DA96 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
@@ -886,6 +888,7 @@
 				8C81F89C20009BAD0037DA96 /* SelectAmountTableController.swift */,
 				8C81F8A520010A620037DA96 /* OrderSummaryTableController.swift */,
 				8C81F8A32000A7840037DA96 /* SelectAmountCardTableCell.swift */,
+				8C5CADB02002980300223FEF /* SelectAmountBuyTableCell.swift */,
 				8C81F89F2000A3F90037DA96 /* ContainerView.swift */,
 				8C81F8A12000A5530037DA96 /* Extensions.swift */,
 			);
@@ -1351,6 +1354,7 @@
 				183B46851FE57BA2009282FB /* FormSwitchCell.swift in Sources */,
 				183B468A1FE57BA2009282FB /* RowFormer.swift in Sources */,
 				183B46811FE57BA2009282FB /* FormSelectorDatePickerCell.swift in Sources */,
+				8C5CADB12002980300223FEF /* SelectAmountBuyTableCell.swift in Sources */,
 				183B46911FE57BA2009282FB /* DatePickerRowFormer.swift in Sources */,
 				183B467C1FE57BA2009282FB /* FormInlineDatePickerCell.swift in Sources */,
 				180FFAF91E7DE5C000435772 /* String+FormerDemo.swift in Sources */,
