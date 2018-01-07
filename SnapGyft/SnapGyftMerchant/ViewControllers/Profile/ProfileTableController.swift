@@ -67,8 +67,12 @@ class ProfileTableController: UITableViewController {
         let emailRow = createFixedLabel("Email", "sachin@italianrestaurant.com")
         let phoneRow = createFixedLabel("Phone", "1234567890")
 
-        
         //Section 2
+        let setUpRow = createMenu("Setup") { [weak self] in
+            self?.former.deselect(animated: true)
+        }
+        
+        //Section 3
         let setPinRow = createMenu("Set Pin") { [weak self] in
             self?.performSegue(withIdentifier: "showSetPinSegue", sender: self)
         }
@@ -76,9 +80,10 @@ class ProfileTableController: UITableViewController {
         
         // Create SectionFormers
         let section1 = SectionFormer(rowFormer: nameRow, emailRow, phoneRow).set(headerViewFormer: createHeader("    "))
-        let section2 = SectionFormer(rowFormer: setPinRow).set(headerViewFormer: createHeader("    "))
+        let section2 = SectionFormer(rowFormer: setUpRow).set(headerViewFormer: createHeader("    "))
+        let section3 = SectionFormer(rowFormer: setPinRow).set(headerViewFormer: createHeader("    "))
         
-        former.append(sectionFormer: section1, section2)
+        former.append(sectionFormer: section1, section2, section3)
         
     }
     

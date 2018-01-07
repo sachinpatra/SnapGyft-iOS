@@ -68,7 +68,7 @@ class SFSettingsViewController: UITableViewController {
         }
         
         //Section 2
-        let gyftCardBalanceRow = createSelectorRow("Gyft Card Balance", "$23", pushGyftCardBalance())
+        let gyftCardBalanceRow = createSelectorRow("SnapCash Balance", "$23", pushGyftCardBalance())
         let redemptionRow = createMenu("Redemptions") { [weak self] in
             self?.performSegue(withIdentifier: "ShowRedemptionListSegue", sender: self)
         }

@@ -18,7 +18,7 @@ class SFBaseTabBarViewController: MMTabBarAnimateController {
         super.viewDidLoad()
         ((self.tabBar.items?[0])! as UITabBarItem).image =   UIImage.octicon(with: "\u{f018}", textColor: .formerSubColor(), size: CGSize(width: kIconSize, height: kIconSize))
         ((self.tabBar.items?[1])! as UITabBarItem).image =   UIImage.octicon(with: "\u{f042}", textColor: .formerSubColor(), size: CGSize(width: kIconSize, height: kIconSize))
-        ((self.tabBar.items?[2])! as UITabBarItem).image =   UIImage.octicon(with: "\u{f02a}", textColor: .formerSubColor(), size: CGSize(width: kIconSize, height: kIconSize))
+        ((self.tabBar.items?[2])! as UITabBarItem).image =   UIImage.octicon(with: "\u{f045}", textColor: .formerSubColor(), size: CGSize(width: kIconSize, height: kIconSize))
         ((self.tabBar.items?[3])! as UITabBarItem).image =   UIImage.octicon(with: "\u{f031}", textColor: .formerSubColor(), size: CGSize(width: kIconSize, height: kIconSize))
 
 

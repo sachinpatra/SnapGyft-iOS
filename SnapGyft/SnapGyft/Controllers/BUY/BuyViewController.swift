@@ -89,6 +89,9 @@ class BuyViewController: UIViewController, UITableViewDataSource, UITableViewDel
         default:
             break
         }
+         
+        self.buyTableView.deselectRow(at: self.buyTableView.indexPathForSelectedRow!, animated: true)
+
     }
 
 }

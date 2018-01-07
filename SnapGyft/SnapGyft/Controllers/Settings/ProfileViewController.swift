@@ -15,7 +15,6 @@ class ProfileViewController: UITableViewController {
     let coredata = AACoreData.sharedInstance()
 
     public private(set) lazy var former: Former = Former(tableView: self.tableView)
-    let appdelObj: AppDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()

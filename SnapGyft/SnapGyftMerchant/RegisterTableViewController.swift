@@ -419,9 +419,16 @@ class RegisterTableViewController: UITableViewController, QRCodeReaderViewContro
         KRProgressHUD.show(withMessage: nil){
             sleep(5)
             KRProgressHUD.dismiss({
-                self.performSegue(withIdentifier: "ShowHomeSegue", sender: self)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                    let appdelObj: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+                    appdelObj.isShowProfile = true
+                    Alertift.alert(title: "SnapGyft", message: "Your business is ready to issue gift cards with default settings. To customize go to your profile.").action(.default("OK")){ _ in
+                            self.performSegue(withIdentifier: "ShowHomeSegue", sender: self)
+                        }.show()
+                    return
+                }
 
-                SGUtility.showAlert(withMessage: "Your business is ready to issue gift cards with default settings. To customize go to your profile."); return
             })
         }
         
@@ -545,8 +552,6 @@ class RegisterTableViewController: UITableViewController, QRCodeReaderViewContro
         reader.stopScanning()
         dismiss(animated: true, completion: nil)
     }
-    
-    
 }
 
 

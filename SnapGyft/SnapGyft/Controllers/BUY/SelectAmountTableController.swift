@@ -67,4 +67,8 @@ class SelectAmountTableController: UITableViewController {
         return 44.0
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let VC = segue.destination as! OrderSummaryTableController
+        VC.cardTitle = cardLabel
+    }
 }

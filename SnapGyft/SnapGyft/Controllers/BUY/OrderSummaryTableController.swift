@@ -10,6 +10,8 @@ import UIKit
 import Alertift
 
 class OrderSummaryTableController: UITableViewController {
+    
+    var cardTitle: String!
 
     public private(set) lazy var former: Former = Former(tableView: self.tableView)
 
@@ -27,7 +29,7 @@ class OrderSummaryTableController: UITableViewController {
     private func configure() {
         let appStoreRow = LabelRowFormer<FormLabelCell>()
             .configure {
-                $0.text = "App Store & iTunes Gift Card"
+                $0.text = cardTitle
                 $0.subText = "$25.00"
                 $0.cell.formSubTextLabel()?.textColor = UIColor.formerSubColor()
             }.onSelected { [weak self] _ in
@@ -87,9 +89,11 @@ class OrderSummaryTableController: UITableViewController {
         rowFormer.former?.deselect(animated: true)
         Alertift.alert(title: "SnapGyft", message: "Sucessfully Purcharged").action(.default("OK")){ _ in
             let navController = (self.tabBarController as! SFBaseTabBarViewController).viewControllers![0] as! UINavigationController
-            navController.popViewController(animated: false)
+            if navController.viewControllers.last is CardDetailTableController, let cardDetail = navController.viewControllers.last as? CardDetailTableController{
+                cardDetail.popTransitionAnimation()
+            }
             let accountVC = navController.viewControllers[0] as! SFAccountViewController
-            accountVC.items.append(("item0", "Italian"))
+            accountVC.items.append(("item0", self.cardTitle))
             accountVC.collectionView?.reloadData()
             self.tabBarController?.selectedIndex = 0
 

@@ -17,6 +17,11 @@ class AccountTableController: UITableViewController {
         self.title = "Account"
        
         configureForm()
+        
+        let appdelObj: AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        if appdelObj.isShowProfile{
+            self.tabBarController?.selectedIndex = 3
+        }
     }
 
     override func didReceiveMemoryWarning() {

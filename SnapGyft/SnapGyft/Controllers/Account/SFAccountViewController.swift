@@ -228,7 +228,7 @@ class SFAccountViewController: ExpandingViewController {
             cell.cardValue.text = "$40"
         
         default:
-            cell.cardValue.text = "$425"
+            cell.cardValue.text = "$25"
 
         }
         
